@@ -12,4 +12,3 @@
 - Scale up: '@github(dhis2/dhis2-android-docs,content/implementation-guide/scale-up.md, main)'
 - Rollout: '@github(dhis2/dhis2-android-docs,content/implementation-guide/rollout.md, main)'
 - Checklist: '@github(dhis2/dhis2-android-docs,content/implementation-guide/checklist.md, main)'
-- Managing mobile devices: '@github(dhis2/dhis2-android-docs, DHIS2_Android_MDM_INDEX.yml, main)' #External INDEX file
