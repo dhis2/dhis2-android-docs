@@ -1,7 +1,7 @@
+- About this guide: '@github(dhis2/dhis2-android-docs,content/common/about-this-android-guide.md, main)'
 - Executive summary: '@github(dhis2/dhis2-android-docs,content/implementation-guide/executive-summary.md, main)'
 - Document Map: '@github(dhis2/dhis2-android-docs,content/implementation-guide/document-map.md, main)'
 - Android Capture overview: '@github(dhis2/dhis2-android-docs,content/implementation-guide/dhis2-capture-android-overview.md, main)'
-- About this guide: '@github(dhis2/dhis2-android-docs,content/common/about-this-android-guide.md, main)'
 - Server requriements: '@github(dhis2/dhis2-android-docs,content/implementation-guide/dhis2-server-requirements.md, main)'
 - Data security and privacy: '@github(dhis2/dhis2-android-docs,content/implementation-guide/data-security-and-privacy.md, main)'
 - Mobile device specifications: '@github(dhis2/dhis2-android-docs,content/implementation-guide/mobile-device-specs.md, main)'
