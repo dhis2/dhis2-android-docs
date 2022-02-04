@@ -4,7 +4,7 @@
 This section focuses on the [Android Settings Web App](https://apps.dhis2.org/app/a1bd6b5b-de8c-4998-8d34-56c18a139683) implementation.
 
 
-The [https://apps.dhis2.org/app/a1bd6b5b-de8c-4998-8d34-56c18a139683](Android Settings Web App) allows admins to configure synchronization parameters for the DHIS2 Android App, encrypt the local database of the Android devices, customize the appearance of Programs, Data sets, and Home screen, and add TEI Analytics items. The configuration parameters defined within this web app will overwrite the settings of all Android devices using the DHIS2 Android Capture App.
+The [Android Settings Web App](https://apps.dhis2.org/app/a1bd6b5b-de8c-4998-8d34-56c18a139683) allows admins to configure synchronization parameters for the DHIS2 Android App, encrypt the local database of the Android devices, customize the appearance of Programs, Data sets, and Home screen, and add TEI Analytics items. The configuration parameters defined within this web app will overwrite the settings of all Android devices using the DHIS2 Android Capture App.
 
 Please note that in this version of the Web App, only users with 'ALL' authority are able to define those parameters in the configuration. Other users having access to the web app can see the value of the parameters, but cannot edit them. 
 
@@ -21,25 +21,24 @@ Includes configurations such as the Matomo URL and project ID, the number of res
 
 ### Matomo configuration
 
-The DHIS2 Android App sends anonymised analytics that can be used to evaluate performance and/or detect problems at an early stage. [Matomo](https: //matomo.org) is the tool used for this and running in a specific server not accessible to the general public. However, implementations can set up their own
+The DHIS2 Android App sends anonymize analytics that can be used to evaluate performance and/or detect problems at an early stage. [Matomo](https://matomo.org) is the tool used for this and running in a specific server not accessible to the general public. However, implementations can set up their own
  Matomo instance (or using the cloud version) in order to collect and analyse the statistics. 
 
-Once you have your Matomo instance ready you should get the URLs and the project ID like shown in the picture below (left). The ID can be introduced direct ly but the URL needs to be followed with */matomo.php* as shown below (right).
+Once you have your Matomo instance ready you should get the URLs and the project ID like shown in the picture below (left). The ID can be introduced directly but the URL needs to be followed with */matomo.php* and start with *https* or *http* as shown below (right).
 
 ![](resources/images/capture-app-matomo-instance.png){width=33%}
 ![](resources/images/capture-app-matomo-settings.png){width=33%}
 
 
-### Encrypt device database
-This will force all the devices to store the database encrypted increasing the security level against data theft attacks.
-
 ### Mobile configuration
 This section allows admin users to edit the SMS gateway ad result sender phone number.
 
 ### Reserved values
-This will specify the number of values per TEI attribute reserved to download in the devices.
+This will specify the number of values per TEI attribute reserved to download in the devices. By default, the Android App reserves 100 Ids, but it is possible to add or reduce this number.
 
 ### Encrypt device database
+This will force all the devices to store the database encrypted increasing the security level against data theft attacks.
+
 By default, the DHIS2 Android App database is not encrypted, but an admin can check the *Encrypt device database* to encrypt the metadata and data stored in every device. Encrypting the database will have an impact on the database volume and performance (degradation between 10-15%) of the Android app. Note that at the moment of selecting or unselecting this option, no data is lost (even if it hasn't been previously synchronized with the server)
 
 > **Warning**
@@ -48,7 +47,9 @@ By default, the DHIS2 Android App database is not encrypted, but an admin can ch
 >
 > By default, the Android app database is not encrypted, but an admin can check the *Encrypt device database* to encrypt the metadata and data stored in every device. Encrypting the database will have an impact on the database volume and performance of the Android app. Note that at the moment of selecting or unselecting this option, no data is lost (even if it hasn't been previously synchronized with the server)
 
- 
+### Allow screenshots
+This section allows to configure the possibility to take screenshots or screen sharing using the Android Capture App. Please note that the default behavior is deactivated screenshots.
+
 ### Disable all settings
 By clicking this button, the user will remove all Android configuration settings. No configuration will be applied to the Android App (if this is the case, the sync parameters applied are the ones defined in the Android Capture app).
 
@@ -67,6 +68,20 @@ Data sync
 :	Admin users can choose how often the data will sync. e.g. Syncing data every 6 hours.
 
 ![](resources/images/capture-app-sync-global.png){width=33%}
+
+
+Use the new Tracker Importer
+:	Admin users can choose which tracker importer endpoint will be used.
+
+> **Warning**
+>
+> This option is only available if the Android Settings Webapp is used from version 2.37 DHIS2 API onwards.
+>
+> By default, the Android app uses the legacy tracker importer */api/trackedEntityInstances* but an admin can check this option and the importer introduced in 2.37 */api/tracker* endpoint will be used.
+>
+> ![](resources/images/capture-app-sync-global-importer.png){width=50%}
+>
+
 
 
 ### Program { #capture_app_android_settings_webapp_synchronization_program }
@@ -113,11 +128,11 @@ In the case that any specific settings has been saved, a table will show a summa
 
 > **Caution**
 >
-> Using specific settings per program might have unexpected results in the number of TEIs downloaded and the total amount might exceed the one defined in the Global Settings. This is due to how the appliation download the TEIs from the server. The Android client will first download a max number of TEIs from the server based on the Organistation Units where the user has access and based on the lastUpdate field. Afterwards it will download a max munumber of TEIs from the specific programs. Therefore, if the TEIs downloaded from the Global setting (500 in the example above) have been updated more recently than any of the TEIs from a specific program (500 for Malaria case diagnosis, treatment and investigation) the Android client will end up downloading 1000 TEI.
+> Using specific settings per program might have unexpected results in the number of TEIs downloaded and the total amount might exceed the one defined in the Global Settings. This is due to how the application download the TEIs from the server. The Android client will first download a max number of TEIs from the server based on the Organisation Units where the user has access and based on the lastUpdate field. Afterwards it will download a max number of TEIs from the specific programs. Therefore, if the TEIs downloaded from the Global setting (500 in the example above) have been updated more recently than any of the TEIs from a specific program (500 for Malaria case diagnosis, treatment and investigation) the Android client will end up downloading 1000 TEI.
 > 
-> This might look confusing at first, but once understood can be used to ensure a minium (and maximum) number of TEIs for a specific program will be downloaded which can be very useful in specific implementations.
+> This might look confusing at first, but once understood can be used to ensure a minimum (and maximum) number of TEIs for a specific program will be downloaded which can be very useful in specific implementations.
 >
-> Imagine an implementation where it must be ensured that the Android user has all the TEIs of a specific program in a server where the same user has access to other Organisation Units where other TEIs might be enrolled in another program. The program is called Community Care and it has 17 TEIs which have been updated very long time ago. The administrator can ensure that the 17 TEIs will be donwloaded by setting anything in Global Settings (if needed to reduce bandwidth a very low value should be set) and a at least 17 for the specific program as show in the image below:
+> Imagine an implementation where it must be ensured that the Android user has all the TEIs of a specific program in a server where the same user has access to other Organisation Units where other TEIs might be enrolled in another program. The program is called Community Care, and it has 17 TEIs which have been updated very long time ago. The administrator can ensure that the 17 TEIs will be downloaded by setting anything in Global Settings (if needed to reduce bandwidth a very low value should be set) and an at least 17 for the specific program as show in the image below:
 >
 > ![](resources/images/capture-app-program-specific-example-web.png){width=50%}
 >
@@ -247,7 +262,7 @@ Also, even though these analytics are created using the android settings web app
 
 The scope of the analysis is the TEI, so the visualizations will be displayed in the TEI dashboard of the android app.
 
-The purpose of this section is to define visualizations to show evolution of dataelements and program indicators over time. Based on that, it will only take into cosideration dataelements that belongs to a repeatable program stage, or programindicators which formula contains at least one dataelement that belongs to a repeatable program stage.
+The purpose of this section is to define visualizations to show evolution of *data elements* and *program indicators* over time. Based on that, it will only take into consideration data elements that belongs to a repeatable program stage, or program indicators which formula contains at least one data element that belongs to a repeatable program stage.
 
 To create a **TEI Analytics** item:
 
@@ -261,9 +276,9 @@ To create a **WHO Nutrition Analytics** item:
 
 1. Select a program, a program stage, and WHO nutrition as visualization type.
 2. Choose a WHO visualization type that can be Height for Age (HFA), Weight for Age (WFA) or Weight for Height (WFH).
-3. Select the trackedentityattribute that represents the gender. You have then to specify the option for Male 'Male title' and the option for Female 'Female title'. Normally they will be option codes.
-4. Choose the dataelement/programindicator that will be displayed in the Horizontal (x) axis
-5. Choose the dataelement/programindicator that will be displayed in the Vertical (y) axis
+3. Select the tracked entity attribute that represents the gender. You have then to specify the option for Male 'Male title' and the option for Female 'Female title'. Normally they will be option codes.
+4. Choose the data element/program indicator that will be displayed in the Horizontal (x) axis
+5. Choose the data element/program indicator that will be displayed in the Vertical (y) axis
 
 
 ![](resources/images/capture-app-analytics-who-item.png)
@@ -274,7 +289,7 @@ If any TEI Analytics item has been created, a table will show the item's title a
 
 ### Home
 
-Home visualizations are displayed in the home screen (Anlaytics tab) of the android app.
+Home visualizations are displayed in the home screen (Analytics tab) of the android app.
 
 All items available are first created in the Data visualizer app in DHIS2 and configured in the android settings app.
 
@@ -293,6 +308,13 @@ To create a **Home** item:
 
 ![](resources/images/capture-app-analytics-home-createdGroup.png)
 
+> **Note:**
+>
+> Visualizations that are added with no group selected, will be displayed in a common "group"
+>
+> ![](resources/images/capture-app-analytics-default-group.png)
+>
+
 To remove a **Home** item:
 
 1. Search for the item by expanding the groups
@@ -309,7 +331,7 @@ To remove a **Home** group:
 3. Click on "Delete"
 4. Click on the "Save" button
 
-All of the items associated to that group will be deleted
+All the items associated to that group will be deleted
 
 ![](resources/images/capture-app-analytics-home-deleteGroup.png)
 
@@ -320,7 +342,7 @@ To reset all values:
 
 ### Program
 
-Program visualizations are displayed in the search screen (Anlaytics tab) in tracker programs or in the list screen (Analytics tab) in event programs of the android app.
+Program visualizations are displayed in the search screen (Analytics tab) in tracker programs or in the list screen (Analytics tab) in event programs of the android app.
 
 All items available are first created in the Data visualizer app in DHIS2 and configured in the android settings app.
 
@@ -354,7 +376,7 @@ To remove a **program** group:
 3. Click on "Delete"
 4. Click on the "Save" button
 
-All of the items associated to that group will be deleted
+All the items associated to that group will be deleted
 
 ![](resources/images/capture-app-analytics-program-deleteGroup.png)
 
@@ -399,7 +421,7 @@ To remove a **Data Set** group:
 3. Click on "Delete"
 4. Click on the "Save" button
 
-All of the items associated to that group will be deleted
+All the items associated to that group will be deleted
 
 ![](resources/images/capture-app-analytics-dataset-deleteGroup.png)
 
@@ -433,16 +455,16 @@ To run the test:
 
 ### Analytics Limitations
 
-Since the aggregations and calculations displayed are calculated in the device, the implementation of analytics is limited compared to web. In summary the compatible and suported objects and features are:
+Since the aggregations and calculations displayed are calculated in the device, the implementation of analytics is limited compared to web. In summary the compatible and supported objects and features are:
 
-- Well formed analytic objects (series, categories, filters)
+- Well-formed analytic objects (series, categories, filters)
 - User has view access
 - Limitations for Pivot Tables
   - Number of header lines: 1
   - Number of header columns: 1
 - Limitations for Charts
   - Number of Series: No limit (but remember you are rendering in a small screen)
-  - Number of Categories (doesn’t apply for pie chart): No limit
+  - Number of Categories (doesn't apply for pie chart): No limit
 
 There are many more restrictions which apply to Android Analytics regarding the many configuration options available in the Web Visualizer as well as the supported functions and calculations related to indicators and program indicators. [This table](https://docs.google.com/spreadsheets/d/1127cz7M0K4fux5CU0V54V2Z77NZWCr0BTrZ6jcCec4Q) summarises all supported features.
 
@@ -486,11 +508,11 @@ Internally all settings are stored in [Datastore](https://docs.dhis2.org/master/
 
 Datastore structure:
 
-| Item        | Description | Data type |
-| ----------- | ----------- | --------- |
-| Namespace   | Namespace for organization of entries | String |
-| Key         | Key for identification of values | String |
-| Value       | Value holding the information for the entry | JSON |
+| Item      | Description                                 | Data type |
+|-----------|---------------------------------------------|-----------|
+| Namespace | Namespace for organization of entries       | String    |
+| Key       | Key for identification of values            | String    |
+| Value     | Value holding the information for the entry | JSON      |
 
 ### Save configuration parameters { #capture_app_android_settings_webapp_save_config }
 
