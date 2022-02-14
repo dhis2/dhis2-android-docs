@@ -76,6 +76,8 @@ Use the new Tracker Importer
 > **Warning**
 >
 > This option is only available if the Android Settings Webapp is used from version 2.37 DHIS2 API onwards.
+> 
+> It is recommended to use this new tracker importer in a testing environment. 
 >
 > By default, the Android app uses the legacy tracker importer */api/trackedEntityInstances* but an admin can check this option and the importer introduced in 2.37 */api/tracker* endpoint will be used.
 >
@@ -461,7 +463,7 @@ Since the aggregations and calculations displayed are calculated in the device, 
 - User has view access
 - Limitations for Pivot Tables
   - Number of header lines: 1
-  - Number of header columns: 1
+  - Number of header columns: 2
 - Limitations for Charts
   - Number of Series: No limit (but remember you are rendering in a small screen)
   - Number of Categories (doesn't apply for pie chart): No limit
