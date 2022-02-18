@@ -50,6 +50,10 @@ By default, the DHIS2 Android App database is not encrypted, but an admin can ch
 ### Allow screenshots
 This section allows to configure the possibility to take screenshots or screen sharing using the Android Capture App. Please note that the default behavior is deactivated screenshots.
 
+> **Warning**
+>
+> The DHIS2 Android App disables the possibiilty of taking screenshots (and capturing the screen from other apps) by default following security and privacy recommendations. Allowing screenshots might be useful for support and/or sharing purposes in same cases but make sure you understand the security and privacy implications of this setting before enabling it.
+
 ### Disable all settings
 By clicking this button, the user will remove all Android configuration settings. No configuration will be applied to the Android App (if this is the case, the sync parameters applied are the ones defined in the Android Capture app).
 
