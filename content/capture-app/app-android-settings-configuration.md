@@ -52,7 +52,7 @@ This section allows to configure the possibility to take screenshots or screen s
 
 > **Warning**
 >
-> The DHIS2 Android App disables the possibiilty of taking screenshots (and capturing the screen from other apps) by default following security and privacy recommendations. Allowing screenshots might be useful for support and/or sharing purposes in some cases but make sure you understand the security and privacy implications of this setting before enabling it.
+> The DHIS2 Android App doesn´t allow taking screenshots (and capturing the screen from other apps) by default for  security and privacy recommendations. Allowing end users to take screenshots invalids this data protection measures. When a user takes a screenshot of private information, the image can be shared by any regular channel (email, WhatsApp, Telegram, Skype, etc...).
 
 ### Disable all settings
 By clicking this button, the user will remove all Android configuration settings. No configuration will be applied to the Android App (if this is the case, the sync parameters applied are the ones defined in the Android Capture app).
