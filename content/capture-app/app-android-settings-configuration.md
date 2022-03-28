@@ -214,7 +214,7 @@ These settings give control over the appearance of the data entry and list forms
 - Completion spinner: it turns on/off the completion spinner that shows the progress in the data entry form.
 
 These settings refer to visual components, so they must be consumed by the app.
-
+For more information about filters feel free to review filters [documentation](https://docs.dhis2.org/en/use/android-app/android-specific-features.html#capture_app_generic_filter). 
 
 ### Home screen { #capture_app_android_settings_webapp_appearance_home_screen }
 
