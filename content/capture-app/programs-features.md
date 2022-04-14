@@ -52,7 +52,7 @@ After tapping on the 'save' button, if the form does not contain any errors, war
 1. 'Not now': The app saves the form and go back to the event listing screen (or TEI dashboard for tracker programs). The status of the event will remain open.
 2. 'Complete': The app saves the form and go back to the event listing. The status of the event changes to completed.
 
-**NEW SCREENSHOTS**
+![](resources/images/capture-app-image201.png){ width=25%}
 
 > **Note**
 >
@@ -66,7 +66,7 @@ After tapping on the 'save' button, if the form does not contain any errors, war
 
 To re-open an event, the app now displays a "Re-open form" button in the Details screen. This button will be available only if the user has the correct authority (‘Uncomplete events’) to reopen a completed event.
 
-**NEW SCREENSHOTS**
+![](resources/images/capture-app-image202.png){ width=25%}
 
 #### Discard changes (New 2.6) { #capture_app_programs_common_features_discard_changes }
 
@@ -80,7 +80,7 @@ If the user is in a new enrollment or event, the options allow the user to:
 1. 'Discard changes': The enrollment or event is not created or,
 2. 'Keep editing': Allowing the user to finish the enrollment or event.
 
-**SCREENSHOTS**
+![](resources/images/capture-app-image203.png){ width=25%}
 
 #### Field completion percentage { #capture_app_programs_common_features_field_percentage }
 
@@ -277,15 +277,13 @@ Using the Android Settings App (v2.2.0) it is possible to configure the mandator
 
 If the feature is enabled, the Android App will display a "create new" button after opening a program and a search won't be required. If the feature is not enabled or the user is in a previous version of the app, a search must be performed to avoid possible duplicates. Once the search is performed the search button will become "Add" button for the user to create a new enrollment.
 
-**SCREENSHOTS**
+![](resources/images/capture-app-image204.png){ width=25%}
 
 #### Offline and Online Search  (New 2.6) { #capture_app_programs_offline_online_search}
 
 To improve the response time in the search results, the Android App now searches offline first and then offers searching online as a second step.
 
 Searching outside the program is also available when the attributes used in the search are program AND Tracked Entity Type (TET) attributes.
-
-**SCREENSHOTS**
 
 #### Reset Search Fields { #capture_app_programs_reset_search }
 
@@ -359,9 +357,8 @@ The "breaking the glass" feature is now supported in DHIS2 Android Capture App. 
 
 After the reason is written, the app will download the TEI and the dashboard will open. If the TEI being downloaded doesn't have an enrollment in the current program, an enrollment date and organisation unit will be asked.
 
-**SCREENSHOTS UPDATE**
-
-![](resources/images/capture-app-image137.jpg){ width=25%}
+![](resources/images/capture-app-image205.png){ width=25%}
+![](resources/images/capture-app-image206.png){ width=25%}
 
 ### Analytic charts
 

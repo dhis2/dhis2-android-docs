@@ -42,11 +42,11 @@ Validation rules and completion of data sets are integrated in the save button a
 
 - If the data set does not have validation rules, the data set will be marked as complete if all mandatory fields have value.
 
-### Increase Row Headers { #capture_app_data_sets_row }
+### Increase Row Headers (Improved 2.6) { #capture_app_data_sets_row }
 
 The length of the first column in data set is adjusted to show the full text for the Data Elements names. Users can use the arrows on the top to adjust the width according to their needs.
 
-![](resources/images/capture-app-image113.png){ width=25%}
+![](resources/images/capture-app-image139.png){ width=25%}
 
 ### Indicators { #capture_app_data_sets_indicators }
 

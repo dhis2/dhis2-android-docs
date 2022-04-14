@@ -32,9 +32,15 @@ After a succesful login the user should be able to perform an *offline* login on
 
 The Android app can now work with up to 3 different users while being offline. The users will need to have access to internet for the frist log in of each account and will be able to switch accounts after without requiring access to the Internet.
 
+![](resources/images/capture-app-image185.png){ width=25%}
+![](resources/images/capture-app-image186.png){ width=25%}
+
 The users will be able to manage the user accounts and delete accounts if needed. When the maximum number of accounts is reached, it will be necesary to delete one of the existing accounts to log in to a new one.
 
-**SCREENSHOT**
+![](resources/images/capture-app-image187.png){ width=25%}
+![](resources/images/capture-app-image188.png){ width=25%}
+![](resources/images/capture-app-image189.png){ width=25%}
+![](resources/images/capture-app-image190.png){ width=25%}
 
 ## Account Recovery { #capture_app_generic_recovery }
 
@@ -228,7 +234,10 @@ A refresh button is now located to trigger a granular synchronization in the fol
 * Data set listing
 * Data set details
 
-**SCREENSHOT**
+![](resources/images/capture-app-image19.png){ width=25%}
+![](resources/images/capture-app-image191.png){ width=25%}
+![](resources/images/capture-app-image192.png){ width=25%}
+![](resources/images/capture-app-image193.png){ width=25%}
 
 ## Org unit (Improved 2.6) { #capture_app_generic_orgunit }
 
@@ -237,6 +246,7 @@ A refresh button is now located to trigger a granular synchronization in the fol
 The whole organisation unit tree is displayed. Organisation units not available for data entry will be colored in grey.
 User must check the box to select the org unit wanted. After an organisation unit is selected, the parents will be marked in bold to show hint of the organisation unit selection when opening the hierarchy.
 
+![](resources/images/capture-app-image194.png){ width=25%}
 
 > **Caution**
 >
@@ -336,7 +346,15 @@ The following list contains all possible reasons:
 
 This feature is for administrators. The Android App incorporates an option in the settings screen for verifying some aspects of the DHIS2 configuration.
 
+![](resources/images/capture-app-image188.png){ width=25%}
+![](resources/images/capture-app-image195.png){ width=25%}
+
 * **Language:** the user will be able to change the language of the application user interface to identify lables, buttons or prompts with errors or without translation.
+
+![](resources/images/capture-app-image196.png){ width=25%}
+![](resources/images/capture-app-image197.png){ width=25%}
+
 * **Program rule validation:** this validator will check the program rules in the device and display configuration inconsitencies.
 
-**SCREENSHOTS**
+![](resources/images/capture-app-image198.png){ width=25%}
+![](resources/images/capture-app-image199.png){ width=25%}

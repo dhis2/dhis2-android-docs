@@ -55,7 +55,7 @@ Legends are displayed in pivot tables by enabling the feature "Use legends for c
 
 The Android app will color the cells using either the pre-defined legend per data item or a single legend for the entire pivot table, depending on the settings in Web.
 
-**SCREENSHOT**
+![](resources/images/capture-app-image183.png){ width=25%}
 
 ### Groups
 
@@ -139,7 +139,7 @@ You can set the generic theme of the app by configuring the them in our server:
 >
 >![](resources/images/capture-app-image23.png){ width=25%}
 
-## Icon library for metadata { #capture_app_visual_icon_lib }
+## Icon library for metadata (Improved 2.6) { #capture_app_visual_icon_lib }
 
 There are currently 134 icons available that you can choose from. You can search by name in the icon picker widget. Icons are available in positive, negative and outlined shapes. We will be adding many more icons in future releases.
 
@@ -151,7 +151,8 @@ Icons can be associated to programs, stages, data elements and the options of an
 
 ![](resources/images/capture-app-image13.png){ .center width=80% }
 
-In the DHIS2 Android App icons render in the home screen to illustrate all the programs available to a user, or while adding an stage. For data elements and options, the icons render for single event programs, when a section contains a single DE, showing the option set as a matrix or sequence of images.
+In the DHIS2 Android App icons render in the home screen to illustrate all the programs available to a user, or while adding an stage. For data elements and options, the icons render for single event programs, when a section contains a single or more DEs, showing the option set as a matrix or sequence of images.
+When an enrollment section contains one or more Tracked Entity Attributes with option sets, the app is able to display them as a matrix or sequence of images.
 
 ![](resources/images/capture-app-image19.png){ width=25%}
 ![](resources/images/capture-app-image26.png){ width=25%}
@@ -259,4 +260,5 @@ If a field rendering is configured as QR, the Android App will also be able to c
 
 Used with d2:extractDataMatrixValue(key, dataMatrixText) program rule configuration, individual GS1 values will be render in the form field.
 
-**SCREENSHOT**
+![](resources/images/capture-app-image184.png){ width=20%}
+![](resources/images/capture-app-image200.png){ width=20%}
