@@ -6,7 +6,7 @@ Use the navigation bar located at the bottom of the data set to switch between t
 
 ![](resources/images/capture-app-image139.png){ width=25%}
 
-### Overview Screen { #capture_app_data_sets_overview_screen }
+### Overview Screen (Improved 2.6) { #capture_app_data_sets_overview_screen }
 
 The new overview tab contains the following details:
 
@@ -16,6 +16,7 @@ The new overview tab contains the following details:
 - Period
 - Org Unit
 - Category option combo
+- Refresh button (To trigger a granular synchronization)
 
 ![](resources/images/capture-app-image122.png){ width=25%}
 
