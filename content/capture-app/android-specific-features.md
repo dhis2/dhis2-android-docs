@@ -342,7 +342,7 @@ The following list contains all possible reasons:
 ![](resources/images/capture-app-image178.png){ width=25%}
 ![](resources/images/capture-app-image179.png){ width=25%}
 
-## Connfiguration troubleshooting (New 2.6) { #capture_app_configuration_troubleshooting }
+## Configuration troubleshooting (New 2.6) { #capture_app_configuration_troubleshooting }
 
 This feature is for administrators. The Android App incorporates an option in the settings screen for verifying some aspects of the DHIS2 configuration.
 
