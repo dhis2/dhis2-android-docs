@@ -267,7 +267,7 @@ To complete or deactivate an enrollment, click on three dot menu in the uppper r
 
 #### Configurable TEI Search (New 2.6) { #capture_app_programs_configurable_search }
 
-Using the Android Settings App (v2.2.0) it is possible to configure the mandatoriness of the TEI search before creating an enrollment. Follow the steps below to enable the creation of TEIs without searching:
+Searching TEIs before creating is not mandatory now. Using the Android Settings App (v2.2.0) it is possible to configure the mandatoriness of the TEI search before creating an enrollment. Follow the steps below to enable the creation of TEIs without searching:
 
   1. Open the Appearance menu in the Android Settings App
   2. In 'Program' add a Program Setting
@@ -279,11 +279,11 @@ If the feature is enabled, the Android App will display a "create new" button af
 
 ![](resources/images/capture-app-image204.png){ width=25%}
 
-#### Offline and Online Search  (New 2.6) { #capture_app_programs_offline_online_search}
+#### Offline and Online Search  (New 2.6) { #capture_app_programs_offline_online_search }
 
-To improve the response time in the search results, the Android App now searches offline first and then offers searching online as a second step.
+To improve the response time in the search results, the Android App now searches offline first and displays the results while making an online search as a second step, transparent to the user.
 
-Searching outside the program is also available when the attributes used in the search are program AND Tracked Entity Type (TET) attributes.
+Searching outside the program is offered as a second step when  the attributes used in the search contain at least one Tracked Entity Type (TET) attribute
 
 #### Reset Search Fields { #capture_app_programs_reset_search }
 
@@ -353,7 +353,7 @@ This means that any existing attributes in the first TEI should have pass to the
 
 ### Breaking the glass (Improved 2.6) { #capture_app_programs_breaking_the_glass }
 
-The "breaking the glass" feature is now supported in DHIS2 Android Capture App. If the program is configured with an access level of "Protected" and a search is done outside the user scope, a dialogue requesting a reason for acess will be displayed for the user to temporarily override the ownership privilege of the proram. This means, the user will gain access to the program related data.
+The "breaking the glass" feature is now supported in DHIS2 Android Capture App. If the program is configured with an access level of "Protected" and a search is done outside the user scope, a dialog requesting a reason for access will be displayed for the user to temporarily override the ownership privilege of the proram. This means, the user will gain access to the program related data.
 
 After the reason is written, the app will download the TEI and the dashboard will open. If the TEI being downloaded doesn't have an enrollment in the current program, an enrollment date and organisation unit will be asked.
 

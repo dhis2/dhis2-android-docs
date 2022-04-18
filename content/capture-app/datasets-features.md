@@ -44,7 +44,7 @@ Validation rules and completion of data sets are integrated in the save button a
 
 ### Increase Row Headers (Improved 2.6) { #capture_app_data_sets_row }
 
-The length of the first column in data set is adjusted to show the full text for the Data Elements names. Users can use the arrows on the top to adjust the width according to their needs.
+The length of the first column in data set is adjusted to show the full text for the Data Elements names. Users can use the arrows on the top to adjust the width according to their needs. This redimensioning arrows are now fixed at the upper-left corner of the screen.
 
 ![](resources/images/capture-app-image139.png){ width=25%}
 

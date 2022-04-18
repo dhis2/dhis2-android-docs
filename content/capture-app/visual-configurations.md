@@ -152,7 +152,8 @@ Icons can be associated to programs, stages, data elements and the options of an
 ![](resources/images/capture-app-image13.png){ .center width=80% }
 
 In the DHIS2 Android App icons render in the home screen to illustrate all the programs available to a user, or while adding an stage. For data elements and options, the icons render for single event programs, when a section contains a single or more DEs, showing the option set as a matrix or sequence of images.
-When an enrollment section contains one or more Tracked Entity Attributes with option sets, the app is able to display them as a matrix or sequence of images.
+
+The icon based data entry can now be used in enrollment forms. When an enrollment section contains one or more Tracked Entity Attributes with option sets and icons assigned, the app is able to display them as a matrix or sequence based on the section rendering type. In previous sections of the App this feature was only available for Data elements.
 
 ![](resources/images/capture-app-image19.png){ width=25%}
 ![](resources/images/capture-app-image26.png){ width=25%}
@@ -216,7 +217,7 @@ This is available when:
 
 The available rendering options have been expanded to include horizontal and vertical radio buttons, checkboxes and toggles. The allowed options depend on the value type.
 
-- Yes Only: can be rendered as radio button or checkbox. From 2.6 the label 'Yes' is not displayed next to the checkbox or radio button.
+- Yes Only: can be rendered as radio button or checkbox. From 2.6 the label 'Yes' next to the checkbox or radio button has been removed.
   
 - Yes/No: can be rendered as horizontal/vertical radio buttons or horizontal/vertical checkboxes or toggle.
   
@@ -256,9 +257,9 @@ Non-editable fields can still share the bar or QR code, but will prevent the use
 
 #### GS1 Data Matrix codes (New 2.6) { #capture_app_visual_gs1 }
 
-If a field rendering is configured as QR, the Android App will also be able to capture GS1 Data Matrix codes.
+If an attribute or data element rendering type is configured as QR code, the Android App will be able to read and process the string as GS1 Data Matrix codes.
 
-Used with d2:extractDataMatrixValue(key, dataMatrixText) program rule configuration, individual GS1 values will be render in the form field.
+Combined with the use of d2 functions in program rules, the different fields of a GS1 code can be saved into different data elements or attributes (d2:extractDataMatrixValue(key, dataMatrixText)).
 
 ![](resources/images/capture-app-image184.png){ width=20%}
 ![](resources/images/capture-app-image200.png){ width=20%}

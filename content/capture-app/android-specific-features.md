@@ -30,12 +30,12 @@ After a succesful login the user should be able to perform an *offline* login on
 
 ## Offline Multi-user (New 2.6) { #capture_app_generic_multiuser}
 
-The Android app can now work with up to 3 different users while being offline. The users will need to have access to internet for the frist log in of each account and will be able to switch accounts after without requiring access to the Internet.
+The Android app can now work with up to 3 different users while being offline. The users will need to have access to the internet for the first login of each account and will be able to switch accounts after without requiring access to the Internet.
 
 ![](resources/images/capture-app-image185.png){ width=25%}
 ![](resources/images/capture-app-image186.png){ width=25%}
 
-The users will be able to manage the user accounts and delete accounts if needed. When the maximum number of accounts is reached, it will be necesary to delete one of the existing accounts to log in to a new one.
+The users will be able to manage the user accounts and delete accounts if needed. When the maximum number of accounts is reached, it will be necessary to delete one of the existing accounts to log in to a new one.
 
 ![](resources/images/capture-app-image187.png){ width=25%}
 ![](resources/images/capture-app-image188.png){ width=25%}
@@ -224,7 +224,7 @@ You can also open the sync errors log from **Settings**:
 
 ## Refresh data (New 2.6) { #capture_app_generic_refresh_data }
 
-A refresh button is now located to trigger a granular synchronization in the following screens:
+Users can now retrieve the latest data from the server before entering new data. A refresh button is now located to trigger a granular synchronization in the following screens:
 
 * Home
 * Search
@@ -349,12 +349,12 @@ This feature is for administrators. The Android App incorporates an option in th
 ![](resources/images/capture-app-image188.png){ width=25%}
 ![](resources/images/capture-app-image195.png){ width=25%}
 
-* **Language:** the user will be able to change the language of the application user interface to identify lables, buttons or prompts with errors or without translation.
+* **Language:** the user will be able to change the language of the application user interface to identify labels, buttons or prompts with errors or without translation.
 
 ![](resources/images/capture-app-image196.png){ width=25%}
 ![](resources/images/capture-app-image197.png){ width=25%}
 
-* **Program rule validation:** this validator will check the program rules in the device and display configuration inconsitencies.
+* **Program rule validation:** this validator will check the program rules in the device and display configuration inconsistencies.
 
 ![](resources/images/capture-app-image198.png){ width=25%}
 ![](resources/images/capture-app-image199.png){ width=25%}
