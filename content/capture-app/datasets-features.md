@@ -6,7 +6,7 @@ Use the navigation bar located at the bottom of the data set to switch between t
 
 ![](resources/images/capture-app-image139.png){ width=25%}
 
-### Overview Screen { #capture_app_data_sets_overview_screen }
+### Overview Screen (Improved 2.6) { #capture_app_data_sets_overview_screen }
 
 The new overview tab contains the following details:
 
@@ -16,6 +16,7 @@ The new overview tab contains the following details:
 - Period
 - Org Unit
 - Category option combo
+- Refresh button (To trigger a granular synchronization)
 
 ![](resources/images/capture-app-image122.png){ width=25%}
 
@@ -41,11 +42,11 @@ Validation rules and completion of data sets are integrated in the save button a
 
 - If the data set does not have validation rules, the data set will be marked as complete if all mandatory fields have value.
 
-### Increase Row Headers { #capture_app_data_sets_row }
+### Increase Row Headers (Improved 2.6) { #capture_app_data_sets_row }
 
-The length of the first column in data set is adjusted to show the full text for the Data Elements names. Users can use the arrows on the top to adjust the width according to their needs.
+The length of the first column in data set is adjusted to show the full text for the Data Elements names. Users can use the arrows on the top to adjust the width according to their needs. This redimensioning arrows are now fixed at the upper-left corner of the screen.
 
-![](resources/images/capture-app-image113.png){ width=25%}
+![](resources/images/capture-app-image139.png){ width=25%}
 
 ### Indicators { #capture_app_data_sets_indicators }
 

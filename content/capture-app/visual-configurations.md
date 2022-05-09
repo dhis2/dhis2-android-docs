@@ -1,6 +1,6 @@
 # Visual configurations { #capture_app_visual }
 
-##  Local Analytics (New 2.5)
+##  Local Analytics
 
 The DHIS2 Android App can now render analytics that have been created in the Data Visualizer app in DHIS2. Analytics to be displayed require to be configured using the Android Settings WebApp where administrators will be able to decide the charts and tables to be displayed for end users.
 
@@ -49,6 +49,14 @@ Users can also change The anlytics type between chart, table or single value.
 ![](resources/images/capture-app-image166.png){ width=25%}
 ![](resources/images/capture-app-image171.png){ width=25%}
 
+### Legends (New 2.6) { #capture_app_visual_pivot_legends }
+
+Legends are displayed in pivot tables by enabling the feature "Use legends for chart color" in the Data Visualizer App.
+
+The Android app will color the cells using either the pre-defined legend per data item or a single legend for the entire pivot table, depending on the settings in Web.
+
+![](resources/images/capture-app-image183.png){ width=25%}
+
 ### Groups
 
 All these visualizations can be organised and displayed in groups. Groups are also configured using the Android Settings Webapp following the steps below:
@@ -81,7 +89,7 @@ Since the aggregations and calculations displayed are calculated in the device, 
 
 There are many more restrictions which apply to Android Analytics regarding the many configuration options available in the Web Visualizer as well as the supported functions and calculations related to indicators and program indicators. [This table](https://docs.google.com/spreadsheets/d/1127cz7M0K4fux5CU0V54V2Z77NZWCr0BTrZ6jcCec4Q) summarises all supported features. 
 
-## Interface language (New 2.5)
+## Interface language
 
 The language of the interface will corespond to the language set in the DHIS2 user configuration. If the language is not available in the app, it will pick the language of the device. 
 
@@ -131,7 +139,7 @@ You can set the generic theme of the app by configuring the them in our server:
 >
 >![](resources/images/capture-app-image23.png){ width=25%}
 
-## Icon library for metadata { #capture_app_visual_icon_lib }
+## Icon library for metadata (Improved 2.6) { #capture_app_visual_icon_lib }
 
 There are currently 134 icons available that you can choose from. You can search by name in the icon picker widget. Icons are available in positive, negative and outlined shapes. We will be adding many more icons in future releases.
 
@@ -143,7 +151,9 @@ Icons can be associated to programs, stages, data elements and the options of an
 
 ![](resources/images/capture-app-image13.png){ .center width=80% }
 
-In the DHIS2 Android App icons render in the home screen to illustrate all the programs available to a user, or while adding an stage. For data elements and options, the icons render for single event programs, when a section contains a single DE, showing the option set as a matrix or sequence of images.
+In the DHIS2 Android App icons render in the home screen to illustrate all the programs available to a user, or while adding an stage. For data elements and options, the icons render for single event programs, when a section contains a single or more DEs, showing the option set as a matrix or sequence of images.
+
+The icon based data entry can now be used in enrollment forms. When an enrollment section contains one or more Tracked Entity Attributes with option sets and icons assigned, the app is able to display them as a matrix or sequence based on the section rendering type. In previous sections of the App this feature was only available for Data elements.
 
 ![](resources/images/capture-app-image19.png){ width=25%}
 ![](resources/images/capture-app-image26.png){ width=25%}
@@ -170,12 +180,12 @@ In the Android App, the color will be rendered as background color for programs 
 >
 > Colours will first be available in the new Android app, followed in future releases by the new web-based Capture App.
 
-## Rendering Types for Program Sections (Improved 2.5) { #capture_app_visual_rendering_type }
+## Rendering Types for Program Sections (Improved 2.6) { #capture_app_visual_rendering_type }
 
 
 ![](resources/images/capture-app-image16.png){width=80% }
 
-**Program Section**: when used in combination with icons, a Program Section with a single data element and associated Option Set can render the options in sequential or matrix layout (see screenshots). If the icon is not found, the app displays the DHIS logo.
+**Program Section**: when used in combination with icons, a Program Section with one or more data elements and associated Option Sets can render the options in sequential or matrix layout (see screenshots). If the icon is not found, the app displays the DHIS logo.
 
 ![](resources/images/capture-app-image26.png){ width=25%}
 ![](resources/images/capture-app-image36.png){ width=25%}
@@ -203,11 +213,11 @@ This is available when:
 > 
 > For Android versions 4.4,  5.1 and small devices, the Accept option is not visible in the second calendar view.
 
-## Render types { #capture_app_visual_render }
+## Render types (Improved 2.6) { #capture_app_visual_render }
 
 The available rendering options have been expanded to include horizontal and vertical radio buttons, checkboxes and toggles. The allowed options depend on the value type.
 
-- Yes Only: can be rendered as radio button or checkbox.
+- Yes Only: can be rendered as radio button or checkbox. From 2.6 the label 'Yes' next to the checkbox or radio button has been removed.
   
 - Yes/No: can be rendered as horizontal/vertical radio buttons or horizontal/vertical checkboxes or toggle.
   
@@ -221,8 +231,9 @@ The available rendering options have been expanded to include horizontal and ver
 > 
 > ![](resources/images/options_no_search.png){ width=25% } ![](resources/images/options_search.png){ width=60% }
 
+Render types are available in event and registration forms
 
-### QR and Barcodes (Improved 2.5) { #capture_app_visual_render_qr }
+### QR and Barcodes (Improved 2.6) { #capture_app_visual_render_qr }
 
 
 Data elements or attributes type text can be also configured as QR or barcodes. When a Data Element or Attribute is rendered as QR/Barcode, the app will open the device camera to read the code image. When the QR/Barcode is a TEI attribute configured as searchable, the user will be allowed to scan the code in order to search and identify the Tracked Entity Instance. This will also work for option sets.
@@ -234,9 +245,21 @@ Barcodes also allow the user to manually enter the value.
 ![](resources/images/capture-app-image120.png){ width=20%}
 ![](resources/images/capture-app-image121.png){ width=20%}
 
-#### Export/Share
+
+#### Export/Share (Improved 2.6)
 
 Users are now able to display a bar or QR code in an image so that it can be shared for printing, take a screenshot or show it on the screen for scanning.
 
+Non-editable fields can still share the bar or QR code, but will prevent the user from capturing a new one.
+
 ![](resources/images/capture-app-image181.png){ width=20%}
 ![](resources/images/capture-app-image174.png){ width=20%}
+
+#### GS1 Data Matrix codes (New 2.6) { #capture_app_visual_gs1 }
+
+If an attribute or data element rendering type is configured as QR code, the Android App will be able to read and process the string as GS1 Data Matrix codes.
+
+Combined with the use of d2 functions in program rules, the different fields of a GS1 code can be saved into different data elements or attributes (d2:extractDataMatrixValue(key, dataMatrixText)).
+
+![](resources/images/capture-app-image184.png){ width=20%}
+![](resources/images/capture-app-image200.png){ width=20%}
