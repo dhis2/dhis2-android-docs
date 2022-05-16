@@ -195,8 +195,8 @@ Consider the following:
 
 | Program Rule Condition(s) | Program Rule Action(s) | Web version | Android version | Comment |
 | ----------- | ----------- | :---: | :---: | ----- |
-| !d2:validatePattern(#{temperature_prv},'\\{d}') | Display error if value is not 2 digits | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-negative.png) | The user would expect the program rule to NOT show an error as 38 does match the pattern. However, Android attempts to validate the pattern \\{d} against 38.0 resulting in Android displaying the error. |
-| !d2:validatePattern(#{temperature_prv},'(\\d{2}|\\d{2}\\.\\d|\\d{2}\\.\\d{2})$') | Display error if value is not 2 digits | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-complete.png) | The regular expression used here will match both integeres and floats resulting in being properly evaluated in web and Android and not displaying an error. |
+| !d2:validatePattern(#{temperature_prv},'\\\\{d}') | Display error if value is not 2 digits | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-negative.png) | The user would expect the program rule to NOT show an error as 38 does match the pattern. However, Android attempts to validate the pattern \\{d} against 38.0 resulting in Android displaying the error. |
+| !d2:validatePattern(#{temperature_prv},'(\\\\d{2}\|\\\\d{2}\\\\.\\\\d\|\\\\d{2}\\\\.\\\\d{2})$') | Display error if value is not 2 digits | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-complete.png) | The regular expression used here will match both integeres and floats resulting in being properly evaluated in web and Android and not displaying an error. |
 
 ## Changes in Program Rules (as from version 2.2 of the app) { #capture_app_pr_changes }
 
