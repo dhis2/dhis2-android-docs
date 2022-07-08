@@ -61,7 +61,7 @@ By default, the DHIS2 Android App database is not encrypted, but an admin can ch
 > By default, the Android app database is not encrypted, but an admin can check the *Encrypt device database* to encrypt the metadata and data stored in every device. Encrypting the database will have an impact on the database volume and performance of the Android app. Note that at the moment of selecting or unselecting this option, no data is lost (even if it hasn't been previously synchronized with the server)
 
 ### Allow screenshots
-This section allows to configure the possibility to take screenshots or screen sharing using the Android Capture App. Please note that the default behavior is deactivated screenshots.
+This section allows to configure the possibility to take screenshots or screen sharing using the Android Capture App (which is required to remote support with applications like Teamviewer, Teams, etc). Please note that the default behavior is deactivated screenshots.
 
 > **Warning**
 >
