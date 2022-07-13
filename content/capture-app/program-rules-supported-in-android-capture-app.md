@@ -91,14 +91,14 @@ The following is a comprehensive list of all Program Rule components (variable t
 | d2:count   | Counts the number of values that is entered for the source field in the argument.      | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:countIfValue     | Counts the number of matching values that is entered for the source field in the first argument. Only occurrences that matches the second argument is counted. | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:countIfZeroPos   | Counts the number of values that is zero or positive entered for the source field in the argument. The source field parameter is the name of one of the defined source fields in the program.      | ![](/en/resources/images/admin/icon-complete.png)    | |
-| d2:hasValue         | Returns the number of numeric zero and positive values among the given object arguments. Can be provided with any number of arguments.       | ![](/en/resources/images/admin/icon-complete.png)    | |
+| d2:hasValue         | Evaluates to true of the argument source field contains a value, false if no value is entered.       | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:validatePattern  | Evaluates to true if the input text is an exact match with the supplied regular expression pattern. The regular expression needs to be escaped.       | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:left    | Evaluates to the left part of a text, num-chars from the first character.     | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:right   | Evaluates to the right part of a text, num-chars from the last character.     | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:substring        | Evaluates to the part of a string specified by the start and end character number.     | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:split   | Split the text by delimiter, and keep the nth element (0 is the first).       | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:length  | Find the length of a string.     | ![](/en/resources/images/admin/icon-complete.png)    | |
-| d2:zpvc    | Returns the number of numeric zero and positive values among the given object arguments. Can be provided any number of arguments.   | ![](/en/resources/images/admin/icon-complete.png)    | |
+| d2:zpvc    | Returns the number of numeric zero and positive values among the given object arguments. Can be provided with any number of arguments.   | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:inOrgUnitGroup\* | Evaluates whether the current organization unit is in the argument group. The argument can be defined with either ID or organization unit group code. | ![](/en/resources/images/admin/icon-complete.png) | |
 | d2:hasUserRole\** |Returns true if the current user has this role otherwise false.| ![](/en/resources/images/admin/icon-complete.png) | |
 | d2:zScoreWFA\*** |Function calculates z-score based on data provided by WHO weight-for-age indicator. Its value varies between -3.5 to 3.5 depending upon the value of weight.| ![](/en/resources/images/admin/icon-complete.png) | |
