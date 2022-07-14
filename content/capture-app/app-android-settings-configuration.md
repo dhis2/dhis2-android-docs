@@ -119,10 +119,18 @@ TEI download period
 :	It downloads the TEIs that have been updated within a period. e.g. TEIs that have been updated within last month
 
 Event to download
-:	Maximum number of Events to download.
+:	Maximum number of Events to download (from events programs, see note below).
 
 Event download period
 :	It downloads Events which event date belongs to a specific period.
+
+> **Note**
+>
+> User might find misleading the amount of data downloaded When setting a number of TEIs and a number of Event. The Android App will download the number of TEIs and all their events following the number of TEI set in the field. The Android App will limit the number of Event to download only for the *event programs* (and not *tracker programs*) according to the field. 
+>
+> For example, imagine there is *tracker program* in the server with several program stages and each TEI has 5 events (enrollments and program stages). The *TEI to download* value is set to 100. Also, in the server there is an *event program* which contains 1000 events. The *Event to download" value has been set to 200. The Android App will download the following: 100 x 5 events from the tracker program, 200 events from the event program, therefore the Android App will end up downloading 700 events.
+>
+
 
 #### Specific settings { #capture_app_android_settings_webapp_synchronization_program_specific }
 
