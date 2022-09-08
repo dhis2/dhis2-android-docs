@@ -3,7 +3,7 @@
 ## How to report a bug { #capture_app_contribute_report }
 
 
-First of all, please check the [List of already reported bugs in JIRA](https://jira.dhis2.org/issues/?filter=10872)
+First of all, please check the [List of already reported bugs in JIRA](https://dhis2.atlassian.net/issues/?filter=10252)
 
 The list is always updated as you add new bugs and we work on them. You need an active, free DHIS 2 Jira account.
 
