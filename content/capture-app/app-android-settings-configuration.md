@@ -49,9 +49,6 @@ To find this configuration in the Android app:
 ![](resources/images/capture-app-reserved-values.png){width=33%}
 ![](resources/images/capture-app-reserved-values-refill.png){width=33%}
 
-### Message of the day (**New 2.2.1**)
-It is a message displayed to the user after logging in. It can be used as a way to communicate with users in order to display important information like: the privacy policy of the server, the Application version supported, news, etc.
-
 ### Encrypt device database
 This will force all the devices to store the database encrypted increasing the security level against data theft attacks.
 
