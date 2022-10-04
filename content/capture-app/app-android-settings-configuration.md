@@ -342,6 +342,16 @@ To create a **Home** item:
 > ![](resources/images/capture-app-analytics-default-group.png)
 >
 
+To edit the title of a **Home** item (**New 2.2.1**):
+
+1. Search for the item by expanding the groups.
+2. Click the "Edit" button next to the item's name.
+3. A pop-up with only the visualization title available will be available, the other fields will be disabled. If wanted change the visualization title.
+4. Click on the "Save" button.
+
+![](resources/images/capture-app-analytics-home-editVisualization.png)
+
+
 To remove a **Home** item:
 
 1. Search for the item by expanding the groups
@@ -387,6 +397,15 @@ To create a **Program** item:
 
 ![](resources/images/capture-app-analytics-program-add.png)
 
+To edit the title of a **Program** item (**New 2.2.1**):
+
+1. Search for the item by expanding the groups.
+2. Click the "Edit" button next to the item's name.
+3. A pop-up with only the visualization title available will be available, the other fields will be disabled. If wanted change the visualization title.
+4. Click on the "Save" button.
+
+![](resources/images/capture-app-analytics-program-editVisualization.png)
+
 To remove a **program** item:
 
 1. Search for the item by expanding the program and group
@@ -431,6 +450,15 @@ To create a **Data Set** item:
 6. Click on the "Save" button.
 
 ![](resources/images/capture-app-analytics-dataset-add.png)
+
+To edit the title of a **Data set** item (**New 2.2.1**):
+
+1. Search for the item by expanding the groups.
+2. Click the "Edit" button next to the item's name.
+3. A pop-up with only the visualization title available will be available, the other fields will be disabled. If wanted change the visualization title.
+4. Click on the "Save" button.
+
+![](resources/images/capture-app-analytics-dataset-editVisualization.png)
 
 To remove a **Data Set** item:
 
@@ -495,16 +523,24 @@ Since the aggregations and calculations displayed are calculated in the device, 
 
 There are many more restrictions which apply to Android Analytics regarding the many configuration options available in the Web Visualizer as well as the supported functions and calculations related to indicators and program indicators. [This table](https://docs.google.com/spreadsheets/d/1127cz7M0K4fux5CU0V54V2Z77NZWCr0BTrZ6jcCec4Q) summarises all supported features.
 
+> **Note (**New 2.2.1**):**
+>
+> When searching for a visualization to add as part of the Analytics visualizations, all visualizations will be listed, but visualizations that don't meet the above restrictions will be disabled. 
+>
+> ![](resources/images/capture-app-analytics-visualization-search.png)
+>
+
 
 ## Installation { #capture_app_android_settings_webapp_installation }
 
 A user can easily install the Android Settings Web App by logging into the DHIS2 and going to **App Management**.
 
-- Click on **App Store**
+- Click on **App Hub**
 - Go to *Android Settings App*
 - Click on *Install V2.X.X*
 
 ![](resources/images/capture-app-app-hub-install.png)
+![](resources/images/capture-app-app-hub-install-webapp.png)
 
 
 ## Log in and first time setup { #capture_app_android_settings_webapp_login }
