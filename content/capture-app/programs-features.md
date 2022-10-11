@@ -38,9 +38,9 @@ The bottom navigation bar also allows switching the visualization mode if the ev
 ![](resources/images/capture-app-image143.jpg){ width=25%}
 ![](resources/images/capture-app-image144.jpg){ width=25%}
 
-### Data Entry Flow (Improved 2.6) { #capture_app_common_features_Data_flow }
+### Data Entry Flow { #capture_app_common_features_Data_flow }
 
-#### Complete/Re-open event (Improved 2.6) { #capture_app_common_features_complete_reopen }
+#### Complete/Re-open event { #capture_app_common_features_complete_reopen }
 
 When adding an event to an event program or inside a tracker program the user should fill the information and scroll down to make the *save* icon appear at the bottom right corner.
 
@@ -68,7 +68,7 @@ To re-open an event, the app now displays a "Re-open form" button in the Details
 
 ![](resources/images/capture-app-image202.png){ width=25%}
 
-#### Discard changes (New 2.6) { #capture_app_programs_common_features_discard_changes }
+#### Discard changes { #capture_app_programs_common_features_discard_changes }
 
 Tapping the back arrow in an enrollment or event form now provide two options:
 
@@ -99,7 +99,7 @@ The sections can be collapsed for a simpler user experience.  Sections in enroll
 ![](resources/images/capture-app-image115.png){ width=25%}
 ![](resources/images/capture-app-image116.png){ width=25%}
 
-#### Error messages (Improved 2.6) { #capture_app_programs_common_features_errors }
+#### Error messages { #capture_app_programs_common_features_errors }
 
 The app will list the name of the mandatory fields missing when the user tries to complete an event or enrollment. The sections containing the missing fields will be highlighted to help the user find the missing fields.
 
@@ -202,6 +202,19 @@ Legends can be assigned to Data Elements and they will be displayed next to valu
 
 ![](resources/images/capture-app-image155.png){ width=25%}
 
+### Data Entry Form (Improved 2.7)  { #capture_app_programs_common_features_data_entry_form }
+
+#### Hint messages (Improved 2.7)
+
+The input fields will display had a hint message saying "Insert value here" which will remain until a value is entered by the user.
+
+![](resources/images/capture-app-image209.png){ width=25%}
+
+#### Navigation button (New 2.7)
+
+In forms with multiple sections, the App includes a "Next" button at the end of each section which calls the user to action. The funtion of the button is to close the current section and open the new one.
+
+![](resources/images/capture-app-image210.png){ width=25%}
 
 ## Event Programs specific features { #capture_app_programs_events }
 
@@ -229,7 +242,9 @@ In tracker programs, the user can see relationships on a map by tapping the map 
 
 ![](resources/images/capture-app-image132.png){ width=50%}
 
-### TEI Dashboard navigation panel 
+### TEI Dashboard (Improved 2.7) { #capture_app_programs_TEI_Dashboard }
+
+#### Navigation panel
 
 To simplify and personalize the user experience, the user interface actions offered to the user at the TEI dashboard will be tailored to the specific configuration of each  program.
 
@@ -237,6 +252,22 @@ To simplify and personalize the user experience, the user interface actions offe
 * "Create event" button will be hidden when the user cannot create more events based on tracker configuration.
 * The Indicator tab will not be visible if the program has no program indicators configured.
 * Organisation Unit filter will not be visible if the user has only one Organisation Unit configured.
+
+#### Creating A Stage (Improved 2.7)
+
+To create a new event, the user needs to tap on the plus icon on the stage card. This icon is always visible unless the stage is non-repeatable and already created.
+
+When the user taps on the button, that program stage will unfold showing to the user all the already existing events of that particular program stage
+
+![](resources/images/capture-app-image211.png){ width=50%}
+
+If the user is creating a new stage and there is only one option based on the program configuration, the available program stage is selected automatically and program stage selection step is skipped.
+
+#### Share a TEI (Improved 2.7)
+
+The "Share" button has been removed from the TEI dashboard and the functionality to share a TEI through QR code has been relocated on the three vertical dot menu, at the top right corner of the screen.
+
+![](resources/images/capture-app-image212.png){ width=50%}
 
 ### TEI Card Design { #capture_app_programs_tei_design }
 
@@ -265,7 +296,7 @@ To complete or deactivate an enrollment, click on three dot menu in the uppper r
 
 ### Search Flow { #capture_app_programs_search }
 
-#### Configurable TEI Search (New 2.6) { #capture_app_programs_configurable_search }
+#### Configurable TEI Search { #capture_app_programs_configurable_search }
 
 Searching TEIs before creating is not mandatory now. Using the Android Settings App (v2.2.0) it is possible to configure the mandatoriness of the TEI search before creating an enrollment. Follow the steps below to enable the creation of TEIs without searching:
 
@@ -279,7 +310,7 @@ If the feature is enabled, the Android App will display a "create new" button af
 
 ![](resources/images/capture-app-image204.png){ width=25%}
 
-#### Offline and Online Search  (New 2.6) { #capture_app_programs_offline_online_search }
+#### Offline and Online Search { #capture_app_programs_offline_online_search }
 
 To improve the response time in the search results, the Android App now searches offline first and displays the results while making an online search as a second step, transparent to the user.
 
@@ -351,7 +382,7 @@ When creating a new TEI for a relationship, inherit any program attribute marked
 
 This means that any existing attributes in the first TEI should have pass to the new TEI and be shown in the registration form.
 
-### Breaking the glass (Improved 2.6) { #capture_app_programs_breaking_the_glass }
+### Breaking the glass { #capture_app_programs_breaking_the_glass }
 
 The "breaking the glass" feature is now supported in DHIS2 Android Capture App. If the program is configured with an access level of "Protected" and a search is done outside the user scope, a dialog requesting a reason for access will be displayed for the user to temporarily override the ownership privilege of the proram. This means, the user will gain access to the program related data.
 
@@ -378,7 +409,11 @@ The Nutrition Growth charts are shown according to the WHO standards.  This opti
 
 3. Tables: It will display the data elements or indicators in the rows and the periods in the columns.
 
-![](resources/images/capture-app-image160.png){ width=25%} 
+![](resources/images/capture-app-image160.png){ width=25%}
+
+### Referrals (Improved 2.7) { #capture_app_programs_referrals }
+
+when a user makes a permanent referral of a TEI, the ownership will be updated accordingly on the server.
 
 ## Supported features Overview { #capture_app_programs_supported_features }
 
