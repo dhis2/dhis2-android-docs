@@ -49,11 +49,13 @@ Users can also change The anlytics type between chart, table or single value.
 ![](resources/images/capture-app-image166.png){ width=25%}
 ![](resources/images/capture-app-image171.png){ width=25%}
 
-### Legends (New 2.6) { #capture_app_visual_pivot_legends }
+### Legends (Improved 2.7) { #capture_app_visual_pivot_legends }
 
 Legends are displayed in pivot tables by enabling the feature "Use legends for chart color" in the Data Visualizer App.
 
 The Android app will color the cells using either the pre-defined legend per data item or a single legend for the entire pivot table, depending on the settings in Web.
+
+The style for legends in tables has a new design which ensures good contrast and visibility independently from the selected colour for the legend.
 
 ![](resources/images/capture-app-image183.png){ width=25%}
 
@@ -72,7 +74,7 @@ You can name your different groups, they will be displayed as a button in the to
 
 ![](resources/images/capture-app-image173.png){ width=25%}
 
-### Limitations
+### Limitations (Improved 2.7)
 
 Android uses tables and charts created using the web Visualizer app, however only the configuration parameters of the object are used by the Android App: data elements, indicators, chart type, title, periods...; all the aggregations are calculated offline by the android application. The results will be based on the data stored in the device at that exact moment. 
 
@@ -87,7 +89,13 @@ Since the aggregations and calculations displayed are calculated in the device, 
       - Number of Series: No limit (but remember you are rendering in a small screen)
       - Number of Categories (doesn’t apply for pie chart): No limit
 
-There are many more restrictions which apply to Android Analytics regarding the many configuration options available in the Web Visualizer as well as the supported functions and calculations related to indicators and program indicators. [This table](https://docs.google.com/spreadsheets/d/1127cz7M0K4fux5CU0V54V2Z77NZWCr0BTrZ6jcCec4Q) summarises all supported features. 
+There are many more restrictions which apply to Android Analytics regarding the many configuration options available in the Web Visualizer as well as the supported functions and calculations related to indicators and program indicators. [This table](https://docs.google.com/spreadsheets/d/1127cz7M0K4fux5CU0V54V2Z77NZWCr0BTrZ6jcCec4Q) summarises all supported features.
+
+> **Note**
+>
+> The following aggreagation functions are supported now in local analytics: LAST, FIRST, AVERAGE_SUM_ORG_UNIT, LAST_AVERAGE_ORG_UNIT, LAST_IN_PERIOD, LAST_IN_PERIOD_AVERAGE_ORG_UNIT, FIRST_AVERAGE_ORG_UNIT
+> 
+> 
 
 ## Interface language
 
@@ -139,7 +147,7 @@ You can set the generic theme of the app by configuring the them in our server:
 >
 >![](resources/images/capture-app-image23.png){ width=25%}
 
-## Icon library for metadata (Improved 2.6) { #capture_app_visual_icon_lib }
+## Icon library for metadata { #capture_app_visual_icon_lib }
 
 There are currently 134 icons available that you can choose from. You can search by name in the icon picker widget. Icons are available in positive, negative and outlined shapes. We will be adding many more icons in future releases.
 
@@ -180,7 +188,7 @@ In the Android App, the color will be rendered as background color for programs 
 >
 > Colours will first be available in the new Android app, followed in future releases by the new web-based Capture App.
 
-## Rendering Types for Program Sections (Improved 2.6) { #capture_app_visual_rendering_type }
+## Rendering Types for Program Sections { #capture_app_visual_rendering_type }
 
 
 ![](resources/images/capture-app-image16.png){width=80% }
@@ -213,7 +221,7 @@ This is available when:
 > 
 > For Android versions 4.4,  5.1 and small devices, the Accept option is not visible in the second calendar view.
 
-## Render types (Improved 2.6) { #capture_app_visual_render }
+## Render types { #capture_app_visual_render }
 
 The available rendering options have been expanded to include horizontal and vertical radio buttons, checkboxes and toggles. The allowed options depend on the value type.
 
@@ -233,7 +241,7 @@ The available rendering options have been expanded to include horizontal and ver
 
 Render types are available in event and registration forms
 
-### QR and Barcodes (Improved 2.6) { #capture_app_visual_render_qr }
+### QR and Barcodes { #capture_app_visual_render_qr }
 
 
 Data elements or attributes type text can be also configured as QR or barcodes. When a Data Element or Attribute is rendered as QR/Barcode, the app will open the device camera to read the code image. When the QR/Barcode is a TEI attribute configured as searchable, the user will be allowed to scan the code in order to search and identify the Tracked Entity Instance. This will also work for option sets.
@@ -246,7 +254,7 @@ Barcodes also allow the user to manually enter the value.
 ![](resources/images/capture-app-image121.png){ width=20%}
 
 
-#### Export/Share (Improved 2.6)
+#### Export/Share
 
 Users are now able to display a bar or QR code in an image so that it can be shared for printing, take a screenshot or show it on the screen for scanning.
 
@@ -255,7 +263,7 @@ Non-editable fields can still share the bar or QR code, but will prevent the use
 ![](resources/images/capture-app-image181.png){ width=20%}
 ![](resources/images/capture-app-image174.png){ width=20%}
 
-#### GS1 Data Matrix codes (New 2.6) { #capture_app_visual_gs1 }
+#### GS1 Data Matrix codes { #capture_app_visual_gs1 }
 
 If an attribute or data element rendering type is configured as QR code, the Android App will be able to read and process the string as GS1 Data Matrix codes.
 
@@ -263,3 +271,9 @@ Combined with the use of d2 functions in program rules, the different fields of 
 
 ![](resources/images/capture-app-image184.png){ width=20%}
 ![](resources/images/capture-app-image200.png){ width=20%}
+
+### Tappable areas in icons and buttons (Improved 2.7) { #capture_app_visual_tappable_areas }
+
+Some buttons or tappable labels of the Android App had small sensitive areas for the user to tap. The whole user interface was reviewed and the tappable areas has been increased. For example the "+" button to create a new stage or the "˅" icon to open TEI details or expand a section.
+
+![](resources/images/capture-app-image208.png){ width=20%}

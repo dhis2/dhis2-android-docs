@@ -1,12 +1,21 @@
 # Data sets { #capture_app_datsets }
 
+### Data Entry  (Improved 2.7){#capture_app_data_sets_data_entry}
+
+While entering data the new text input dialog opens an input field above the keyboard which shows the Data Element name, and category options of the field being selected, ensuring the user does not lose context when navigating the tables.
+
+![](resources/images/capture-app-image213.png){ width=25%}
+
+![](resources/images/capture-app-image214.png){ width=25%}
+
+
 ### Navigation Bar { #capture_app_data_sets_navigation_bar }
 
 Use the navigation bar located at the bottom of the data set to switch between the data entry form and the overview screen.
 
 ![](resources/images/capture-app-image139.png){ width=25%}
 
-### Overview Screen (Improved 2.6) { #capture_app_data_sets_overview_screen }
+### Overview Screen { #capture_app_data_sets_overview_screen }
 
 The new overview tab contains the following details:
 
@@ -42,11 +51,11 @@ Validation rules and completion of data sets are integrated in the save button a
 
 - If the data set does not have validation rules, the data set will be marked as complete if all mandatory fields have value.
 
-### Increase Row Headers (Improved 2.6) { #capture_app_data_sets_row }
+### Increase Row Headers (Update 2.7) { #capture_app_data_sets_row }
 
-The length of the first column in data set is adjusted to show the full text for the Data Elements names. Users can use the arrows on the top to adjust the width according to their needs. This redimensioning arrows are now fixed at the upper-left corner of the screen.
+The resizing of the header column has been removed due to a refactor of the data set tables.
 
-![](resources/images/capture-app-image139.png){ width=25%}
+A new feature will be included in a future patch version in which users will be able to resize any column of the table.
 
 ### Indicators { #capture_app_data_sets_indicators }
 
