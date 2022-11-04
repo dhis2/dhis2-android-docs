@@ -181,7 +181,7 @@ The sorting button will be on the filter bars with the following behavior:
 
 ## Sync Information { #capture_app_generic_sync_info }
 
-### Login Sync (New 2.7){#capture_app_generic_login_sync}
+### Login Sync (New 2.7) {#capture_app_generic_login_sync}
 
 During the metadata download, the app will remain in the splash screen and will open the home screen once the metadata is in the device.
 
@@ -196,7 +196,7 @@ The user will be able to see how many programs are downloading data, or complete
 
 **NOTE:** All programs and data sets will be blocked until the sync process is fully finished.
 
-### Subsequent logins (New 2.7){#capture_app_generic_subsequent_login}
+### Subsequent logins (New 2.7) {#capture_app_generic_subsequent_login}
 
 The application will launch a sync process for data and metadata only for the first time the user logs in. In order to facilitate the work in the most difficult cases, the sync process have been removed for the subsequent logins. This means that when the user opens the app, it will open without performing a full sync even if the user logs out of the account.
 
