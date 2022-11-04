@@ -1,6 +1,6 @@
 # Data sets { #capture_app_datsets }
 
-### Data Entry  (Improved 2.7){#capture_app_data_sets_data_entry}
+### Data Entry  (Improved 2.7) {#capture_app_data_sets_data_entry}
 
 While entering data the new text input dialog opens an input field above the keyboard which shows the Data Element name, and category options of the field being selected, ensuring the user does not lose context when navigating the tables.
 
