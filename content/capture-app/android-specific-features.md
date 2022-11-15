@@ -28,6 +28,19 @@ After a succesful login the user should be able to perform an *offline* login on
 >
 > Due to a change in the login API this feature is not available in 2.31, 2.32, 2.33, 2.34, 2.35 and 2.36.
 
+## Offline Multi-user { #capture_app_generic_multiuser}
+
+The Android app can now work with up to 3 different users while being offline. The users will need to have access to the internet for the first login of each account and will be able to switch accounts after without requiring access to the Internet.
+
+![](resources/images/capture-app-image185.png){ width=25%}
+![](resources/images/capture-app-image186.png){ width=25%}
+
+The users will be able to manage the user accounts and delete accounts if needed. When the maximum number of accounts is reached, it will be necessary to delete one of the existing accounts to log in to a new one.
+
+![](resources/images/capture-app-image187.png){ width=25%}
+![](resources/images/capture-app-image188.png){ width=25%}
+![](resources/images/capture-app-image189.png){ width=25%}
+![](resources/images/capture-app-image190.png){ width=25%}
 
 ## Account Recovery { #capture_app_generic_recovery }
 
@@ -98,7 +111,7 @@ Filter the Events, TEIs(based on their events) and data sets, the following peri
 - Other (Opens a date picker)
 - Anytime
 
-### Org. Unit (Improved 2.5) { #capture_app_generic_filter_orgunit }
+### Org. Unit { #capture_app_generic_filter_orgunit }
 
 Allows the user to type the search or select an organisation unit from the tree. The filter will not be visible if the user has only one Organisation Unit configured.
 
@@ -131,7 +144,7 @@ The 'Date of Enrollment' will apply to the Enrollment date of the TEI in the pro
 
 The filter 'Enrollment status' offers three options: Active, Completed, Cancelled. Only one option can be selected at time. If you filter by "completed" and the TEI has more than one enrollment, the app will open the "active"  enrollment. To see the completed one, select the three dot menu at the top right corner of the dashboard and select "program enrollments".
 
-### Follow-Up (New 2.5)
+### Follow-Up
 
 The 'Follow Up' filter allowes the user to filter out the TEIs that have been marked as 'Follow-up'. TEIs can be marked to be followed up in the TEI Dashbaord.
 
@@ -167,6 +180,31 @@ The sorting button will be on the filter bars with the following behavior:
 ![](resources/images/capture-app-image123.png){ width=25%}
 
 ## Sync Information { #capture_app_generic_sync_info }
+
+### Login Sync (New 2.7) {#capture_app_generic_login_sync}
+
+During the metadata download, the app will remain in the splash screen and will open the home screen once the metadata is in the device.
+
+In the home screen, the app will inform with a loading spinner on each program when the data is downloading. After the sync process finishes, the app will display one of the two possible icons:
+
+* A green checkmark if the program downloads data successfully and without errors (the icon will disappear after three seconds)  or,
+* A gray arrow if there is an error during the sync process and the total or partial data isn't donwloaded
+  
+The user will be able to see how many programs are downloading data, or completed, making the waiting process more transparent and informative about its progress.
+
+![](resources/images/capture-app-image207.png){ width=20%}
+
+**NOTE:** All programs and data sets will be blocked until the sync process is fully finished.
+
+### Subsequent logins (New 2.7) {#capture_app_generic_subsequent_login}
+
+The application will launch a sync process for data and metadata only for the first time the user logs in. In order to facilitate the work in the most difficult cases, the sync process have been removed for the subsequent logins. This means that when the user opens the app, it will open without performing a full sync even if the user logs out of the account.
+
+If the user deletes the account, then the next login will launch the sync process.
+
+Also, users have the option to sync with the server through the Refresh button any time they wish.
+
+### Sync Status {#capture_app_generic_sync_status}
 
 Next to each program or data set an icon will be displayed which allows the user to check sync information. Synced records will not show display any icon. Unsynced (grey arrows), error (red arrows), warning (orange) or SMS (blue and including the SMS word inside) icons are be displayed according to the status.
 
@@ -209,14 +247,31 @@ You can also open the sync errors log from **Settings**:
 
 ![](resources/images/capture-app-image15.jpg){ width=25%}
 
+## Refresh data { #capture_app_generic_refresh_data }
+
+Users can now retrieve the latest data from the server before entering new data. A refresh button is now located to trigger a granular synchronization in the following screens:
+
+* Home
+* Search
+* TEI dashboard
+* Event program listing
+* Event details
+* Data set listing
+* Data set details
+
+![](resources/images/capture-app-image19.png){ width=25%}
+![](resources/images/capture-app-image191.png){ width=25%}
+![](resources/images/capture-app-image192.png){ width=25%}
+![](resources/images/capture-app-image193.png){ width=25%}
 
 ## Org unit { #capture_app_generic_orgunit }
 
 ![](resources/images/capture-app-image30.png){ width=25%}
 
 The whole organisation unit tree is displayed. Organisation units not available for data entry will be colored in grey.
-User must check the box to select the org unit wanted.
+User must check the box to select the org unit wanted. After an organisation unit is selected, the parents will be marked in bold to show hint of the organisation unit selection when opening the hierarchy.
 
+![](resources/images/capture-app-image194.png){ width=25%}
 
 > **Caution**
 >
@@ -289,13 +344,13 @@ If the TEI has a profile image, the map will display it.
 
 ![](resources/images/capture-app-image103.png){ width=25%}
 
-## Personalized Calendar View (New 2.5)
+## Personalized Calendar View { #capture_app_personalized_calendar }
 
 In the DHIS2 Android Capture App users can switch date selection from spinner to calendar view. In this version, the app will remember the last visualization selected by the user and use it the next time the user needs to select a date.
 
 ![](resources/images/capture-app-image177.png){ width=25%}
 
-## Reason for non-editable data (New 2.5)
+## Reason for non-editable data { #capture_app_reason_non_editable }
 
 Data can be blocked for many reasons in DHIS2, because of access restrictions or expiration among others. When an Event, TEI or Data Set are not editable the user will be able to find the reason on the "Details" section.
 
@@ -311,3 +366,20 @@ The following list contains all possible reasons:
 
 ![](resources/images/capture-app-image178.png){ width=25%}
 ![](resources/images/capture-app-image179.png){ width=25%}
+
+## Configuration troubleshooting { #capture_app_configuration_troubleshooting }
+
+This feature is for administrators. The Android App incorporates an option in the settings screen for verifying some aspects of the DHIS2 configuration.
+
+![](resources/images/capture-app-image188.png){ width=25%}
+![](resources/images/capture-app-image195.png){ width=25%}
+
+* **Language:** the user will be able to change the language of the application user interface to identify labels, buttons or prompts with errors or without translation.
+
+![](resources/images/capture-app-image196.png){ width=25%}
+![](resources/images/capture-app-image197.png){ width=25%}
+
+* **Program rule validation:** this validator will check the program rules in the device and display configuration inconsistencies.
+
+![](resources/images/capture-app-image198.png){ width=25%}
+![](resources/images/capture-app-image199.png){ width=25%}

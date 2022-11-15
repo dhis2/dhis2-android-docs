@@ -32,9 +32,22 @@ Once you have your Matomo instance ready you should get the URLs and the project
 
 ### Mobile configuration
 This section allows admin users to edit the SMS gateway ad result sender phone number.
+This configuration can be found in the Android app.
+- Click on Settings
+- Click on SMS Settings
+
+![](resources/images/capture-app-sms-settings.png){width=33%}
 
 ### Reserved values
 This will specify the number of values per TEI attribute reserved to download in the devices. By default, the Android App reserves 100 Ids, but it is possible to add or reduce this number.
+
+To find this configuration in the Android app:
+- Click on Settings
+- Click on Reserved Values
+- To refill them click on *Manage Reserved Values*
+
+![](resources/images/capture-app-reserved-values.png){width=33%}
+![](resources/images/capture-app-reserved-values-refill.png){width=33%}
 
 ### Encrypt device database
 This will force all the devices to store the database encrypted increasing the security level against data theft attacks.
@@ -48,11 +61,12 @@ By default, the DHIS2 Android App database is not encrypted, but an admin can ch
 > By default, the Android app database is not encrypted, but an admin can check the *Encrypt device database* to encrypt the metadata and data stored in every device. Encrypting the database will have an impact on the database volume and performance of the Android app. Note that at the moment of selecting or unselecting this option, no data is lost (even if it hasn't been previously synchronized with the server)
 
 ### Allow screenshots
-This section allows to configure the possibility to take screenshots or screen sharing using the Android Capture App. Please note that the default behavior is deactivated screenshots.
+This section allows to configure the possibility to take screenshots or screen sharing using the Android Capture App (which is required to remote support with applications like Teamviewer, Teams, etc). Please note that the default behavior is deactivated screenshots.
 
 > **Warning**
 >
-> The DHIS2 Android App doesn´t allow taking screenshots (and capturing the screen from other apps) by default for  security and privacy recommendations. Allowing end users to take screenshots invalids this data protection measures. When a user takes a screenshot of private information, the image can be shared by any regular channel (email, WhatsApp, Telegram, Skype, etc...).
+> The DHIS2 Android App disables the possibility of taking screenshots (and capturing the screen from other apps) by default following security and privacy recommendations. Allowing screenshots might be useful for support and/or sharing purposes in same cases but make sure you understand the security and privacy implications of this setting before enabling it.
+>
 
 ### Disable all settings
 By clicking this button, the user will remove all Android configuration settings. No configuration will be applied to the Android App (if this is the case, the sync parameters applied are the ones defined in the Android Capture app).
@@ -72,16 +86,15 @@ Data sync
 :	Admin users can choose how often the data will sync. e.g. Syncing data every 6 hours.
 
 ![](resources/images/capture-app-sync-global.png){width=33%}
+![](resources/images/capture-app-sync-global-app.png){width=33%}
 
 
-Use the new Tracker Importer
+Use the new Tracker Importer (**New 2.2**)
 :	Admin users can choose which tracker importer endpoint will be used.
 
 > **Warning**
 >
-> This option is only available if the Android Settings Webapp is used from version 2.37 DHIS2 API onwards.
-> 
-> It is recommended to use this new tracker importer in a testing environment. 
+> This option is only available if the Android Settings Webapp is used from version 2.38 DHIS2 API onwards.
 >
 > By default, the Android app uses the legacy tracker importer */api/trackedEntityInstances* but an admin can check this option and the importer introduced in 2.37 */api/tracker* endpoint will be used.
 >
@@ -107,10 +120,18 @@ TEI download period
 :	It downloads the TEIs that have been updated within a period. e.g. TEIs that have been updated within last month
 
 Event to download
-:	Maximum number of Events to download.
+:	Maximum number of Events to download (from events programs, see note below).
 
 Event download period
 :	It downloads Events which event date belongs to a specific period.
+
+> **Note**
+>
+> User might find misleading the amount of data downloaded When setting a number of TEIs and a number of Event. The Android App will download the number of TEIs and all their events following the number of TEI set in the field. The Android App will limit the number of Event to download only for the *event programs* (and not *tracker programs*) according to the field. 
+>
+> For example, imagine there is *tracker program* in the server with several program stages and each TEI has 5 events (enrollments and program stages). The *TEI to download* value is set to 100. Also, in the server there is an *event program* which contains 1000 events. The *Event to download" value has been set to 200. The Android App will download the following: 100 x 5 events from the tracker program, 200 events from the event program, therefore the Android App will end up downloading 700 events.
+>
+
 
 #### Specific settings { #capture_app_android_settings_webapp_synchronization_program_specific }
 
@@ -202,7 +223,7 @@ These settings give control over the appearance of the data entry and list forms
 - Completion spinner: it turns on/off the completion spinner that shows the progress in the data entry form.
 
 These settings refer to visual components, so they must be consumed by the app.
-
+For more information about filters feel free to review filters [documentation](https://docs.dhis2.org/en/use/android-app/android-specific-features.html#capture_app_generic_filter). 
 
 ### Home screen { #capture_app_android_settings_webapp_appearance_home_screen }
 
@@ -227,13 +248,22 @@ This section allows to admin user to customize the filter and percentage complet
 
 - Click on *Add a Program Settings*, and a dialog will appear.
 - Click on the dropdown that will show a list of programs.
-- Clicking on a program will show the different filters to configure. The category combo filter depends on the category combo name. 
+- Clicking on a program will show the different filters to configure. The category combo filter depends on the category combo name.
 
 ![](resources/images/capture-app-appearance-program-specific.png){width=75%}
 
 If any specific settings have been saved, a table will summarize the particular configuration per program, and the options to edit or delete these settings. 
 
 ![](resources/images/capture-app-appearance-program-table.png){width=75%}
+
+The option "Show percentage (%) complete in Program toolbar" refers to: 
+![](resources/images/capture-app-appearance-programs-spinner.png){width=75%}
+
+**Search Tracked Entity (New 2.2)**
+
+Searching before entering a new TEI is mandatory to avoid possible duplicates, and the DHIS2 Android App has been designed as such. This new version gives the possibility to choose to keep this process or allow the user to create a TEI without searching first.
+By default, allowing the user to create a TEI without searching is disabled.
+
 
 
 ### Data set { #capture_app_android_settings_webapp_appearance_data }
@@ -321,6 +351,16 @@ To create a **Home** item:
 > ![](resources/images/capture-app-analytics-default-group.png)
 >
 
+To edit the title of a **Home** item (**New 2.2.1**):
+
+1. Search for the item by expanding the groups.
+2. Click the "Edit" button next to the item's name.
+3. A pop-up with only the visualization title available will be available, the other fields will be disabled. If wanted change the visualization title.
+4. Click on the "Save" button.
+
+![](resources/images/capture-app-analytics-home-editVisualization.png)
+
+
 To remove a **Home** item:
 
 1. Search for the item by expanding the groups
@@ -366,6 +406,15 @@ To create a **Program** item:
 
 ![](resources/images/capture-app-analytics-program-add.png)
 
+To edit the title of a **Program** item (**New 2.2.1**):
+
+1. Search for the item by expanding the groups.
+2. Click the "Edit" button next to the item's name.
+3. A pop-up with only the visualization title available will be available, the other fields will be disabled. If wanted change the visualization title.
+4. Click on the "Save" button.
+
+![](resources/images/capture-app-analytics-program-editVisualization.png)
+
 To remove a **program** item:
 
 1. Search for the item by expanding the program and group
@@ -410,6 +459,15 @@ To create a **Data Set** item:
 6. Click on the "Save" button.
 
 ![](resources/images/capture-app-analytics-dataset-add.png)
+
+To edit the title of a **Data set** item (**New 2.2.1**):
+
+1. Search for the item by expanding the groups.
+2. Click the "Edit" button next to the item's name.
+3. A pop-up with only the visualization title available will be available, the other fields will be disabled. If wanted change the visualization title.
+4. Click on the "Save" button.
+
+![](resources/images/capture-app-analytics-dataset-editVisualization.png)
 
 To remove a **Data Set** item:
 
@@ -474,16 +532,24 @@ Since the aggregations and calculations displayed are calculated in the device, 
 
 There are many more restrictions which apply to Android Analytics regarding the many configuration options available in the Web Visualizer as well as the supported functions and calculations related to indicators and program indicators. [This table](https://docs.google.com/spreadsheets/d/1127cz7M0K4fux5CU0V54V2Z77NZWCr0BTrZ6jcCec4Q) summarises all supported features.
 
+> **Note (**New 2.2.1**):**
+>
+> When searching for a visualization to add as part of the Analytics visualizations, all visualizations will be listed, but visualizations that don't meet the above restrictions will be disabled. 
+>
+> ![](resources/images/capture-app-analytics-visualization-search.png)
+>
+
 
 ## Installation { #capture_app_android_settings_webapp_installation }
 
 A user can easily install the Android Settings Web App by logging into the DHIS2 and going to **App Management**.
 
-- Click on **App Store**
+- Click on **App Hub**
 - Go to *Android Settings App*
 - Click on *Install V2.X.X*
 
 ![](resources/images/capture-app-app-hub-install.png)
+![](resources/images/capture-app-app-hub-install-webapp.png)
 
 
 ## Log in and first time setup { #capture_app_android_settings_webapp_login }
