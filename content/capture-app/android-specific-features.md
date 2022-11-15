@@ -222,9 +222,11 @@ Users can click on the grey arrows (which means record(s) stored online in the d
 
 ### SMS Sync { #capture_app_generic_sync_sms }
 
-When there is no Internet conection (either via WiFi or Mobile Data) but there is still mobile conectivity, users can synchronize via SMS if the gateway has been previously established in the app and properly configured at server level. The information will be sent via one or more SMS messages and the status will be updated to display either error or marked as “SMS synced”.
+When there is no Internet conection (either via WiFi or Mobile Data) but there is still mobile conectivity, users can synchronize via SMS if the gateway has been previously established in the app and properly configured at server level. Users will be prompted with a confirmation to send the SMS and after that their default SMS application open with the message composed. Users should send the message without modifying it and then switch back to the DHIS2 App to confirm that the message was sent.
 
-![](resources/images/capture-app-image91.png){ width=25%}
+![](resources/images/capture-app-sms-sync.png){ width=25%}
+![](resources/images/capture-app-sms-sync-default-app.png){ width=25%}
+![](resources/images/capture-app-sms-sync-confirm.png){ width=25%}
 
 > **Tip**
 >
