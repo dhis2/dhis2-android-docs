@@ -189,8 +189,11 @@ The first part is for global settings that apply to all data sets an Android use
 
 ![](resources/images/capture-app-dataset-global-settings.png){width=50%}
 
-Number of Periods
-:	Maximum number of periods to download.
+The maximum number of periods defines the amount of past periods the app will download in the data synchronization process.
+
+If a data set has future periods ("open future periods" configuration) the app won't take them into consideration in the restriction of the amounts of periods to download.
+
+For example, in a data set with "open future periods" = 2 and a "maximum number of periods to download" = 1, the app will download 3 periods.
 
 #### Specific Settings { #capture_app_android_settings_webapp_synchronization_data_specific }
 
