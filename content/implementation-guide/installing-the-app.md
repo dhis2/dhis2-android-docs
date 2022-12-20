@@ -3,15 +3,15 @@
 
 There application can be downloaded and installed from two places:
 
-- [**Google Play:**](https://play.google.com/store/apps/details?id=com.dhis2&hl=en_US) - This version does not allow screen broadcasting or taking screenshots.
+- [**Google Play:**](https://play.google.com/store/apps/details?id=com.dhis2&hl=en_US) - This version has certain security measures implemented and does not allow screen broadcasting or taking screenshots by default unless configured specifically using the Android Settings Web App. For SMS syncing, users must manually send the autocomposed message from their default messaging app and confirm afterwards.
 - [**GitHub**](https://github.com/dhis2/dhis2-android-capture-app/releases) - There are two versions available in Github:
-	- Production *no_sms* version: The same version than Google Play, it does not allow screen broadcasting or taking screenshots
-	- Production version: The same version than Google Play but including SMS capability (currently blocked by Google Play), it does not allow screen broadcasting or taking screenshots
-	- Training version: With screen broadcasting and possibility to take screenshots (the one named with the suffix \_training.apk)
+	- Production version: Almost exactly as the version in Google Play, it does not allow screen broadcasting or taking screenshots by default unless configured specifically using the Android Settings Web App. However, the SMS syncing workflow does not require manually sending the SMS via the default messaging app.
+	- Training version: With screen broadcasting, possibility to take screenshots, debugging libraries, etc (the one named with the suffix \_training.apk)
 
 > **Note**
 >
 > When installing the training APK, you might need to allow 3rd party installs
+> Before 2.7 the production version came in two versions: one included SMS capabilities and the other did not.
 
 Please read the section on App distribution for understanding the implications of using the different distribution channels.
 
