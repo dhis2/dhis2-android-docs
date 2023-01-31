@@ -277,3 +277,15 @@ Combined with the use of d2 functions in program rules, the different fields of 
 Some buttons or tappable labels of the Android App had small sensitive areas for the user to tap. The whole user interface was reviewed and the tappable areas has been increased. For example the "+" button to create a new stage or the "˅" icon to open TEI details or expand a section.
 
 ![](resources/images/capture-app-image208.png){ width=20%}
+
+## Increase row headers (New 2.7.1) { #capture_app_increase_row_header }
+
+It is possible to change the size of the row headers. Follow the steps below to resize any table within the app (Data set or Analytics):
+
+1. Tap on any header of the first column of the table
+2. Press the resize icon at the right side of the cell
+3. Drag the icon to the desire size
+
+![](resources/images/capture-app-image217.png){ width=25%}
+![](resources/images/capture-app-image216.png){ width=25%}
+![](resources/images/capture-app-image215.png){ width=25%}
