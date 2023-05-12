@@ -6,7 +6,7 @@ This section focuses on the [Android Settings Web App](https://apps.dhis2.org/ap
 
 The [Android Settings Web App](https://apps.dhis2.org/app/a1bd6b5b-de8c-4998-8d34-56c18a139683) allows admins to configure synchronization parameters for the DHIS2 Android App, encrypt the local database of the Android devices, customize the appearance of Programs, Data sets, and Home screen, and add TEI Analytics items. The configuration parameters defined within this web app will overwrite the settings of all Android devices using the DHIS2 Android Capture App.
 
-Please note that in this version of the Web App (2.3), if the DHIS2 version is equal to or higher than 2.40, only users with "M_androidsettingsapp" authority can define those parameters in the configuration. Other users accessing the web app can see the value of the parameters but cannot edit them.
+Please note that in this version of the Web App (2.3), if the DHIS2 version is equal to or higher than 2.40, only users with "M_androidsettingsapp" or "ALL" authority can define those parameters in the configuration. Other users accessing the web app can see the value of the parameters but cannot edit them.
 
 > **Warning**
 >
@@ -195,7 +195,7 @@ In the case that any specific settings has been saved, a table will show a summa
 
 By clicking on *Reset all values*, the admin user will restore the default settings values of the program section. Please note that in this case it means no specific settings per program. 
 
-To save any configuration, the admin user needs to click on the *Save* button (this button is disabled for the users who don't have the 'ALL' authority)
+To save any configuration, the admin user needs to click on the *Save* button (this button is disabled for the users who don't have 'ALL' or 'M_androidsettingsapp' authority)
 
 
 ### Data set { #capture_app_android_settings_webapp_synchronization_data }
@@ -228,7 +228,7 @@ To add a specific setting:
 
 ### User Sync Test { #capture_app_android_settings_webapp_synchronization_user_sync_test }
 
-This section checks the amount of data and metadata a user would sync to his/her device. You can run this test on any user that you have access to. This test shows up the number of organisation units, data sets, program rules, programs, etc., that an android user has access to (so the resources that the android app will download), and the metadata and data download size (approx estimation). Please note that a user doesn't need to have the 'ALL' authority to run this test.
+This section checks the amount of data and metadata a user would sync to his/her device. You can run this test on any user that you have access to. This test shows up the number of organisation units, data sets, program rules, programs, etc., that an android user has access to (so the resources that the android app will download), and the metadata and data download size (approx estimation). Please note that a user doesn't need to have the 'ALL' or 'M_androidsettingsapp' authority to run this test.
 
 ![](resources/images/capture-app-user-sync-test.png){width=50%}
 
@@ -588,7 +588,7 @@ After a user installs and launches the Android Settings Web App for the first ti
 
 > **Warning (New 2.3)** 
 >
-> When using DHIS2 version equal to or higher to 2.40, only users with "M_androidsettingsapp" authority can *save or update* the configuration, but any user will have *view* access once it is created.
+> When using DHIS2 version equal to or higher to 2.40, only users with "M_androidsettingsapp" or "ALL" authority can *save or update* the configuration, but any user will have *view* access once it is created.
 > 
 
 
