@@ -91,17 +91,19 @@ The following is a comprehensive list of all Program Rule components (variable t
 | d2:count   | Counts the number of values that is entered for the source field in the argument.      | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:countIfValue     | Counts the number of matching values that is entered for the source field in the first argument. Only occurrences that matches the second argument is counted. | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:countIfZeroPos   | Counts the number of values that is zero or positive entered for the source field in the argument. The source field parameter is the name of one of the defined source fields in the program.      | ![](/en/resources/images/admin/icon-complete.png)    | |
-| d2:hasValue         | Returns the number of numeric zero and positive values among the given object arguments. Can be provided with any number of arguments.       | ![](/en/resources/images/admin/icon-complete.png)    | |
+| d2:hasValue         | Evaluates to true of the argument source field contains a value, false if no value is entered.       | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:validatePattern  | Evaluates to true if the input text is an exact match with the supplied regular expression pattern. The regular expression needs to be escaped.       | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:left    | Evaluates to the left part of a text, num-chars from the first character.     | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:right   | Evaluates to the right part of a text, num-chars from the last character.     | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:substring        | Evaluates to the part of a string specified by the start and end character number.     | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:split   | Split the text by delimiter, and keep the nth element (0 is the first).       | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:length  | Find the length of a string.     | ![](/en/resources/images/admin/icon-complete.png)    | |
-| d2:zpvc    | Returns the number of numeric zero and positive values among the given object arguments. Can be provided any number of arguments.   | ![](/en/resources/images/admin/icon-complete.png)    | |
+| d2:zpvc    | Returns the number of numeric zero and positive values among the given object arguments. Can be provided with any number of arguments.   | ![](/en/resources/images/admin/icon-complete.png)    | |
 | d2:inOrgUnitGroup\* | Evaluates whether the current organization unit is in the argument group. The argument can be defined with either ID or organization unit group code. | ![](/en/resources/images/admin/icon-complete.png) | |
 | d2:hasUserRole\** |Returns true if the current user has this role otherwise false.| ![](/en/resources/images/admin/icon-complete.png) | |
-| d2:zScoreWFA\*** |Function calculates z-score based on data provided by WHO weight-for-age indicator. Its value varies between -3.5 to 3.5 depending upon the value of weight.| ![](/en/resources/images/admin/icon-complete.png) | |
+| d2:zScoreWFA\*** |Function calculates z-score based on data provided by WHO weight-for-age indicator. Its value varies between -3.5 to 3.5 depending upon the value of weight.| ![](/en/resources/images/admin/icon-complete.png) | Providing an age less than 0 or greater than 60 will result in the program rule to not be calculated. Also, WFA tables have the age parameter increment in steps of 1, providing a fraction age will floor the value (2.3 months → 2 months).|
+| d2:zScoreHFA\*** |Function calculates z-score based on data provided by WHO height-for-age indicator. Its value varies between -3.5 to 3.5 depending upon the value of weight.| ![](/en/resources/images/admin/icon-complete.png) |Providing an age less than 0 or greater than 60 will result in the program rule to not be calculated. Also, HFA tables have the age parameter increment in steps of 1, providing a fraction age will floor the value (2.3 months → 2 months). |
+| d2:zScoreWFH\*** |Function calculates z-score based on data provided by WHO weight-for-height indicator. Its value varies between -3.5 to 3.5 depending upon the value of weight.| ![](/en/resources/images/admin/icon-complete.png) | Providing a height less than 45 or greater than 120 will result in the program rule to not be calculated. Also, WFH tables have the height parameter increment in steps of 0.5, providing a fraction height will floor the value (45.3 → 45 | 45.7 → 45.5).|
 
 > **Note**
 >
@@ -165,21 +167,39 @@ For the examples belows consider the following:
 | d2:hasValue('yn_prv1') \|\| d2:hasValue('yn_prv2') | Assign fixed value to DE | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-complete.png) | |
 | #{yn_prv1} \|\| #{yn_prv2} | Assign fixed value to DE | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-complete.png) | |
 | d2:hasValue('yn_prv1') \|\| d2:hasValue('yn_prv2') | Assign value to DE: #{yn_prv1} + #{yn_prv2} + 1 | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-negative.png) | Crashes in Android  whenver a boolean is marked as the expression would result in *true*+*false*+1 |
-| d2:hasValue('yn_prv1') \|\| d2:hasValue('yn_prv2') | Assign value to DE: #{yn_prv1} + #{yn_prv2} + 1 | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-negative.png) | Crashes in Android  whenver a boolean is marked as the expression would result in *true*+*false*+1 |
 | PR1: #{prv_boolean_one} <br /><br />PR2: #{prv_boolean_two} <br /><br />PR3: #{prv_boolean_one} \|\| #{prv_boolean_two} | PRA1. Assign value  "1" to PRV "#{prv_bool_one_to_number}" <br /><br />PRA2. Assign value: "1" to PRV "#{prv_bool_two_to_number}" <br /><br />PRA3. Assign value to DE: "#{prv_bool_one_to_number} + #{prv_bool_two_to_number} + 1"| ![](/en/resources/images/admin/icon-negative.png) | ![](/en/resources/images/admin/icon-negative.png) | There are 2 variables for boolean, one gets the value via a PRV definition “value form DE” and the other one via a PRA. If a boolean is not marked it is counted as string instead of a number |
 | Four PR to assign 1 or 0 to the booleans and an additional for the addition. Priorities go from top to bottom <br /><br />PRC1: !d2:hasValue('prv_boolean_one')  \|\| !#{prv_boolean_one} <br /><br />PRC2: d2:hasValue('prv_boolean_one') && #{prv_boolean_one}<br /><br />PRC3: !d2:hasValue('prv_boolean_two')  \|\| !#{prv_boolean_two} <br /><br />PRC4: d2:hasValue('prv_boolean_two') && #{prv_boolean_two} <br /><br />PRC5: true | PRA1: Assign value: "0" to PRV "#{prv_bool_one_to_number}" <br /><br />PRA2: Assign value: "1" to PRV "#{prv_bool_one_to_number}" <br /><br />PRA3: Assign value: "0" to PRV "#{prv_bool_two_to_number}" <br /><br />PRA4: Assign value: "1" to PRV "#{prv_bool_two_to_number}" <br /><br />PRA5: Assign value: "#{prv_bool_one_to_number} + #{prv_bool_two_to_number} + 1" to DE <br /> | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-complete.png) | There are 2 variables for boolean, one gets the value via a PRV definition “value form DE” and the other one via a PRA.
 
 ### Evaluation of numbers { #capture_app_pr_differences_web_android_numbers }
 
 
-DHIS2 web version evaluate numbers in a more flexible way casting values from integer to floats if required for a division, however, Android take numbers as such (without a casting) which my end up giving unexpected results. Check the table below for examples and possible solutions.
+DHIS2 web version evaluate numbers in a more flexible way casting values from integer to floats and viceversa. This can lead to some issues as explained in the examples below.
+
+#### Division of numbers
+
+If required for a division web will cast from integer to float, however, Android take numbers as such (literally and without casting) which my end up giving unexpected results. Check the table below for examples and possible solutions.
 
 | Program Rule Condition(s) | Program Rule Action(s) | Web version | Android version | Comment |
 | ----------- | ----------- | :---: | :---: | ----- |
 | true | Assign value to DE: d2:daysBetween('2020-05-13', '2020-05-17') / 3 | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-negative.png) | The user would expect the division to be calculated as 4/3 with a result of 1.3333. However, Android does not cast 4 to a float (4.0 as the web version does) so the result in Android is a pure 1 as the result of the integer division 4/3 |
 | true | Assign value to DE: d2:daysBetween('2020-05-13', '2020-05-17') / 3.0 | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-complete.png) | Division results in 1.33333 in both web and Android | 
 
-## Changes in Program Rules (as from version 2.2 of the app ) { #capture_app_pr_changes }
+
+#### Using the function validatePattern
+
+In the same way, if a DataElement of the type number is used, Android will use that value as float (including decimals) which might lead to validatePattern function not working as expected.
+
+Consider the following:
+
+* temperatue_prv: is a Program Rule Variable containing the value of the Data Element *temperature*.
+* User inputs 38 in the Data Element.
+
+| Program Rule Condition(s) | Program Rule Action(s) | Web version | Android version | Comment |
+| ----------- | ----------- | :---: | :---: | ----- |
+| !d2:validatePattern(#{temperature_prv},'\\\\{d}') | Display error if value is not 2 digits | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-negative.png) | The user would expect the program rule to NOT show an error as 38 does match the pattern. However, Android attempts to validate the pattern \\{d} against 38.0 resulting in Android displaying the error. |
+| !d2:validatePattern(#{temperature_prv},'(\\\\d{2}\|\\\\d{2}\\\\.\\\\d\|\\\\d{2}\\\\.\\\\d{2})$') | Display error if value is not 2 digits | ![](/en/resources/images/admin/icon-complete.png) | ![](/en/resources/images/admin/icon-complete.png) | The regular expression used here will match both integeres and floats resulting in being properly evaluated in web and Android and not displaying an error. |
+
+## Changes in Program Rules (as from version 2.2 of the app) { #capture_app_pr_changes }
 
 In the version 2.2 of the application (released on August, 2020) a new rule-engine was included.  This rule-engine requires some optional and some mandatory changes to be performed on the program rules expressions in order to make it work in the new application. A list of those changes, how to detect them and how to fix them is included in the following subsections.
 

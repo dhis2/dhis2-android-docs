@@ -38,30 +38,51 @@ The bottom navigation bar also allows switching the visualization mode if the ev
 ![](resources/images/capture-app-image143.jpg){ width=25%}
 ![](resources/images/capture-app-image144.jpg){ width=25%}
 
-### Complete/Re-open event { #capture_app_programs_complete_reopen }
+### Data Entry Flow { #capture_app_common_features_Data_flow }
+
+#### Complete/Re-open event { #capture_app_common_features_complete_reopen }
 
 When adding an event to an event program or inside a tracker program the user should fill the information and scroll down to make the *save* icon appear at the bottom right corner.
 
 ![](resources/images/capture-app-image37.jpg){ width=25%}
 ![](resources/images/capture-app-image74.png){ width=25%}
 
-Two options will be presented:
+After tapping on the 'save' button, if the form does not contain any errors, warnings or empty mandatory fields, the app will ask if the user wants to complete the form. Two options are given to the user:
 
-1. Finish and Complete
-2. Finish
+1. 'Not now': The app saves the form and go back to the event listing screen (or TEI dashboard for tracker programs). The status of the event will remain open.
+2. 'Complete': The app saves the form and go back to the event listing. The status of the event changes to completed.
 
-![](resources/images/capture-app-image75.png){ width=25%}
-
+![](resources/images/capture-app-image201.png){ width=25%}
 
 > **Note**
 >
 > To verify if an event is completed look at the icon, it must be a green checked box.
+>
 
 > **Note**
 >
-> The app needs to take into consideration if the user has the correct authority (‘Uncomplete events’) to reopen a completed event.
+> If the event is non-editable, the app will hide the 'save' button
+>
 
-### Field completion percentage { #capture_app_programs_common_features_field_percentage }
+To re-open an event, the app now displays a "Re-open form" button in the Details screen. This button will be available only if the user has the correct authority (‘Uncomplete events’) to reopen a completed event.
+
+![](resources/images/capture-app-image202.png){ width=25%}
+
+#### Discard changes { #capture_app_programs_common_features_discard_changes }
+
+Tapping the back arrow in an enrollment or event form now provide two options:
+
+1. 'Discard changes',  which allows the user to restored the fields to their previous values or,
+2. 'Review' to remain in the form and update the fields.
+
+If the user is in a new enrollment or event, the options allow the user to:
+
+1. 'Discard changes': The enrollment or event is not created or,
+2. 'Keep editing': Allowing the user to finish the enrollment or event.
+
+![](resources/images/capture-app-image203.png){ width=25%}
+
+#### Field completion percentage { #capture_app_programs_common_features_field_percentage }
 
 The percentage of data completed in each event is shown in the top right corner of an event when it is opened after first registration.
 
@@ -71,22 +92,42 @@ The percentage of data completed in each event is shown in the top right corner 
 >
 > The display of the percentage can be set up to be displayed or not using the [#capture_app_android_settings_webapp_appearance_program](Android Settings WebApp)
 
-### Sections Navigation { #capture_app_programs_common_features_sections_nav }
+#### Sections Navigation { #capture_app_programs_common_features_sections_nav }
 
 The sections can be collapsed for a simpler user experience.  Sections in enrollment forms are also supported and are aligned with the design of the event sections.
 
 ![](resources/images/capture-app-image115.png){ width=25%}
 ![](resources/images/capture-app-image116.png){ width=25%}
 
-### Error messages { #capture_app_programs_common_features_errors }
+#### Error messages { #capture_app_programs_common_features_errors }
 
 The app will list the name of the mandatory fields missing when the user tries to complete an event or enrollment. The sections containing the missing fields will be highlighted to help the user find the missing fields.
 
 ![](resources/images/capture-app-image117.png){ width=25%}
 
-The errors and warnings are also shown as an indicator next to the section name including the number of errors for each section.
+After tapping on the 'save' button, the app will display two options:
+
+1. 'Not now': Allowing the user to save the form with an 'open' status or,
+2. 'Review': The app will remain in the form for the user to fill the empty mandatory fields.
+
+The errors and warnings are also shown as an indicator next to the section name including the number of errors for each section. A list of the fields with the errors/warnings when the user tries to save the form will be displayed.
 
 ![](resources/images/capture-app-image145.png){ width=25%}
+
+After tapping on the 'save' button, the app will display two options:
+
+**Warnings**
+
+1. 'Not now': Allowing the user to save the form with an 'open' status or,
+2. 'Complete': The form is saved and its status changes to 'complete'
+
+**Errorrs**
+
+1. 'Not now': Allowing the user to save the form with an 'open' status or,
+2. 'Review': The app will remain in the form for the user to review the fields with errors
+
+If there is a combinantion of errors, warnings and missing mandatory fields, the app will display the 'Not now' and 'Review' options only.
+
 
 ### Event Notes { #capture_app_programs_common_features_event_notes }
 
@@ -128,7 +169,7 @@ Each card displays Tracked Entity Attributes (for Tracker Programs) and Data Ele
 
 ![](resources/images/capture-app-image147.png){ width=25%}
 
-#### Current Location displayed in maps (Improved 2.5)
+#### Current Location displayed in maps
 
 If the user has granted location permissions to the App, the map will show the current location represented as a blue color dot. The maps in the DHIS2 Android Capture App include the possibility to center the map on the user location.
 
@@ -161,10 +202,23 @@ Legends can be assigned to Data Elements and they will be displayed next to valu
 
 ![](resources/images/capture-app-image155.png){ width=25%}
 
+### Data Entry Form (Improved 2.7)  { #capture_app_programs_common_features_data_entry_form }
+
+#### Hint messages (Improved 2.7)
+
+The input fields will display had a hint message saying "Insert value here" which will remain until a value is entered by the user.
+
+![](resources/images/capture-app-image209.png){ width=25%}
+
+#### Navigation button (New 2.7)
+
+In forms with multiple sections, the App includes a "Next" button at the end of each section which calls the user to action. The funtion of the button is to close the current section and open the new one.
+
+![](resources/images/capture-app-image210.png){ width=25%}
 
 ## Event Programs specific features { #capture_app_programs_events }
 
-### Event - TEI relationships (NEW 2.5)
+### Event - TEI relationships
 
 The app allows adding relationships from single events (in event programs) to TEIs. There is a new tab in the event screen, named relationships, that will be displayed only when this type of relationships are configured in the server for the specific program.
 
@@ -188,7 +242,9 @@ In tracker programs, the user can see relationships on a map by tapping the map 
 
 ![](resources/images/capture-app-image132.png){ width=50%}
 
-### TEI Dashboard navigation panel (NEW in 2.5)
+### TEI Dashboard (Improved 2.7) { #capture_app_programs_TEI_Dashboard }
+
+#### Navigation panel
 
 To simplify and personalize the user experience, the user interface actions offered to the user at the TEI dashboard will be tailored to the specific configuration of each  program.
 
@@ -196,6 +252,22 @@ To simplify and personalize the user experience, the user interface actions offe
 * "Create event" button will be hidden when the user cannot create more events based on tracker configuration.
 * The Indicator tab will not be visible if the program has no program indicators configured.
 * Organisation Unit filter will not be visible if the user has only one Organisation Unit configured.
+
+#### Creating A Stage (Improved 2.7)
+
+To create a new event, the user needs to tap on the plus icon on the stage card. This icon is always visible unless the stage is non-repeatable and already created.
+
+When the user taps on the button, that program stage will unfold showing to the user all the already existing events of that particular program stage
+
+![](resources/images/capture-app-image211.png){ width=50%}
+
+If the user is creating a new stage and there is only one option based on the program configuration, the available program stage is selected automatically and program stage selection step is skipped.
+
+#### Share a TEI (Improved 2.7)
+
+The "Share" button has been removed from the TEI dashboard and the functionality to share a TEI through QR code has been relocated on the three vertical dot menu, at the top right corner of the screen.
+
+![](resources/images/capture-app-image212.png){ width=50%}
 
 ### TEI Card Design { #capture_app_programs_tei_design }
 
@@ -222,19 +294,35 @@ To complete or deactivate an enrollment, click on three dot menu in the uppper r
 
 ![](resources/images/capture-app-image76.jpg){ width=25%}
 
-### Reset Search Fields { #capture_app_programs_reset_search }
+### Search Flow { #capture_app_programs_search }
 
-All tracker programs will take the user to the search screen. The search fields are used to look up for a specific entity, and the circled arrow to reset the search. All fields will be blank for the user to do a new search.
+#### Configurable TEI Search { #capture_app_programs_configurable_search }
 
-Before entering a new TEI the user must perform a search to avoid possible duplicates. Once the search is performed the the search button will become "Add" button for the user to create a new enrollment.
+Searching TEIs before creating is not mandatory now. Using the Android Settings App (v2.2.0) it is possible to configure the mandatoriness of the TEI search before creating an enrollment. Follow the steps below to enable the creation of TEIs without searching:
+
+  1. Open the Appearance menu in the Android Settings App
+  2. In 'Program' add a Program Setting
+  3. Select a tracker program
+  4. Tick the "Allow the user to create a TEI without searching" checkbox
+  5. Save
+
+If the feature is enabled, the Android App will display a "create new" button after opening a program and a search won't be required. If the feature is not enabled or the user is in a previous version of the app, a search must be performed to avoid possible duplicates. Once the search is performed the search button will become "Add" button for the user to create a new enrollment.
+
+![](resources/images/capture-app-image204.png){ width=25%}
+
+#### Offline and Online Search { #capture_app_programs_offline_online_search }
+
+To improve the response time in the search results, the Android App now searches offline first and displays the results while making an online search as a second step, transparent to the user.
+
+Searching outside the program is offered as a second step when  the attributes used in the search contain at least one Tracked Entity Type (TET) attribute
+
+#### Reset Search Fields { #capture_app_programs_reset_search }
+
+The search fields are used to look up for a specific entity, and the circled arrow to reset the search. All fields will be blank for the user to do a new search.
 
 ![](resources/images/capture-app-image79.png){ width=25%}
 
-> **Info**
-> 
-> Searching before entering a new TEI is mandatory to avoid possible duplicates and the DHIS2 Android App has been designed as such. If the device is working offline the search will be performed locally, however, if the device is working in online mode a server search is performed. This behavior cannot be changed.
-
-### Search screen for all Tracked Entity Type { #capture_app_programs_search_screen }
+#### Search screen for all Tracked Entity Type { #capture_app_programs_search_screen }
 
 User can search across all programs by specific tracked entity type (TET). In the Search screen there is a drop down which shows all the programs available for the active TET (active TET is defined by the selection of the program in the home screen). That drop down should also have an option with TET name, for example: *All Person*.
 
@@ -296,9 +384,12 @@ This means that any existing attributes in the first TEI should have pass to the
 
 ### Breaking the glass { #capture_app_programs_breaking_the_glass }
 
-The "breaking the glass" feature is not yet supported in DHIS2 Android Capture App. If the program is configured as "Protected", the default behavior for Android will be the same as if the program is configured as "closed". This means that an Android user will not be able to read or edit enrollments of a TEI outside of their capture org units. TEIs registered in a Search OU will be returned by the TE Type search but if the program is closed or protected the user will not be allowed to see or create a new enrollment.  If Android users must be able to access TEI outside of their data capture org unit, the program should be configured with access level "Open".
+The "breaking the glass" feature is now supported in DHIS2 Android Capture App. If the program is configured with an access level of "Protected" and a search is done outside the user scope, a dialog requesting a reason for access will be displayed for the user to temporarily override the ownership privilege of the proram. This means, the user will gain access to the program related data.
 
-![](resources/images/capture-app-image137.jpg){ width=25%}
+After the reason is written, the app will download the TEI and the dashboard will open. If the TEI being downloaded doesn't have an enrollment in the current program, an enrollment date and organisation unit will be asked.
+
+![](resources/images/capture-app-image205.png){ width=25%}
+![](resources/images/capture-app-image206.png){ width=25%}
 
 ### Analytic charts
 
@@ -318,7 +409,11 @@ The Nutrition Growth charts are shown according to the WHO standards.  This opti
 
 3. Tables: It will display the data elements or indicators in the rows and the periods in the columns.
 
-![](resources/images/capture-app-image160.png){ width=25%} 
+![](resources/images/capture-app-image160.png){ width=25%}
+
+### Referrals (Improved 2.7) { #capture_app_programs_referrals }
+
+when a user makes a permanent referral of a TEI, the ownership will be updated accordingly on the server.
 
 ## Supported features Overview { #capture_app_programs_supported_features }
 

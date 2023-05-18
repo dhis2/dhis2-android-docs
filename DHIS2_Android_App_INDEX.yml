@@ -11,3 +11,4 @@
 - Program indicators supported: '@github(dhis2/dhis2-android-docs,content/capture-app/program-indicators.md, main)'
 - Value types supported: '@github(dhis2/dhis2-android-docs,content/capture-app/value-types-supported.md, main)'
 - Settings configuration: '@github(dhis2/dhis2-android-docs,content/capture-app/app-android-settings-configuration.md, main)'
+- Use case configuration: '@github(dhis2/dhis2-android-docs,content/capture-app/app-use-case-configuration.md, main)'
