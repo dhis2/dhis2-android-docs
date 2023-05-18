@@ -10,6 +10,13 @@ Based on the configuration, any program of the DHIS2 server can be set as a stoc
 
 Please note that in this version of the Web App, only users with "ALL" authority are able to define the configuration. Other users will not have access to the web app or see the configuration.
 
+> **Warning**
+>
+> Be aware that the app can only be used in instances using the 2.39.1 DHIS2 API version onward.
+> 
+> ![](resources/images/capture-app-use-case-configure-api-no-access.png)
+>
+
 
 ## Configure Program { #capture_app_use_case_configuraton_webapp_configure }
 
