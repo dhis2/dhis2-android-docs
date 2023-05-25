@@ -5,69 +5,9 @@ This section focuses on the [APK Distribution Web App](https://apps.dhis2.org/ap
 
 The [APK Distribution Web App](https://apps.dhis2.org/app) enables implementation administrators to manage and control the version of the Android app, making it easier to manage app updates and ensure compatibility with the DHIS2 system. 
 
-Managers will be able to upload the desired version and users will get a prompt message to update when they are not in the last updated version.
+Admins will be able to upload the desired version and users will get a prompt message to update when they are not in the last updated version.
 
 Please note that in this version of the Web App, only users with "ALL" authority are able to define the Android app versions. Other users having access to the web app can see the version history list and download the latest version, but cannot edit them.
-
-
-## APK Versions { #capture_app_apk_distribution_webapp_versions }
-
-It allows admin users to update or remove versions of the Android app.
-
-![](resources/images/capture-app-apk-distribution.png)
-
-### Upload version
-
-The APK Distribution App allows administrators to upload an android APK to use as the desired version.
-
-To upload a **Android app version**:
-
-1. Click on *Upload new version* button.
-2. Assign a version number.
-3. Choose the minimum and/or recommend Android OS version.
-4. Add a URL that contains the APK of the Android app.
-5. Click on the "Create app version" button.
-
-
-![](resources/images/capture-app-apk-distribution-upload.png)
-
-
-> **Note:**
->
-> App versions must follow semantic versioning. Read more about [semantic versions](https://docs.npmjs.com/about-semantic-versioning). 
->
-> When uploading a new version, make sure that the app version should be always higher than the current/latest version.
-> 
-> ![](resources/images/capture-app-apk-distribution-alert-version-higher.png)
-> 
-> To choose the minimum or recommended Android OS version for the app version, it is suggested to review the [Mobile Device Specification documentation](https://docs.dhis2.org/en/implement/android-implementation/mobile-device-specifications.html).
->
-
-
-### Delete version
-
-To remove an **Android App version**:
-
-1. Search for the Android app version to delete.
-2. Click on "Delete".
-3. Click on the "Delete" button.
-
-![](resources/images/capture-app-apk-distribution-upload-delete.png)
-
-
-### Using mobile device
-
-This app can also be manipulated from a mobile device. To use the app, open DHIS2 in the browser from a mobile or tablet device.
-
-The mobile version allows the administrator user to **upload** and **download** app versions.
-
-![](resources/images/capture-app-apk-distribution-upload-mobile.png)
-
-
-When downloading a version, the APK will be stored in the device.
-
-![](resources/images/capture-app-apk-distribution-version-list-mobile.png)
-
 
 ## Installation { #capture_app_apk_distribution_webapp_installation }
 
@@ -96,3 +36,59 @@ After a user installs and launches the APK Distribution Web App for the first ti
 
 
 ![](resources/images/capture-app-apk-distribution-no-authorities.png){width=50%}
+
+## APK Versions { #capture_app_apk_distribution_webapp_versions }
+
+The APK Distribution Web App allows the admin users to update or remove versions of the Android app.
+
+![](resources/images/capture-app-apk-distribution.png)
+
+### Upload version
+
+Follow the steps below to upload an **Android app version**:
+
+1. Click on *Upload new version* button.
+2. Assign a version number.
+3. Choose the minimum and/or recommend Android OS version.
+4. Add a URL that contains the APK of the Android app.
+5. Click on the "Create app version" button.
+
+
+![](resources/images/capture-app-apk-distribution-upload.png)
+
+
+> **Note:**
+>
+> App versions must follow semantic versioning. Read more about [semantic versions](https://docs.npmjs.com/about-semantic-versioning). 
+>
+> When uploading a new apk, make sure that the app version is higher than the current/latest version.
+> 
+> ![](resources/images/capture-app-apk-distribution-alert-version-higher.png)
+> 
+> To choose the minimum or recommended Android OS version for the app version, it is suggested to review the [Mobile Device Specification documentation](https://docs.dhis2.org/en/implement/android-implementation/mobile-device-specifications.html).
+>
+
+
+### Delete version
+
+To remove an **Android App version**:
+
+1. Search for the Android app version to delete.
+2. Click on "Delete".
+3. Click on the "Delete" button.
+
+![](resources/images/capture-app-apk-distribution-upload-delete.png)
+
+
+### Using mobile device
+
+This Web App can also be manipulated from a mobile device. To use it, open DHIS2 in the browser from a mobile or tablet device.
+
+The mobile version allows the administrator user to **upload** and **download** app versions.
+
+![](resources/images/capture-app-apk-distribution-upload-mobile.png)
+
+
+When downloading a version, the APK will be stored in the device.
+
+![](resources/images/capture-app-apk-distribution-version-list-mobile.png)
