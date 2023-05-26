@@ -6,11 +6,12 @@ This section focuses on the [Android Settings Web App](https://apps.dhis2.org/ap
 
 The [Android Settings Web App](https://apps.dhis2.org/app/a1bd6b5b-de8c-4998-8d34-56c18a139683) allows admins to configure synchronization parameters for the DHIS2 Android App, encrypt the local database of the Android devices, customize the appearance of Programs, Data sets, and Home screen, and add TEI Analytics items. The configuration parameters defined within this web app will overwrite the settings of all Android devices using the DHIS2 Android Capture App.
 
-Please note that in this version of the Web App, only users with 'ALL' authority are able to define those parameters in the configuration. Other users having access to the web app can see the value of the parameters, but cannot edit them. 
+Please note that in this version of the Web App (2.3), if the DHIS2 version is equal to or higher than 2.40, only users with "M_androidsettingsapp" or "ALL" authority can define those parameters in the configuration. Other users accessing the web app can see the value of the parameters but cannot edit them.
 
 > **Warning**
 >
-> This version comes with improvements and disruptive features, so previous versions are no longer supported, the settings stored there will be removed.
+> If the DHIS2 version is not above 2.40, only users with 'ALL' authority can define those parameters in the configuration.
+> 
 
 
 ## General settings { #capture_app_android_settings_webapp_general }
@@ -89,17 +90,35 @@ Data sync
 ![](resources/images/capture-app-sync-global-app.png){width=33%}
 
 
-Use the new Tracker Importer (**New 2.2**)
+Use the new Tracker Importer
 :	Admin users can choose which tracker importer endpoint will be used.
 
 > **Warning**
 >
 > This option is only available if the Android Settings Webapp is used from version 2.38 DHIS2 API onwards.
 >
-> By default, the Android app uses the legacy tracker importer */api/trackedEntityInstances* but an admin can check this option and the importer introduced in 2.37 */api/tracker* endpoint will be used.
->
+> By default, if the DHIS2 API version is 2.38 or higher, the Android app will use the importer introduced in 2.37 */api/tracker* endpoint but an admin can deselect this option and the legacy tracker importer */api/trackedEntityInstances* will be used.
+> 
 > ![](resources/images/capture-app-sync-global-importer.png){width=50%}
 >
+
+Use the new Tracker Exporter (**New 2.3**)
+:	Admin users can choose which tracker exporter endpoint will be used.
+
+> **Warning**
+>
+> This option is only available if the Android Settings Webapp is used from version 2.40 DHIS2 API onwards. 
+> 
+> By default, if the DHIS2 API version is 2.40 or higher, the Android app will use the exporter introduced in the 2.37 */api/tracker* endpoint, but an admin can deselect this option, and the legacy tracker importer */api/trackedEntityInstances* will be used.
+>
+>
+> ![](resources/images/capture-app-sync-global-exporter.png){width=50%}
+>
+
+Limit the file size to download (**New 2.3**)
+:	Admin users can limit the maximum size of the file resources downloaded in KB.
+
+![](resources/images/capture-app-sync-download-file-size.png){width=50%}
 
 
 
@@ -129,7 +148,7 @@ Event download period
 >
 > User might find misleading the amount of data downloaded When setting a number of TEIs and a number of Event. The Android App will download the number of TEIs and all their events following the number of TEI set in the field. The Android App will limit the number of Event to download only for the *event programs* (and not *tracker programs*) according to the field. 
 >
-> For example, imagine there is *tracker program* in the server with several program stages and each TEI has 5 events (enrollments and program stages). The *TEI to download* value is set to 100. Also, in the server there is an *event program* which contains 1000 events. The *Event to download" value has been set to 200. The Android App will download the following: 100 x 5 events from the tracker program, 200 events from the event program, therefore the Android App will end up downloading 700 events.
+> For example, imagine there is *tracker program* in the server with several program stages and each TEI has 5 events (enrollments and program stages). The *TEI to download* value is set to 100. Also, in the server there is an *event program* which contains 1000 events. The *Event to download* value has been set to 200. The Android App will download the following: 100 x 5 events from the tracker program, 200 events from the event program, therefore the Android App will end up downloading 700 events.
 >
 
 
@@ -176,7 +195,7 @@ In the case that any specific settings has been saved, a table will show a summa
 
 By clicking on *Reset all values*, the admin user will restore the default settings values of the program section. Please note that in this case it means no specific settings per program. 
 
-To save any configuration, the admin user needs to click on the *Save* button (this button is disabled for the users who don't have the 'ALL' authority)
+To save any configuration, the admin user needs to click on the *Save* button (this button is disabled for the users who don't have 'ALL' or 'M_androidsettingsapp' authority)
 
 
 ### Data set { #capture_app_android_settings_webapp_synchronization_data }
@@ -209,7 +228,7 @@ To add a specific setting:
 
 ### User Sync Test { #capture_app_android_settings_webapp_synchronization_user_sync_test }
 
-This section checks the amount of data and metadata a user would sync to his/her device. You can run this test on any user that you have access to. This test shows up the number of organisation units, data sets, program rules, programs, etc., that an android user has access to (so the resources that the android app will download), and the metadata and data download size (approx estimation). Please note that a user doesn't need to have the 'ALL' authority to run this test.
+This section checks the amount of data and metadata a user would sync to his/her device. You can run this test on any user that you have access to. This test shows up the number of organisation units, data sets, program rules, programs, etc., that an android user has access to (so the resources that the android app will download), and the metadata and data download size (approx estimation). Please note that a user doesn't need to have the 'ALL' or 'M_androidsettingsapp' authority to run this test.
 
 ![](resources/images/capture-app-user-sync-test.png){width=50%}
 
@@ -338,7 +357,7 @@ To create a **Home** item:
 2. Click on the search box and select the visualization from the list or type the name of the visualization item.
 3. Add an alternative title, otherwise, the app will display the name of the visualization
 4. By default, the app will enable the group visualization setting.
-   1. Create a new group: A free text box will pop-up to type the name or
+   1. Create a new group: A free text box will pop up to type the name or
    2. Select a created group visualization: Choose an option from the list to add the visualization or
    3. Disable the group visualization by clicking on the checkbox.
 5. Click on the "Save" button.
@@ -402,7 +421,7 @@ To create a **Program** item:
 3. Click on the search box and select the visualization from the list or type the name of the visualization item.
 4. Add an alternative title, otherwise, the app will display the name of the visualization
 5. By default, the app will enable the group visualization setting.
-   1. Create a new group: A free text box will pop-up to type the name or
+   1. Create a new group: A free text box will pop up to type the name or
    2. Select a created group visualization: Choose an option from the list to add the visualization or
    3. Disable the group visualization by clicking on the checkbox.
 6. Click on the "Save" button.
@@ -456,7 +475,7 @@ To create a **Data Set** item:
 3. Click on the search box and select the visualization from the list or type the name of the visualization item.
 4. Add an alternative title, otherwise, the app will display the name of the visualization
 5. By default, the app will enable the group visualization setting.
-   1. Create a new group: A free text box will pop-up to type the name or
+   1. Create a new group: A free text box will pop up to type the name or
    2. Select a created group visualization: Choose an option from the list to add the visualization or
    3. Disable the group visualization by clicking on the checkbox.
 6. Click on the "Save" button.
@@ -527,7 +546,7 @@ Since the aggregations and calculations displayed are calculated in the device, 
 - Well-formed analytic objects (series, categories, filters)
 - User has view access
 - Limitations for Pivot Tables
-  - Number of header lines: 1
+  - Number of header lines: 1 or 2 (*New 2.3*)
   - Number of header columns: 2
 - Limitations for Charts
   - Number of Series: No limit (but remember you are rendering in a small screen)
@@ -567,9 +586,10 @@ After a user installs and launches the Android Settings Web App for the first ti
 
 ![](resources/images/capture-app-first-setup-with-deprecation-message.png){width=50%}
 
-> **Warning** 
+> **Warning (New 2.3)** 
 >
-> Only users will 'ALL' authority are able to *save or update* the configuration, but any user will have view access once it's created.
+> When using DHIS2 version equal to or higher to 2.40, only users with "M_androidsettingsapp" or "ALL" authority can *save or update* the configuration, but any user will have *view* access once it is created.
+> 
 
 
 ![](resources/images/capture-app-first-setup-no-authorities.png){width=50%}
@@ -595,7 +615,7 @@ At the form footer of all settings sections, admin users can find a *Save* butto
 
 ![](resources/images/capture-app-save_button.png)
 
-Only when an admin user clicks on this button, all changes made on the current section are saved on the Datastore. These changes will apply to the Android Capture Apps when they synchronize their configuration.
+Only when an admin user clicks on this button, all changes made on the current section are saved on the Datastore. These changes will apply to the Android Capture App when they synchronize their configuration.
  
 Unsaved changes
 :	In case an admin user wants to go to another section when there are still some unsaved changes, an alert will be displayed before navigating away from the current section. In case the user accepts leaving the page, the unsaved changes will be lost.
@@ -609,3 +629,30 @@ An admin user can restore the settings at any time. There is a *Reset all values
 ![](resources/images/capture-app-reset-default.png)
 
 The default values will be only restored on Datastore and applied after clicking on *Save*. 
+
+
+## Uninstall the app { #capture_app_android_settings_webapp_uninstall_app }
+
+In case of needing to uninstall the Android Settings App it is recommended to also delete the datastore namespace.
+
+#### Uninstall app
+
+- Click on **Custom Apps**
+- Go to *Android Settings App*
+- Click on *Install V2.X.X*
+
+![](resources/images/capture-app-unistall-custom-app.png)
+
+![](resources/images/capture-app-unistall-aswa.png)
+
+#### Delete datastore namespace
+
+- Click on **Datastore Management** app
+- Go to *ANDROID_SETTINGS_APP*
+- Click on *Delete*
+
+![](resources/images/capture-app-unistall-delete-namespace.png)
+
+> **Warning**
+>
+> This is a critical action, be aware that by doing this, all previous configurations will be permanently deleted.   
