@@ -1,6 +1,6 @@
 # Settings { #capture_app_settings }
 
-![Settings window](resources/images/capture-app-image17.jpg){  width=25%}
+![Settings window](resources/images/capture-app-image17.png){  width=25%}
 
 Sync data
 :	User is able to choose from a drop-down list if the data entered in the app is uploaded to the server manually or scheduled every 15 min, 1 hour or 1 Day. By default the app will sync every 24h. This kind of Syncing includes new and updated events and TEI’s.
@@ -43,3 +43,8 @@ Reset app data & configuration
 
 SMS Settings
 :	This sections allows to check or edit the parameters related to the sms gateway.
+
+Software Update (New 2.8)
+:	This feature enables implementation administrators to manage and control the version of the Android app from the DHIS2 user web interface, making it easier to manage app updates and ensure compatibility with the DHIS2 system. Managers will be able to upload the desired version and users will get a prompt message to update when they are not in the last updated version. The management of versions is made through a new Web App.
+
+![](resources/images/capture-app-image229.png){ width=25%}
