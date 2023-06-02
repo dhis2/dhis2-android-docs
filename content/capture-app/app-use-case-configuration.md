@@ -95,9 +95,8 @@ A user can easily install the Use Case Configuration Web App by logging into the
 - Go to *Use Case Configuration App*
 - Click on *Install V1.X.X*
 
-[//]: # (TODO: change img)
-![](resources/images/capture-app-app-hub-install.png)
-![](resources/images/capture-app-app-hub-install-webapp.png)
+![](resources/images/capture-app-use-case-configure-app-hub-install.png)
+![](resources/images/capture-app-use-case-configure-app-hub-install-webapp.png)
 
 
 ## Log in and first time setup { #capture_app_use_case_configuration_webapp_login }
