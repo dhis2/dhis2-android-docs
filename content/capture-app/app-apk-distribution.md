@@ -17,9 +17,8 @@ A user can easily install the Use Case Configuration Web App by logging into the
 - Go to *APK Distribution App*
 - Click on *Install V1.X.X*
 
-[//]: # (TODO: change img)
-![](resources/images/capture-app-app-hub-install.png)
-![](resources/images/capture-app-app-hub-install-webapp.png)
+![](resources/images/capture-app-apk-distribution-app-hub-install.png)
+![](resources/images/capture-app-apk-distribution-app-hub-install-webapp.png)
 
 
 ## Log in and first time setup { #capture_app_apk_distribution_webapp_webapp_login }
