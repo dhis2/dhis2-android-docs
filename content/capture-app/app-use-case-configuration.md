@@ -1,10 +1,10 @@
 # Use Case Configuration Web App { #capture_app_use_case_configuration_webapp }
 ## Overview { #capture_app_use_case_configuration_webapp_overview }
 
-This section focuses on the [Use Case Configuration Web App](https://apps.dhis2.org/app/) implementation.
+This section focuses on the [Use Case Configuration Web App](https://apps.dhis2.org/app/7df6f344-0487-469c-abe6-53c6e729abcf) implementation.
 
 
-The [Use Case Configuration Web App](https://apps.dhis2.org/app) will connect the components of use cases, like Pharmacy stock management (LMIS), such as the Tracker Program and Data elements, to the Android Capture App. This app ensures configuration flexibility and avoids hard coding various metadata in the actual mobile application.
+The [Use Case Configuration Web App](https://apps.dhis2.org/app/7df6f344-0487-469c-abe6-53c6e729abcf) will connect the components of use cases, like Pharmacy stock management (LMIS), such as the Tracker Program and Data elements, to the Android Capture App. This app ensures configuration flexibility and avoids hard coding various metadata in the actual mobile application.
 
 Based on the configuration, any program of the DHIS2 server can be set as a stock management system or any other use case.
 
@@ -16,6 +16,34 @@ Please note that in this version of the Web App, only users with "ALL" authority
 > 
 > ![](resources/images/capture-app-use-case-configure-api-no-access.png)
 >
+
+
+## Installation { #capture_app_use_case_configuration_webapp_installation }
+
+A user can easily install the Use Case Configuration Web App by logging into the DHIS2 and going to **App Management**.
+
+- Click on **App Hub**
+- Go to *Use Case Configuration App*
+- Click on *Install V1.X.X*
+
+![](resources/images/capture-app-use-case-configure-app-hub-install.png)
+![](resources/images/capture-app-use-case-configure-app-hub-install-webapp.png)
+
+
+## Log in and first time setup { #capture_app_use_case_configuration_webapp_login }
+
+After a user installs and launches the Use Case Configuration Web App for the first time, the web app will require saving the default values of the configuration. This will allow android devices connect to the instance.
+
+
+![](resources/images/capture-app-use-case-configure-first-setup.png){width=50%}
+
+> **Warning**
+>
+> Only users with 'ALL' authority are able to *save or update* the configuration, users with no authority will not have view access to the app even if it is already created.
+>
+
+
+![](resources/images/capture-app-use-case-configure-no-authorities.png){width=50%}
 
 
 ## Configure Program { #capture_app_use_case_configuraton_webapp_configure }
@@ -85,34 +113,6 @@ To remove a **Program Configuration**:
 3. Click on the "Delete" button.
 
 ![](resources/images/capture-app-use-case-configure-delete-program.png)
-
-
-## Installation { #capture_app_use_case_configuration_webapp_installation }
-
-A user can easily install the Use Case Configuration Web App by logging into the DHIS2 and going to **App Management**.
-
-- Click on **App Hub**
-- Go to *Use Case Configuration App*
-- Click on *Install V1.X.X*
-
-![](resources/images/capture-app-use-case-configure-app-hub-install.png)
-![](resources/images/capture-app-use-case-configure-app-hub-install-webapp.png)
-
-
-## Log in and first time setup { #capture_app_use_case_configuration_webapp_login }
-
-After a user installs and launches the Use Case Configuration Web App for the first time, the web app will require saving the default values of the configuration. This will allow android devices connect to the instance.
-
-
-![](resources/images/capture-app-use-case-configure-first-setup.png){width=50%}
-
-> **Warning**
->
-> Only users with 'ALL' authority are able to *save or update* the configuration, users with no authority will not have view access to the app even if it is already created.
->
-
-
-![](resources/images/capture-app-use-case-configure-no-authorities.png){width=50%}
 
 
 ## Enter and save configuration parameters { #capture_app_use_case_configuration_webapp_enter_and_save }
