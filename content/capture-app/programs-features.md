@@ -183,9 +183,11 @@ If the TEI or event has coordinates a navigation icon will be displayed at the t
 ![](resources/images/capture-app-image150.png){ width=25%}
 ![](resources/images/capture-app-image151.jpg){ width=25%}
 
-### Working Lists
+### Working Lists (Improved 2.8)
 
 Working lists are available in Event and Tracker Programs, once a list is selected the filters will be blocked and not allowed to change until the user resets the search.
+
+From 2.8, the Android App supports the new tracker working lists, allowing users to filter by data elements. The working lists need to be configured in web using the web Capture App. The Android app will download the working lists that are configured and saved on the server side.
 
 ![](resources/images/capture-app-image152.png){ width=25%}
 ![](resources/images/capture-app-image153.png){ width=25%}
@@ -202,19 +204,25 @@ Legends can be assigned to Data Elements and they will be displayed next to valu
 
 ![](resources/images/capture-app-image155.png){ width=25%}
 
-### Data Entry Form (Improved 2.7)  { #capture_app_programs_common_features_data_entry_form }
+### Data Entry Form  { #capture_app_programs_common_features_data_entry_form }
 
-#### Hint messages (Improved 2.7)
+#### Hint messages
 
 The input fields will display had a hint message saying "Insert value here" which will remain until a value is entered by the user.
 
 ![](resources/images/capture-app-image209.png){ width=25%}
 
-#### Navigation button (New 2.7)
+#### Navigation button
 
 In forms with multiple sections, the App includes a "Next" button at the end of each section which calls the user to action. The funtion of the button is to close the current section and open the new one.
 
 ![](resources/images/capture-app-image210.png){ width=25%}
+
+### Actionable Icons (New 2.8)  { #capture_app_programs_common_features_actionable_icons }
+
+This feature enables users to take action on phone numbers and email addresses directly from the app.  When tapping on the icons, the app will dial a phone number or open an email app copying the address from the event or enrollment data entry form.
+
+![](resources/images/capture-app-image230.png){ width=25%}
 
 ## Event Programs specific features { #capture_app_programs_events }
 
@@ -242,7 +250,7 @@ In tracker programs, the user can see relationships on a map by tapping the map 
 
 ![](resources/images/capture-app-image132.png){ width=50%}
 
-### TEI Dashboard (Improved 2.7) { #capture_app_programs_TEI_Dashboard }
+### TEI Dashboard { #capture_app_programs_TEI_Dashboard }
 
 #### Navigation panel
 
@@ -253,7 +261,7 @@ To simplify and personalize the user experience, the user interface actions offe
 * The Indicator tab will not be visible if the program has no program indicators configured.
 * Organisation Unit filter will not be visible if the user has only one Organisation Unit configured.
 
-#### Creating A Stage (Improved 2.7)
+#### Creating A Stage
 
 To create a new event, the user needs to tap on the plus icon on the stage card. This icon is always visible unless the stage is non-repeatable and already created.
 
@@ -263,7 +271,7 @@ When the user taps on the button, that program stage will unfold showing to the 
 
 If the user is creating a new stage and there is only one option based on the program configuration, the available program stage is selected automatically and program stage selection step is skipped.
 
-#### Share a TEI (Improved 2.7)
+#### Share a TEI 
 
 The "Share" button has been removed from the TEI dashboard and the functionality to share a TEI through QR code has been relocated on the three vertical dot menu, at the top right corner of the screen.
 
@@ -411,7 +419,7 @@ The Nutrition Growth charts are shown according to the WHO standards.  This opti
 
 ![](resources/images/capture-app-image160.png){ width=25%}
 
-### Referrals (Improved 2.7) { #capture_app_programs_referrals }
+### Referrals { #capture_app_programs_referrals }
 
 when a user makes a permanent referral of a TEI, the ownership will be updated accordingly on the server.
 

@@ -49,7 +49,7 @@ Users can also change The anlytics type between chart, table or single value.
 ![](resources/images/capture-app-image166.png){ width=25%}
 ![](resources/images/capture-app-image171.png){ width=25%}
 
-### Legends (Improved 2.7) { #capture_app_visual_pivot_legends }
+### Legends { #capture_app_visual_pivot_legends }
 
 Legends are displayed in pivot tables by enabling the feature "Use legends for chart color" in the Data Visualizer App.
 
@@ -74,7 +74,7 @@ You can name your different groups, they will be displayed as a button in the to
 
 ![](resources/images/capture-app-image173.png){ width=25%}
 
-### Limitations (Improved 2.7)
+### Limitations
 
 Android uses tables and charts created using the web Visualizer app, however only the configuration parameters of the object are used by the Android App: data elements, indicators, chart type, title, periods...; all the aggregations are calculated offline by the android application. The results will be based on the data stored in the device at that exact moment. 
 
@@ -188,7 +188,7 @@ In the Android App, the color will be rendered as background color for programs 
 >
 > Colours will first be available in the new Android app, followed in future releases by the new web-based Capture App.
 
-## Rendering Types for Program Sections { #capture_app_visual_rendering_type }
+## Rendering Types for Program Sections (Improved 2.8) { #capture_app_visual_rendering_type }
 
 
 ![](resources/images/capture-app-image16.png){width=80% }
@@ -198,6 +198,10 @@ In the Android App, the color will be rendered as background color for programs 
 ![](resources/images/capture-app-image26.png){ width=25%}
 ![](resources/images/capture-app-image36.png){ width=25%}
 
+From 2.8, the app will render option set with any value type as matrix or sequential layout.
+
+![](resources/images/capture-app-image226.png){ width=25%}
+![](resources/images/capture-app-image227.png){ width=25%}
 
 > **Note**
 >
@@ -221,17 +225,13 @@ This is available when:
 > 
 > For Android versions 4.4,  5.1 and small devices, the Accept option is not visible in the second calendar view.
 
-## Render types { #capture_app_visual_render }
+## Render types (Improved 2.8) { #capture_app_visual_render }
 
-The available rendering options have been expanded to include horizontal and vertical radio buttons, checkboxes and toggles. The allowed options depend on the value type.
+The available rendering options have been expanded to include horizontal and vertical radio buttons, checkboxes and toggles for any value type.
 
-- Yes Only: can be rendered as radio button or checkbox. From 2.6 the label 'Yes' next to the checkbox or radio button has been removed.
-  
-- Yes/No: can be rendered as horizontal/vertical radio buttons or horizontal/vertical checkboxes or toggle.
-  
-- Text: When is linked to an option set can be rendered as horizontal/vertical radio buttons or horizontal/vertical checkboxes. The option set must be configured with value type "Text", any other value type will be displayed as a drop-down list.
-
-![](resources/images/capture-app-image111.png){ width=25%}
+![](resources/images/capture-app-image111.png){ width=100%}
+![](resources/images/capture-app-image224.png){ width=25%}
+![](resources/images/capture-app-image225.png){ width=25%}
 
 > **Note** 
 >
@@ -272,8 +272,33 @@ Combined with the use of d2 functions in program rules, the different fields of 
 ![](resources/images/capture-app-image184.png){ width=20%}
 ![](resources/images/capture-app-image200.png){ width=20%}
 
-### Tappable areas in icons and buttons (Improved 2.7) { #capture_app_visual_tappable_areas }
+### Signature (New 2.8) { #capture_app_visual_signature }
+
+This feature allows users to collect handwritten signatures from the device. The signatures will be saved as an image data element in the app.
+
+This configuration must be done in web ( available from 2.40 version) by selecting the "canvas" rendering type on an image value type.
+
+![](resources/images/capture-app-image231.png){ width=20%}
+![](resources/images/capture-app-image232.png){ width=20%}
+
+## User Experience (Improved 2.8) { #capture_app_visual_user_experience }
+
+### Tappable areas in icons and buttons { #capture_app_visual_tappable_areas }
 
 Some buttons or tappable labels of the Android App had small sensitive areas for the user to tap. The whole user interface was reviewed and the tappable areas has been increased. For example the "+" button to create a new stage or the "˅" icon to open TEI details or expand a section.
 
 ![](resources/images/capture-app-image208.png){ width=20%}
+
+### Loading Banners (Improved 2.8) { #capture_app_visual_loading_banners}
+
+The Android App provides visual animations to users when they perform actions that take longer than usual to complete, such loading maps or searching, so that they know that the system is processing their request.
+
+![](resources/images/capture-app-image228.png){ width=20%}
+
+### Offline Buttons (New2.8){#capture_app_visual_offline_buttons}
+
+This feature enhances the functionality of the app when it is used offline, ensuring that menus are disabled when the online actions are not available.
+
+### Long Texts Management (New2.8){#capture_app_visual_longtext_management}
+
+The Android App enables users to view long text in fields that are limited in size, such as a stage names or datasets headers.

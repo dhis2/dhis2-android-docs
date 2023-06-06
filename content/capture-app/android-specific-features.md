@@ -28,14 +28,16 @@ After a succesful login the user should be able to perform an *offline* login on
 >
 > Due to a change in the login API this feature is not available in 2.31, 2.32, 2.33, 2.34, 2.35 and 2.36.
 
-## Offline Multi-user { #capture_app_generic_multiuser}
+## Offline Multi-user (Improved 2.8) { #capture_app_generic_multiuser}
 
-The Android app can now work with up to 3 different users while being offline. The users will need to have access to the internet for the first login of each account and will be able to switch accounts after without requiring access to the Internet.
+The Android app have removed the limitation on the number of offline accounts that users can create, allowing them to work with as many offline accounts as needed.
+
+The users will need to have access to the internet for the first login of each account and will be able to switch accounts after without requiring access to the Internet.
 
 ![](resources/images/capture-app-image185.png){ width=25%}
 ![](resources/images/capture-app-image186.png){ width=25%}
 
-The users will be able to manage the user accounts and delete accounts if needed. When the maximum number of accounts is reached, it will be necessary to delete one of the existing accounts to log in to a new one.
+The users will be able to manage the user accounts and delete accounts if needed.
 
 ![](resources/images/capture-app-image187.png){ width=25%}
 ![](resources/images/capture-app-image188.png){ width=25%}
@@ -46,7 +48,7 @@ The users will be able to manage the user accounts and delete accounts if needed
 
 The users will be able to restore their own password if they have the setting enabled: Enabled User Account Recovery.
 
-![](resources/images/capture-app-image64.PNG){ width=25%}
+![](resources/images/capture-app-image64.png){ width=25%}
 
 ## Blocking session (PIN) { #capture_app_generic_PIN }
 
@@ -54,7 +56,6 @@ User is able to lock the session using a 4 digit PIN. This allows to move to oth
 If the user forgets the PIN number, log in by entering the credentials is also available.
 
 ![](resources/images/capture-app-image65.png){width=25%}
-![](resources/images/capture-app-image63.jpg){width=25%}
 
 ## Fingerprint { #capture_app_generic_fingerprint }
 
@@ -68,9 +69,8 @@ User is able to use the fingerprint scanner if the feature is activated in the d
 
 ## Instructions/information buttons { #capture_app_generic_instructions }
 
-A contextual guide is available in Event details and TEI dashboard screen.
+A contextual guide is available in TEI dashboard screen.
 
-![](resources/images/capture-app-image42.jpg){width=25%}
 ![](resources/images/capture-app-image66.png){width=25%}
 
 > **Tip**
@@ -82,7 +82,7 @@ A contextual guide is available in Event details and TEI dashboard screen.
 A filter can be applied in all listing screens (home, event listing, tei search and dataSets) which narrows down the data displayed. The filters available are: period, org. unit, sync state, event status, category option combination and "assigned to me".
 
 ![](resources/images/capture-app-image19.png){ width=25%}
-![](resources/images/capture-app-image123.png){ width=25%}
+![](resources/images/capture-app-image123.png){ width=50%}
 ![](resources/images/capture-app-image134.png){ width=25%}
 
 Filters will adapt to the different programs and data sets.
@@ -177,11 +177,11 @@ The sorting button will be on the filter bars with the following behavior:
 ### Enrollment Status { #capture_app_generic_sorting_enrollment }
 - List will be sorted in alphabetical order by status name.
 
-![](resources/images/capture-app-image123.png){ width=25%}
+![](resources/images/capture-app-image123.png){ width=100%}
 
 ## Sync Information { #capture_app_generic_sync_info }
 
-### Login Sync (New 2.7) {#capture_app_generic_login_sync}
+### Login Sync {#capture_app_generic_login_sync}
 
 During the metadata download, the app will remain in the splash screen and will open the home screen once the metadata is in the device.
 
@@ -196,7 +196,7 @@ The user will be able to see how many programs are downloading data, or complete
 
 **NOTE:** All programs and data sets will be blocked until the sync process is fully finished.
 
-### Subsequent logins (New 2.7) {#capture_app_generic_subsequent_login}
+### Subsequent logins{#capture_app_generic_subsequent_login}
 
 The application will launch a sync process for data and metadata only for the first time the user logs in. In order to facilitate the work in the most difficult cases, the sync process have been removed for the subsequent logins. This means that when the user opens the app, it will open without performing a full sync even if the user logs out of the account.
 
@@ -393,3 +393,23 @@ This feature is for administrators. The Android App incorporates an option in th
 
 ![](resources/images/capture-app-image198.png){ width=25%}
 ![](resources/images/capture-app-image199.png){ width=25%}
+
+## Error Navigation (New 2.8) { #capture_app_error_navigation }
+
+The Android App has improved the navigation of sync errors on the user interface. The app will display the sync errors in a simple and clean manner allowing the user to navigate from the home screen to the exact field that is causing the error inside the event or data set.
+
+![](resources/images/capture-app-image217.png){ width=25%}
+
+User must tap on any of the errors listed and the app will move to the correspondent screen. Once the error is located and fixed, the user can synced by tapping on the "Refresh" button.
+
+![](resources/images/capture-app-image218.png){ width=25%}
+![](resources/images/capture-app-image219.png){ width=25%}
+![](resources/images/capture-app-image220.png){ width=25%}
+
+## LMIS Module (New 2.8) { #capture_app_lmis_module }
+
+The new module for real stock monitoring use case enables users to manage and monitor their stock levels in real-time. Integrating a module implies that the app will open a completely new and different user interface and experience to respond to a different data entry flow. To use this modules the program will need to be configured using the new web app for program use case configuration.
+
+![](resources/images/capture-app-image221.png){ width=25%}
+![](resources/images/capture-app-image222.png){ width=25%}
+![](resources/images/capture-app-image223.png){ width=25%}

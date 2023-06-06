@@ -1,6 +1,6 @@
 # Data sets { #capture_app_datsets }
 
-### Data Entry  (Improved 2.7) {#capture_app_data_sets_data_entry}
+### Data Entry {#capture_app_data_sets_data_entry}
 
 While entering data the new text input dialog opens an input field above the keyboard which shows the Data Element name, and category options of the field being selected, ensuring the user does not lose context when navigating the tables.
 
@@ -51,11 +51,17 @@ Validation rules and completion of data sets are integrated in the save button a
 
 - If the data set does not have validation rules, the data set will be marked as complete if all mandatory fields have value.
 
-### Increase Row Headers (Update 2.7) { #capture_app_data_sets_row }
+### Increase Row and column Headers (New 2.8) { #capture_app_data_sets_row }
 
-The resizing of the header column has been removed due to a refactor of the data set tables.
+Users are now allowed to resize the row headers and columns in datasets, making it easier to view and work with larger tables.
 
-A new feature will be included in a future patch version in which users will be able to resize any column of the table.
+To resize any column, tap on its header and then drag and drop until the desired size. A maximum and minimum size limit is given for the columns that can be resized to ensure a good layout.
+
+If the column have multiple headers, the resizing will be available only for the child header (lowest level). Users can also resize all collumns at once by clicking on the top left of the table.
+
+![](resources/images/capture-app-image215.png){ width=25%}
+
+![](resources/images/capture-app-image216.png){ width=25%}
 
 ### Indicators { #capture_app_data_sets_indicators }
 
