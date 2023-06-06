@@ -276,10 +276,10 @@ This section allows to admin user to customize the filter and percentage complet
 
 If any specific settings have been saved, a table will summarize the particular configuration per program, and the options to edit or delete these settings. 
 
-![](resources/images/capture-app-appearance-program-table.png){width=75%}
+![](resources/images/capture-app-appearance-program-table.png)
 
 The option "Show percentage (%) complete in Program toolbar" refers to: 
-![](resources/images/capture-app-appearance-programs-spinner.png){width=75%}
+![](resources/images/capture-app-appearance-programs-spinner.png){width=50%}
 
 **Search Tracked Entity (New 2.2)**
 
@@ -554,7 +554,7 @@ Since the aggregations and calculations displayed are calculated in the device, 
 
 There are many more restrictions which apply to Android Analytics regarding the many configuration options available in the Web Visualizer as well as the supported functions and calculations related to indicators and program indicators. [This table](https://docs.google.com/spreadsheets/d/1127cz7M0K4fux5CU0V54V2Z77NZWCr0BTrZ6jcCec4Q) summarises all supported features.
 
-> **Note (**New 2.2.1**):**
+> **Note (New 2.2.1)**
 >
 > When searching for a visualization to add as part of the Analytics visualizations, all visualizations will be listed, but visualizations that don't meet the above restrictions will be disabled. 
 >
@@ -599,7 +599,7 @@ After a user installs and launches the Android Settings Web App for the first ti
 
 ### Datastore { #capture_app_android_settings_webapp_datastore }
 
-Internally all settings are stored in [Datastore](https://docs.dhis2.org/master/en/developer/html/webapi_data_store.html) in JSON format.
+Internally all settings are stored in [Datastore](https://docs.dhis2.org/en/develop/using-the-api/dhis-core-version-240/data-store.html) in JSON format.
 
 Datastore structure:
 
