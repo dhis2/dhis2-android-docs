@@ -1,9 +1,9 @@
 # APK Distribution Web App { #capture_app_apk_distribution_webapp }
 ## Overview { #capture_app_apk_distribution_webapp_overview }
 
-This section focuses on the [APK Distribution Web App](https://apps.dhis2.org/app/) implementation.
+This section focuses on the [APK Distribution Web App](https://apps.dhis2.org/app/dff273fc-909e-48af-b151-c4d7e9c8a12c) implementation.
 
-The [APK Distribution Web App](https://apps.dhis2.org/app) enables implementation administrators to manage and control the version of the Android app, making it easier to manage app updates and ensure compatibility with the DHIS2 system. 
+The [APK Distribution Web App](https://apps.dhis2.org/app/dff273fc-909e-48af-b151-c4d7e9c8a12c) enables implementation administrators to manage and control the version of the Android app, making it easier to manage app updates and ensure compatibility with the DHIS2 system. 
 
 Admins will be able to upload the desired version and users will get a prompt message to update when they are not in the last updated version.
 
