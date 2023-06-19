@@ -295,10 +295,10 @@ The Android App provides visual animations to users when they perform actions th
 
 ![](resources/images/capture-app-image228.png){ width=20%}
 
-### Offline Buttons (New2.8){#capture_app_visual_offline_buttons}
+### Offline Buttons (New2.8) { #capture_app_visual_offline_buttons}
 
 This feature enhances the functionality of the app when it is used offline, ensuring that menus are disabled when the online actions are not available.
 
-### Long Texts Management (New2.8){#capture_app_visual_longtext_management}
+### Long Texts Management (New2.8) { #capture_app_visual_longtext_management}
 
 The Android App enables users to view long text in fields that are limited in size, such as a stage names or datasets headers.
