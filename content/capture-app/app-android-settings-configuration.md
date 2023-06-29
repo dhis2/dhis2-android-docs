@@ -544,6 +544,7 @@ To run the test:
 Since the aggregations and calculations displayed are calculated in the device, the implementation of analytics is limited compared to web. In summary the compatible and supported objects and features are:
 
 - Well-formed analytic objects (series, categories, filters)
+- Use of relative periods (Fix periods are not supported)
 - User has view access
 - Limitations for Pivot Tables
   - Number of header lines: 1 or 2 (*New 2.3*)

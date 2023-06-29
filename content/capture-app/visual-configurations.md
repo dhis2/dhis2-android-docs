@@ -33,7 +33,7 @@ The analytics supported in the Android App are:
 
 For each visualization object, the user will be able to filter in the app by:
 
-   * Period: Daily, Weekly, Monthly, Yearly, This Quarter, Last Quarter, Last 4 Quarters and Quarter this year.
+   * Relative Period: Daily, Weekly, Monthly, Yearly, This Quarter, Last Quarter, Last 4 Quarters and Quarter this year.
    * OrgUnit: Select "All" to display all the org units available to the user or "Selection" to specify one or multiple org units.
 
 ![](resources/images/capture-app-image180.png){ width=25%}
@@ -76,15 +76,16 @@ You can name your different groups, they will be displayed as a button in the to
 
 ### Limitations
 
-Android uses tables and charts created using the web Visualizer app, however only the configuration parameters of the object are used by the Android App: data elements, indicators, chart type, title, periods...; all the aggregations are calculated offline by the android application. The results will be based on the data stored in the device at that exact moment. 
+Android uses tables and charts created using the web Visualizer app, however only the configuration parameters of the object are used by the Android App: data elements, indicators, chart type, title, periods...; all the aggregations are calculated offline by the android application. The results will be based on the data stored in the device at that exact moment.
 
 Since the aggregations and calculations displayed are calculated in the device, the implementation of analytics is limited compared to web. In summary the compatible and suported objects and features are:
 
    - Well formed analytic objects (series, categories, filters)
+   - Use of relative periods (Fix periods are not supported)
    - User has view access
    - Limitations for Pivot Tables
-      - Number of header lines: 1
-      - Number of header columns: 1
+      - Number of header lines: 1 or 2 (from 2.3)
+      - Number of header columns: 2
    - Limitations for Charts
       - Number of Series: No limit (but remember you are rendering in a small screen)
       - Number of Categories (doesn’t apply for pie chart): No limit
