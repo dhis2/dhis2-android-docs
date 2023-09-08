@@ -43,7 +43,7 @@ After a user installs and launches the Use Case Configuration Web App for the fi
 >
 
 
-![](resources/images/capture-app-use-case-configure-no-authorities.png){width=50%}
+![](resources/images/capture-app-use-case-configure-no-authorities.png)
 
 
 ## Configure Program { #capture_app_use_case_configuraton_webapp_configure }
@@ -88,6 +88,20 @@ To create a **Program Configuration**:
 > - Data elements and Tracker Entity Attributes assign to program and program stage.
 >
 
+The following is a comprehensive list of the main metadata configurations and settings for the Tracker
+Program on which the customized DHIS2-RTS is based on.
+
+| CATEGORY                 | SYSTEM DEFAULT SETTINGS                                                                                                                                                                                                                                                                                                                                                                                               |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Organisation unit        | According to national protocols and policies and/or existing DHIS2 configuration                                                                                                                                                                                                                                                                                                                                      |
+| Data element             | Name: <br/>- "Deliver to": Text / Option set = "Deliver to" <br/>- "Previous stock balance": Positive integer <br/>- "Stock correction": Number <br/>- "Stock count": Positive integer <br/>- "Stock discard": Positive integer <br/>- "Stock distribution": Positive integer <br/>- "Stock on hand": Positive integer <br/>- "Stock received": Positive integer <br/>Domain type: Tracker <br/>Value type: see above |
+| Option set               | Name: "Deliver to" <br/>Value type: Text                                                                                                                                                                                                                                                                                                                                                                              |
+| Tracked entity attribute | Name: <br/>- "Item barcode" <br/>- "Item code" <br/>- "Item description" <br/>"Value type": Text <br/>"Aggregation type": None                                                                                                                                                                                                                                                                                        |
+| Tracked entity type      | Name: Item <br/>"Feature type": None                                                                                                                                                                                                                                                                                                                                                                                  |
+| Program                  | Type: Tracker <br/>Tracked entity type: Item <br/>Program tracked entity attributes: <br/>- Item barcode <br/>- Item code <br/>- Item description <br/>Program stages: <br/>Name: "Stock on Hand" <br/>Scheduled days from start: 0 <br/>Repeatable                                                                                                                                                                   |
+| Program rule             | *Name*: "Assign Stock correction" <br/>Condition: "d2:hasValue( #{Stock count} )” <br/>Action: "Assign value"  <br/>*Name*: "Assign Stock on Hand" <br/>Condition: "true" <br/>Action: "Assign value"  <br/>*Name*: "Assign previous stock balance" <br/>Condition: "d2:hasValue( #{Initial stock on hand - Previous event} )" <br/>Action: "Assign value"                                                            |
+
+More information related to DHIS2 for logistic in the [user guide](https://drive.google.com/file/d/1x6HoG75zMPCA823mdY87rb9hEJqxUz22/view).
 
 ### Edit configuration
 

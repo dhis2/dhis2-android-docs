@@ -11,4 +11,5 @@
 - '@github(dhis2/dhis2-android-docs,content/capture-app/program-indicators.md, main)'
 - '@github(dhis2/dhis2-android-docs,content/capture-app/value-types-supported.md, main)'
 - '@github(dhis2/dhis2-android-docs,content/capture-app/app-android-settings-configuration.md, main)'
-
+- '@github(dhis2/dhis2-android-docs,content/capture-app/app-use-case-configuration.md, main)'
+- '@github(dhis2/dhis2-android-docs,content/capture-app/app-apk-distribution.md, main)'
