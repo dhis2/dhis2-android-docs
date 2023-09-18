@@ -17,7 +17,12 @@ You should consider the feasibility of using a BYOD policy - this format allows 
 
 **Distribution of the app** (now and later)
 
-DHIS 2 Android app has a new release every couple of weeks. Each new release contains bug fixes and could contain new functionality. It could also contain new bugs. New versions are published in GitHub as well as Google Play store. Github is only a repository: you will download a specific APK and install it on your device. You will need to allow the use of third-party permissions to install an APK. Once an APK downloaded from GitHub or via other method, the installed version will never auto-update. On the other hand, if you install from Google Play, it normally auto-updates to the latest version. It is possible to disable auto-update in gPlay if you need to.
+DHIS2 Android app major versions are released twice per year, minor versions (which fix previous bugs and might add small new features) are released in between those major versions as needed. New versions are always published via two channels: Google Play Store and [GitHub](https://github.com/dhis2/dhis2-android-capture-app/releases/). If you install the App from the Google Play Store, it will auto-update by default with each new version (although this behaviour can be disabled).  Github is only a repository from where you can download a specific APK and install it on your device. You will need to allow the use of third-party permissions to install an APK. Once the APK is installed from GitHub or via other method it could be updated via the [APK Distribution WebApp](#capture_app_apk_distribution_webapp).
+
+> **Note**
+>
+> Whenever a new APK is added via the APK Distribution WebApp, devices connected to the server and with Internet connectivity will be asked to install the new version every 24 hours. Users can also trigger a search for updates via the Settings > Check for updates.  
+> ![](resources/images/implementation-guide-apk-update.png){ .center width=40%} ![](resources/images/implementation-guide-apk-update-manual.png){ .center width=40%}
 
 Once you complete your testing and training materials, and start your rollout, you don’t want the application version to change for any of the users, unless you have re-tested the new version. Version changes could include a modified UI, erroneous behaviours, or an incompatibility with your DHIS 2 server version. You want to thoroughly test new versions before pushing them to your users, so you can ensure that the new version doesn’t cause any problems to your configuration, requires retraining, on requires changes to your configuration.
 
