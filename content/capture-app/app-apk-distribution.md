@@ -91,3 +91,32 @@ The mobile version allows the administrator user to **upload** and **download** 
 When downloading a version, the APK will be stored in the device.
 
 ![](resources/images/capture-app-apk-distribution-version-list-mobile.png)
+
+
+## Uninstall the app
+
+In case of needing to uninstall the APK Distribution App it is recommended to also delete all the data from the datastore namespace.
+
+#### Delete data
+
+- Click on *Erase settings*
+- A modal will pop up, click on *Erase*
+
+![](resources/images/capture-app-apk-distribution-unistall-delete-namespace.png)
+
+![](resources/images/capture-app-apk-distribution-unistall-delete-namespace-modal.png)
+
+#### Uninstall app
+
+- Go to **App Management**
+- Click on **Custom Apps**
+- Go to *APK Distribution*
+- Click on *Uninstall V1.X.X*
+
+![](resources/images/capture-app-apk-distribution-unistall-custom-app.png)
+
+![](resources/images/capture-app-apk-distribution-unistall-apk.png)
+
+> **Warning**
+>
+> This is a critical action, be aware that by doing this, all previous configurations will be permanently deleted.   

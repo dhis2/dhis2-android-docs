@@ -151,3 +151,32 @@ At the footer of the configuration section, admin users can find a *Save* button
 ![](resources/images/capture-app-use-case-configure-save-button.png)
 
 Only when an admin user clicks on this button, all changes made are saved on the Datastore. These changes will apply to the Android Capture Apps when they synchronize their configuration.
+
+
+## Uninstall the app
+
+In case of needing to uninstall the Use Case Configuration App it is recommended to also delete all the data from the datastore namespace.
+
+#### Delete data
+
+- Click on *Erase all settings*
+- A modal will pop up, click on *Erase*
+
+![](resources/images/capture-app-use-case-configure-unistall-delete-namespace.png)
+
+![](resources/images/capture-app-use-case-configure-unistall-delete-namespace-modal.png)
+
+#### Uninstall app
+
+- Go to **App Management**
+- Click on **Custom Apps**
+- Go to *Use Case Configuration*
+- Click on *Uninstall V1.X.X*
+
+![](resources/images/capture-app-use-case-configure-unistall-custom-app.png)
+
+![](resources/images/capture-app-use-case-configure-unistall-use-case.png)
+
+> **Warning**
+>
+> This is a critical action, be aware that by doing this, all previous configurations will be permanently deleted.   
