@@ -256,7 +256,7 @@ It allows the admin user to enable or disable the option to show the filters rel
 
 ### Program { #capture_app_android_settings_webapp_appearance_program }
 
-It allows the admin user to specify which filters should be shown.
+Program appearance allows to hide/show features within the program according to the configuration needs. These changes can happen globally, applying to ALL the programs, or specifically to a single one.
 
 #### Global settings { #capture_app_android_settings_webapp_appearance_program_global }
 
@@ -271,12 +271,14 @@ TEI referrals (**New 2.3.1**):
 It allows to switch off/on the TEI referral option.
 
 Collapse sections in form (**New 2.3.1**):  
-Current behavior lets the sections collapse and expand in an accordion style. This option allows overriding or changing this behavior.	
+Current behavior lets the sections collapse and expand in an accordion style. This option overrides the behavior by keeping all the sections of the form (registration and events) open and removing the "next" button in each section.	
 
 
 #### Specific settings { #capture_app_android_settings_webapp_appearance_program_specific }
 
-This section allows to admin user to customize the filter and percentage completion appearance option. To add a specific setting:
+This section allows the admin user to customize features such as filter, completion percentage, mandatory search, referrals, TEI headers and referral options. Each explained in the section below.
+
+To add a specific setting:
 
 - Click on *Add a Program Settings*, and a dialog will appear.
 - Click on the dropdown that will show a list of programs.
