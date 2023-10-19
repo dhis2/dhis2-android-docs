@@ -634,25 +634,28 @@ The default values will be only restored on Datastore and applied after clicking
 
 ## Uninstall the app { #capture_app_android_settings_webapp_uninstall_app }
 
-In case of needing to uninstall the Android Settings App it is recommended to also delete the datastore namespace.
+In case of needing to uninstall the Android Settings App it is recommended to also delete all the data from the reserved datastore namespace.
+
+#### Delete data
+
+- Go to *General* section
+- Click on *Disable all settings*
+- A modal will pop up, click on *Disable*
+
+![](resources/images/capture-app-unistall-delete-namespace.png)
+
+![](resources/images/capture-app-unistall-delete-namespace-modal.png)
 
 #### Uninstall app
 
+- Go to **App Management**
 - Click on **Custom Apps**
 - Go to *Android Settings App*
-- Click on *Install V2.X.X*
+- Click on *Uninstall V2.X.X*
 
 ![](resources/images/capture-app-unistall-custom-app.png)
 
 ![](resources/images/capture-app-unistall-aswa.png)
-
-#### Delete datastore namespace
-
-- Click on **Datastore Management** app
-- Go to *ANDROID_SETTINGS_APP*
-- Click on *Delete*
-
-![](resources/images/capture-app-unistall-delete-namespace.png)
 
 > **Warning**
 >
