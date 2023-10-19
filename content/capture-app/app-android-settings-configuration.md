@@ -256,7 +256,7 @@ It allows the admin user to enable or disable the option to show the filters rel
 
 ### Program { #capture_app_android_settings_webapp_appearance_program }
 
-It allows the admin user to specify which filters should be shown and enable or disable the option to show the completion percentage of the data entry form.
+Program appearance allows to hide/show features within the program according to the configuration needs. These changes can happen globally, applying to ALL the programs, or specifically to a single one.
 
 #### Global settings { #capture_app_android_settings_webapp_appearance_program_global }
 
@@ -264,15 +264,55 @@ Global settings apply to all programs that an android user has access to.
 
 ![](resources/images/capture-app-appearance-program-global.png){width=75%}
 
+Percentage (%) complete in Program: 
+Enable or disable the option to show the completion percentage of the data entry form.
+
+TEI referrals (**New 2.3.1**):	
+It allows to switch off/on the TEI referral option.
+
+Collapse sections in form (**New 2.3.1**):  
+Current behavior lets the sections collapse and expand in an accordion style. This option overrides the behavior by keeping all the sections of the form (registration and events) open and removing the "next" button in each section.	
+
+
 #### Specific settings { #capture_app_android_settings_webapp_appearance_program_specific }
 
-This section allows to admin user to customize the filter and percentage completion appearance option. To add a specific setting:
+This section allows the admin user to customize features such as filter, completion percentage, mandatory search, referrals, TEI headers and referral options. Each explained in the section below.
+
+To add a specific setting:
 
 - Click on *Add a Program Settings*, and a dialog will appear.
 - Click on the dropdown that will show a list of programs.
 - Clicking on a program will show the different filters to configure. The category combo filter depends on the category combo name.
 
 ![](resources/images/capture-app-appearance-program-specific.png){width=75%}
+
+![](resources/images/capture-app-appearance-program-specific-advanced.png){width=75%}
+
+TEI without searching:
+Offer online and offline search, as well as allow the user to create a TEI without a prior search.
+
+TEI Header (**New 2.3.1**):
+Assign a specific attribute or expression that will be displayed as a header in TEI cards. 
+
+To add a TEI Header:
+
+- Select a Program Indicator
+- An expression related to the program indicator will be displayed
+
+![](resources/images/capture-app-appearance-program-specific-tei-header.png){width=75%}
+
+
+> **Note:**
+>
+> A notice box will be displayed if the selected program lacks expressions related to program indicators that are valid for Android. 
+> 
+> An expression is considered valid for Android only if it is composed exclusively of attributes and/or functions.
+> 
+> ![](resources/images/capture-app-appearance-program-specific-expression-valid.png)
+> 
+> ![](resources/images/capture-app-appearance-program-specific-expression-invalid.png)
+> 
+
 
 If any specific settings have been saved, a table will summarize the particular configuration per program, and the options to edit or delete these settings. 
 
