@@ -28,7 +28,7 @@ After a succesful login the user should be able to perform an *offline* login on
 >
 > Due to a change in the login API this feature is not available in 2.31, 2.32, 2.33, 2.34, 2.35 and 2.36.
 
-## Offline Multi-user (Improved 2.8) { #capture_app_generic_multiuser}
+## Offline Multi-user { #capture_app_generic_multiuser}
 
 The Android app have removed the limitation on the number of offline accounts that users can create, allowing them to work with as many offline accounts as needed.
 
@@ -297,7 +297,10 @@ The user can now enter aggregate data for an organisation Unit, a period and a s
 ![](resources/images/capture-app-image92.png){ width=25%}
 
 
-## Differentiating Data Sets, Tracker and Event programs { #capture_app_generic_differentiating }
+## Home (Improved 2.9) {#capture_app_home}
+
+The home screen of the DHIS2 Android App shows the list of programs and data sets available for the user. The first thing the user does when collecting data in this case is to select the program or data set to work with.
+
 
 ![](resources/images/capture-app-image87.png){ width=25%}
 
@@ -305,6 +308,9 @@ The user can now enter aggregate data for an organisation Unit, a period and a s
 >
 >  An easy way to differentiate them is by looking at the word at the bottom left corner. The word 'Event' will always be in event programs. In tracker will appear the name of the tracked entity type (person, patient, building, etc.). For data sets, the word 'DataSets' will be shown next to the number of records.
 
+For those implementations where the users have access to only one program or dataset, the App will skip the home and will open directly the program or datasaset screen with the event, TEI or dataset list to reduce the number of clicks and streamline the process of data entry.
+
+[screenshots]
 
 ## Sharing Data { #capture_app_generic_shargin }
 
@@ -394,7 +400,7 @@ This feature is for administrators. The Android App incorporates an option in th
 ![](resources/images/capture-app-image198.png){ width=25%}
 ![](resources/images/capture-app-image199.png){ width=25%}
 
-## Error Navigation (New 2.8) { #capture_app_error_navigation }
+## Error Navigation { #capture_app_error_navigation }
 
 The Android App has improved the navigation of sync errors on the user interface. The app will display the sync errors in a simple and clean manner allowing the user to navigate from the home screen to the exact field that is causing the error inside the event or data set.
 
@@ -406,7 +412,7 @@ User must tap on any of the errors listed and the app will move to the correspon
 ![](resources/images/capture-app-image219.png){ width=25%}
 ![](resources/images/capture-app-image220.png){ width=25%}
 
-## LMIS Module (New 2.8) { #capture_app_lmis_module }
+## LMIS Module { #capture_app_lmis_module }
 
 The new module for real stock monitoring use case enables users to manage and monitor their stock levels in real-time. Integrating a module implies that the app will open a completely new and different user interface and experience to respond to a different data entry flow. To use this modules the program will need to be configured using the new web app for program use case configuration.
 

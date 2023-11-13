@@ -51,7 +51,7 @@ Validation rules and completion of data sets are integrated in the save button a
 
 - If the data set does not have validation rules, the data set will be marked as complete if all mandatory fields have value.
 
-### Increase Row and column Headers (New 2.8) { #capture_app_data_sets_row }
+### Increase Row and column Headers { #capture_app_data_sets_row }
 
 Users are now allowed to resize the row headers and columns in datasets, making it easier to view and work with larger tables.
 
@@ -68,6 +68,20 @@ If the column have multiple headers, the resizing will be available only for the
 Indicators are now available in default and section forms and are displayed at the bottom of the data entry form.
 
 ![](resources/images/capture-app-image140.png){ width=25%}
+
+### Cards design (improved 2.9) { #capture_app_datsets_cards_design }
+
+The new design of cards offers a cleaner and more intuitive layout replacing the use of coloured icons by explicit text when relevan.
+
+#### Main changes { #capture_app_datsets_cards_design_main_changes }
+
+**Sync button:** It now appears as a button at the bottom of the card and it is only displayed if there are unsynced data or an error or warning after a sync.
+
+[screenshot]
+
+**Completion status:** After the data set is completed, the app will add a label in each card to specify the completion status.
+
+[screenshot]
 
 ## Supported features overview { #capture_app_datsets_supported_features }
 
