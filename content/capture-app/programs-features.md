@@ -183,7 +183,7 @@ If the TEI or event has coordinates a navigation icon will be displayed at the t
 ![](resources/images/capture-app-image150.png){ width=25%}
 ![](resources/images/capture-app-image151.jpg){ width=25%}
 
-### Working Lists (Improved 2.9)
+### Working Lists (Improved 2.9) { #capture_app_programs_common_features_working_lists }
 
 Working lists are available in Event and Tracker Programs, once a list is selected the filters will be blocked and not allowed to change until the user resets the search.
 
@@ -191,10 +191,7 @@ The Android App supports the new tracker working lists, allowing users to filter
 
 In 2.9, the working lists have been moved from the filters section to the main program screen. In earlier versions the user had to open the filters to be able to see and select a working list, from this version the working lists are always visible under the search bar facilitating its selection for filtering out Tracked Entity Instances
 
-[Update screenshots]
-
-![](resources/images/capture-app-image152.png){ width=25%}
-![](resources/images/capture-app-image153.png){ width=25%}
+![](resources/images/capture-app-image251.png){ width=25%}
 
 ### Program Indicators
 
@@ -222,19 +219,28 @@ In forms with multiple sections, the App includes a "Next" button at the end of 
 
 ![](resources/images/capture-app-image210.png){ width=25%}
 
-#### Program Stage section description (New 2.9)
+#### Program Stage section description (New 2.9) { #capture_app_programs_common_features_data_entry_form_program_stage_description }
 
 To provide more context and information at the moment of data collection the description has now been brought to the user interface and will be displayed below the section name. The description will always be visible but if the text is too long (more than 3 lines) the app will add an ellipsis and a show more/less button to expand or collapse.
 
-[Screenshots]
+![](resources/images/capture-app-image243.png){ width=25%}
+![](resources/images/capture-app-image244.png){ width=25%}
 
-#### Enable/disable collapsible sections in forms (New 2.9)
+#### Enable/disable collapsible sections in forms (New 2.9) { #capture_app_programs_common_features_data_entry_form_collapsible_sections }
 
 Stage sections in the Android App are displayed with collapsible menus that enable the user to open one section at a time. The purpose of this accordion-like implemementation is to help the user navigate very long forms, however some implementations would prefer to list the sections one after the other. 
 
 This new version of the application enables the admin use to decide if the sections should appear in extended mode. This configuration is made through the [Android Settings Web App](https://docs.dhis2.org/en/use/android-app/settings-configuration.html#capture_app_android_settings_webapp_appearance_program_specific) and will display the sections one after the other with the name the secion acting as a separator. In extended mode, the "next" button at the end of each section is removed.
 
-[Screenshots]
+![](resources/images/capture-app-image241.png){ width=25%}
+
+#### New inputs per value types (New 2.9) { #capture_app_programs_common_features_data_entry_form_new_inputs }
+
+The inputs for all value types have been redesigned. Tappable areas and texts have been increased and selection modes are improved to offer cleaner and more intuitive user experience. By default the Android App will display the current forms. Admin users are able to opt-in to use the new forms through the [Android Settings WebApp]().
+
+![](resources/images/capture-app-image238.png){ width=25%}
+![](resources/images/capture-app-image239.png){ width=25%}
+![](resources/images/capture-app-image240.png){ width=25%}
 
 ### Actionable Icons  { #capture_app_programs_common_features_actionable_icons }
 
@@ -262,12 +268,9 @@ The new design of cards offers a cleaner and more intuitive layout replacing the
 
 **Sync button:** It now appears as a button at the bottom of the card and it is only displayed if there are unsynced data or an error or warning after a sync.
 
-[screenshot]
-
 **Event status:** After an event program is completed, the app will add a label in each card to specify the status.
 
-[screenshot]
-
+![](resources/images/capture-app-image236.png){ width=25%}
 
 ## Tracker Programs (program with registration) specific features { #capture_app_programs_tracker }
 
@@ -292,25 +295,17 @@ Main changes in 2.9:
 
 **Edit registration form:** In previous versions, there was a button "Open TET details" at the bottom of the TEI dashboard card. Now, the button is located at the top bar of the screen with the label "Edit TET" (For example: Edit Patient)
 
-[screenshot before and after]
-
 **Follow-up:** In previous versions, there was an icon at the top right corner of the card to mark the TEI. Now, to mark for follow up, the user needs to tap the three dot menu and select the "Mark for follow-up" option.
-
-[screenshot before and after]
 
 **Card title** In previous versions, the title included the values of the first 3 tracked entity attributes marked as Display in List. Now, the tile of the card can bdisplay the first Tracked Entity Attribute marked as Display in list OR a customize text, called TEI header, using program indicators and the Android Settings web App.
 
 More information [here](https://docs.dhis2.org/en/use/android-app/program-features.html#capture_app_programs_tei_header) on how to configure the TEI header.
 
-[screenshot before and after]
-
 **Tracked Entity Attributes:** From 2.9, the complete list of tracked entity attributes marked as Display in List will be display in the dashboard card. The first three will always be visible and if there are more, a show "more" button will appear to expand the list.
-
-[screenshot before and after]
 
 **Programs:** From 2.9, if the TEI is enrolled to more than one program, a list of the programs will be display and will also allow the user to tap on the label and navigate to full list of enrollments.
 
-[screenshot before and after]
+![](resources/images/capture-app-image248.png){ width=50%}
 
 #### Navigation panel
 
@@ -349,19 +344,13 @@ The main changes are:
 
 **Sync button:** It now appears as a button at the bottom of the card and it is only displayed if there are unsynced data or an error or warning after a sync.
 
-[screenshot]
-
 **Enrollment status:** After a program is completed or cancelled, the app will add a label in each card to specify the status.
-
-[screenshot]
 
 **Overdue events:** Is now displayed as a red label with the text: "Overdue" + date of the event
 
-[screenshot]
-
 **Follow-up:** After a TEI is marked for follow-up, an orange label with the text "Marked for follow-up" is added to the card
 
-[screenshot]
+![](resources/images/capture-app-image247.png){ width=50%}
 
 ### Complete/Deactivate Enrollment { #capture_app_programs_complete_deactivate_enrollment }
 
@@ -494,7 +483,7 @@ From 2.9, admin users can now enable or disable the referrals in the DHIS2 Andro
 
 When users add events (tapping on the + icon) in a tracker program, the DHIS2 Android Capture App offers three options: Add (for new events), Schedule (for planning future events) and Refer (for referrals or transfers). IF the referral option is not needed, then the admin user can remove the option from the menu to simplify the user experience. The removal can be general (for all the programs) or for specific programs.
 
-[Screenshots]
+![](resources/images/capture-app-image233.png){ width=50%}
 
 ### [EXPERIMENTAL] TEI Header (new 2.9) { #capture_app_programs_tei_header }
 
@@ -506,7 +495,8 @@ The TEI Header is a title that can be added to the TEI cards and dashboards in t
 
 For more information on how to configure the TEI header, click [here.](https://docs.dhis2.org/en/use/android-app/settings-configuration.html#capture_app_android_settings_webapp_appearance_program)
 
-[Screenshots]
+![](resources/images/capture-app-image249.png){ width=50%}
+![](resources/images/capture-app-image250.png){ width=50%}
 
 ## Supported features Overview { #capture_app_programs_supported_features }
 

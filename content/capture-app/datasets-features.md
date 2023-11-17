@@ -77,11 +77,9 @@ The new design of cards offers a cleaner and more intuitive layout replacing the
 
 **Sync button:** It now appears as a button at the bottom of the card and it is only displayed if there are unsynced data or an error or warning after a sync.
 
-[screenshot]
-
 **Completion status:** After the data set is completed, the app will add a label in each card to specify the completion status.
 
-[screenshot]
+![](resources/images/capture-app-image237.png){ width=25%}
 
 ## Supported features overview { #capture_app_datsets_supported_features }
 

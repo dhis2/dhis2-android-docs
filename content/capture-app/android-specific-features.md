@@ -310,7 +310,8 @@ The home screen of the DHIS2 Android App shows the list of programs and data set
 
 For those implementations where the users have access to only one program or dataset, the App will skip the home and will open directly the program or datasaset screen with the event, TEI or dataset list to reduce the number of clicks and streamline the process of data entry.
 
-[screenshots]
+![](resources/images/capture-app-image245.png){ width=25%}
+![](resources/images/capture-app-image247.png){ width=25%}
 
 ## Sharing Data { #capture_app_generic_shargin }
 
