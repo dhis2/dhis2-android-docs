@@ -99,7 +99,7 @@ Metadata sync
 Data sync
 :	Admin users can choose how often the data will sync. e.g. Syncing data every 6 hours.
 
-![](resources/images/capture-app-sync-global.png){width=33%}
+![](resources/images/capture-app-sync-global.png){width=50%}
 ![](resources/images/capture-app-sync-global-app.png){width=33%}
 
 
@@ -131,7 +131,7 @@ Use the new Tracker Exporter (**New 2.3**)
 Limit the file size to download (**New 2.3**)
 :	Admin users can limit the maximum size of the file resources downloaded in KB.
 
-![](resources/images/capture-app-sync-download-file-size.png){width=50%}
+![](resources/images/capture-app-sync-download-file-size.png){width=33%}
 
 
 
@@ -143,7 +143,7 @@ This section controls the program data synchronization parameters. It has a sect
 
 Global settings apply to all programs that an Android user has access to. The settings can be enabled globally, per Org Unit, per program or per OU and program.
 
-![](resources/images/capture-app-program-global-settings.png){width=33%}
+![](resources/images/capture-app-program-global-settings.png){width=50%}
 
 TEI to download
 :	Maximum number of TEIs to download from the server.
@@ -312,7 +312,7 @@ To add a TEI Header:
 - Select a Program Indicator
 - An expression related to the program indicator will be displayed
 
-![](resources/images/capture-app-appearance-program-specific-tei-header.png){width=75%}
+![](resources/images/capture-app-appearance-program-specific-tei-header.png)
 
 
 > **Note:**
