@@ -69,6 +69,19 @@ This section allows to configure the possibility to take screenshots or screen s
 > The DHIS2 Android App disables the possibility of taking screenshots (and capturing the screen from other apps) by default following security and privacy recommendations. Allowing screenshots might be useful for support and/or sharing purposes in same cases but make sure you understand the security and privacy implications of this setting before enabling it.
 >
 
+### Opt-in Features (**New 2.3.1**)
+Opt-in features are additional functionalities or settings within the application that the user can choose to enable based on preferences. Unlike default settings, these features require an explicit consent or action ('opting in') to activate.
+Opting in allows the user to customize the experience by adding extra capabilities to the app. Keep in mind that these features might come with specific considerations, so it is recommended to review any associated information before opting in.
+
+To enable a feature:
+- Click on *Opt-in Features*. 
+- A list of available opt-in settings will appear.
+- Click on the feature's checkbox.
+
+**Data entry Form :** The inputs for all value types have been redesigned in the Android Capture App with an improved selection mode and increased tappable areas and texts to offer a cleaner and more intuitive user experience. By default, the Android Capture App will display the previous forms. Admin users are able to opt in to use the new forms by clicking in the checkbox option.
+
+![](resources/images/capture-app-optin-features.png)
+
 ### Disable all settings
 By clicking this button, the user will remove all Android configuration settings. No configuration will be applied to the Android App (if this is the case, the sync parameters applied are the ones defined in the Android Capture app).
 
@@ -276,7 +289,7 @@ Current behavior lets the sections collapse and expand in an accordion style. Th
 
 #### Specific settings { #capture_app_android_settings_webapp_appearance_program_specific }
 
-This section allows the admin user to customize features such as filter, completion percentage, mandatory search, referrals, TEI headers and referral options. Each explained in the section below.
+This section allows the admin user to customize features such as filter, completion percentage, mandatory search, referrals, TEI headers, referral options and collapse sections in form. Each explained in the section below.
 
 To add a specific setting:
 
