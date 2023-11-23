@@ -189,7 +189,7 @@ In the Android App, the color will be rendered as background color for programs 
 >
 > Colours will first be available in the new Android app, followed in future releases by the new web-based Capture App.
 
-## Rendering Types for Program Sections (Improved 2.8) { #capture_app_visual_rendering_type }
+## Rendering Types for Program Sections { #capture_app_visual_rendering_type }
 
 
 ![](resources/images/capture-app-image16.png){width=80% }
@@ -226,7 +226,7 @@ This is available when:
 > 
 > For Android versions 4.4,  5.1 and small devices, the Accept option is not visible in the second calendar view.
 
-## Render types (Improved 2.8) { #capture_app_visual_render }
+## Render types { #capture_app_visual_render }
 
 The available rendering options have been expanded to include horizontal and vertical radio buttons, checkboxes and toggles for any value type.
 
@@ -273,7 +273,7 @@ Combined with the use of d2 functions in program rules, the different fields of 
 ![](resources/images/capture-app-image184.png){ width=20%}
 ![](resources/images/capture-app-image200.png){ width=20%}
 
-### Signature (New 2.8) { #capture_app_visual_signature }
+### Signature { #capture_app_visual_signature }
 
 This feature allows users to collect handwritten signatures from the device. The signatures will be saved as an image data element in the app.
 
@@ -282,7 +282,7 @@ This configuration must be done in web ( available from 2.40 version) by selecti
 ![](resources/images/capture-app-image231.png){ width=20%}
 ![](resources/images/capture-app-image232.png){ width=20%}
 
-## User Experience (Improved 2.8) { #capture_app_visual_user_experience }
+## User Experience { #capture_app_visual_user_experience }
 
 ### Tappable areas in icons and buttons { #capture_app_visual_tappable_areas }
 
@@ -290,16 +290,16 @@ Some buttons or tappable labels of the Android App had small sensitive areas for
 
 ![](resources/images/capture-app-image208.png){ width=20%}
 
-### Loading Banners (Improved 2.8) { #capture_app_visual_loading_banners}
+### Loading Banners { #capture_app_visual_loading_banners}
 
 The Android App provides visual animations to users when they perform actions that take longer than usual to complete, such loading maps or searching, so that they know that the system is processing their request.
 
 ![](resources/images/capture-app-image228.png){ width=20%}
 
-### Offline Buttons (New2.8) { #capture_app_visual_offline_buttons}
+### Offline Buttons { #capture_app_visual_offline_buttons}
 
 This feature enhances the functionality of the app when it is used offline, ensuring that menus are disabled when the online actions are not available.
 
-### Long Texts Management (New2.8) { #capture_app_visual_longtext_management}
+### Long Texts Management { #capture_app_visual_longtext_management}
 
 The Android App enables users to view long text in fields that are limited in size, such as a stage names or datasets headers.
