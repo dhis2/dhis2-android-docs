@@ -20,7 +20,7 @@ Includes configurations such as the Matomo URL and project ID, the number of res
 
 ![](resources/images/capture-app-general-settings.png)
 
-### Matomo configuration
+### Matomo configuration { #capture_app_android_settings_webapp_general_matomo }
 
 The DHIS2 Android App sends anonymize analytics that can be used to evaluate performance and/or detect problems at an early stage. [Matomo](https://matomo.org) is the tool used for this and running in a specific server not accessible to the general public. However, implementations can set up their own
  Matomo instance (or using the cloud version) in order to collect and analyse the statistics. 
@@ -31,7 +31,7 @@ Once you have your Matomo instance ready you should get the URLs and the project
 ![](resources/images/capture-app-matomo-settings.png){width=33%}
 
 
-### Mobile configuration
+### Mobile configuration { #capture_app_android_settings_webapp_generalmobile_configuration }
 This section allows admin users to edit the SMS gateway ad result sender phone number.
 This configuration can be found in the Android app.
 - Click on Settings
@@ -39,7 +39,7 @@ This configuration can be found in the Android app.
 
 ![](resources/images/capture-app-sms-settings.png){width=33%}
 
-### Reserved values
+### Reserved values { #capture_app_android_settings_webapp_general_reserved_values }
 This will specify the number of values per TEI attribute reserved to download in the devices. By default, the Android App reserves 100 Ids, but it is possible to add or reduce this number.
 
 To find this configuration in the Android app:
@@ -50,7 +50,7 @@ To find this configuration in the Android app:
 ![](resources/images/capture-app-reserved-values.png){width=33%}
 ![](resources/images/capture-app-reserved-values-refill.png){width=33%}
 
-### Encrypt device database
+### Encrypt device database { #capture_app_android_settings_webapp_general_encrypt_database }
 This will force all the devices to store the database encrypted increasing the security level against data theft attacks.
 
 By default, the DHIS2 Android App database is not encrypted, but an admin can check the *Encrypt device database* to encrypt the metadata and data stored in every device. Encrypting the database will have an impact on the database volume and performance (degradation between 10-15%) of the Android app. Note that at the moment of selecting or unselecting this option, no data is lost (even if it hasn't been previously synchronized with the server)
@@ -61,7 +61,7 @@ By default, the DHIS2 Android App database is not encrypted, but an admin can ch
 >
 > By default, the Android app database is not encrypted, but an admin can check the *Encrypt device database* to encrypt the metadata and data stored in every device. Encrypting the database will have an impact on the database volume and performance of the Android app. Note that at the moment of selecting or unselecting this option, no data is lost (even if it hasn't been previously synchronized with the server)
 
-### Allow screenshots
+### Allow screenshots { #capture_app_android_settings_webapp_general_screenshots }
 This section allows to configure the possibility to take screenshots or screen sharing using the Android Capture App (which is required to remote support with applications like Teamviewer, Teams, etc). Please note that the default behavior is deactivated screenshots.
 
 > **Warning**
@@ -69,7 +69,20 @@ This section allows to configure the possibility to take screenshots or screen s
 > The DHIS2 Android App disables the possibility of taking screenshots (and capturing the screen from other apps) by default following security and privacy recommendations. Allowing screenshots might be useful for support and/or sharing purposes in same cases but make sure you understand the security and privacy implications of this setting before enabling it.
 >
 
-### Disable all settings
+### Opt-in Features (**New 2.3.1**) { #capture_app_android_settings_webapp_general_optin_features }
+Opt-in features are additional functionalities or settings within the application that the user can choose to enable based on preferences. Unlike default settings, these features require an explicit consent or action ('opting in') to activate.
+Opting in allows the user to customize the experience by adding extra capabilities to the app. Keep in mind that these features might come with specific considerations, so it is recommended to review any associated information before opting in.
+
+To enable a feature:
+- Click on *Opt-in Features*. 
+- A list of available opt-in settings will appear.
+- Click on the feature's checkbox.
+
+**Data entry Form :** The inputs for all value types have been redesigned in the Android Capture App with an improved selection mode and increased tappable areas and texts to offer a cleaner and more intuitive user experience. By default, the Android Capture App will display the previous forms. Admin users are able to opt in to use the new forms by clicking in the checkbox option.
+
+![](resources/images/capture-app-optin-features.png)
+
+### Disable all settings { #capture_app_android_settings_webapp_general_disable_settings }
 By clicking this button, the user will remove all Android configuration settings. No configuration will be applied to the Android App (if this is the case, the sync parameters applied are the ones defined in the Android Capture app).
 
 
@@ -86,7 +99,7 @@ Metadata sync
 Data sync
 :	Admin users can choose how often the data will sync. e.g. Syncing data every 6 hours.
 
-![](resources/images/capture-app-sync-global.png){width=33%}
+![](resources/images/capture-app-sync-global.png){width=50%}
 ![](resources/images/capture-app-sync-global-app.png){width=33%}
 
 
@@ -118,7 +131,7 @@ Use the new Tracker Exporter (**New 2.3**)
 Limit the file size to download (**New 2.3**)
 :	Admin users can limit the maximum size of the file resources downloaded in KB.
 
-![](resources/images/capture-app-sync-download-file-size.png){width=50%}
+![](resources/images/capture-app-sync-download-file-size.png){width=33%}
 
 
 
@@ -130,7 +143,7 @@ This section controls the program data synchronization parameters. It has a sect
 
 Global settings apply to all programs that an Android user has access to. The settings can be enabled globally, per Org Unit, per program or per OU and program.
 
-![](resources/images/capture-app-program-global-settings.png){width=33%}
+![](resources/images/capture-app-program-global-settings.png){width=50%}
 
 TEI to download
 :	Maximum number of TEIs to download from the server.
@@ -276,7 +289,7 @@ Current behavior lets the sections collapse and expand in an accordion style. Th
 
 #### Specific settings { #capture_app_android_settings_webapp_appearance_program_specific }
 
-This section allows the admin user to customize features such as filter, completion percentage, mandatory search, referrals, TEI headers and referral options. Each explained in the section below.
+This section allows the admin user to customize features such as filter, completion percentage, mandatory search, referrals, TEI headers, referral options and collapse sections in form. Each explained in the section below.
 
 To add a specific setting:
 
@@ -299,7 +312,7 @@ To add a TEI Header:
 - Select a Program Indicator
 - An expression related to the program indicator will be displayed
 
-![](resources/images/capture-app-appearance-program-specific-tei-header.png){width=75%}
+![](resources/images/capture-app-appearance-program-specific-tei-header.png)
 
 
 > **Note:**
@@ -356,7 +369,7 @@ Analytics settings define TEI, Home, Program and Data Set analytics items (chart
 
 Also, even though these analytics are created using the android settings web app, the data aggregation happens offline using only data stored in the device.
 
-### TEI
+### TEI { #capture_app_android_settings_webapp_analytics_tei }
 
 The scope of the analysis is the TEI, so the visualizations will be displayed in the TEI dashboard of the android app.
 
@@ -385,7 +398,7 @@ If any TEI Analytics item has been created, a table will show the item's title a
 
 ![](resources/images/capture-app-analytics-table.png)
 
-### Home
+### Home { #capture_app_android_settings_webapp_analytics_home }
 
 Home visualizations are displayed in the home screen (Analytics tab) of the android app.
 
@@ -448,7 +461,7 @@ To reset all values:
 1. Click on "Reset all values to default"
 2. Click on the "Save" button
 
-### Program
+### Program { #capture_app_android_settings_webapp_analytics_program }
 
 Program visualizations are displayed in the search screen (Analytics tab) in tracker programs or in the list screen (Analytics tab) in event programs of the android app.
 
@@ -502,7 +515,7 @@ To reset all values:
 1. Click on "Reset all values to default"
 2. Click on the "Save" button
 
-### Data Set
+### Data Set { #capture_app_android_settings_webapp_analytics_data }
 
 Data Set visualizations are displayed in the list screen (Analytics tab) in a Data Set of the android app.
 
@@ -556,7 +569,7 @@ To reset all values:
 1. Click on "Reset all values to default"
 2. Click on the "Save" button
 
-### Visualization user test
+### Visualization user test { #capture_app_android_settings_webapp_analytics_visualization_user_test }
 
 The visualization user test is a feature available in Home, Program and Data Set Analytic setting that helps the admin user to identify if any particular user will be able to see the visualization.
 
@@ -579,7 +592,7 @@ To run the test:
 
 ![](resources/images/capture-app-analytics-usertest-noaccess-visualization.png)
 
-### Analytics Limitations
+### Analytics Limitations { #capture_app_android_settings_analytics_limitations }
 
 Since the aggregations and calculations displayed are calculated in the device, the implementation of analytics is limited compared to web. In summary the compatible and supported objects and features are:
 
@@ -676,7 +689,7 @@ The default values will be only restored on Datastore and applied after clicking
 
 In case of needing to uninstall the Android Settings App it is recommended to also delete all the data from the reserved datastore namespace.
 
-#### Delete data
+#### Delete data { #capture_app_android_settings_webapp_delete_data }
 
 - Go to *General* section
 - Click on *Disable all settings*
@@ -686,7 +699,7 @@ In case of needing to uninstall the Android Settings App it is recommended to al
 
 ![](resources/images/capture-app-unistall-delete-namespace-modal.png)
 
-#### Uninstall app
+#### Uninstall app { #capture_app_android_settings_webapp_uninstall_app }
 
 - Go to **App Management**
 - Click on **Custom Apps**
