@@ -5,7 +5,7 @@ This section focuses on the [APK Distribution Web App](https://apps.dhis2.org/ap
 
 The [APK Distribution Web App](https://apps.dhis2.org/app/dff273fc-909e-48af-b151-c4d7e9c8a12c) enables implementation administrators to manage and control the version of the Android app, making it easier to manage app updates and ensure compatibility with the DHIS2 system. 
 
-Admins will be able to upload the desired version and users will get a prompt message to update when they are not in the last updated version.
+Admins can upload the desired version to the server and mobile users will get a prompt message to update (on their first connection and every 24 hours) whenever they are not in the last updated version. More information about how to manage devices can be found in the "Distribution of the App" section of the [Android Implementation Guide](https://docs.dhis2.org/en/implement/android-implementation/scale-up.html)
 
 Please note that in this version of the Web App, only users with "ALL" authority are able to define the Android app versions. Other users having access to the web app can see the version history list and download the latest version, but cannot edit them.
 
