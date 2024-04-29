@@ -62,7 +62,7 @@ By default, the DHIS2 Android App database is not encrypted, but an admin can ch
 > By default, the Android app database is not encrypted, but an admin can check the *Encrypt device database* to encrypt the metadata and data stored in every device. Encrypting the database will have an impact on the database volume and performance of the Android app. Note that at the moment of selecting or unselecting this option, no data is lost (even if it hasn't been previously synchronized with the server)
 
 ### Allow screenshots { #capture_app_android_settings_webapp_general_screenshots }
-This section allows to configure the possibility to take screenshots or screen sharing using the Android Capture App (which is required to remote support with applications like Teamviewer, Teams, etc). Please note that the default behavior is deactivated screenshots.
+This section allows to configure the possibility to take screenshots or screen sharing using the Android Capture App (which is required to remote support with applications like Teamviewer, Teams, etc.). Please note that the default behavior is deactivated screenshots.
 
 > **Warning**
 >
@@ -209,7 +209,7 @@ In the case that any specific settings has been saved, a table will show a summa
 
 By clicking on *Reset all values*, the admin user will restore the default settings values of the program section. Please note that in this case it means no specific settings per program. 
 
-To save any configuration, the admin user needs to click on the *Save* button (this button is disabled for the users who don't have 'ALL' or 'M_androidsettingsapp' authority)
+To save any configuration, the admin user needs to click on the *Save* button (this button is disabled for the users who don't have "ALL" or "M_androidsettingsapp" authority)
 
 
 ### Data set { #capture_app_android_settings_webapp_synchronization_data }
@@ -242,7 +242,7 @@ To add a specific setting:
 
 ### User Sync Test { #capture_app_android_settings_webapp_synchronization_user_sync_test }
 
-This section checks the amount of data and metadata a user would sync to his/her device. You can run this test on any user that you have access to. This test shows up the number of organisation units, data sets, program rules, programs, etc., that an android user has access to (so the resources that the android app will download), and the metadata and data download size (approx estimation). Please note that a user doesn't need to have the 'ALL' or 'M_androidsettingsapp' authority to run this test.
+This section checks the amount of data and metadata a user would sync to his/her device. You can run this test on any user that you have access to. This test shows up the number of organisation units, data sets, program rules, programs, etc., that an android user has access to (so the resources that the android app will download), and the metadata and data download size (approx estimation). Please note that a user doesn't need to have the "ALL" or "M_androidsettingsapp" authority to run this test.
 
 ![](resources/images/capture-app-user-sync-test.png){width=50%}
 
