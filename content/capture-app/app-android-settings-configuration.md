@@ -74,11 +74,12 @@ Opt-in features are additional functionalities or settings within the applicatio
 Opting in allows the user to customize the experience by adding extra capabilities to the app. Keep in mind that these features might come with specific considerations, so it is recommended to review any associated information before opting in.
 
 To enable a feature:
+
 - Click on *Opt-in Features*. 
 - A list of available opt-in settings will appear.
-- Click on the feature's checkbox.
+- Click on the feature's checkbox to enable it.
 
-**Data entry Form :** The inputs for all value types have been redesigned in the Android Capture App with an improved selection mode and increased tappable areas and texts to offer a cleaner and more intuitive user experience. By default, the Android Capture App will display the previous forms. Admin users are able to opt in to use the new forms by clicking in the checkbox option.
+**Data entry Form (**New 2.4**):** The inputs for all value types have been redesigned in the Android Capture App with an improved selection mode and increased tappable areas and texts to offer a cleaner and more intuitive user experience. By default, the Android Capture App will display the new forms. Admin users can opt out of using the new version of forms by clicking the checkbox option.
 
 ![](resources/images/capture-app-optin-features.png)
 
@@ -402,18 +403,28 @@ If any TEI Analytics item has been created, a table will show the item's title a
 
 Home visualizations are displayed in the home screen (Analytics tab) of the android app.
 
-All items available are first created in the Data visualizer app in DHIS2 and configured in the android settings app.
+All items available are first created in the Data visualizer or Line Listing app in DHIS2 and configured in the Android Settings app.
+
+> **Note:**
+>
+> Visualization items can be sourced either from the **Data Visualizer** or the **Line Listing** app. 
+> 
+> When choosing a visualization type, the items shown automatically change; if "Data Visualization" is selected, only visualizations created in the Data Visualization app will be displayed. 
+> 
+> When selecting "Event Visualization" (**New 2.4**), only elements created in the Line Listing app will appear in the Visualization search box.
+>
 
 To create a **Home** item:
 
-1. Click on "Add Home Visualization"
-2. Click on the search box and select the visualization from the list or type the name of the visualization item.
-3. Add an alternative title, otherwise, the app will display the name of the visualization
-4. By default, the app will enable the group visualization setting.
+1. Click on "Add Home Visualization" Button.
+2. Choose a "Visualization Type" (**New 2.4**)
+3. Click on the search box and select the visualization from the list or type the name of the visualization item.
+4. Add an alternative title, otherwise, the app will display the name of the visualization.
+5. By default, the app will enable the group visualization setting.
    1. Create a new group: A free text box will pop up to type the name or
    2. Select a created group visualization: Choose an option from the list to add the visualization or
    3. Disable the group visualization by clicking on the checkbox.
-5. Click on the "Save" button.
+6. Click on the "Save" button.
 
 ![](resources/images/capture-app-analytics-home-newGroup.png)
 
@@ -465,19 +476,31 @@ To reset all values:
 
 Program visualizations are displayed in the search screen (Analytics tab) in tracker programs or in the list screen (Analytics tab) in event programs of the android app.
 
-All items available are first created in the Data visualizer app in DHIS2 and configured in the android settings app.
+All items available are first created in the Data visualizer or Line Listing (**New 2.4**) app in DHIS2 and configured in the Android Settings app.
+
+> **Note:**
+>
+> Visualization items can be sourced either from the **Data Visualizer** or the **Line Listing** app.
+>
+> When choosing a visualization type, the items shown automatically change; if "Data Visualization" is selected, only visualizations created in the Data Visualization app will be displayed.
+>
+> When selecting "Event Visualization" (**New 2.4**), only elements created in the Line Listing app will appear in the Visualization search box.
+>
+> ![](resources/images/capture-app-analytics-program-visualization-type.png)
+> 
 
 To create a **Program** item:
 
-1. Click on "Add Program Visualization"
-2. Select a Program
-3. Click on the search box and select the visualization from the list or type the name of the visualization item.
-4. Add an alternative title, otherwise, the app will display the name of the visualization
-5. By default, the app will enable the group visualization setting.
+1. Click on "Add Program Visualization" Button.
+2. Choose a Visualization Type (**New 2.4**).
+3. Select a Program.
+4. Click on the search box and select the visualization from the list or type the name of the visualization item.
+5. Add an alternative title, otherwise, the app will display the name of the visualization
+6. By default, the app will enable the group visualization setting.
    1. Create a new group: A free text box will pop up to type the name or
    2. Select a created group visualization: Choose an option from the list to add the visualization or
    3. Disable the group visualization by clicking on the checkbox.
-6. Click on the "Save" button.
+7. Click on the "Save" button.
 
 ![](resources/images/capture-app-analytics-program-add.png)
 
@@ -594,7 +617,9 @@ To run the test:
 
 ### Analytics Limitations { #capture_app_android_settings_analytics_limitations }
 
-Since the aggregations and calculations displayed are calculated in the device, the implementation of analytics is limited compared to web. In summary the compatible and supported objects and features are:
+Since the aggregations and calculations displayed are calculated in the device, the implementation of analytics is limited compared to web. 
+
+In summary the compatible and supported objects and features for Data Visualizations are:
 
 - Well-formed analytic objects (series, categories, filters)
 - Use of relative periods (Fix periods are not supported)
@@ -607,6 +632,15 @@ Since the aggregations and calculations displayed are calculated in the device, 
   - Number of Categories (doesn't apply for pie chart): No limit
 
 There are many more restrictions which apply to Android Analytics regarding the many configuration options available in the Web Visualizer as well as the supported functions and calculations related to indicators and program indicators. [This table](https://docs.google.com/spreadsheets/d/1127cz7M0K4fux5CU0V54V2Z77NZWCr0BTrZ6jcCec4Q) summarises all supported features.
+
+In the same way, Event visualizations are considered valid if:
+
+- Visualization was created using Line Listing app
+- Visualization type is Line List
+- Use of relative periods
+- Limitations for Table
+  - Number of columns: 15
+
 
 > **Note (New 2.2.1)**
 >
