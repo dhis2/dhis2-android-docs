@@ -69,7 +69,7 @@ This section allows to configure the possibility to take screenshots or screen s
 > The DHIS2 Android App disables the possibility of taking screenshots (and capturing the screen from other apps) by default following security and privacy recommendations. Allowing screenshots might be useful for support and/or sharing purposes in same cases but make sure you understand the security and privacy implications of this setting before enabling it.
 >
 
-### Opt-in Features (**New 2.3.1**) { #capture_app_android_settings_webapp_general_optin_features }
+### Opt-in Features (**v2.3.1**) { #capture_app_android_settings_webapp_general_optin_features }
 Opt-in features are additional functionalities or settings within the application that the user can choose to enable based on preferences. Unlike default settings, these features require an explicit consent or action ('opting in') to activate.
 Opting in allows the user to customize the experience by adding extra capabilities to the app. Keep in mind that these features might come with specific considerations, so it is recommended to review any associated information before opting in.
 
@@ -116,7 +116,7 @@ Use the new Tracker Importer
 > ![](resources/images/capture-app-sync-global-importer.png){width=50%}
 >
 
-Use the new Tracker Exporter (**New 2.3**)
+Use the new Tracker Exporter (**v2.3**)
 :	Admin users can choose which tracker exporter endpoint will be used.
 
 > **Warning**
@@ -129,7 +129,7 @@ Use the new Tracker Exporter (**New 2.3**)
 > ![](resources/images/capture-app-sync-global-exporter.png){width=50%}
 >
 
-Limit the file size to download (**New 2.3**)
+Limit the file size to download (**v2.3**)
 :	Admin users can limit the maximum size of the file resources downloaded in KB.
 
 ![](resources/images/capture-app-sync-download-file-size.png){width=33%}
@@ -281,10 +281,10 @@ Global settings apply to all programs that an android user has access to.
 Percentage (%) complete in Program: 
 Enable or disable the option to show the completion percentage of the data entry form.
 
-TEI referrals (**New 2.3.1**):	
+TEI referrals (**v2.3.1**):	
 It allows to switch off/on the TEI referral option.
 
-Collapse sections in form (**New 2.3.1**):  
+Collapse sections in form (**v2.3.1**):  
 Current behavior lets the sections collapse and expand in an accordion style. This option overrides the behavior by keeping all the sections of the form (registration and events) open and removing the "next" button in each section.	
 
 
@@ -305,7 +305,7 @@ To add a specific setting:
 TEI without searching:
 Offer online and offline search, as well as allow the user to create a TEI without a prior search.
 
-TEI Header (**New 2.3.1**):
+TEI Header (**v2.3.1**):
 Assign a specific attribute or expression that will be displayed as a header in TEI cards. 
 
 To add a TEI Header:
@@ -335,7 +335,7 @@ If any specific settings have been saved, a table will summarize the particular 
 The option "Show percentage (%) complete in Program toolbar" refers to: 
 ![](resources/images/capture-app-appearance-programs-spinner.png){width=50%}
 
-**Search Tracked Entity (New 2.2)**
+**Search Tracked Entity (v2.2)**
 
 Searching before entering a new TEI is mandatory to avoid possible duplicates, and the DHIS2 Android App has been designed as such. This new version gives the possibility to choose to keep this process or allow the user to create a TEI without searching first.
 By default, allowing the user to create a TEI without searching is disabled.
@@ -437,7 +437,7 @@ To create a **Home** item:
 > ![](resources/images/capture-app-analytics-default-group.png)
 >
 
-To edit the title of a **Home** item (**New 2.2.1**):
+To edit the title of a **Home** item (**v2.2.1**):
 
 1. Search for the item by expanding the groups.
 2. Click the "Edit" button next to the item's name.
@@ -504,7 +504,7 @@ To create a **Program** item:
 
 ![](resources/images/capture-app-analytics-program-add.png)
 
-To edit the title of a **Program** item (**New 2.2.1**):
+To edit the title of a **Program** item (**v2.2.1**):
 
 1. Search for the item by expanding the groups.
 2. Click the "Edit" button next to the item's name.
@@ -558,7 +558,7 @@ To create a **Data Set** item:
 
 ![](resources/images/capture-app-analytics-dataset-add.png)
 
-To edit the title of a **Data set** item (**New 2.2.1**):
+To edit the title of a **Data set** item (**v2.2.1**):
 
 1. Search for the item by expanding the groups.
 2. Click the "Edit" button next to the item's name.
@@ -625,7 +625,7 @@ In summary the compatible and supported objects and features for Data Visualizat
 - Use of relative periods (Fix periods are not supported)
 - User has view access
 - Limitations for Pivot Tables
-  - Number of header lines: 1 or 2 (*New 2.3*)
+  - Number of header lines: 1 or 2 (*v2.3*)
   - Number of header columns: 2
 - Limitations for Charts
   - Number of Series: No limit (but remember you are rendering in a small screen)
@@ -642,7 +642,7 @@ In the same way, Event visualizations are considered valid if:
   - Number of columns: 15
 
 
-> **Note (New 2.2.1)**
+> **Note (v2.2.1)**
 >
 > When searching for a visualization to add as part of the Analytics visualizations, all visualizations will be listed, but visualizations that don't meet the above restrictions will be disabled. 
 >
@@ -674,7 +674,7 @@ After a user installs and launches the Android Settings Web App for the first ti
 
 ![](resources/images/capture-app-first-setup-with-deprecation-message.png){width=50%}
 
-> **Warning (New 2.3)** 
+> **Warning (v2.3)** 
 >
 > When using DHIS2 version equal to or higher to 2.40, only users with "M_androidsettingsapp" or "ALL" authority can *save or update* the configuration, but any user will have *view* access once it is created.
 > 
