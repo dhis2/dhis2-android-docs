@@ -297,7 +297,7 @@ The user can now enter aggregate data for an organisation Unit, a period and a s
 ![](resources/images/capture-app-image92.png){ width=25%}
 
 
-## Home (Improved 2.9) {#capture_app_home}
+## Home {#capture_app_home}
 
 The home screen of the DHIS2 Android App shows the list of programs and data sets available for the user. The first thing the user does when collecting data in this case is to select the program or data set to work with.
 

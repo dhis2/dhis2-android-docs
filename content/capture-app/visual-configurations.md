@@ -1,15 +1,18 @@
 # Visual configurations { #capture_app_visual }
 
-##  Local Analytics
+##  Local Analytics (Improved 3.0)
+
+### Data Visualizations { #capture_app_visual_data_visualizations }
 
 The DHIS2 Android App can now render analytics that have been created in the Data Visualizer app in DHIS2. Analytics to be displayed require to be configured using the Android Settings WebApp where administrators will be able to decide the charts and tables to be displayed for end users.
 
 To configure analytics open the Android Settings WebApp on your DHIS2 server and follow the steps below:
 
    1. Select Home, Program or Data set from the Analytics menu
-   2. Click on the  "Add Visualization" button
-   3. Search by typing the name of the visualization and select it by clicking on it
-   4. Add an alternative title, otherwise, the app will display the name of the visualization
+   2. Select the visualization type "Data visualization"
+   3. Click on the  "Add Visualization" button
+   4. Search by typing the name of the visualization and select it by clicking on it
+   5. Add an alternative title, otherwise, the app will display the name of the visualization
 
 ![](resources/images/capture-app-image162.png){ width=25%}
 ![](resources/images/capture-app-image164.png){ width=25%}
@@ -49,7 +52,7 @@ Users can also change The anlytics type between chart, table or single value.
 ![](resources/images/capture-app-image166.png){ width=25%}
 ![](resources/images/capture-app-image171.png){ width=25%}
 
-### Legends { #capture_app_visual_pivot_legends }
+#### Legends { #capture_app_visual_data_visualizations_legends }
 
 Legends are displayed in pivot tables by enabling the feature "Use legends for chart color" in the Data Visualizer App.
 
@@ -59,7 +62,7 @@ The style for legends in tables has a new design which ensures good contrast and
 
 ![](resources/images/capture-app-image183.png){ width=25%}
 
-### Groups
+#### Groups { #capture_app_visual_data_visualizations_groups }
 
 All these visualizations can be organised and displayed in groups. Groups are also configured using the Android Settings Webapp following the steps below:
 
@@ -74,7 +77,7 @@ You can name your different groups, they will be displayed as a button in the to
 
 ![](resources/images/capture-app-image173.png){ width=25%}
 
-### Limitations
+#### Limitations { #capture_app_visual_data_visualizations_limitations }
 
 Android uses tables and charts created using the web Visualizer app, however only the configuration parameters of the object are used by the Android App: data elements, indicators, chart type, title, periods...; all the aggregations are calculated offline by the android application. The results will be based on the data stored in the device at that exact moment.
 
@@ -97,6 +100,28 @@ There are many more restrictions which apply to Android Analytics regarding the 
 > The following aggreagation functions are supported now in local analytics: LAST, FIRST, AVERAGE_SUM_ORG_UNIT, LAST_AVERAGE_ORG_UNIT, LAST_IN_PERIOD, LAST_IN_PERIOD_AVERAGE_ORG_UNIT, FIRST_AVERAGE_ORG_UNIT
 > 
 > 
+
+### Event Visualizations { #capture_app_visual_event_visualizations }
+
+The DHIS2 Android App can now render analytics that have been created in the line listing app.Analytics to be displayed require to be configured using the Android Settings WebApp where administrators will be able to decide the tables to be displayed for end users.
+
+To configure analytics open the Android Settings WebApp on your DHIS2 server and follow the steps below:
+
+   1. Select Home or Program from the Analytics menu
+   2. Select the visualization type "Event visualization"
+   3. Click on the  "Add Visualization" button
+   4. Search by typing the name of the visualization and select it by clicking on it
+   5. Add an alternative title, otherwise, the app will display the name of the visualization 
+    
+In the app, the users will be able to search by period, Org. unit, or any of the columns added in the Line List.
+
+#### Limitations { #capture_app_visual_event_visualizations_limitations }
+
+To add an event visualization in the Android Settings WebApp, the table must:
+
+- be created in the Line Listing app
+- use relative periods
+- not exceed 15 columns
 
 ## Interface language
 
@@ -148,9 +173,9 @@ You can set the generic theme of the app by configuring the them in our server:
 >
 >![](resources/images/capture-app-image23.png){ width=25%}
 
-## Icon library for metadata { #capture_app_visual_icon_lib }
+## Icon library for metadata (Improved 3.0) { #capture_app_visual_icon_lib }
 
-There are currently 134 icons available that you can choose from. You can search by name in the icon picker widget. Icons are available in positive, negative and outlined shapes. We will be adding many more icons in future releases.
+There are currently 134 icons available that you can choose from. You can search by name in the icon picker widget. Icons are available in positive, negative and outlined shapes.
 
 Icons can be associated to programs, stages, data elements and the options of an option set. This is  configurable through the Maintenance App.
 
@@ -166,6 +191,8 @@ The icon based data entry can now be used in enrollment forms. When an enrollmen
 
 ![](resources/images/capture-app-image19.png){ width=25%}
 ![](resources/images/capture-app-image26.png){ width=25%}
+
+From 3.0 it is possible to display custom icons in the Androi App. DHIS2 (41 version) now allows uploading custom Icons to be used in addition to the built-in Icon library. This is useful for use cases not related to health or that require very specific iconography. The Android App will render the custom icons that need to be uploaded and configured using the Maintenance DHIS2 Web App.
 
 > **Note**
 >
@@ -273,7 +300,7 @@ Combined with the use of d2 functions in program rules, the different fields of 
 ![](resources/images/capture-app-image184.png){ width=20%}
 ![](resources/images/capture-app-image200.png){ width=20%}
 
-### Signature { #capture_app_visual_signature }
+### Signature (Improved 3.0) { #capture_app_visual_signature }
 
 This feature allows users to collect handwritten signatures from the device. The signatures will be saved as an image data element in the app.
 
@@ -281,6 +308,8 @@ This configuration must be done in web ( available from 2.40 version) by selecti
 
 ![](resources/images/capture-app-image231.png){ width=20%}
 ![](resources/images/capture-app-image232.png){ width=20%}
+
+From 3.0, signatures are allowed to be opened in full screen for better visibility.
 
 ## User Experience { #capture_app_visual_user_experience }
 
@@ -303,3 +332,14 @@ This feature enhances the functionality of the app when it is used offline, ensu
 ### Long Texts Management { #capture_app_visual_longtext_management}
 
 The Android App enables users to view long text in fields that are limited in size, such as a stage names or datasets headers.
+
+### Legends (Improved 3.0) { #capture_app_visual_legends_descriptions}
+
+The Android App displays the full description of the legend when tapping on the information icon once a legend is active. These feature is available only in event and registration forms.
+
+![](resources/images/capture-app-image276.png){ width=25%}
+![](resources/images/capture-app-image277.png){ width=25%}
+
+### Input fields (Improved 3.0) { #capture_app_visual_input_fields }
+
+The new input fields are now displayed by default in the Android app and admin users are able to opt-out to use the old forms through the Android Settings web app.

@@ -40,6 +40,16 @@ The bottom navigation bar also allows switching the visualization mode if the ev
 
 ### Data Entry Flow { #capture_app_common_features_Data_flow }
 
+#### creating/editing an event (Improved 3.0) { #capture_app_common_features_newEdit_event }
+
+When creating an event or an enrollment, there are a number of fields that are not data elements or attributes, for example, event date, org unit, coordinates, enrollment date, category combinations. 
+
+Those elements are referred to as event/enrollment details and in previous versions they were displayed in different screens separated from the data elements or attributes. From 3.0,  the details are displayed inside the form, as the first opened section for completion. Once they are filled in, for example when the user reopens the event or enrollment form, the details section will be visible and easily available, but collapsed to leave more space for the data collection.
+
+![](resources/images/capture-app-image284.png){ width=25%}
+![](resources/images/capture-app-image285.png){ width=25%}
+![](resources/images/capture-app-image286.png){ width=25%}
+
 #### Complete/Re-open event { #capture_app_common_features_complete_reopen }
 
 When adding an event to an event program or inside a tracker program the user should fill the information and scroll down to make the *save* icon appear at the bottom right corner.
@@ -67,6 +77,13 @@ After tapping on the 'save' button, if the form does not contain any errors, war
 To re-open an event, the app now displays a "Re-open form" button in the Details screen. This button will be available only if the user has the correct authority (‘Uncomplete events’) to reopen a completed event.
 
 ![](resources/images/capture-app-image202.png){ width=25%}
+
+#### Schedule after completion (Improved 3.0) { #capture_app_programs_common_features_schedule_after_completion }
+
+In 3.0, the schedule dialog after completion has been redisigned to facilitate the creation of the event.
+
+![](resources/images/capture-app-image270.png){ width=25%}
+![](resources/images/capture-app-image271.png){ width=25%}
 
 #### Discard changes { #capture_app_programs_common_features_discard_changes }
 
@@ -138,7 +155,7 @@ It is possible to add notes to events in single event programs and program stage
 
 ### Maps { #capture_app_programs_common_features_maps }
 
-#### Map Layers
+#### Map Layers (Improved 3.0)
 
 When displaying maps there are different layers that can be displayed by clicking on the specific button on the uppper right corner. The user can select one or more layers to be displayed. Both coordinate and polygons types will be displayed. The layers are depenandat on the type of program as explained below:
 
@@ -154,6 +171,10 @@ When displaying maps there are different layers that can be displayed by clickin
 
 ![](resources/images/capture-app-image125.png){ width=25%}
 ![](resources/images/capture-app-image136.png){ width=25%}
+
+From 3.0 custom map layers are also supported by the Android App. These custom layers, configured using the maintenance app, will be downloaded and displayed as additional layers to the default ones.
+![](resources/images/capture-app-image263.png){ width=25%}
+![](resources/images/capture-app-image262.png){ width=25%}
 
 #### Map Carousel { #capture_app_programs_common_features_map_carousel }
 
@@ -183,7 +204,7 @@ If the TEI or event has coordinates a navigation icon will be displayed at the t
 ![](resources/images/capture-app-image150.png){ width=25%}
 ![](resources/images/capture-app-image151.jpg){ width=25%}
 
-### Working Lists (Improved 2.9) { #capture_app_programs_common_features_working_lists }
+### Working Lists { #capture_app_programs_common_features_working_lists }
 
 Working lists are available in Event and Tracker Programs, once a list is selected the filters will be blocked and not allowed to change until the user resets the search.
 
@@ -205,7 +226,7 @@ Legends can be assigned to Data Elements and they will be displayed next to valu
 
 ![](resources/images/capture-app-image155.png){ width=25%}
 
-### Data Entry Form (Improved 2.9) { #capture_app_programs_common_features_data_entry_form }
+### Data Entry Form { #capture_app_programs_common_features_data_entry_form }
 
 #### Hint messages
 
@@ -219,14 +240,14 @@ In forms with multiple sections, the App includes a "Next" button at the end of 
 
 ![](resources/images/capture-app-image210.png){ width=25%}
 
-#### Program Stage section description (New 2.9) { #capture_app_programs_common_features_data_entry_form_program_stage_description }
+#### Program Stage section description { #capture_app_programs_common_features_data_entry_form_program_stage_description }
 
 To provide more context and information at the moment of data collection the description has now been brought to the user interface and will be displayed below the section name. The description will always be visible but if the text is too long (more than 3 lines) the app will add an ellipsis and a show more/less button to expand or collapse.
 
 ![](resources/images/capture-app-image243.png){ width=25%}
 ![](resources/images/capture-app-image244.png){ width=25%}
 
-#### Enable/disable collapsible sections in forms (New 2.9) { #capture_app_programs_common_features_data_entry_form_collapsible_sections }
+#### Enable/disable collapsible sections in forms { #capture_app_programs_common_features_data_entry_form_collapsible_sections }
 
 Stage sections in the Android App are displayed with collapsible menus that enable the user to open one section at a time. The purpose of this accordion-like implemementation is to help the user navigate very long forms, however some implementations would prefer to list the sections one after the other. 
 
@@ -234,7 +255,7 @@ This new version of the application enables the admin use to decide if the secti
 
 ![](resources/images/capture-app-image241.png){ width=25%}
 
-#### New inputs per value types (New 2.9) { #capture_app_programs_common_features_data_entry_form_new_inputs }
+#### New inputs per value types { #capture_app_programs_common_features_data_entry_form_new_inputs }
 
 The inputs for all value types have been redesigned. Tappable areas and texts have been increased and selection modes are improved to offer cleaner and more intuitive user experience. By default the Android App will display the current forms. Admin users are able to opt-in to use the new forms through the [Android Settings WebApp]().
 
@@ -248,6 +269,18 @@ This feature enables users to take action on phone numbers and email addresses d
 
 ![](resources/images/capture-app-image230.png){ width=25%}
 
+### Customized Tracker Terminology { #capture_app_programs_common_features_customized_terminology }
+
+In order to facilitate the terminology used in DHIS2 it has been decided to gradually enable the possibility to customize certain term to each particular use case. In 3.0, the terms "event" (used in a program stage context) and "enrollment" are customizable. The admin user will be able to configure it for each program using the Maintenance App, and the Android Capture App will display the customized term instead of the generic one.
+
+![](resources/images/capture-app-image253.png){ width=25%}
+![](resources/images/capture-app-image254.png){ width=25%}
+![](resources/images/capture-app-image252.png){ width=25%}
+![](resources/images/capture-app-image257.png){ width=25%}
+![](resources/images/capture-app-image256.png){ width=25%}
+![](resources/images/capture-app-image255.png){ width=25%}
+
+
 ## Event Programs specific features { #capture_app_programs_events }
 
 ### Event - TEI relationships
@@ -260,7 +293,7 @@ The app allows adding relationships from single events (in event programs) to TE
 
 ![](resources/images/capture-app-image175.png){ width=25%}
 
-### Cards design (improved 2.9) { #capture_app_programs_common_features_cards_design }
+### Cards design { #capture_app_programs_common_features_cards_design }
 
 The new design of cards offers a cleaner and more intuitive layout replacing the use of coloured icons by explicit text when relevant.
 
@@ -285,7 +318,7 @@ In tracker programs, the user can see relationships on a map by tapping the map 
 
 ![](resources/images/capture-app-image132.png){ width=50%}
 
-### TEI Dashboard (Improved 2.9) { #capture_app_programs_TEI_Dashboard }
+### TEI Dashboard (Improved 3.0) { #capture_app_programs_TEI_Dashboard }
 
 The TEI Dashboard has been redesigned for both portrait and landscape view. The new design offers a cleaner and more intuitive layout replacing the use of coloured icons by explicit text when relevant and moving some secondar actions to the hidden menus.
 
@@ -306,6 +339,14 @@ More information [here](https://docs.dhis2.org/en/use/android-app/program-featur
 **Programs:** From 2.9, if the TEI is enrolled to more than one program, a list of the programs will be display and will also allow the user to tap on the label and navigate to full list of enrollments.
 
 ![](resources/images/capture-app-image248.png){ width=50%}
+
+#### Program stages { #capture_app_programs_TEI_Dashboard_program_stages }
+
+Main changes in 3.0:
+
+**Event list:** fresh and more clean look of the list of events, with more space and less -not critical- information displayed.
+
+**Timeline view:** the button for creating new events has been moved to the top.
 
 #### Navigation panel
 
@@ -332,7 +373,7 @@ The "Share" button has been removed from the TEI dashboard and the functionality
 
 ![](resources/images/capture-app-image212.png){ width=50%}
 
-### TEI Card Design (Improved 2.9) { #capture_app_programs_tei_design }
+### TEI Card Design { #capture_app_programs_tei_design }
 
 The TEI Card has been designed to display as much information as possible considering the constrains of screen size.
 
@@ -358,7 +399,7 @@ To complete or deactivate an enrollment, click on three dot menu in the uppper r
 
 ![](resources/images/capture-app-image76.jpg){ width=25%}
 
-### Search Flow { #capture_app_programs_search }
+### Search Flow (Improved 3.0) { #capture_app_programs_search }
 
 #### Configurable TEI Search { #capture_app_programs_configurable_search }
 
@@ -373,6 +414,10 @@ Searching TEIs before creating is not mandatory now. Using the Android Settings 
 If the feature is enabled, the Android App will display a "create new" button after opening a program and a search won't be required. If the feature is not enabled or the user is in a previous version of the app, a search must be performed to avoid possible duplicates. Once the search is performed the search button will become "Add" button for the user to create a new enrollment.
 
 ![](resources/images/capture-app-image204.png){ width=25%}
+
+#### Search by unique QR/bar Codes (new 3.0) { #capture_app_programs_unique_qrBar_search }
+
+In 3.0, the search form has been improved to provide a cleaner look and a more intuitive user experience. The buttons have been made more explicit for differencing search from creation. In addition the flow for searching TEIs using attributes rendered as bar / QR codes has been made more agile. If there is only one result and the attribute is unique, the app will open the TEI Dashboard directly. If there are multiple results, the app will display all the cards on the TEI list (this is equal to the current workflow), and if there are no results, the app will display the create button and allow the user to “search outside the program” if the configuration allows it.
 
 #### Offline and Online Search { #capture_app_programs_offline_online_search }
 
@@ -418,7 +463,7 @@ User can see the complete historical records of the TEI. Clicking on the upper r
 ![](resources/images/capture-app-image40.jpg){ width=25%}
 ![](resources/images/capture-app-image7.png){ width=25%}
 
-### Delete TEI's & Enrollments { #capture_app_programs_delete_tei }
+### Delete TEI's & Enrollments (Improved 3.0) { #capture_app_programs_delete_tei }
 
 To delete a TEI or an enrollment, select the desired option in the three dots menu of TEI dashboard.  Local TEI or Enrollment will be deleted from the database. Records that has been previously synced with the server will be marked for deletion if the user has the following authorities:
 
@@ -426,6 +471,10 @@ To delete a TEI or an enrollment, select the desired option in the three dots me
 * F_TEI_CASCADE_DELETE
 
 In this case they will be shown in the TEI search list, but will not be accessible.
+
+![](resources/images/capture-app-image269.png){ width=25%}
+
+From 3.0, there is a confirmation message to reduce errors when tapping on the dele button.
 
 ![](resources/images/capture-app-image86.jpg){ width=25%}
 
@@ -475,7 +524,7 @@ The Nutrition Growth charts are shown according to the WHO standards.  This opti
 
 ![](resources/images/capture-app-image160.png){ width=25%}
 
-### Referrals (Improved 2.9) { #capture_app_programs_referrals }
+### Referrals { #capture_app_programs_referrals }
 
 when a user makes a permanent referral of a TEI, the ownership will be updated accordingly on the server.
 
@@ -485,7 +534,7 @@ When users add events (tapping on the + icon) in a tracker program, the DHIS2 An
 
 ![](resources/images/capture-app-image233.png){ width=50%}
 
-### [EXPERIMENTAL] TEI Header (new 2.9) { #capture_app_programs_tei_header }
+### [EXPERIMENTAL] TEI Header  { #capture_app_programs_tei_header }
 
 The TEI Header is a title that can be added to the TEI cards and dashboards in the app. The title helps identify a TEI by displaying a summary of key information. It is formed by a concatenation of Tracked Entity Atributes and fixed text. The title is configured through a Program Indicator in the maintenance app and its assigned to the tracker program in the Android settings webapp. This feature is experimentan and depending on feedback and adoption it will be refined and incorporated in the Web Capture app.
 
