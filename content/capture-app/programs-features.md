@@ -83,7 +83,6 @@ To re-open an event, the app now displays a "Re-open form" button in the Details
 In 3.0, the schedule dialog after completion has been redisigned to facilitate the creation of the event.
 
 ![](resources/images/capture-app-image270.png){ width=25%}
-![](resources/images/capture-app-image271.png){ width=25%}
 
 #### Discard changes { #capture_app_programs_common_features_discard_changes }
 
@@ -172,7 +171,7 @@ When displaying maps there are different layers that can be displayed by clickin
 ![](resources/images/capture-app-image125.png){ width=25%}
 ![](resources/images/capture-app-image136.png){ width=25%}
 
-From 3.0 custom map layers are also supported by the Android App. These custom layers, configured using the maintenance app, will be downloaded and displayed as additional layers to the default ones.
+From 3.0 custom map layers are also supported by the Android App. These custom layers, configured in the [maintenance app](https://docs.dhis2.org/en/use/user-guides/dhis-core-version-240/configuring-the-system/metadata.html#manage_external_maplayer), will be downloaded and displayed as additional layers to the default ones.
 ![](resources/images/capture-app-image263.png){ width=25%}
 ![](resources/images/capture-app-image262.png){ width=25%}
 
@@ -271,12 +270,10 @@ This feature enables users to take action on phone numbers and email addresses d
 
 ### Customized Tracker Terminology { #capture_app_programs_common_features_customized_terminology }
 
-In order to facilitate the terminology used in DHIS2 it has been decided to gradually enable the possibility to customize certain term to each particular use case. In 3.0, the terms "event" (used in a program stage context) and "enrollment" are customizable. The admin user will be able to configure it for each program using the Maintenance App, and the Android Capture App will display the customized term instead of the generic one.
+In order to facilitate the terminology used in DHIS2, it has been decided to gradually enable the possibility to customize certain terms to each particular use case. In 3.0, the terms "event" (used in a program stage context) and "enrollment" are customizable. The admin user will be able to configure it for each program using the Maintenance App, and the Android Capture App will display the customized term instead of the generic one.
 
 ![](resources/images/capture-app-image253.png){ width=25%}
 ![](resources/images/capture-app-image254.png){ width=25%}
-![](resources/images/capture-app-image252.png){ width=25%}
-![](resources/images/capture-app-image257.png){ width=25%}
 ![](resources/images/capture-app-image256.png){ width=25%}
 ![](resources/images/capture-app-image255.png){ width=25%}
 
@@ -348,6 +345,8 @@ Main changes in 3.0:
 
 **Timeline view:** the button for creating new events has been moved to the top.
 
+![](resources/images/capture-app-image248.png){ width=50%}
+
 #### Navigation panel
 
 To simplify and personalize the user experience, the user interface actions offered to the user at the TEI dashboard will be tailored to the specific configuration of each  program.
@@ -413,7 +412,7 @@ Searching TEIs before creating is not mandatory now. Using the Android Settings 
 
 If the feature is enabled, the Android App will display a "create new" button after opening a program and a search won't be required. If the feature is not enabled or the user is in a previous version of the app, a search must be performed to avoid possible duplicates. Once the search is performed the search button will become "Add" button for the user to create a new enrollment.
 
-![](resources/images/capture-app-image204.png){ width=25%}
+![](resources/images/capture-app-image281.png){ width=25%}
 
 #### Search by unique QR/bar Codes (new 3.0) { #capture_app_programs_unique_qrBar_search }
 
@@ -472,11 +471,11 @@ To delete a TEI or an enrollment, select the desired option in the three dots me
 
 In this case they will be shown in the TEI search list, but will not be accessible.
 
-![](resources/images/capture-app-image269.png){ width=25%}
+![](resources/images/capture-app-image86.jpg){ width=25%}
 
 From 3.0, there is a confirmation message to reduce errors when tapping on the dele button.
 
-![](resources/images/capture-app-image86.jpg){ width=25%}
+![](resources/images/capture-app-image269.png){ width=25%}
 
 > **Warning**
 >

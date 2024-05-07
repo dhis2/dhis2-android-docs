@@ -101,7 +101,7 @@ There are many more restrictions which apply to Android Analytics regarding the 
 > 
 > 
 
-### Event Visualizations { #capture_app_visual_event_visualizations }
+### Event Visualizations (New 3.0) { #capture_app_visual_event_visualizations }
 
 The DHIS2 Android App can now render analytics that have been created in the line listing app.Analytics to be displayed require to be configured using the Android Settings WebApp where administrators will be able to decide the tables to be displayed for end users.
 
@@ -114,6 +114,10 @@ To configure analytics open the Android Settings WebApp on your DHIS2 server and
    5. Add an alternative title, otherwise, the app will display the name of the visualization 
     
 In the app, the users will be able to search by period, Org. unit, or any of the columns added in the Line List.
+
+![](resources/images/capture-app-image265.png){ width=25%}
+![](resources/images/capture-app-image266.png){ width=25%}
+![](resources/images/capture-app-image267.png){ width=25%}
 
 #### Limitations { #capture_app_visual_event_visualizations_limitations }
 
@@ -193,6 +197,8 @@ The icon based data entry can now be used in enrollment forms. When an enrollmen
 ![](resources/images/capture-app-image26.png){ width=25%}
 
 From 3.0 it is possible to display custom icons in the Androi App. DHIS2 (41 version) now allows uploading custom Icons to be used in addition to the built-in Icon library. This is useful for use cases not related to health or that require very specific iconography. The Android App will render the custom icons that need to be uploaded and configured using the Maintenance DHIS2 Web App.
+
+![](resources/images/capture-app-image290.png){ width=25%}
 
 > **Note**
 >
@@ -343,3 +349,5 @@ The Android App displays the full description of the legend when tapping on the 
 ### Input fields (Improved 3.0) { #capture_app_visual_input_fields }
 
 The new input fields are now displayed by default in the Android app and admin users are able to opt-out to use the old forms through the Android Settings web app.
+
+![](resources/images/capture-app-image289.png){ width=25%}

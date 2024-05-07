@@ -26,7 +26,11 @@ Open sync errors log
 Export database (New 3.0)
 :   Users are now be able to export the local database and share it with an admin, who will be able to import it for troubleshooting, being able to replicate the exact environment (database, device, configuration). The exported database is encrypted and the administrator will require the user credentials to be able to access the database
 
+![](resources/images/capture-app-image260.png){ width=25%}
+
 The import button can be found by tapping on the tree dots menu at the login screen.
+
+![](resources/images/capture-app-image261.png){ width=25%}
 
 Delete local data
 :	This action will delete local data without having to log out.
