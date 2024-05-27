@@ -270,8 +270,13 @@ This feature enables users to take action on phone numbers and email addresses d
 
 ### Customized Tracker Terminology { #capture_app_programs_common_features_customized_terminology }
 
-In order to facilitate the terminology used in DHIS2, it has been decided to gradually enable the possibility to customize certain terms to each particular use case. In 3.0, the terms "event" (used in a program stage context) and "enrollment" are customizable. The admin user will be able to configure it for each program using the Maintenance App, and the Android Capture App will display the customized term instead of the generic one.
+In order to facilitate the terminology used in DHIS2, it has been decided to gradually enable the possibility to customize certain terms to each particular use case. In 3.0, the terms "event" (used in a program stage context) and "enrollment" are customizable.
 
+To customize the terms, the admin can go to the Maintenance and when creating or editing the program add a text to:
+
+  1. "Custom label for enrollment" in the Enrollment details section OR
+  2. "Custom label for event" in the stage details section
+   
 ![](resources/images/capture-app-image253.png){ width=25%}
 ![](resources/images/capture-app-image254.png){ width=25%}
 ![](resources/images/capture-app-image256.png){ width=25%}

@@ -196,7 +196,15 @@ The icon based data entry can now be used in enrollment forms. When an enrollmen
 ![](resources/images/capture-app-image19.png){ width=25%}
 ![](resources/images/capture-app-image26.png){ width=25%}
 
-From 3.0 it is possible to display custom icons in the Androi App. DHIS2 (41 version) now allows uploading custom Icons to be used in addition to the built-in Icon library. This is useful for use cases not related to health or that require very specific iconography. The Android App will render the custom icons that need to be uploaded and configured using the Maintenance DHIS2 Web App.
+From 3.0 it is possible to display custom icons in the Android App. DHIS2 (41 version) now allows uploading custom Icons to be used in addition to the built-in Icon library. This is useful for use cases not related to health or that require very specific iconography. The Android App will render the custom icons that need to be uploaded and configured using the Maintenance DHIS2 Web App.
+
+To upload and assign the custome icons through the instance, the admin must:
+
+1. Open the object (program, data element, option, etc.)
+2. Click on the "Select icon"
+3. Click on the "Choose file to upload"
+4. Add a key and description
+5. Save
 
 ![](resources/images/capture-app-image290.png){ width=25%}
 
