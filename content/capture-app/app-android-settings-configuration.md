@@ -69,6 +69,18 @@ This section allows to configure the possibility to take screenshots or screen s
 > The DHIS2 Android App disables the possibility of taking screenshots (and capturing the screen from other apps) by default following security and privacy recommendations. Allowing screenshots might be useful for support and/or sharing purposes in same cases but make sure you understand the security and privacy implications of this setting before enabling it.
 >
 
+
+### Skip DHIS2 version validation (**New 2.4**) { #capture_app_android_settings_webapp_general_skip_version_validation }
+When connecting to DHIS2 instances, the app typically verifies compatibility with supported versions. However, in some cases, connecting to unsupported instances may be necessary or useful. Please note that the default behavior is to enforce strict version validation. To skip the validation process for DHIS2 version compatibility, select the checkbox.
+
+![](resources/images/capture-app-skip-version-validation.png)
+
+> **Warning**
+>
+> This option is only applicable when using Android Capture app version 3.0 or later.
+>
+
+
 ### Opt-in Features (**v2.3.1**) { #capture_app_android_settings_webapp_general_optin_features }
 Opt-in features are additional functionalities or settings within the application that the user can choose to enable based on preferences. Unlike default settings, these features require an explicit consent or action ('opting in') to activate.
 Opting in allows the user to customize the experience by adding extra capabilities to the app. Keep in mind that these features might come with specific considerations, so it is recommended to review any associated information before opting in.
