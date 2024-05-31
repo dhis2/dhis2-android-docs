@@ -23,6 +23,15 @@ Reserved values
 Open sync errors log
 :	The sync error log gives details about the error and is prepared to be shared with admins.
 
+Export database (New 3.0)
+:   Users are now be able to export the local database and share it with an admin, who will be able to import it for troubleshooting, being able to replicate the exact environment (database, device, configuration). The exported database is encrypted and the administrator will require the user credentials to be able to access the database
+
+![](resources/images/capture-app-image260.png){ width=25%}
+
+The import button can be found by tapping on the tree dots menu at the login screen.
+
+![](resources/images/capture-app-image261.png){ width=25%}
+
 Delete local data
 :	This action will delete local data without having to log out.
 
@@ -44,7 +53,7 @@ Reset app data & configuration
 SMS Settings
 :	This sections allows to check or edit the parameters related to the sms gateway.
 
-Software Update (New 2.8)
+Software Update
 :	This feature enables implementation administrators to manage and control the version of the Android app from the DHIS2 user web interface, making it easier to manage app updates and ensure compatibility with the DHIS2 system. Managers will be able to upload the desired version and users will get a prompt message to update when they are not in the last updated version. The management of versions is made through a new Web App.
 
 ![](resources/images/capture-app-image229.png){ width=25%}

@@ -69,7 +69,7 @@ Indicators are now available in default and section forms and are displayed at t
 
 ![](resources/images/capture-app-image140.png){ width=25%}
 
-### Cards design (improved 2.9) { #capture_app_datsets_cards_design }
+### Cards design { #capture_app_datsets_cards_design }
 
 The new design of cards offers a cleaner and more intuitive layout replacing the use of coloured icons by explicit text when relevan.
 
