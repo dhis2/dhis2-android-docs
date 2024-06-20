@@ -18,7 +18,7 @@ Any issues around using a particular feature with Android are highlighted with a
 |if|Evaluates the boolean expression and if true returns the true expression value, if false returns the false expression value. The arguments must follow the rules for any indicator expression.|![](/en/resources/images/admin/icon-complete.png)||
 |isNull|Returns true if the element value is missing (null), otherwise false.|![](/en/resources/images/admin/icon-complete.png)||
 |isNotNull|Returns true if the element value is not missing (not null), otherwise false.|![](/en/resources/images/admin/icon-complete.png)||
-|firstNonNull|RReturns the value of the first element that is not missing (not null). Can be provided any number of arguments. Any argument may also be a numeric or string literal, which will be returned if all the previous objects have missing values.|![](/en/resources/images/admin/icon-complete.png)||
+|firstNonNull|Returns the value of the first element that is not missing (not null). Can be provided any number of arguments. Any argument may also be a numeric or string literal, which will be returned if all the previous objects have missing values.|![](/en/resources/images/admin/icon-complete.png)||
 |greatest|Returns the greatest (highest) value of the expressions given. Can be provided any number of arguments.|![](/en/resources/images/admin/icon-complete.png)||
 |least|Returns the least (lowest) value of the expressions given. Can be provided any number of arguments.|![](/en/resources/images/admin/icon-complete.png)||
 
