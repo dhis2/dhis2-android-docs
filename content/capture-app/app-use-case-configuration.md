@@ -52,6 +52,17 @@ It allows admin users to configure programs to use the stock management system u
 
 ![](resources/images/capture-app-use-case-configure.png)
 
+
+> **Note: (New 1.1)**
+>
+>    - Effective from version 1.1.0 of this web application, it is mandatory that Data Elements such as "Stock on Hand" and "Corrected Stock" possess a value type of "Positive or Zero Integer."
+>    - To modify the value type of these Data Elements, users must use the Maintenance app.
+>    - Following the adjustment of the value type, users are required to update or edit the program configuration via the Use Case Configuration web application. This ensures synchronization and coherence across the system.
+>
+> This ensures that these crucial data elements maintain consistency and accuracy within the system.
+>
+
+
 ### Create configuration
 
 The DHIS2 Use Case Configuration App assigns the use case, like Real Time Stock Management, to any Tracker Program.
@@ -91,15 +102,15 @@ To create a **Program Configuration**:
 The following is a comprehensive list of the main metadata configurations and settings for the Tracker
 Program on which the customized DHIS2-RTS is based on.
 
-| CATEGORY                 | SYSTEM DEFAULT SETTINGS                                                                                                                                                                                                                                                                                                                                                                                               |
-|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Organisation unit        | According to national protocols and policies and/or existing DHIS2 configuration                                                                                                                                                                                                                                                                                                                                      |
-| Data element             | Name: <br/>- "Deliver to": Text / Option set = "Deliver to" <br/>- "Previous stock balance": Positive integer <br/>- "Stock correction": Number <br/>- "Stock count": Positive integer <br/>- "Stock discard": Positive integer <br/>- "Stock distribution": Positive integer <br/>- "Stock on hand": Positive integer <br/>- "Stock received": Positive integer <br/>Domain type: Tracker <br/>Value type: see above |
-| Option set               | Name: "Deliver to" <br/>Value type: Text                                                                                                                                                                                                                                                                                                                                                                              |
-| Tracked entity attribute | Name: <br/>- "Item barcode" <br/>- "Item code" <br/>- "Item description" <br/>"Value type": Text <br/>"Aggregation type": None                                                                                                                                                                                                                                                                                        |
-| Tracked entity type      | Name: Item <br/>"Feature type": None                                                                                                                                                                                                                                                                                                                                                                                  |
-| Program                  | Type: Tracker <br/>Tracked entity type: Item <br/>Program tracked entity attributes: <br/>- Item barcode <br/>- Item code <br/>- Item description <br/>Program stages: <br/>Name: "Stock on Hand" <br/>Scheduled days from start: 0 <br/>Repeatable                                                                                                                                                                   |
-| Program rule             | *Name*: "Assign Stock correction" <br/>Condition: "d2:hasValue( #{Stock count} )” <br/>Action: "Assign value"  <br/>*Name*: "Assign Stock on Hand" <br/>Condition: "true" <br/>Action: "Assign value"  <br/>*Name*: "Assign previous stock balance" <br/>Condition: "d2:hasValue( #{Initial stock on hand - Previous event} )" <br/>Action: "Assign value"                                                            |
+| CATEGORY                 | SYSTEM DEFAULT SETTINGS                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Organisation unit        | According to national protocols and policies and/or existing DHIS2 configuration                                                                                                                                                                                                                                                                                                                                                                                            |
+| Data element             | Name: <br/>- "Deliver to": Text / Option set = "Deliver to" <br/>- "Previous stock balance": Positive integer <br/>- "Stock correction": Positive or Zero integer (**New 1.1**) <br/>- "Stock count": Positive integer <br/>- "Stock discard": Positive integer <br/>- "Stock distribution": Positive integer <br/>- "Stock on hand": Positive or Zero integer (**New 1.1**) <br/>- "Stock received": Positive integer <br/>Domain type: Tracker <br/>Value type: see above |
+| Option set               | Name: "Deliver to" <br/>Value type: Text                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Tracked entity attribute | Name: <br/>- "Item barcode" <br/>- "Item code" <br/>- "Item description" <br/>"Value type": Text <br/>"Aggregation type": None                                                                                                                                                                                                                                                                                                                                              |
+| Tracked entity type      | Name: Item <br/>"Feature type": None                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Program                  | Type: Tracker <br/>Tracked entity type: Item <br/>Program tracked entity attributes: <br/>- Item barcode <br/>- Item code <br/>- Item description <br/>Program stages: <br/>Name: "Stock on Hand" <br/>Scheduled days from start: 0 <br/>Repeatable                                                                                                                                                                                                                         |
+| Program rule             | *Name*: "Assign Stock correction" <br/>Condition: "d2:hasValue( #{Stock count} )” <br/>Action: "Assign value"  <br/>*Name*: "Assign Stock on Hand" <br/>Condition: "true" <br/>Action: "Assign value"  <br/>*Name*: "Assign previous stock balance" <br/>Condition: "d2:hasValue( #{Initial stock on hand - Previous event} )" <br/>Action: "Assign value"                                                                                                                  |
 
 More information related to DHIS2 for logistic in the [user guide](https://drive.google.com/file/d/1x6HoG75zMPCA823mdY87rb9hEJqxUz22/view).
 
@@ -117,6 +128,15 @@ To edit a **Program Configuration**:
 
 ![](resources/images/capture-app-use-case-configure-edit-details.png)
 
+> **Note: (New 1.1)**
+>
+> - While editing the configuration of a program containing Data Elements with a previously accepted value type, users will encounter a warning indicating the need for attention to these fields. These flagged fields will need reconfiguration by selecting new Data Elements.
+> - The "Next" and "Done" buttons within the configuration interface will remain disabled until users have selected Data Elements that comply with the new valid value type. This precaution ensures that only compatible Data Elements are used. 
+> 
+> This process ensures seamless transition and adherence to updated system requirements, minimizing errors and ensuring data accuracy.
+>
+> ![](resources/images/capture-app-use-case-configure-program-stock-hand.png)
+>
 
 ### Delete configuration
 
