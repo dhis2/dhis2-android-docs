@@ -50,7 +50,8 @@ Follow the steps below to upload an **Android app version**:
 2. Assign a version number.
 3. Choose the minimum and/or recommend Android OS version.
 4. Add a URL that contains the APK of the Android app.
-5. Click on the "Create app version" button.
+5. Optionally, select one or more "user groups" to grant them access. (**New 1.1**)
+6. Click on the "Create app version" button.
 
 
 ![](resources/images/capture-app-apk-distribution-upload.png)
@@ -67,6 +68,42 @@ Follow the steps below to upload an **Android app version**:
 > To choose the minimum or recommended Android OS version for the app version, it is suggested to review the [Mobile Device Specification documentation](https://docs.dhis2.org/en/implement/android-implementation/mobile-device-specifications.html).
 >
 
+
+### Grant access to User Groups (**New 1.1**)
+
+To give access to one or more User Groups:
+
+1. Click on "Access".
+2. A pop-up will appear with a search field.
+3. Search a User Group.
+4. Click on "Give access" button.
+5. Click on "Close".
+
+![](resources/images/capture-app-apk-distribution-version-list.png)
+
+![](resources/images/capture-app-apk-distribution-grant-access.png)
+
+
+> **Note:**
+>
+> The APK Distribution web application empowers administrators to allocate access to user groups for specific "Android App" versions.
+> - User groups can be assigned to multiple "Android app" versions, yet individual users within those groups will only have access to the latest version allocated to their group. 
+> - It's feasible to refrain from assigning a user group to an "Android app" version. In such cases, all users within that instance will automatically gain access to that version. 
+> - In instances where no user group is assigned to any "Android app" version, the latest version will be designated as the *Default*. Consequently, only the latest version will be accessible to all users within the instance.
+>
+>
+
+### Remove access to User Groups (**New 1.1**)
+
+To give access to one or more User Groups:
+
+1. Click on "Access".
+2. A pop-up will appear with a search field and a list of User groups that currently have access.
+3. Find the User group whose access will be removed.
+4. Click on "Remove access" button.
+5. Click on "Close".
+
+![](resources/images/capture-app-apk-distribution-remove-access.png)
 
 ### Delete version
 
