@@ -62,23 +62,36 @@ By default, the DHIS2 Android App database is not encrypted, but an admin can ch
 > By default, the Android app database is not encrypted, but an admin can check the *Encrypt device database* to encrypt the metadata and data stored in every device. Encrypting the database will have an impact on the database volume and performance of the Android app. Note that at the moment of selecting or unselecting this option, no data is lost (even if it hasn't been previously synchronized with the server)
 
 ### Allow screenshots { #capture_app_android_settings_webapp_general_screenshots }
-This section allows to configure the possibility to take screenshots or screen sharing using the Android Capture App (which is required to remote support with applications like Teamviewer, Teams, etc). Please note that the default behavior is deactivated screenshots.
+This section allows to configure the possibility to take screenshots or screen sharing using the Android Capture App (which is required to remote support with applications like Teamviewer, Teams, etc.). Please note that the default behavior is deactivated screenshots.
 
 > **Warning**
 >
 > The DHIS2 Android App disables the possibility of taking screenshots (and capturing the screen from other apps) by default following security and privacy recommendations. Allowing screenshots might be useful for support and/or sharing purposes in same cases but make sure you understand the security and privacy implications of this setting before enabling it.
 >
 
-### Opt-in Features (**New 2.3.1**) { #capture_app_android_settings_webapp_general_optin_features }
+
+### Skip DHIS2 version validation (**New 2.4**) { #capture_app_android_settings_webapp_general_skip_version_validation }
+When connecting to DHIS2 instances, the app typically verifies compatibility with supported versions. However, in some cases, connecting to unsupported instances may be necessary or useful. Please note that the default behavior is to enforce strict version validation. To skip the validation process for DHIS2 version compatibility, select the checkbox.
+
+![](resources/images/capture-app-skip-version-validation.png)
+
+> **Warning**
+>
+> This option is only applicable when using Android Capture app version 3.0 or later.
+>
+
+
+### Opt-in Features (**v2.3.1**) { #capture_app_android_settings_webapp_general_optin_features }
 Opt-in features are additional functionalities or settings within the application that the user can choose to enable based on preferences. Unlike default settings, these features require an explicit consent or action ('opting in') to activate.
 Opting in allows the user to customize the experience by adding extra capabilities to the app. Keep in mind that these features might come with specific considerations, so it is recommended to review any associated information before opting in.
 
 To enable a feature:
+
 - Click on *Opt-in Features*. 
 - A list of available opt-in settings will appear.
-- Click on the feature's checkbox.
+- Click on the feature's checkbox to enable it.
 
-**Data entry Form :** The inputs for all value types have been redesigned in the Android Capture App with an improved selection mode and increased tappable areas and texts to offer a cleaner and more intuitive user experience. By default, the Android Capture App will display the previous forms. Admin users are able to opt in to use the new forms by clicking in the checkbox option.
+**Data entry Form (**New 2.4**):** The inputs for all value types have been redesigned in the Android Capture App with an improved selection mode and increased tappable areas and texts to offer a cleaner and more intuitive user experience. By default, the Android Capture App will display the new forms. Admin users can opt out of using the new version of forms by clicking the checkbox option.
 
 ![](resources/images/capture-app-optin-features.png)
 
@@ -115,7 +128,7 @@ Use the new Tracker Importer
 > ![](resources/images/capture-app-sync-global-importer.png){width=50%}
 >
 
-Use the new Tracker Exporter (**New 2.3**)
+Use the new Tracker Exporter (**v2.3**)
 :	Admin users can choose which tracker exporter endpoint will be used.
 
 > **Warning**
@@ -128,7 +141,7 @@ Use the new Tracker Exporter (**New 2.3**)
 > ![](resources/images/capture-app-sync-global-exporter.png){width=50%}
 >
 
-Limit the file size to download (**New 2.3**)
+Limit the file size to download (**v2.3**)
 :	Admin users can limit the maximum size of the file resources downloaded in KB.
 
 ![](resources/images/capture-app-sync-download-file-size.png){width=33%}
@@ -208,7 +221,7 @@ In the case that any specific settings has been saved, a table will show a summa
 
 By clicking on *Reset all values*, the admin user will restore the default settings values of the program section. Please note that in this case it means no specific settings per program. 
 
-To save any configuration, the admin user needs to click on the *Save* button (this button is disabled for the users who don't have 'ALL' or 'M_androidsettingsapp' authority)
+To save any configuration, the admin user needs to click on the *Save* button (this button is disabled for the users who don't have "ALL" or "M_androidsettingsapp" authority)
 
 
 ### Data set { #capture_app_android_settings_webapp_synchronization_data }
@@ -241,7 +254,7 @@ To add a specific setting:
 
 ### User Sync Test { #capture_app_android_settings_webapp_synchronization_user_sync_test }
 
-This section checks the amount of data and metadata a user would sync to his/her device. You can run this test on any user that you have access to. This test shows up the number of organisation units, data sets, program rules, programs, etc., that an android user has access to (so the resources that the android app will download), and the metadata and data download size (approx estimation). Please note that a user doesn't need to have the 'ALL' or 'M_androidsettingsapp' authority to run this test.
+This section checks the amount of data and metadata a user would sync to his/her device. You can run this test on any user that you have access to. This test shows up the number of organisation units, data sets, program rules, programs, etc., that an android user has access to (so the resources that the android app will download), and the metadata and data download size (approx estimation). Please note that a user doesn't need to have the "ALL" or "M_androidsettingsapp" authority to run this test.
 
 ![](resources/images/capture-app-user-sync-test.png){width=50%}
 
@@ -280,10 +293,10 @@ Global settings apply to all programs that an android user has access to.
 Percentage (%) complete in Program: 
 Enable or disable the option to show the completion percentage of the data entry form.
 
-TEI referrals (**New 2.3.1**):	
+TEI referrals (**v2.3.1**):	
 It allows to switch off/on the TEI referral option.
 
-Collapse sections in form (**New 2.3.1**):  
+Collapse sections in form (**v2.3.1**):  
 Current behavior lets the sections collapse and expand in an accordion style. This option overrides the behavior by keeping all the sections of the form (registration and events) open and removing the "next" button in each section.	
 
 
@@ -304,7 +317,7 @@ To add a specific setting:
 TEI without searching:
 Offer online and offline search, as well as allow the user to create a TEI without a prior search.
 
-TEI Header (**New 2.3.1**):
+TEI Header (**v2.3.1**):
 Assign a specific attribute or expression that will be displayed as a header in TEI cards. 
 
 To add a TEI Header:
@@ -334,7 +347,7 @@ If any specific settings have been saved, a table will summarize the particular 
 The option "Show percentage (%) complete in Program toolbar" refers to: 
 ![](resources/images/capture-app-appearance-programs-spinner.png){width=50%}
 
-**Search Tracked Entity (New 2.2)**
+**Search Tracked Entity (v2.2)**
 
 Searching before entering a new TEI is mandatory to avoid possible duplicates, and the DHIS2 Android App has been designed as such. This new version gives the possibility to choose to keep this process or allow the user to create a TEI without searching first.
 By default, allowing the user to create a TEI without searching is disabled.
@@ -402,18 +415,28 @@ If any TEI Analytics item has been created, a table will show the item's title a
 
 Home visualizations are displayed in the home screen (Analytics tab) of the android app.
 
-All items available are first created in the Data visualizer app in DHIS2 and configured in the android settings app.
+All items available are first created in the Data visualizer or Line Listing app in DHIS2 and configured in the Android Settings app.
+
+> **Note:**
+>
+> Visualization items can be sourced either from the **Data Visualizer** or the **Line Listing** app. 
+> 
+> When choosing a visualization type, the items shown automatically change; if "Data Visualization" is selected, only visualizations created in the Data Visualization app will be displayed. 
+> 
+> When selecting "Event Visualization" (**New 2.4**), only elements created in the Line Listing app will appear in the Visualization search box.
+>
 
 To create a **Home** item:
 
-1. Click on "Add Home Visualization"
-2. Click on the search box and select the visualization from the list or type the name of the visualization item.
-3. Add an alternative title, otherwise, the app will display the name of the visualization
-4. By default, the app will enable the group visualization setting.
+1. Click on "Add Home Visualization" Button.
+2. Choose a "Visualization Type" (**New 2.4**)
+3. Click on the search box and select the visualization from the list or type the name of the visualization item.
+4. Add an alternative title, otherwise, the app will display the name of the visualization.
+5. By default, the app will enable the group visualization setting.
    1. Create a new group: A free text box will pop up to type the name or
    2. Select a created group visualization: Choose an option from the list to add the visualization or
    3. Disable the group visualization by clicking on the checkbox.
-5. Click on the "Save" button.
+6. Click on the "Save" button.
 
 ![](resources/images/capture-app-analytics-home-newGroup.png)
 
@@ -426,7 +449,7 @@ To create a **Home** item:
 > ![](resources/images/capture-app-analytics-default-group.png)
 >
 
-To edit the title of a **Home** item (**New 2.2.1**):
+To edit the title of a **Home** item (**v2.2.1**):
 
 1. Search for the item by expanding the groups.
 2. Click the "Edit" button next to the item's name.
@@ -465,23 +488,35 @@ To reset all values:
 
 Program visualizations are displayed in the search screen (Analytics tab) in tracker programs or in the list screen (Analytics tab) in event programs of the android app.
 
-All items available are first created in the Data visualizer app in DHIS2 and configured in the android settings app.
+All items available are first created in the Data visualizer or Line Listing (**New 2.4**) app in DHIS2 and configured in the Android Settings app.
+
+> **Note:**
+>
+> Visualization items can be sourced either from the **Data Visualizer** or the **Line Listing** app.
+>
+> When choosing a visualization type, the items shown automatically change; if "Data Visualization" is selected, only visualizations created in the Data Visualization app will be displayed.
+>
+> When selecting "Event Visualization" (**New 2.4**), only elements created in the Line Listing app will appear in the Visualization search box.
+>
+> ![](resources/images/capture-app-analytics-program-visualization-type.png)
+> 
 
 To create a **Program** item:
 
-1. Click on "Add Program Visualization"
-2. Select a Program
-3. Click on the search box and select the visualization from the list or type the name of the visualization item.
-4. Add an alternative title, otherwise, the app will display the name of the visualization
-5. By default, the app will enable the group visualization setting.
+1. Click on "Add Program Visualization" Button.
+2. Choose a Visualization Type (**New 2.4**).
+3. Select a Program.
+4. Click on the search box and select the visualization from the list or type the name of the visualization item.
+5. Add an alternative title, otherwise, the app will display the name of the visualization
+6. By default, the app will enable the group visualization setting.
    1. Create a new group: A free text box will pop up to type the name or
    2. Select a created group visualization: Choose an option from the list to add the visualization or
    3. Disable the group visualization by clicking on the checkbox.
-6. Click on the "Save" button.
+7. Click on the "Save" button.
 
 ![](resources/images/capture-app-analytics-program-add.png)
 
-To edit the title of a **Program** item (**New 2.2.1**):
+To edit the title of a **Program** item (**v2.2.1**):
 
 1. Search for the item by expanding the groups.
 2. Click the "Edit" button next to the item's name.
@@ -535,7 +570,7 @@ To create a **Data Set** item:
 
 ![](resources/images/capture-app-analytics-dataset-add.png)
 
-To edit the title of a **Data set** item (**New 2.2.1**):
+To edit the title of a **Data set** item (**v2.2.1**):
 
 1. Search for the item by expanding the groups.
 2. Click the "Edit" button next to the item's name.
@@ -594,13 +629,15 @@ To run the test:
 
 ### Analytics Limitations { #capture_app_android_settings_analytics_limitations }
 
-Since the aggregations and calculations displayed are calculated in the device, the implementation of analytics is limited compared to web. In summary the compatible and supported objects and features are:
+Since the aggregations and calculations displayed are calculated in the device, the implementation of analytics is limited compared to web. 
+
+In summary the compatible and supported objects and features for Data Visualizations are:
 
 - Well-formed analytic objects (series, categories, filters)
 - Use of relative periods (Fix periods are not supported)
 - User has view access
 - Limitations for Pivot Tables
-  - Number of header lines: 1 or 2 (*New 2.3*)
+  - Number of header lines: 1 or 2 (*v2.3*)
   - Number of header columns: 2
 - Limitations for Charts
   - Number of Series: No limit (but remember you are rendering in a small screen)
@@ -608,7 +645,16 @@ Since the aggregations and calculations displayed are calculated in the device, 
 
 There are many more restrictions which apply to Android Analytics regarding the many configuration options available in the Web Visualizer as well as the supported functions and calculations related to indicators and program indicators. [This table](https://docs.google.com/spreadsheets/d/1127cz7M0K4fux5CU0V54V2Z77NZWCr0BTrZ6jcCec4Q) summarises all supported features.
 
-> **Note (New 2.2.1)**
+In the same way, Event visualizations are considered valid if:
+
+- Visualization was created using Line Listing app
+- Visualization type is Line List
+- Use of relative periods
+- Limitations for Table
+  - Number of columns: 15
+
+
+> **Note (v2.2.1)**
 >
 > When searching for a visualization to add as part of the Analytics visualizations, all visualizations will be listed, but visualizations that don't meet the above restrictions will be disabled. 
 >
@@ -640,7 +686,7 @@ After a user installs and launches the Android Settings Web App for the first ti
 
 ![](resources/images/capture-app-first-setup-with-deprecation-message.png){width=50%}
 
-> **Warning (New 2.3)** 
+> **Warning (v2.3)** 
 >
 > When using DHIS2 version equal to or higher to 2.40, only users with "M_androidsettingsapp" or "ALL" authority can *save or update* the configuration, but any user will have *view* access once it is created.
 > 
