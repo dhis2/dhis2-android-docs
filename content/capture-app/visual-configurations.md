@@ -362,4 +362,4 @@ The new input fields are now displayed by default in the Android app and admin u
 
 ### New menus update (Improved 3.1.0) { #capture_app_visual_menu_update}
 
-The new menus are added to provide clear information to the user
+The new menus are added to bring clear information to the user
