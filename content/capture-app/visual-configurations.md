@@ -359,3 +359,5 @@ The Android App displays the full description of the legend when tapping on the 
 The new input fields are now displayed by default in the Android app and admin users are able to opt-out to use the old forms through the Android Settings web app.
 
 ![](resources/images/capture-app-image289.png){ width=25%}
+
+### New menus update (Improved 3.1.0) { #capture_app_visual_menu_update}
