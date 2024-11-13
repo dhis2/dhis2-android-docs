@@ -361,3 +361,5 @@ The new input fields are now displayed by default in the Android app and admin u
 ![](resources/images/capture-app-image289.png){ width=25%}
 
 ### New menus update (Improved 3.1.0) { #capture_app_visual_menu_update}
+
+The new
