@@ -303,7 +303,6 @@ The home screen of the DHIS2 Android App shows the list of programs and data set
 
 In 3.1.0,  a new dynamic home screen that adapts to the number of programs (up to 4 programs) available has been implemented. This update replaces the old static list that didn’t adjust to the screen, providing a more responsive and user-friendly interface.The responsive design makes better use of screen real estate, providing a more engaging and functional home screen layout.
 
-
 ![](resources/images/capture-app-image310.png){ width=25%}
 ![](resources/images/capture-app-image313.png){ width=25%}
 
