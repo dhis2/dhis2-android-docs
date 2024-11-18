@@ -23,7 +23,7 @@ Reserved values
 Open sync errors log
 :	The sync error log gives details about the error and is prepared to be shared with admins.
 
-Export database (New 3.0)
+Export database
 :   Users are now be able to export the local database and share it with an admin, who will be able to import it for troubleshooting, being able to replicate the exact environment (database, device, configuration). The exported database is encrypted and the administrator will require the user credentials to be able to access the database
 
 ![](resources/images/capture-app-image260.png){ width=25%}

@@ -57,9 +57,9 @@ If the user forgets the PIN number, log in by entering the credentials is also a
 
 ![](resources/images/capture-app-image65.png){width=25%}
 
-## Fingerprint { #capture_app_generic_fingerprint }
+## Biometrics login (Improved 3.1.0) { #capture_app_generic_biometrics_login }
 
-User is able to use the fingerprint scanner if the feature is activated in the device.
+User is able to use the fingerprint scanner or face id if the feature is activated in the device. This will only be available if there is only one account (not supported for multple accounts)
 
 * When the fingerprint scanner is enable and not the PIN, every time the app closes, goes to background or the device is blocked, the session will be locked. Once the app is open again, the user needs to tap the fingerprint icon to activate the scanner.
 * If the PIN and the fingerprint are set, when the session is locked and the user open the app again, the PIN will be asked.
@@ -297,12 +297,16 @@ The user can now enter aggregate data for an organisation Unit, a period and a s
 ![](resources/images/capture-app-image92.png){ width=25%}
 
 
-## Home {#capture_app_home}
+## Home (Improved 3.1.0) {#capture_app_home}
 
 The home screen of the DHIS2 Android App shows the list of programs and data sets available for the user. The first thing the user does when collecting data in this case is to select the program or data set to work with.
 
+In 3.1.0,  a new dynamic home screen that adapts to the number of programs (up to 4 programs) available has been implemented. This update replaces the old static list that didn’t adjust to the screen, providing a more responsive and user-friendly interface.The responsive design makes better use of screen real estate, providing a more engaging and functional home screen layout.
 
-![](resources/images/capture-app-image87.png){ width=25%}
+
+![](resources/images/capture-app-image310.png){ width=25%}
+![](resources/images/capture-app-image313.png){ width=25%}
+
 
 > **Tip**
 >
