@@ -40,7 +40,26 @@ After a user installs and launches the APK Distribution Web App for the first ti
 
 The APK Distribution Web App allows the admin users to update or remove versions of the Android app.
 
+The app provides two distinct interfaces based on user roles:
+
+**User Interface**: Regular users have a simplified interface where they can:
+- Download APK (**New 1.2**): A download button is displayed, showing the APK associated with their user group.
+If no APK is assigned to their user group, no button or related content will be displayed.
+This design ensures admins have full control over APK management, while regular users only see content relevant to their access permissions.
+
+![](resources/images/capture-app-apk-distribution-user-no-apk.png)
 ![](resources/images/capture-app-apk-distribution.png)
+
+
+**Admin Interface**:
+This special interface is designed exclusively for admin users, allowing them to:
+
+- *Upload APKs*: Admins can upload APK files to the platform.
+- *Grant Access*: Admins can assign APK access to specific user groups.
+- *Delete APKs*: Admins can remove uploaded APKs when necessary.
+
+![](resources/images/capture-app-apk-distribution-user-apk.png)
+
 
 ### Upload version
 
@@ -50,7 +69,7 @@ Follow the steps below to upload an **Android app version**:
 2. Assign a version number.
 3. Choose the minimum and/or recommend Android OS version.
 4. Add a URL that contains the APK of the Android app.
-5. Optionally, select one or more "user groups" to grant them access. (**New 1.1**)
+5. Optionally, select one or more "user groups" to grant them access. (**v1.1**)
 6. Click on the "Create app version" button.
 
 
@@ -69,7 +88,7 @@ Follow the steps below to upload an **Android app version**:
 >
 
 
-### Grant access to User Groups (**New 1.1**)
+### Grant access to User Groups (**v1.1**)
 
 To give access to one or more User Groups:
 
@@ -93,7 +112,7 @@ To give access to one or more User Groups:
 >
 >
 
-### Remove access to User Groups (**New 1.1**)
+### Remove access to User Groups (**v1.1**)
 
 To give access to one or more User Groups:
 
