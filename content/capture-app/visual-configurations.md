@@ -1,6 +1,6 @@
 # Visual configurations { #capture_app_visual }
 
-##  Local Analytics (Improved 3.0)
+##  Local Analytics
 
 ### Data Visualizations { #capture_app_visual_data_visualizations }
 
@@ -101,7 +101,7 @@ There are many more restrictions which apply to Android Analytics regarding the 
 > 
 > 
 
-### Event Visualizations (New 3.0) { #capture_app_visual_event_visualizations }
+### Event Visualizations (Improved 3.1.0) { #capture_app_visual_event_visualizations }
 
 The DHIS2 Android App can now render analytics that have been created in the line listing app.Analytics to be displayed require to be configured using the Android Settings WebApp where administrators will be able to decide the tables to be displayed for end users.
 
@@ -118,6 +118,8 @@ In the app, the users will be able to search by period, Org. unit, or any of the
 ![](resources/images/capture-app-image265.png){ width=25%}
 ![](resources/images/capture-app-image266.png){ width=25%}
 ![](resources/images/capture-app-image267.png){ width=25%}
+
+From 3.1.0, the Android App introduces support for the Category Option Dimension in line listings. Additionally, it has been improved the text alignment within the Line Listing tables to support left alignment. This enhancement ensures better readability and a cleaner presentation of data, making it easier for users to review and analyze their information quickly.
 
 #### Limitations { #capture_app_visual_event_visualizations_limitations }
 
@@ -177,7 +179,7 @@ You can set the generic theme of the app by configuring the them in our server:
 >
 >![](resources/images/capture-app-image23.png){ width=25%}
 
-## Icon library for metadata (Improved 3.0) { #capture_app_visual_icon_lib }
+## Icon library for metadata (Improved 3.1.0) { #capture_app_visual_icon_lib }
 
 There are currently 134 icons available that you can choose from. You can search by name in the icon picker widget. Icons are available in positive, negative and outlined shapes.
 
@@ -207,6 +209,8 @@ To upload and assign the custome icons through the instance, the admin must:
 5. Save
 
 ![](resources/images/capture-app-image290.png){ width=25%}
+
+From 3.1 it is possible to disply the custom icon when a relationship is displayed.
 
 > **Note**
 >
@@ -314,7 +318,7 @@ Combined with the use of d2 functions in program rules, the different fields of 
 ![](resources/images/capture-app-image184.png){ width=20%}
 ![](resources/images/capture-app-image200.png){ width=20%}
 
-### Signature (Improved 3.0) { #capture_app_visual_signature }
+### Signature { #capture_app_visual_signature }
 
 This feature allows users to collect handwritten signatures from the device. The signatures will be saved as an image data element in the app.
 
@@ -347,15 +351,26 @@ This feature enhances the functionality of the app when it is used offline, ensu
 
 The Android App enables users to view long text in fields that are limited in size, such as a stage names or datasets headers.
 
-### Legends (Improved 3.0) { #capture_app_visual_legends_descriptions}
+### Legends (Improved 3.1.0) { #capture_app_visual_legends_descriptions}
 
 The Android App displays the full description of the legend when tapping on the information icon once a legend is active. These feature is available only in event and registration forms.
+
+From 3.1.0, the legend in a data element will now automatically update after seconds of inactivity. This means that users no longer need to move to the next field to prompt the legend update, making the process smoother and more efficient.
 
 ![](resources/images/capture-app-image276.png){ width=25%}
 ![](resources/images/capture-app-image277.png){ width=25%}
 
-### Input fields (Improved 3.0) { #capture_app_visual_input_fields }
+### Input fields { #capture_app_visual_input_fields }
 
 The new input fields are now displayed by default in the Android app and admin users are able to opt-out to use the old forms through the Android Settings web app.
 
 ![](resources/images/capture-app-image289.png){ width=25%}
+
+### Menus and Navigation bar (Improved 3.1.0) { #capture_app_visual_menu_bars_update}
+
+A revamped of the menus and navigation bar has been made to be more user-friendly and accessible. It includes a cleaner, more modern look that improves readability and usability. These updates are designed to provide a more efficient and enjoyable user experience.
+
+![](resources/images/capture-app-image300.png){ width=25%}
+![](resources/images/capture-app-image301.png){ width=25%}
+![](resources/images/capture-app-image302.png){ width=25%}
+![](resources/images/capture-app-image304.png){ width=25%}

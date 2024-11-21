@@ -40,7 +40,7 @@ The bottom navigation bar also allows switching the visualization mode if the ev
 
 ### Data Entry Flow { #capture_app_common_features_Data_flow }
 
-#### creating/editing an event (Improved 3.0) { #capture_app_common_features_newEdit_event }
+#### creating/editing an event { #capture_app_common_features_newEdit_event }
 
 When creating an event or an enrollment, there are a number of fields that are not data elements or attributes, for example, event date, org unit, coordinates, enrollment date, category combinations. 
 
@@ -78,13 +78,8 @@ To re-open an event, the app now displays a "Re-open form" button in the Details
 
 ![](resources/images/capture-app-image202.png){ width=25%}
 
-#### Schedule after completion (Improved 3.0) { #capture_app_programs_common_features_schedule_after_completion }
 
-In 3.0, the schedule dialog after completion has been redisigned to facilitate the creation of the event.
-
-![](resources/images/capture-app-image270.png){ width=25%}
-
-#### Discard changes { #capture_app_programs_common_features_discard_changes }
+#### Discard changes (Improved 3.1.0) { #capture_app_programs_common_features_discard_changes }
 
 Tapping the back arrow in an enrollment or event form now provide two options:
 
@@ -97,6 +92,8 @@ If the user is in a new enrollment or event, the options allow the user to:
 2. 'Keep editing': Allowing the user to finish the enrollment or event.
 
 ![](resources/images/capture-app-image203.png){ width=25%}
+
+From 3.1.0 Discard changes will not only apply to new events but also when edit them.
 
 #### Field completion percentage { #capture_app_programs_common_features_field_percentage }
 
@@ -154,7 +151,7 @@ It is possible to add notes to events in single event programs and program stage
 
 ### Maps { #capture_app_programs_common_features_maps }
 
-#### Map Layers (Improved 3.0)
+#### Map Layers 
 
 When displaying maps there are different layers that can be displayed by clicking on the specific button on the uppper right corner. The user can select one or more layers to be displayed. Both coordinate and polygons types will be displayed. The layers are depenandat on the type of program as explained below:
 
@@ -202,6 +199,42 @@ If the TEI or event has coordinates a navigation icon will be displayed at the t
 ![](resources/images/capture-app-image149.png){ width=25%}
 ![](resources/images/capture-app-image150.png){ width=25%}
 ![](resources/images/capture-app-image151.jpg){ width=25%}
+
+#### Maps Accuracy (New 3.1.0) { #capture_app_programs_common_features_map_accuracy }
+
+From 3.1.0, the capture coordinates process now includes a feature that displays the precision of the captured location. This allows users to see how accurate their location data is in real-time.
+
+The user will see the tags according to the following ranges:
+
+1. Low: >= 100m
+2. Medium: < 100m to 25m
+3. Good: < 25m to 6m
+4. Very good: < 6m
+
+The coordinate can be captured even if the accuracy is low, but this behavior can change if there is a restriction/limit on the precision (configured in Android Settings WebApp). When there is a restriction, the  “Done” button will remain disabled until the precision meets the required threshold.
+
+![](resources/images/capture-app-image295.png){ width=25%}
+![](resources/images/capture-app-image296.png){ width=25%}
+
+
+#### Maps Search (New 3.1.0) { #capture_app_programs_common_features_map_search }
+
+A new search functionality has been added, allowing users to look up specific locations by name or address. Once the user tap on the search bar, the keyboard will open and the user can enter any street or location name. The user can select any of the locations of the list or tap on the "select in map" to display all the locations in the map (blue pins). 
+
+![](resources/images/capture-app-image297.png){ width=25%}
+![](resources/images/capture-app-image298.png){ width=25%}
+
+When a place is selected, the location will be displayed as a card below the map, the pin will be positioned on the selected place and the search bar will be filled up with the place name.
+
+The list of pins is based/limited on the current location. But once the search is done, if the user moves to a different area, the search can be done within the new area by tapping on the "search on this area" button.
+
+#### Maps Manual Capture (New 3.1.0) { #capture_app_programs_common_features_map_manual }
+
+By dragging the map the user can choose the pin location manually. At the bottom of the map, the label "selected location" will be displayed with the respective coordinates.
+
+In 3.1 the manual capture can be disabled (Android settings webApp configuration).This will hid the search bar and won't allow the user to select any location on the map. It will be restricted to save the current location only.
+
+![](resources/images/capture-app-image291.png){ width=25%}
 
 ### Working Lists { #capture_app_programs_common_features_working_lists }
 
@@ -268,7 +301,7 @@ This feature enables users to take action on phone numbers and email addresses d
 
 ![](resources/images/capture-app-image230.png){ width=25%}
 
-### Customized Tracker Terminology { #capture_app_programs_common_features_customized_terminology }
+### Customized Tracker Terminology (Improved 3.1.0) { #capture_app_programs_common_features_customized_terminology }
 
 In order to facilitate the terminology used in DHIS2, it has been decided to gradually enable the possibility to customize certain terms to each particular use case. In 3.0, the terms "event" (used in a program stage context) and "enrollment" are customizable.
 
@@ -281,6 +314,29 @@ To customize the terms, the admin can go to the Maintenance and when creating or
 ![](resources/images/capture-app-image254.png){ width=25%}
 ![](resources/images/capture-app-image256.png){ width=25%}
 ![](resources/images/capture-app-image255.png){ width=25%}
+
+In 3.1, the term "event" (program context) is now customizable.
+
+### Relationships (Improved 3.1.0) { #capture_app_programs_common_features_relationships }
+
+The relationship tab has been modified to display sections once the tab is open. Each section represents a different relationship type and the + icon will be available only if the user has capture access to the relationship type. 
+
+The name of the section will be the "relationship name seen from the initiating or receiving entity" depending on the configuration of the relationship.
+
+![](resources/images/capture-app-image308.png){ width=25%}
+
+In 3.1.0, the relationship cards have also been updated with a new design to offer a more intuitive and visually appealing experience. The new design emphasizes clarity and usability, making it easier to view and manage relationships at a glance.
+
+![](resources/images/capture-app-image309.png){ width=25%}
+
+#### Delete a relationship
+
+To delete a card, long press on it and select one or more. Then, tap on the remove icon to display the dialog. Finish the process by tapping on the "Remove" button.
+
+To prevent accidental deletions and enhance user control, a new confirmation dialog also has been added when deleting a relationship. This dialog will prompt users to confirm their action, ensuring that relationships are only deleted intentionally.
+
+![](resources/images/capture-app-image307.png){ width=25%}
+![](resources/images/capture-app-image306.png){ width=25%}
 
 
 ## Event Programs specific features { #capture_app_programs_events }
@@ -320,7 +376,7 @@ In tracker programs, the user can see relationships on a map by tapping the map 
 
 ![](resources/images/capture-app-image132.png){ width=50%}
 
-### TEI Dashboard (Improved 3.0) { #capture_app_programs_TEI_Dashboard }
+### TEI Dashboard { #capture_app_programs_TEI_Dashboard }
 
 The TEI Dashboard has been redesigned for both portrait and landscape view. The new design offers a cleaner and more intuitive layout replacing the use of coloured icons by explicit text when relevant and moving some secondar actions to the hidden menus.
 
@@ -403,7 +459,7 @@ To complete or deactivate an enrollment, click on three dot menu in the uppper r
 
 ![](resources/images/capture-app-image76.jpg){ width=25%}
 
-### Search Flow (Improved 3.0) { #capture_app_programs_search }
+### Search Flow (Improved 3.1.0) { #capture_app_programs_search }
 
 #### Configurable TEI Search { #capture_app_programs_configurable_search }
 
@@ -419,9 +475,18 @@ If the feature is enabled, the Android App will display a "create new" button af
 
 ![](resources/images/capture-app-image281.png){ width=25%}
 
-#### Search by unique QR/bar Codes (new 3.0) { #capture_app_programs_unique_qrBar_search }
+#### Search by unique QR/bar Codes (Improved 3.1.0) { #capture_app_programs_unique_qrBar_search }
 
 In 3.0, the search form has been improved to provide a cleaner look and a more intuitive user experience. The buttons have been made more explicit for differencing search from creation. In addition the flow for searching TEIs using attributes rendered as bar / QR codes has been made more agile. If there is only one result and the attribute is unique, the app will open the TEI Dashboard directly. If there are multiple results, the app will display all the cards on the TEI list (this is equal to the current workflow), and if there are no results, the app will display the create button and allow the user to “search outside the program” if the configuration allows it.
+
+Aimed at aligning it with the web instance for a more consistent user experience, 3.1.0, by default, sorts the unique attributes (QR, barcode) at the top of the list of searchable attributes. Users can quickly and easily find the attributes for a more exact search.
+
+The sort of the attributes will follow:
+
+- At the top: QR/barcode attributes (unique)
+- QR/barcode attributes (not unique)
+- Other Attributes (unique)
+- Configured order or default order (if not configured)
 
 #### Offline and Online Search { #capture_app_programs_offline_online_search }
 
@@ -467,7 +532,7 @@ User can see the complete historical records of the TEI. Clicking on the upper r
 ![](resources/images/capture-app-image40.jpg){ width=25%}
 ![](resources/images/capture-app-image7.png){ width=25%}
 
-### Delete TEI's & Enrollments (Improved 3.0) { #capture_app_programs_delete_tei }
+### Delete TEI's & Enrollments { #capture_app_programs_delete_tei }
 
 To delete a TEI or an enrollment, select the desired option in the three dots menu of TEI dashboard.  Local TEI or Enrollment will be deleted from the database. Records that has been previously synced with the server will be marked for deletion if the user has the following authorities:
 
@@ -538,6 +603,14 @@ When users add events (tapping on the + icon) in a tracker program, the DHIS2 An
 
 ![](resources/images/capture-app-image233.png){ width=50%}
 
+### Transfers (Improved 3.1.0) { #capture_app_programs_transfers }
+
+Significant enhancements to the transfer flow, aimed at making the process more user-friendly and transparent. The transfer button has been moved to a more accessible location within the three dot menu in the TEI Dashboard, ensuring that users can easily find and initiate transfers without unnecessary navigation. 
+
+Also, the ownership organisation unit has been added as a parameter in the TEI card. If the ownership org unit and enrollment org unit are the same, then the enrollment one will be hidden.
+
+Once the transfer process has started, the user will see a dialog with all the org units available (search scope), once an org unit is selected, the transfer button will be activated. After tapping on the button, the ownership org unit will change to the new one. The user must sync data to reflect the changes in the instance.
+
 ### [EXPERIMENTAL] TEI Header  { #capture_app_programs_tei_header }
 
 The TEI Header is a title that can be added to the TEI cards and dashboards in the app. The title helps identify a TEI by displaying a summary of key information. It is formed by a concatenation of Tracked Entity Atributes and fixed text. The title is configured through a Program Indicator in the maintenance app and its assigned to the tracker program in the Android settings webapp. This feature is experimentan and depending on feedback and adoption it will be refined and incorporated in the Web Capture app.
@@ -550,6 +623,28 @@ For more information on how to configure the TEI header, click [here.](https://d
 
 ![](resources/images/capture-app-image249.png){ width=50%}
 ![](resources/images/capture-app-image250.png){ width=50%}
+
+### Scheduling (Improved 3.1.0)  { #capture_app_programs_scheduling }
+
+#### Schedule after completion { #capture_app_programs_common_features_schedule_after_completion }
+
+In 3.0, the schedule dialog after completion has been redisigned to facilitate the creation of the event.
+
+![](resources/images/capture-app-image270.png){ width=25%}
+
+#### Schedule events dialog (New 3.1.0)
+
+As a continuation of the new schedule dialog introduced in the version 3.0, a new  intuitive and user-friendly schedule dialog has been implemented to enhance the overall user experience, making it easier to book, reschedule, or cancel events.
+
+Once an event has been scheduled, when the user taps on it, the app will display a dialog with the following:
+
+1. Due date field: Allows the user to open the calendar by tapping on the icon or change the date manually. This will facilitate the process of re-scheduling an event.
+2. Enter event button: after tapping on this button, the app will open the event with the current date and the user can start filling the form. 
+3. Cancel event button: after tapping on this button, the app will close the event and mark it as "skipped". As before, the user can always enter the event, add a report date, changing the status from skipped to open.
+
+![](resources/images/capture-app-image293.png){ width=25%}
+![](resources/images/capture-app-image294.png){ width=25%}
+
 
 ## Supported features Overview { #capture_app_programs_supported_features }
 
