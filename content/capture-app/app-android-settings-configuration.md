@@ -70,7 +70,7 @@ This section allows to configure the possibility to take screenshots or screen s
 >
 
 
-### Skip DHIS2 version validation (**New 2.4**) { #capture_app_android_settings_webapp_general_skip_version_validation }
+### Skip DHIS2 version validation (**v2.4**) { #capture_app_android_settings_webapp_general_skip_version_validation }
 When connecting to DHIS2 instances, the app typically verifies compatibility with supported versions. However, in some cases, connecting to unsupported instances may be necessary or useful. Please note that the default behavior is to enforce strict version validation. To skip the validation process for DHIS2 version compatibility, select the checkbox.
 
 ![](resources/images/capture-app-skip-version-validation.png)
@@ -91,7 +91,7 @@ To enable a feature:
 - A list of available opt-in settings will appear.
 - Click on the feature's checkbox to enable it.
 
-**Data entry Form (**New 2.4**):** The inputs for all value types have been redesigned in the Android Capture App with an improved selection mode and increased tappable areas and texts to offer a cleaner and more intuitive user experience. By default, the Android Capture App will display the new forms. Admin users can opt out of using the new version of forms by clicking the checkbox option.
+**Data entry Form (**v2.4**):** The inputs for all value types have been redesigned in the Android Capture App with an improved selection mode and increased tappable areas and texts to offer a cleaner and more intuitive user experience. By default, the Android Capture App will display the new forms. Admin users can opt out of using the new version of forms by clicking the checkbox option.
 
 ![](resources/images/capture-app-optin-features.png)
 
@@ -145,6 +145,16 @@ Limit the file size to download (**v2.3**)
 :	Admin users can limit the maximum size of the file resources downloaded in KB.
 
 ![](resources/images/capture-app-sync-download-file-size.png){width=33%}
+
+> **Note**
+>
+> Admin users the ability to set the maximum file resource size for downloads. Admins can now leave the field with no value to indicate no limit on the maximum file size. (**New 2.4.1**) 
+> - no value: Allows unlimited file resource size for downloads. By default, this is the initial value.
+> - 0: Restricts downloads to 0 KB.
+> - Any positive value: Restricts downloads to files within the specified maximum size limit (in megabytes or another unit). 
+> 
+> This provides flexibility for admins to either enforce a file size limit or allow unrestricted downloads depending on their needs.
+>
 
 
 
@@ -352,6 +362,19 @@ The option "Show percentage (%) complete in Program toolbar" refers to:
 Searching before entering a new TEI is mandatory to avoid possible duplicates, and the DHIS2 Android App has been designed as such. This new version gives the possibility to choose to keep this process or allow the user to create a TEI without searching first.
 By default, allowing the user to create a TEI without searching is disabled.
 
+**Capture Coordinates (New 2.4.1)**
+
+This section provides admin users with two configurable options for managing location capture on mobile devices:
+
+- Disable Manual Location Capture:
+By enabling this option, manual location entry on mobile devices is disabled. This ensures that location data is captured automatically, preventing manual errors or alterations.
+
+- Minimum Location Accuracy:
+This field allows admins to define the minimum precision level (in meters) required for capturing location data. The lower the value, the higher the accuracy required. The minimum recommended value is 5 meters, ensuring reliable and precise location capture.
+
+These options provide admins with greater control over how location data is captured and ensure consistency in the accuracy of recorded positions.
+
+![](resources/images/capture-app-appearance-programs-coordinates.png)
 
 
 ### Data set { #capture_app_android_settings_webapp_appearance_data }
@@ -423,13 +446,13 @@ All items available are first created in the Data visualizer or Line Listing app
 > 
 > When choosing a visualization type, the items shown automatically change; if "Data Visualization" is selected, only visualizations created in the Data Visualization app will be displayed. 
 > 
-> When selecting "Event Visualization" (**New 2.4**), only elements created in the Line Listing app will appear in the Visualization search box.
+> When selecting "Event Visualization" (**v2.4**), only elements created in the Line Listing app will appear in the Visualization search box.
 >
 
 To create a **Home** item:
 
 1. Click on "Add Home Visualization" Button.
-2. Choose a "Visualization Type" (**New 2.4**)
+2. Choose a "Visualization Type" (**v2.4**)
 3. Click on the search box and select the visualization from the list or type the name of the visualization item.
 4. Add an alternative title, otherwise, the app will display the name of the visualization.
 5. By default, the app will enable the group visualization setting.
@@ -488,7 +511,7 @@ To reset all values:
 
 Program visualizations are displayed in the search screen (Analytics tab) in tracker programs or in the list screen (Analytics tab) in event programs of the android app.
 
-All items available are first created in the Data visualizer or Line Listing (**New 2.4**) app in DHIS2 and configured in the Android Settings app.
+All items available are first created in the Data visualizer or Line Listing (**v2.4**) app in DHIS2 and configured in the Android Settings app.
 
 > **Note:**
 >
@@ -496,7 +519,7 @@ All items available are first created in the Data visualizer or Line Listing (**
 >
 > When choosing a visualization type, the items shown automatically change; if "Data Visualization" is selected, only visualizations created in the Data Visualization app will be displayed.
 >
-> When selecting "Event Visualization" (**New 2.4**), only elements created in the Line Listing app will appear in the Visualization search box.
+> When selecting "Event Visualization" (**v2.4**), only elements created in the Line Listing app will appear in the Visualization search box.
 >
 > ![](resources/images/capture-app-analytics-program-visualization-type.png)
 > 
@@ -504,7 +527,7 @@ All items available are first created in the Data visualizer or Line Listing (**
 To create a **Program** item:
 
 1. Click on "Add Program Visualization" Button.
-2. Choose a Visualization Type (**New 2.4**).
+2. Choose a Visualization Type (**v2.4**).
 3. Select a Program.
 4. Click on the search box and select the visualization from the list or type the name of the visualization item.
 5. Add an alternative title, otherwise, the app will display the name of the visualization
@@ -758,4 +781,16 @@ In case of needing to uninstall the Android Settings App it is recommended to al
 
 > **Warning**
 >
-> This is a critical action, be aware that by doing this, all previous configurations will be permanently deleted.   
+> This is a critical action, be aware that by doing this, all previous configurations will be permanently deleted.
+>
+
+
+## App Compatibility { #capture_app_android_settings_webapp_app_compatibility }
+
+A label is displayed to indicate the minimum Android app version required to use specific features or functionalities. This ensures that users are informed about compatibility requirements and can update their app if necessary to meet the minimum version.
+
+For example, if a feature requires Android app version 2.9 or higher, the label will show the required version clearly for the user.
+
+![](resources/images/capture-app-aswa-compatibility.png)
+
+[This table](https://docs.google.com/spreadsheets/d/1HZv4iYD9_UVbMAxEgIHYXD_peK_ppzpJLo85MojNmMQ/edit?usp=sharing) summarises all supported features and the compatibility of them with the Android Capture app.
