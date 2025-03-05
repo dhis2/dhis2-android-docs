@@ -1,14 +1,13 @@
 ## Verion update document
-
-
+This document provides an overview of the key features and enhancements introduced in different versions of the DHIS2 Android app, specifically Android 2.9, 3.0, and 3.1. It highlights compatibility with DHIS2 core versions and details improvements in usability, configuration, and functionality.
 
 
 
 | Feature | Android 2.9 | Android 3.0 | Android 3.1 |
 | :---- | :---- | :---- | :---- |
 | Compatible DHIS2 web version | Compatible with DHIS2 versions 2.30 through 40| Compatible with DHIS2 core versions 2.39, 2.40, and 2.41| Compatible with DHIS2 core versions 2.39, 2.40, and 2.41|
-| **Disable referral in tracker programs** | The referral option can be hidden using the Android Settings Web App. [Documentation](https://docs.dhis2.org/en/use/android-app/program-features.html#capture_app_programs_referrals)![](resources/versionupdateimages/image1.png)![](resources/versionupdateimages/image2.png)| Updated settings in Web App. [Documentation](https://docs.dhis2.org/en/use/android-app/settings-configuration.html#capture_app_android_settings_webapp_appearance_program) |  |
-| **Skip home screen if only one program is available** | The app skips the home screen if the user has access to only one program/dataset. [More info](https://docs.dhis2.org/en/use/android-app/android-specific-features.html#capture_app_home) ![](resources/versionupdateimages/image3.png) | \- |  |
+| **Disable referral in tracker programs** | The referral option can be hidden using the Android Settings Web App. [Documentation](https://docs.dhis2.org/en/use/android-app/program-features.html#capture_app_programs_referrals)![](resources/versionupdateimages/image1.png)![](resources/versionupdateimages/image3.png)| Updated settings in Web App. [Documentation](https://docs.dhis2.org/en/use/android-app/settings-configuration.html#capture_app_android_settings_webapp_appearance_program) |  |
+| **Skip home screen if only one program is available** | The app skips the home screen if the user has access to only one program/dataset. [More info](https://docs.dhis2.org/en/use/android-app/android-specific-features.html#capture_app_home) ![](resources/versionupdateimages/image2.png) | \- |  |
 | **Display program stage description** | Program stage description is displayed below the section name. [More info](https://docs.dhis2.org/en/use/android-app/program-features.html#capture_app_programs_common_features_data_entry_form_program_stage_description) ![](resources/versionupdateimages/image4.png)| \- |  |
 | **Disable collapsible sections in forms** | Stage sections are displayed with collapsible menus. [Documentation](https://docs.dhis2.org/en/use/android-app/program-features.html#capture_app_programs_common_features_data_entry_form_collapsible_sections) ![](resources/versionupdateimages/image5.png)![](resources/versionupdateimages/image6.png) | \- |  |
 | **Move working lists under the search bar** | Working lists are now visible under the search bar for better filtering. [More info](https://docs.dhis2.org/en/use/android-app/program-features.html#capture_app_programs_common_features_working_lists) ![](resources/versionupdateimages/image7.png)| \- |  |
