@@ -1,7 +1,11 @@
+## Verion update document
+
+
+
+
 
 | Feature | Android 2.9 | Android 3.0 | Android 3.1 |
 | :---- | :---- | :---- | :---- |
-|For optimal performance and access to the latest features, it's recommended to use the most recent version of the DHIS2 Android Capture App compatible with your DHIS2 server version.|
 | Compatible DHIS2 web version | Compatible with DHIS2 versions 2.30 through 40| Compatible with DHIS2 core versions 2.39, 2.40, and 2.41| Compatible with DHIS2 core versions 2.39, 2.40, and 2.41|
 | **Disable referral in tracker programs** | The referral option can be hidden using the Android Settings Web App. [Documentation](https://docs.dhis2.org/en/use/android-app/program-features.html#capture_app_programs_referrals)![](resources/versionupdateimages/image1.png)![](resources/versionupdateimages/image2.png)| Updated settings in Web App. [Documentation](https://docs.dhis2.org/en/use/android-app/settings-configuration.html#capture_app_android_settings_webapp_appearance_program) |  |
 | **Skip home screen if only one program is available** | The app skips the home screen if the user has access to only one program/dataset. [More info](https://docs.dhis2.org/en/use/android-app/android-specific-features.html#capture_app_home) ![](resources/versionupdateimages/image3.png) | \- |  |
