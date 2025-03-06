@@ -1,4 +1,5 @@
-## Verion update document
+## Version update document
+
 This document provides an overview of the key features and enhancements introduced in different versions of the DHIS2 Android app, specifically Android 2.9, 3.0, and 3.1. It highlights compatibility with DHIS2 core versions and details improvements in usability, configuration, and functionality.
 
 
