@@ -148,7 +148,7 @@ Limit the file size to download (**v2.3**)
 
 > **Note**
 >
-> Admin users the ability to set the maximum file resource size for downloads. Admins can now leave the field with no value to indicate no limit on the maximum file size. (**New 2.4.1**) 
+> Admin users the ability to set the maximum file resource size for downloads. Admins can now leave the field with no value to indicate no limit on the maximum file size. (**v2.4.1**) 
 > - no value: Allows unlimited file resource size for downloads. By default, this is the initial value.
 > - 0: Restricts downloads to 0 KB.
 > - Any positive value: Restricts downloads to files within the specified maximum size limit (in megabytes or another unit). 
@@ -362,7 +362,7 @@ The option "Show percentage (%) complete in Program toolbar" refers to:
 Searching before entering a new TEI is mandatory to avoid possible duplicates, and the DHIS2 Android App has been designed as such. This new version gives the possibility to choose to keep this process or allow the user to create a TEI without searching first.
 By default, allowing the user to create a TEI without searching is disabled.
 
-**Capture Coordinates (New 2.4.1)**
+**Capture Coordinates (v2.4.1)**
 
 This section provides admin users with two configurable options for managing location capture on mobile devices:
 
@@ -375,6 +375,21 @@ This field allows admins to define the minimum precision level (in meters) requi
 These options provide admins with greater control over how location data is captured and ensure consistency in the accuracy of recorded positions.
 
 ![](resources/images/capture-app-appearance-programs-coordinates.png)
+
+**Quick Actions (New 2.4.2)**
+
+The Quick Actions Bar is a new feature in the Android App that allows users to configure and add "chips" representing different actions for easy access in the TEI Dashboard.
+This section aims to enhance user productivity by providing a streamlined and customizable interface for frequently used functions.
+
+![](resources/images/capture-app-appearance-programs-quick-actions.png)
+
+> **Note:**
+>
+> Checking the box will display the action as a "quick-access" chip instead of just listing it in the menu.
+>
+>
+> ![](resources/images/capture-app-appearance-program-specific-quick-action.png)
+>
 
 
 ### Data set { #capture_app_android_settings_webapp_appearance_data }
@@ -397,6 +412,21 @@ To add a specific setting:
 ![](resources/images/capture-app-appearance-dataset-specific.png){width=75%}
 
 ![](resources/images/capture-app-appearance-dataset-table.png){width=75%}
+
+**Capture Coordinates (New 2.4.2)**
+
+This section provides admin users with two configurable options for managing location capture on mobile devices:
+
+- Disable Manual Location Capture:
+  By enabling this option, manual location entry on mobile devices is disabled. This ensures that location data is captured automatically, preventing manual errors or alterations.
+
+- Minimum Location Accuracy:
+  This field allows admins to define the minimum precision level (in meters) required for capturing location data. The lower the value, the higher the accuracy required. The minimum recommended value is 5 meters, ensuring reliable and precise location capture.
+
+These options provide admins with greater control over how location data is captured and ensure consistency in the accuracy of recorded positions.
+
+![](resources/images/capture-app-appearance-dataset-coordinates.png)
+
 
 
 ## Analytics { #capture_app_android_settings_webapp_analytics }
@@ -491,6 +521,15 @@ To remove a **Home** item:
 
 ![](resources/images/capture-app-analytics-home-deleteVisualization.png)
 
+To reorganize a **Home** item inside a group (**New 2.4.2**):
+
+1. Search for the item by expanding the groups
+2. Click on the "Up" or "Down" arrow button next to the item's name
+3. Keep clicking on the button until the item is in the wanted position 
+4. Click on the "Save" button
+
+![](resources/images/capture-app-analytics-home-reorganizeVisualization.png)
+
 To remove a **Home** group:
 
 1. Search for the specific group to delete
@@ -548,7 +587,7 @@ To edit the title of a **Program** item (**v2.2.1**):
 
 ![](resources/images/capture-app-analytics-program-editVisualization.png)
 
-To remove a **program** item:
+To remove a **Program** item:
 
 1. Search for the item by expanding the program and group
 2. Click the "Delete" button next to the item's name
@@ -557,7 +596,16 @@ To remove a **program** item:
 
 ![](resources/images/capture-app-analytics-program-deleteVisualization.png)
 
-To remove a **program** group:
+To reorganize a **Program** item inside a group (**New 2.4.2**):
+
+1. Search for the item by expanding the program and groups
+2. Click on the "Up" or "Down" arrow button next to the item's name
+3. Keep clicking on the button until the item is in the wanted position
+4. Click on the "Save" button
+
+![](resources/images/capture-app-analytics-program-reorganizeVisualization.png)
+
+To remove a **Program** group:
 
 1. Search for the specific group to delete in the corresponding program
 2. Click on "Delete Group"
@@ -610,6 +658,15 @@ To remove a **Data Set** item:
 4. Click on the "Save" button
 
 ![](resources/images/capture-app-analytics-dataset-deleteVisualization.png)
+
+To reorganize a **Data Set** item inside a group (**New 2.4.2**):
+
+1. Search for the item by expanding the Data Set and groups
+2. Click on the "Up" or "Down" arrow button next to the item's name
+3. Keep clicking on the button until the item is in the wanted position
+4. Click on the "Save" button
+
+![](resources/images/capture-app-analytics-dataset-reorganizeVisualization.png)
 
 To remove a **Data Set** group:
 
