@@ -29,6 +29,16 @@ The Synchronization Troubleshooting provides admin users with a dedicated interf
 
 This functionality helps admins track and resolve synchronization problems quickly, ensuring a smoother data transfer process.
 
+
+**Understanding Error Details: Identifying Android vs. Web Users**
+
+In the error detail cards, additional information is provided to help identify the source of the error. Key details include:
+
+- User Group & Role: These indicate the permissions and access level of the user involved in the error.
+- Error Origin: By analyzing the user role and group, admins can determine whether the error was caused by an Android user or a web user.
+
+This information helps troubleshoot synchronization issues more efficiently by pinpointing whether the error is related to a specific platform or user type.
+
 ![](resources/images/capture-app-sync-troubleshooting-errors.png)
 
 
@@ -37,6 +47,7 @@ This functionality helps admins track and resolve synchronization problems quick
 > To monitor synchronization errors in the web app, users must have specific permissions:
 > 
 > - "F_JOB_LOG_READ" Authority: Required to access and read the list of synchronization errors.
+> - "F_USER_VIEW" Authority: Required to read the list of users
 > - Additional Access for Error Details: To view more details about each error, the user must have permission to access the lists of:
 > Users
 > Events
