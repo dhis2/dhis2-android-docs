@@ -148,7 +148,7 @@ Limit the file size to download (**v2.3**)
 
 > **Note**
 >
-> Admin users the ability to set the maximum file resource size for downloads. Admins can now leave the field with no value to indicate no limit on the maximum file size. (**v2.4.1**) 
+> Admin users have the ability to set the maximum file resource size for downloads. Admins can now leave the field with no value to indicate no limit on the maximum file size. (**v2.4.1**) 
 > - no value: Allows unlimited file resource size for downloads. By default, this is the initial value.
 > - 0: Restricts downloads to 0 KB.
 > - Any positive value: Restricts downloads to files within the specified maximum size limit (in megabytes or another unit). 
@@ -385,8 +385,16 @@ This section aims to enhance user productivity by providing a streamlined and cu
 
 > **Note:**
 >
-> Checking the box will display the action as a "quick-access" chip instead of just listing it in the menu.
+> Checking the box will display the action as a "quick-access" chip instead of just listing it in the menu. 
+> 
+> Chips can’t be reordered. The order of appearance will be:
+> - Mark for follow-up
+> - Transfer TEI
+> - Complete Enrollment
+> - Cancel Enrollment
+> - More enrollments
 >
+> By default, all the chips are unselected and the Quick actions bar is not available in the Android app.
 >
 > ![](resources/images/capture-app-appearance-program-specific-quick-action.png)
 >
