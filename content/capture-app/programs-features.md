@@ -79,7 +79,7 @@ To re-open an event, the app now displays a "Re-open form" button in the Details
 ![](resources/images/capture-app-image202.png){ width=25%}
 
 
-#### Discard changes (Improved 3.1.0) { #capture_app_programs_common_features_discard_changes }
+#### Discard changes { #capture_app_programs_common_features_discard_changes }
 
 Tapping the back arrow in an enrollment or event form now provide two options:
 
@@ -200,7 +200,7 @@ If the TEI or event has coordinates a navigation icon will be displayed at the t
 ![](resources/images/capture-app-image150.png){ width=25%}
 ![](resources/images/capture-app-image151.jpg){ width=25%}
 
-#### Maps Accuracy (New 3.1.0) { #capture_app_programs_common_features_map_accuracy }
+#### Maps Accuracy { #capture_app_programs_common_features_map_accuracy }
 
 From 3.1.0, the capture coordinates process now includes a feature that displays the precision of the captured location. This allows users to see how accurate their location data is in real-time.
 
@@ -217,7 +217,7 @@ The coordinate can be captured even if the accuracy is low, but this behavior ca
 ![](resources/images/capture-app-image296.png){ width=25%}
 
 
-#### Maps Search (New 3.1.0) { #capture_app_programs_common_features_map_search }
+#### Maps Search { #capture_app_programs_common_features_map_search }
 
 A new search functionality has been added, allowing users to look up specific locations by name or address. Once the user tap on the search bar, the keyboard will open and the user can enter any street or location name. The user can select any of the locations of the list or tap on the "select in map" to display all the locations in the map (blue pins). 
 
@@ -228,7 +228,7 @@ When a place is selected, the location will be displayed as a card below the map
 
 The list of pins is based/limited on the current location. But once the search is done, if the user moves to a different area, the search can be done within the new area by tapping on the "search on this area" button.
 
-#### Maps Manual Capture (New 3.1.0) { #capture_app_programs_common_features_map_manual }
+#### Maps Manual Capture { #capture_app_programs_common_features_map_manual }
 
 By dragging the map the user can choose the pin location manually. At the bottom of the map, the label "selected location" will be displayed with the respective coordinates.
 
@@ -301,7 +301,7 @@ This feature enables users to take action on phone numbers and email addresses d
 
 ![](resources/images/capture-app-image230.png){ width=25%}
 
-### Customized Tracker Terminology (Improved 3.1.0) { #capture_app_programs_common_features_customized_terminology }
+### Customized Tracker Terminology { #capture_app_programs_common_features_customized_terminology }
 
 In order to facilitate the terminology used in DHIS2, it has been decided to gradually enable the possibility to customize certain terms to each particular use case. In 3.0, the terms "event" (used in a program stage context) and "enrollment" are customizable.
 
@@ -317,7 +317,7 @@ To customize the terms, the admin can go to the Maintenance and when creating or
 
 In 3.1, the term "event" (program context) is now customizable.
 
-### Relationships (Improved 3.1.0) { #capture_app_programs_common_features_relationships }
+### Relationships { #capture_app_programs_common_features_relationships }
 
 The relationship tab has been modified to display sections once the tab is open. Each section represents a different relationship type and the + icon will be available only if the user has capture access to the relationship type. 
 
@@ -459,7 +459,7 @@ To complete or deactivate an enrollment, click on three dot menu in the uppper r
 
 ![](resources/images/capture-app-image76.jpg){ width=25%}
 
-### Search Flow (Improved 3.1.0) { #capture_app_programs_search }
+### Search Flow { #capture_app_programs_search }
 
 #### Configurable TEI Search { #capture_app_programs_configurable_search }
 
@@ -475,7 +475,7 @@ If the feature is enabled, the Android App will display a "create new" button af
 
 ![](resources/images/capture-app-image281.png){ width=25%}
 
-#### Search by unique QR/bar Codes (Improved 3.1.0) { #capture_app_programs_unique_qrBar_search }
+#### Search by unique QR/bar Codes { #capture_app_programs_unique_qrBar_search }
 
 In 3.0, the search form has been improved to provide a cleaner look and a more intuitive user experience. The buttons have been made more explicit for differencing search from creation. In addition the flow for searching TEIs using attributes rendered as bar / QR codes has been made more agile. If there is only one result and the attribute is unique, the app will open the TEI Dashboard directly. If there are multiple results, the app will display all the cards on the TEI list (this is equal to the current workflow), and if there are no results, the app will display the create button and allow the user to “search outside the program” if the configuration allows it.
 
@@ -603,7 +603,7 @@ When users add events (tapping on the + icon) in a tracker program, the DHIS2 An
 
 ![](resources/images/capture-app-image233.png){ width=50%}
 
-### Transfers (Improved 3.1.0) { #capture_app_programs_transfers }
+### Transfers { #capture_app_programs_transfers }
 
 Significant enhancements to the transfer flow, aimed at making the process more user-friendly and transparent. The transfer button has been moved to a more accessible location within the three dot menu in the TEI Dashboard, ensuring that users can easily find and initiate transfers without unnecessary navigation. 
 
@@ -624,7 +624,7 @@ For more information on how to configure the TEI header, click [here.](https://d
 ![](resources/images/capture-app-image249.png){ width=50%}
 ![](resources/images/capture-app-image250.png){ width=50%}
 
-### Scheduling (Improved 3.1.0)  { #capture_app_programs_scheduling }
+### Scheduling { #capture_app_programs_scheduling }
 
 #### Schedule after completion { #capture_app_programs_common_features_schedule_after_completion }
 
@@ -632,7 +632,7 @@ In 3.0, the schedule dialog after completion has been redisigned to facilitate t
 
 ![](resources/images/capture-app-image270.png){ width=25%}
 
-#### Schedule events dialog (New 3.1.0)
+#### Schedule events dialog
 
 As a continuation of the new schedule dialog introduced in the version 3.0, a new  intuitive and user-friendly schedule dialog has been implemented to enhance the overall user experience, making it easier to book, reschedule, or cancel events.
 
@@ -645,6 +645,29 @@ Once an event has been scheduled, when the user taps on it, the app will display
 ![](resources/images/capture-app-image293.png){ width=25%}
 ![](resources/images/capture-app-image294.png){ width=25%}
 
+### Dashboard quick actions (New 3.2.0)  { #capture_app_quick_actions }
+
+The Quick Actions bar is a new feature in the DHIS2 Android Capture App that enables users to access frequently used actions directly from the Tracked Entity Instance (TEI) Dashboard. These actions are displayed as customizable chips, streamlining workflows and reducing the number of taps needed to perform routine tasks.
+
+Each action is displayed as a chip in the TEI Dashboard. By default, all chips are unselected, and the Quick Actions bar is not displayed in the app. When tapped, the chip performs a predefined function. The available actions include:
+
+1. Mark for follow-up
+2. Transfer
+3. Complete
+4. Cancel
+5. More enrollments
+
+The chips cannot be reordered. The order of appearance is as the list above.
+
+![](resources/images/TBD.png){ width=25%}
+![](resources/images/TBD.png){ width=25%}
+
+
+### Limitations and considerations { #capture_app_quick_actions_limitations }
+
+* Quick Actions are available only when configured via Android Settings WebApp (v2.4.2)
+* Each program must be configured individually.
+* Feature parity is maintained: actions remain available in the TEI Dashboard 3-dot menu even when Quick Actions are disabled.
 
 ## Supported features Overview { #capture_app_programs_supported_features }
 

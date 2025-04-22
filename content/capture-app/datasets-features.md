@@ -1,13 +1,21 @@
 # Data sets { #capture_app_datsets }
 
-### Data Entry {#capture_app_data_sets_data_entry}
+### Data Entry (Improved 3.2.0) {#capture_app_data_sets_data_entry}
 
-While entering data the new text input dialog opens an input field above the keyboard which shows the Data Element name, and category options of the field being selected, ensuring the user does not lose context when navigating the tables.
+From 3.2.0, to improve usability and align with user expectations, the DHIS2 Android Capture App has undergone a comprehensive redesign of the data entry table and input dialog for Data Sets.
 
-![](resources/images/capture-app-image213.png){ width=25%}
+**Key Enhancements:**
 
-![](resources/images/capture-app-image214.png){ width=25%}
+* Modernized Table Layout: The data entry table now features a cleaner and more intuitive design, facilitating easier data input and review.
+* Enhanced Input Dialog: The input dialog has been revamped to provide a more user-friendly interface, streamlining the data entry process.
 
+![](resources/images/TBD.png){ width=25%}
+
+#### Capturing Coordinates (New 3.2.0) {#capture_app_data_sets_data_entry_capture_coordinates}
+
+To enhance the process of capturing coordinates and align to the behavior in tracker programs, a search bar has been implemented. This feature allows users to input textual information, such as street names or numbers, to facilitate the identification of specific locations.
+
+![](resources/images/TBD.png){ width=25%}
 
 ### Navigation Bar { #capture_app_data_sets_navigation_bar }
 
@@ -15,21 +23,15 @@ Use the navigation bar located at the bottom of the data set to switch between t
 
 ![](resources/images/capture-app-image139.png){ width=25%}
 
-### Overview Screen { #capture_app_data_sets_overview_screen }
+### Overview Screen (Removed 3.2.0) { #capture_app_data_sets_overview_screen }
 
-The new overview tab contains the following details:
+the Overview screen for Data Sets has been removed from the Android Capture App in version 3.2.0. Users are now taken directly to the data entry screen after selecting a Data Set.
 
-- Data set name
-- Last Update
-- Open/Close Status
-- Period
-- Org Unit
-- Category option combo
-- Refresh button (To trigger a granular synchronization)
+All relevant metadata is now either pre-selected or directly accessible within the data entry screen.
 
-![](resources/images/capture-app-image122.png){ width=25%}
+![](resources/images/TBD.png){ width=25%}
 
-### Saving a data set { #capture_app_data_sets_saving }
+### Saving a data set (Improved 3.2.0) { #capture_app_data_sets_saving }
 
 Validation rules and completion of data sets are integrated in the save button actions:
 
@@ -51,7 +53,7 @@ Validation rules and completion of data sets are integrated in the save button a
 
 - If the data set does not have validation rules, the data set will be marked as complete if all mandatory fields have value.
 
-### Increase Row and column Headers { #capture_app_data_sets_row }
+### Increase Row and column Headers (Improved 3.2.0) { #capture_app_data_sets_row }
 
 Users are now allowed to resize the row headers and columns in datasets, making it easier to view and work with larger tables.
 
@@ -63,11 +65,21 @@ If the column have multiple headers, the resizing will be available only for the
 
 ![](resources/images/capture-app-image216.png){ width=25%}
 
-### Indicators { #capture_app_data_sets_indicators }
+From 3.2.0 the Data Sets table includes a Reset button to complement the increment and decrement input controls in columns.It appears only while resizing is active and lets users quickly revert any resized columns to their original (default) width.
+
+The button is contextual and will:
+
+* Disappear once the user navigates to a different section.
+* Be hidden when an input dialog is opened.
+
+![](resources/images/TBD.png){ width=25%}
+
+### Indicators (Improved 3.2.0) { #capture_app_data_sets_indicators }
 
 Indicators are now available in default and section forms and are displayed at the bottom of the data entry form.
 
 ![](resources/images/capture-app-image140.png){ width=25%}
+
 
 ### Cards design { #capture_app_datsets_cards_design }
 
@@ -80,6 +92,43 @@ The new design of cards offers a cleaner and more intuitive layout replacing the
 **Completion status:** After the data set is completed, the app will add a label in each card to specify the completion status.
 
 ![](resources/images/capture-app-image237.png){ width=25%}
+
+### Configurable forms/ Pivot options (New 3.2.0) { #capture_app_datsets_pivot_options }
+
+This new feature supports a variety of layout and display configurations, allowing data sets to better reflect national paper tools, simplify workflows, and reduce user errors. It requires a configuration in the maintenance app whithin a DHIS2 Web version: 2.41+.
+
+The following configurations are supported:
+
+#### 1. Disable Automatic Grouping of Data Elements
+
+Ensures data elements retain their defined order, even if they share category combination and prevents the default behavior where data elements are grouped by category combination and sorted alphabetically.
+
+![](resources/images/TBD.png){ width=25%}
+
+#### 2. Transpose (Pivot) Layout Options
+
+Controls how data elements and category options are arranged in tables:
+
+|Mode | Description|
+|---|---|
+|Default | Data elements as rows, categories as columns (standard layout)|
+|Full Pivot | Categories as rows, data elements as columns|
+|Move Specific Category to Row | Shift only one category to rows for partial transposition|
+
+[](resources/images/TBD.png){ width=25%}
+
+#### 3. Content Before and After Sections
+
+Adds  instructional text or HTML content above and below each section and supports simple styling: <a>, <u>, <b/strong>, and <em>.
+
+[](resources/images/TBD.png){ width=25%}
+
+#### 4. Render Sections as Tabs (vertical layout)
+
+When the feature is enabled in the section configuration, the form displays a left panel listing all the sections as vertical tabs.This panel is only shown in landscape orientation. In portrait mode, the traditional tab bar remains.
+
+[](resources/images/TBD.png){ width=25%}
+
 
 ## Supported features overview { #capture_app_datsets_supported_features }
 
