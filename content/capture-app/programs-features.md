@@ -659,9 +659,8 @@ Each action is displayed as a chip in the TEI Dashboard. By default, all chips a
 
 The chips cannot be reordered. The order of appearance is as the list above.
 
-![](resources/images/TBD.png){ width=25%}
-![](resources/images/TBD.png){ width=25%}
-
+![](resources/images/capture-app-image325.png){ width=25%}
+![](resources/images/capture-app-image326.png){ width=25%}
 
 ### Limitations and considerations { #capture_app_quick_actions_limitations }
 

@@ -9,13 +9,16 @@ From 3.2.0, to improve usability and align with user expectations, the DHIS2 And
 * Modernized Table Layout: The data entry table now features a cleaner and more intuitive design, facilitating easier data input and review.
 * Enhanced Input Dialog: The input dialog has been revamped to provide a more user-friendly interface, streamlining the data entry process.
 
-![](resources/images/TBD.png){ width=25%}
+![](resources/images/capture-app-image318.png){ width=25%}
+![](resources/images/capture-app-image319.png){ width=25%}
 
 #### Capturing Coordinates (New 3.2.0) {#capture_app_data_sets_data_entry_capture_coordinates}
 
 To enhance the process of capturing coordinates and align to the behavior in tracker programs, a search bar has been implemented. This feature allows users to input textual information, such as street names or numbers, to facilitate the identification of specific locations.
 
-![](resources/images/TBD.png){ width=25%}
+![](resources/images/capture-app-image316.png){ width=25%}
+![](resources/images/capture-app-image314.png){ width=25%}
+![](resources/images/capture-app-image315.png){ width=25%}
 
 ### Navigation Bar { #capture_app_data_sets_navigation_bar }
 
@@ -28,8 +31,6 @@ Use the navigation bar located at the bottom of the data set to switch between t
 the Overview screen for Data Sets has been removed from the Android Capture App in version 3.2.0. Users are now taken directly to the data entry screen after selecting a Data Set.
 
 All relevant metadata is now either pre-selected or directly accessible within the data entry screen.
-
-![](resources/images/TBD.png){ width=25%}
 
 ### Saving a data set (Improved 3.2.0) { #capture_app_data_sets_saving }
 
@@ -61,9 +62,8 @@ To resize any column, tap on its header and then drag and drop until the desired
 
 If the column have multiple headers, the resizing will be available only for the child header (lowest level). Users can also resize all collumns at once by clicking on the top left of the table.
 
-![](resources/images/capture-app-image215.png){ width=25%}
+![](resources/images/capture-app-image329.png){ width=25%}
 
-![](resources/images/capture-app-image216.png){ width=25%}
 
 From 3.2.0 the Data Sets table includes a Reset button to complement the increment and decrement input controls in columns.It appears only while resizing is active and lets users quickly revert any resized columns to their original (default) width.
 
@@ -78,8 +78,7 @@ The button is contextual and will:
 
 Indicators are now available in default and section forms and are displayed at the bottom of the data entry form.
 
-![](resources/images/capture-app-image140.png){ width=25%}
-
+![](resources/images/capture-app-image318.png){ width=25%}
 
 ### Cards design { #capture_app_datsets_cards_design }
 
@@ -103,7 +102,7 @@ The following configurations are supported:
 
 Ensures data elements retain their defined order, even if they share category combination and prevents the default behavior where data elements are grouped by category combination and sorted alphabetically.
 
-![](resources/images/TBD.png){ width=25%}
+![](resources/images/capture-app-image.png){ width=25%}
 
 #### 2. Transpose (Pivot) Layout Options
 
@@ -115,19 +114,21 @@ Controls how data elements and category options are arranged in tables:
 |Full Pivot | Categories as rows, data elements as columns|
 |Move Specific Category to Row | Shift only one category to rows for partial transposition|
 
-[](resources/images/TBD.png){ width=25%}
+![](resources/images/capture-app-image330.png){ width=25%}
+![](resources/images/capture-app-image.png){ width=25%}
 
 #### 3. Content Before and After Sections
 
-Adds  instructional text or HTML content above and below each section and supports simple styling: <a>, <u>, <b/strong>, and <em>.
+Adds  instructional text or HTML content above and below each section and supports simple styling: < a >, < u >, < b/strong >, and < em >.
 
-[](resources/images/TBD.png){ width=25%}
+![](resources/images/capture-app-image320.png){ width=25%}
+![](resources/images/capture-app-image321.png){ width=25%}
 
 #### 4. Render Sections as Tabs (vertical layout)
 
 When the feature is enabled in the section configuration, the form displays a left panel listing all the sections as vertical tabs.This panel is only shown in landscape orientation. In portrait mode, the traditional tab bar remains.
 
-[](resources/images/TBD.png){ width=25%}
+![](resources/images/capture-app-image328.png){ width=25%}
 
 
 ## Supported features overview { #capture_app_datsets_supported_features }
