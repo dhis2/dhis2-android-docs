@@ -37,20 +37,16 @@ All relevant metadata is now either pre-selected or directly accessible within t
 Validation rules and completion of data sets are integrated in the save button actions:
 
 - When a Data set is configured to *complete only if validation passess*. If the validation is successful, a dialog asking to mark as complete will show up. The App will allow completion only if all mandatory fields have value.
-
-![](resources/images/capture-app-image131.png){ width=25%}
   
 - if it is not successful, then an error dialog should show and the dataset will not be marked as complete. The description and instructions of the validation rule will be displayed to help the user identify the error.
 
-![](resources/images/capture-app-image128.png){ width=25%}
+![](resources/images/capture-app-image129.png){ width=25%}
 
 - On a dataset that does not have setup "Complete allowed only if validation passes". When clicking on the save button; if the data set has validation rules associated to it, then the app will ask the user to run the validation rules.
-  
-![](resources/images/capture-app-image130.png){ width=25%}
 
 - If the validation is not successful, an error dialog should show but with the possibility to complete the data set anyway. The description and instructions of the validation rule will be displayed to help the user identify the error.
 
-![](resources/images/capture-app-image129.png){ width=25%}
+![](resources/images/capture-app-image128.png){ width=25%}
 
 - If the data set does not have validation rules, the data set will be marked as complete if all mandatory fields have value.
 
@@ -72,7 +68,7 @@ The button is contextual and will:
 * Disappear once the user navigates to a different section.
 * Be hidden when an input dialog is opened.
 
-![](resources/images/TBD.png){ width=25%}
+![](resources/images/capture-app-image335.png){ width=25%}
 
 ### Indicators (Improved 3.2.0) { #capture_app_data_sets_indicators }
 
@@ -102,7 +98,13 @@ The following configurations are supported:
 
 Ensures data elements retain their defined order, even if they share category combination and prevents the default behavior where data elements are grouped by category combination and sorted alphabetically.
 
-![](resources/images/capture-app-image.png){ width=25%}
+**Enabling grouping (default)**
+
+![](resources/images/capture-app-image332.png){ width=25%}
+
+**Disabling grouping**
+
+![](resources/images/capture-app-image333.png){ width=25%}
 
 #### 2. Transpose (Pivot) Layout Options
 
@@ -114,8 +116,14 @@ Controls how data elements and category options are arranged in tables:
 |Full Pivot | Categories as rows, data elements as columns|
 |Move Specific Category to Row | Shift only one category to rows for partial transposition|
 
+**Full Pivot**
+
 ![](resources/images/capture-app-image330.png){ width=25%}
-![](resources/images/capture-app-image.png){ width=25%}
+
+**Specific category to row**
+
+![](resources/images/capture-app-image334.png){ width=25%}
+
 
 #### 3. Content Before and After Sections
 
