@@ -319,7 +319,7 @@ In 3.1, the term "event" (program context) is now customizable.
 
 ### Relationships { #capture_app_programs_common_features_relationships }
 
-The relationship tab has been modified to display sections once the tab is open. Each section represents a different relationship type and the + icon will be available only if the user has capture access to the relationship type. 
+The relationship tab displays sections once the tab is open. Each section represents a different relationship type and the + icon will be available only if the user has capture access to the relationship type. 
 
 The name of the section will be the "relationship name seen from the initiating or receiving entity" depending on the configuration of the relationship.
 
