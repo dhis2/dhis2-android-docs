@@ -101,7 +101,7 @@ There are many more restrictions which apply to Android Analytics regarding the 
 > 
 > 
 
-### Event Visualizations (Improved 3.1.0) { #capture_app_visual_event_visualizations }
+### Event Visualizations { #capture_app_visual_event_visualizations }
 
 The DHIS2 Android App can now render analytics that have been created in the line listing app.Analytics to be displayed require to be configured using the Android Settings WebApp where administrators will be able to decide the tables to be displayed for end users.
 
@@ -179,7 +179,7 @@ You can set the generic theme of the app by configuring the them in our server:
 >
 >![](resources/images/capture-app-image23.png){ width=25%}
 
-## Icon library for metadata (Improved 3.1.0) { #capture_app_visual_icon_lib }
+## Icon library for metadata { #capture_app_visual_icon_lib }
 
 There are currently 134 icons available that you can choose from. You can search by name in the icon picker widget. Icons are available in positive, negative and outlined shapes.
 
@@ -351,7 +351,7 @@ This feature enhances the functionality of the app when it is used offline, ensu
 
 The Android App enables users to view long text in fields that are limited in size, such as a stage names or datasets headers.
 
-### Legends (Improved 3.1.0) { #capture_app_visual_legends_descriptions}
+### Legends { #capture_app_visual_legends_descriptions}
 
 The Android App displays the full description of the legend when tapping on the information icon once a legend is active. These feature is available only in event and registration forms.
 
@@ -366,7 +366,7 @@ The new input fields are now displayed by default in the Android app and admin u
 
 ![](resources/images/capture-app-image289.png){ width=25%}
 
-### Menus and Navigation bar (Improved 3.1.0) { #capture_app_visual_menu_bars_update}
+### Menus and Navigation bar { #capture_app_visual_menu_bars_update}
 
 A revamped of the menus and navigation bar has been made to be more user-friendly and accessible. It includes a cleaner, more modern look that improves readability and usability. These updates are designed to provide a more efficient and enjoyable user experience.
 

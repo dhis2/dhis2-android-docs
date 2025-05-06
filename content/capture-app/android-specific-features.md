@@ -57,7 +57,7 @@ If the user forgets the PIN number, log in by entering the credentials is also a
 
 ![](resources/images/capture-app-image65.png){width=25%}
 
-## Biometrics login (Improved 3.1.0) { #capture_app_generic_biometrics_login }
+## Biometrics login { #capture_app_generic_biometrics_login }
 
 User is able to use the fingerprint scanner or face id if the feature is activated in the device. This will only be available if there is only one account (not supported for multple accounts)
 
@@ -297,7 +297,7 @@ The user can now enter aggregate data for an organisation Unit, a period and a s
 ![](resources/images/capture-app-image92.png){ width=25%}
 
 
-## Home (Improved 3.1.0) {#capture_app_home}
+## Home {#capture_app_home}
 
 The home screen of the DHIS2 Android App shows the list of programs and data sets available for the user. The first thing the user does when collecting data in this case is to select the program or data set to work with.
 
