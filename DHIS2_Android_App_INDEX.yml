@@ -13,3 +13,4 @@
 - Settings configuration: '@github(dhis2/dhis2-android-docs,content/capture-app/app-android-settings-configuration.md, main)'
 - Use case configuration: '@github(dhis2/dhis2-android-docs,content/capture-app/app-use-case-configuration.md, main)'
 - APK distribution: '@github(dhis2/dhis2-android-docs,content/capture-app/app-apk-distribution.md, main)'
+- Synchronization Troubleshooting: '@github(dhis2/dhis2-android-docs,content/capture-app/app-sync-troubleshooting.md, main)'
