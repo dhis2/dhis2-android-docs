@@ -2,30 +2,79 @@
 
 ## Acquisitions { #implementation_guide_scale_up_acquisitions }
 
+Scaling up a DHIS2 Android implementation is a complex but manageable process that begins after thorough testing and piloting. At this stage, decisions must be made regarding hardware acquisition, app distribution strategy, mobile device management, training programs, and—if relevant—SMS infrastructure. Planning well at this stage ensures stability, sustainability, and user satisfaction as the system is deployed at larger scale.
 
-Now that you have performed all your testing and your pilot project, you are ready to scale up your deployment, for which you will need to do acquisition of Hardware and necessary services. You will need to make decisions regarding:
+### Purchasing of devices vs BYOD (bring your own device)
 
-- Purchasing of devices vs BYOD (bring your own device)
-- Distribution of the app (now and later)
-- Telecommunication contracts
-
-**Purchasing of devices vs BYOD (bring your own device)**
-
-Initially you should buy different devices to allow users to evaluate them and provide you with feedback. Once the device that you will be using is decided upon, you should only buy 10 or less units, or whatever is needed for the testing and the pilot phases. Only when the pilot is coming to completion, you should buy equipment for the next 6 months roll-out. Some very large projects will take years for a national roll-out, and your hardware adquisicion plan should expand across years. Recommendations on the technical specs for devices are in the chapter [Mobile devices specifications](#mobile_specs).
+Initially you should buy different devices to allow users to evaluate them and provide you with feedback. Once the device that you will be using is decided upon, you should only buy 10 or less units, or whatever is needed for the testing and the pilot phases. Only when the pilot is coming to completion, you should buy equipment for the next 6 months roll-out. Some very large projects will take years for a national roll-out, and your hardware adquisicion plan should expand across years. Recommendations on the technical specs for devices are in the chapter [Mobile devices specifications](https://docs.dhis2.org/en/implement/android-implementation/mobile-device-specifications.html).
 
 You should consider the feasibility of using a BYOD policy - this format allows users to bring their own devices, as long as they satisfy a minimum technical standard, which you will define for your project. You will normally offer some sort of incentive, likely to be in the form of eCash or airtime. The advantages of this approach are obvious: it avoids the large initial cost for acquisition, as well as it reduces the administration costs and logistics considerations. On the other hand, you will have the challenge of a very heterogeneous hardware environment, meaning different devices and Android OS versions. This mainly affects the debugging process.
 
-**Distribution of the app** (now and later)
+### Distribution of the app (now and later)
 
-DHIS 2 Android app has a new release every couple of weeks. Each new release contains bug fixes and could contain new functionality. It could also contain new bugs. New versions are published in GitHub as well as Google Play store. Github is only a repository: you will download a specific APK and install it on your device. You will need to allow the use of third-party permissions to install an APK. Once an APK downloaded from GitHub or via other method, the installed version will never auto-update. On the other hand, if you install from Google Play, it normally auto-updates to the latest version. It is possible to disable auto-update in gPlay if you need to.
+The DHIS2 Android Capture App is actively maintained, with four releases per year: two regular feature (minor/major) releases, and two patch releases focused on bug fixes and stability improvements. Each version is tested for compatibility with supported DHIS2 server versions and includes detailed release notes.
 
-Once you complete your testing and training materials, and start your rollout, you don’t want the application version to change for any of the users, unless you have re-tested the new version. Version changes could include a modified UI, erroneous behaviours, or an incompatibility with your DHIS 2 server version. You want to thoroughly test new versions before pushing them to your users, so you can ensure that the new version doesn’t cause any problems to your configuration, requires retraining, on requires changes to your configuration.
+In addition to these scheduled releases, interim APKs may also be published when new or updated translations are submitted through Transifex. These APKs reflect the latest available language support and are especially valuable for multilingual implementations or training needs in local languages.
 
-In summary, for any installation that involves a significant number of devices you should avoid the use of Google Play, and instead use a Mobile Device Management (MDM) solution, which we discuss in [this chapter](#scale_up_mdmt). If you don’t have access to this option, you could consider using Google Play, but you should disable auto-update for the DHIS 2 android application. The procedure on how to do this changes by Android OS version - please google ‘how to disable android auto update by application in Andrid X.X’.
+The official distribution channels are:
 
-**Telecommunication contracts**
+* **Google Play Store:** Recommended for smaller implementations or BYOD scenarios. The app is available at DHIS2 on Play Store. Note that apps installed from the Play Store may auto-update unless this is manually disabled on the device.
+* **GitHub Releases:** Every official version is published on [DHIS2 GitHub](https://github.com/dhis2/dhis2-android-capture-app/releases), where you can download the APK files manually. APKs installed this way will not update automatically, which is preferable for implementations requiring version control and pre-release testing.
 
-If your installation plans to include the use of SMS for transmitting selected records via SMS when mobile data is not available, you will need to establish a contract with a local aggregator which can provide you with an incoming number to receive the SMS. You should configure your server to receive & send SMSs - please see [DHIS 2 documentation](https://docs.dhis2.org/master/en/user/html/mobile_sms_service.html#) on SMS connections. You will need to estimate the number of messages per month to be able to forecast the monthly cost.
+As an implementer, once your testing and training materials are finalized, it is critical that the app version used during training is frozen and not updated automatically during rollout. New versions can introduce changes in UI, program rule behavior, or compatibility issues with your specific configuration. Each new version should be carefully tested before adoption.
+
+For larger implementations, we recommend:
+
+* Avoiding auto-updates from the Play Store by disabling them on all devices.
+* Using a Mobile Device Management (MDM) system or custom APK hosting page to control which version is used and when it is updated.
+* Clearly documenting the version and configuration used during training to ensure consistency throughout rollout.
+
+>**Note**
+>If MDM tools are not available, alternatives include APK distribution via a secure internal portal, shared folders, or QR-based install links generated during configuration.
+>
+
+For detailed guidance on MDM and alternative distribution options, refer to the [Mobile Device Management section.](https://docs.dhis2.org/en/implement/android-implementation/managing-mobile-devices/considerations.html)
+
+#### Alternatives and Complements to MDM: APK Distribution Strategies
+
+If a full MDM setup is not feasible, there are alternative methods to distribute and manage the DHIS2 Android app, depending on the technical capacity of your team and the scale of the implementation.
+
+1. [APK Distribution Web App](https://docs.dhis2.org/en/use/android-app/apk-distribution.html)
+
+To support projects that need controlled rollout without complex infrastructure, the DHIS2 Android team provides an official APK Distribution Web App. This tool allows administrators to host a simple internal or public-facing webpage that shares trusted APK builds.
+
+This method is especially effective when:
+
+* You want to lock the app to a specific version that has been tested and validated.
+* Google Play is unreliable or blocked.
+* Updates need to be managed manually, not automatically.
+
+The app provides version history, changelogs, and contextual guidance. Devices must allow installations from unknown sources, but this approach is simple to maintain and widely adopted across DHIS2 implementations.
+
+2. Google Play Store (with Caution)
+
+Installing the DHIS2 Android Capture App from the Google Play Store provides convenience, but should be used carefully in structured rollouts. Automatic updates can break compatibility or introduce UI changes unexpectedly. If Play Store is used, configure devices to disable auto-updates for DHIS2, or restrict them via managed Play Store in enterprise setups.
+
+3. F-Droid and Private App Repositories
+
+Some implementers prefer using F-Droid, an open-source Android app repository that allows for hosting private app channels. With F-Droid, you can offer secure, controlled app delivery without relying on commercial app stores. However, it has limitations in bandwidth control and device management.
+
+*Choosing the Right Approach*
+
+Ultimately, the right distribution and device management strategy depends on:
+
+* The number of users and devices.
+* Whether devices are owned by the institution or BYOD.
+* Network availability.
+* Security needs.
+* Your internal support capacity.
+
+For smaller rollouts or pilots, a shared APK via a webpage or Google Drive folder might suffice. For national programs, an MDM combined with APK hosting and a robust SOP for app version control is highly recommended.
+
+
+### Telecommunication contracts
+
+If your installation plans to include the use of SMS for transmitting selected records via SMS when mobile data is not available, you will need to establish a contract with a local aggregator which can provide you with an incoming number to receive the SMS. You should configure your server to receive & send SMSs - please see DHIS 2 developers documentation on [SMS connections](https://developers.dhis2.org/docs/mobile/android-sdk/sms/) . You will need to estimate the number of messages per month to be able to forecast the monthly cost.
 
 The process of selecting and signing a contract with an SMS provider varies by country and it depends on the procurement procedures of your organization.
 
@@ -95,7 +144,7 @@ In the next page you can find a list of available MDM software (please keep in m
 
 > **Note**
 >
-> Check the specific [Mobile Device Management Guideline](https://docs.dhis2.org/en/implement/managing-mobile-devices/considerations.html) for more information about this topic.
+> Check the specific [Mobile Device Management Guideline](https://docs.dhis2.org/en/implement/android-implementation/managing-mobile-devices/considerations.html) for more information about this topic.
 
 ## Training { #implementation_guide_scale_up_training }
 
@@ -143,4 +192,3 @@ In the same document we find recommendation for the training materials as well, 
 The agenda for training sessions should be defined well-ahead of the training and included in materials distributed.
 
 User documentation should be packaged in Minimal Manuals. These manuals explain a specific work task (e.g. enter monthly data from village health register or compare health in your village with the neighboring villages). After explaining the work task, the Minimal Manual provides numbered step-by-step instructions with screenshots, so that users recognize what to do. Keep in mind that Minimal Manuals do NOT explain the functionality of the app, one by one, like a typical vendor user manual. Since users prefer doing and not reading, the manuals should be a short as possible while still containing all steps.
-

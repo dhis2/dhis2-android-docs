@@ -1,66 +1,73 @@
 # DHIS 2 Capture Android overview { #implementation_guide_overview }
 
-This document focuses on mobile implementation which use the new DHIS 2 Capture Android App. To get additional information about the different DHIS 2 Android apps please visit the [App Store](https://www.dhis2.org/app-store) and the [Documentation](https://www.dhis2.org/android-documentation) on the website. The previous set of DHIS 2 Android Apps developed are currently on planned deprecation and under corrective maintenance support only:
+This document focuses on mobile implementation which use the new DHIS 2 Capture Android App. To get additional information about the different DHIS 2 Android apps please visit the [App Store](https://www.dhis2.org/app-store) and the [Documentation](https://www.dhis2.org/android-documentation) on the website. 
 
-* Dashboard App: Deprecated since March 2020
-* Tracker and Event App: Deprecated since June 2020
-* Data Capture App: Planned deprecation as from September 2020
+The DHIS2 Android Capture App is the official mobile application developed by the DHIS2 core team for collecting and managing data in field-based environments. It supports both Tracker and Aggregate programs and is fully aligned with the DHIS2 data model and Web API.
 
-The new DHIS 2 Capture Android App allows offline data capture across all DHIS 2 data models\*. Data and metadata are automaticallynchronized whenever there is Internet access, always keeping the most relevant data for the logged user in the local device.
+As of 2020, this app has fully replaced earlier DHIS2 Android applications such as Tracker Capture, Event Capture, Data Capture, and Dashboard, all of which have been officially deprecated. The Android Capture App consolidates their functionality into a single, unified experience, while also continuing to evolve with new capabilities.
 
-## Easier Login and enhanced data protection { #implementation_guide_overview_easier }
+The app plays a central role in DHIS2’s mobile strategy, supporting use cases where access to desktop computers or consistent internet connectivity is limited or unavailable. It has been used globally in a wide range of programs, including immunization, community outreach, HIV case management, routine facility reporting, and nutrition programs and now increasingly in education, stock management and logistics tracking.
 
+## Core Principles { #implementation_core_principles }
+The Android Capture App is designed with the following key principles:
 
-Server URL can be set via a QR code. The app will also remember previously used URLs and user names. Once a user is logged, a four digit PIN can bsed to secure the app with a soft log out.
+* Offline-first architecture: All data entry, validation, program rules, and syncing are available offline. Users can work fully disconnected and synchronize data when a connection is available.
+* Security and role-based access: User roles, data permissions, and secure local storage are fully respected.
+* Scalable and modular: The app can be deployed at national scale, used across multiple programs, and adapted for specific implementation needs.
+* Open source: The full source code is available under an open-source license and actively maintained on GitHub.
 
+## Feature Summary
+The DHIS2 Android Capture App includes a range of features designed to ensure usability, performance, and security in real-world mobile data collection settings. Below is an overview of its main capabilities.
 
-## Configurable App theme and Icon { #implementation_guide_overview_configurable }
+### Easier Login & Secure Access { #implementation_guide_overview_easier }
 
+* Quick login using QR codes: Users can scan a QR code to instantly populate the server URL. Previously used server URLs and usernames are also remembered for convenience.
+* PIN-based app locking: Once logged in, users can secure the app with a 4-digit PIN, enabling soft logout and protecting sensitive data between sessions.
+* Multi-account support: Users can manage and switch between multiple DHIS2 accounts on the same device.
 
-The appearance of the app, including icon and color is determined by your server configuration. You can create a shortcut to the app with your institutional logo in the home screen of the mobile device by using the App Widget.
-
-![](resources/images/implementation-guide-login.gif){ .center width=25% }
-
-## Attractive, user friendly navigation { #implementation_guide_overview_attractive }
-
-
-All programs and datasets\* accessible to the logged user are integrated into the new "Home" screen.. Each program or dataset will be, displayed with their associated icon and colour.
-
-![](resources/images/implementation-guide-user_friendly.gif){ .center width=25% }
-
-## Fully functional while offline: intelligent sync { #implementation_guide_overview_fully_functional }
+![](resources/images/implementation-guide-overview-login.png){ .center width=25% }
+![](resources/images/implementation-guide-overview-login2.png){ .center width=25% }
 
 
-A local database in the mobile device keeps a synchronized copy of the DHIS 2 programs and datasets available to the logged user. The most relevant data is also automatically synchronized.
+### Customizations and Configurable UI{ #implementation_guide_overview_configurable }
 
-* Tracked Entities: by default, up to 500 active enrolments, prioritizing the most recently updated on the user’s assigned data capture Org Unit(s).
-* Events & Datasets: by default, the most recent 1,000 events or 500 datasets.
+* Custom colors an icons: The programs appearance (icon, color) is defined by your server configuration.
+* Visual data entry: Icons and colors can be configured for option sets, making data entry more intuitive, especially in field or low-literacy settings.
+* Language support: The app supports full translation of the user interface and metadata.
 
-> **Note**
-> These parameters are configurable
-
-## Tracker dashboard { #implementation_guide_overview_tracker_dashboard }
+![](resources/images/implementation-guide-overview-custom.png){ .center width=25% }
 
 
-DHIS 2’s powerful tracker data model has been fully implemented in the small screen. The tracker dashboard incorporates feedback, relationships, indicators and notes.
+### User-Friendly Navigation { #implementation_guide_overview_attractive }
 
-The app implements tracker logic by supporting most program rules, giving the possibility to add, schedule or refer new events, depending on the server configuration.
+* Unified home screen: All accessible programs and datasets are integrated into a single "Home" screen, displayed with their assigned icons and colors. Screen is responsive to the amount of programs/data sets assigned to the user.
+* Pictorial forms: Option sets can use icons and colors to visually represent choices in both Tracker and Event programs.
+* Context-sensitive actions: Visibility of buttons like “Refer,” “Schedule,” or “Add Event” adapts based on the program’s configuration and current stage.
 
-![](resources/images/implementation-guide-tracker_search.png){ .center width=25% }
-
-## Integrated search for tracker { #implementation_guide_overview_integrated_search }
-
-
-Before being able to add a new tracked entity, the app automatically conduct a search. If offline, the search is on the local synchronized database. and when online, it will suggest records for download, based on user’s Organization Unit search configuration. This functionality minimized potential duplicates, even when the user is offline.
-
-## Pictorial Data Entry { #implementation_guide_overview_pictorial }
+![](resources/images/implementation-guide-overview-custom2.png){ .center width=25% }
 
 
-Data Entry comes to life - icons and colors can be used to illustrate questions’ answers. Available for data elements with associated options sets in both, single event and tracker programs.
+### Offline-First with Smart Synchronization { #implementation_guide_overview_fully_functional }
 
-![](resources/images/implementation-guide-pictorial_entry.gif){ .center width=25% }
+* Reliable local storage: All assigned metadata and data (programs, TEIs, events, datasets) are stored on the device, allowing users to work fully offline.
+* Configurable sync scope: Admins can define how much data to sync. By default:
+    - Tracked Entities: up to 500 active enrolments, prioritizing the most recently updated on the user’s assigned data capture Org Unit(s).
+    - Events & Datasets: by default, the most recent 1,000 events or 500 datasets.
+    - Error and sync status feedback: Users can see when syncs are complete, failed, or pending, and retry when needed.
 
-## Event Completeness { #implementation_guide_overview_event_completeness }
 
+### Tracker and events { #implementation_guide_overview_tracker_dashboard }
 
-During data entry, the app will display information about the current status of completion for a program stage. Useful for complex surveys with multiple sections.
+* Full tracker dashboard: Includes relationships, indicators, feedback messages, and stage completion overview, even in offline mode.
+* Enrollment logic: The app respects enrollment rules such as uniqueness, completion status, and program access.
+* Event-based workflows: Users can view and complete repeatable or scheduled events based on assigned timelines and availability.
+* Integrated tracker search: When adding new tracked entities, the app first checks for duplicates:
+    - Offline: Search is performed on the locally cached dataset.
+    - Online: Suggestions are pulled from the server based on the user’s org unit scope and search settings.
+
+![](resources/images/implementation-guide-overview-tracker.png){ .center width=25% }
+![](resources/images/implementation-guide-overview-tracker2.png){ .center width=25% }
+
+### Event Completeness { #implementation_guide_overview_event_completeness }
+
+During data entry, the app provides real-time indicators for section or stage completeness — especially useful in complex program forms with multiple stages or sections.
