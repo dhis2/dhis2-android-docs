@@ -8,7 +8,7 @@ Required features and their reason:
 
 * Android as supported platform:
 
-    This might seem obvious but some MDM solutions are aimed at other types of devices like iOS or Windows. At the moment the DHIS2 Android App is only compatible with Android devices, and it supports from version 4.4 (not recommended) and above (we recommend from version 7).
+    This might seem obvious but some MDM solutions are aimed at other types of devices like iOS or Windows. At the moment the DHIS2 Android App is only compatible with Android devices, and it supports from version 5 (not recommended) and above (we recommend from version 7).
 
 * Application(s) distribution management: 
 
