@@ -10,7 +10,8 @@ There application can be downloaded and installed from two places:
 
 > **Note**
 >
-> When installing the training APK, you might need to allow 3rd party installs
+> When installing the training APK, you might need to allow 3rd party installs.
+> 
 > Before 2.7 the production version came in two versions: one included SMS capabilities and the other did not.
 
 Please read the section on App distribution for understanding the implications of using the different distribution channels.
@@ -32,10 +33,8 @@ Before you start with the installation of the new DHIS 2 Capture Android App in 
 ## Login into the app { #implementation_guide_installing_login }
 
 
-In order to log in you will need the DHIS 2 server URL, the user name and the password for the user you just created.For testing purposes you can also use the testing servers and credentials:
+In order to log in you will need the DHIS 2 server URL, the user name and the password for the user you just created. For testing purposes you can also use the testing servers and credentials:
 
 | URL | User | Password |
 | ------------- | --- | --- |
-| Most recent DHIS 2 version <br /> [https://play.dhis2.org/android-current](https://play.dhis2.org/android-current) | android | Android123 |
-| Previous DHIS 2 version <br /> [https://play.dhis2.org/android-previous1](https://play.dhis2.org/android-previous1) | android | Android123 |
-| Second Previous DHIS 2 version <br /> [https://play.dhis2.org/android-previous2](https://play.dhis2.org/android-previous2) | android | Android123 |
+| Most recent DHIS 2 version <br /> [https://play.dhis2.org/demo](https://play.dhis2.org/android-current) | android | Android123 |

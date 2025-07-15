@@ -1,6 +1,6 @@
 # DHIS 2 Server Requirements { #implementation_guide_dhis2_server }
 
-The new DHIS 2 Capture Android App requires a DHIS 2 2.29 or greater instance running in a web server. The DHIS 2 instance can reside on-premise server, a virtual machine or it can be purchased as software-as-a-service (managed hosting). For more information about thifferent DHIS 2 hosting options please visit [https://www.DHIS2.org/hosting](https://www.dhis2.org/hosting).
+The DHIS 2 Capture Android App requires a DHIS 2 2.30 or greater instance running in a web server. The DHIS 2 instance can reside on-premise server, a virtual machine or it can be purchased as software-as-a-service (managed hosting). For more information about the different DHIS 2 hosting options please visit [https://www.DHIS2.org/hosting](https://www.dhis2.org/hosting).
 
 This section provides basic guidelines on how to configure the DHIS 2 server, which you will need to do in the first two scenarios (on-premis and virtual machine). In the third scenario of managed hosting, you should let your provider know that you will be deploying the Android App and have an open discussion on best ways to configure the server. You should start by sharing these guidelines with your managed hosting provider.
 
@@ -8,7 +8,7 @@ The DHIS 2 Server must be designed and configured keeping in mind: data collecti
 
 The *Testing* Server will be the server where you can change the server configurations and test the results of such configurations. Once you are happy with the configuration, training of users should occur in an environment different to *Production*. A dedicated *Training* server is the ideal environment in which you will train your users. You will create DHIS 2 users for all the trainees and make sure everyone understands and feels comfortable with the changes. The last step once you have tested the configurations and trained the users will be to deploy the configuration to the *Production* environment. You should never make configuration changes or train your users directly into the *Production* environment.
 
-DHIS 2 is licensed under [BSD](http://www.linfo.org/bsdlicense.html), an open source license and is free for everyone to install and use.  However, managing a DHIS 2 instance involves more than setting up a powerful web server. Deploying a reliable and scalable system includet least these aspects:
+DHIS 2 is licensed under [BSD](http://www.linfo.org/bsdlicense.html), an open source license and is free for everyone to install and use. However, managing a DHIS 2 instance involves more than setting up a powerful web server. Deploying a reliable and scalable system includes at least these aspects:
 
 - Human resources with skills in relevant technologies such as web servers and database systems.
 - Reliable backup of your system including safe storage at a remote server.
@@ -24,7 +24,20 @@ The DHIS 2 Capture Android App runs in mobile devices, including smartphones, ta
 > **Caution**
 >
 >  In addition to the DHIS2 Server requirements listed here note that the DHIS2 Android App might require connections to additional services and by blocking those the application might not fully function. This can apply in implementations where you might use strict firewall rules like in a zero-rate URL environment by an agreement with an ISP provider. In those cases you might want to include in the list of allowed URLs the following:
+>
 >  * Your DHIS2 URL server
->  * [Mapbox addresses](https://docs.mapbox.com/help/troubleshooting/firewalls/)
 >  * The public and/or private Matomo server for statistics as explained in the [guide](https://docs.dhis2.org/en/full/implement/dhis2-android-configuration-guide.html#capture_app_andoid_settings_webapp)
+>  * OpenStreetMap urls
+>    * `openstreetmap.org`
+>    * `www.openstreetmap.org`
+>    * `a.tile.openstreetmap.org`
+>    * `b.tile.openstreetmap.org`
+>    * `c.tile.openstreetmap.org`
+>    * `d.tile.openstreetmap.org`
+>    * `carto.com`
+>    * `cartodb-basemaps-a.global.ssl.fastly.net`
+>    * `cartodb-basemaps-b.global.ssl.fastly.net`
+>    * `cartodb-basemaps-c.global.ssl.fastly.net`
+>    * `cartodb-basemaps-d.global.ssl.fastly.net`
+
 
