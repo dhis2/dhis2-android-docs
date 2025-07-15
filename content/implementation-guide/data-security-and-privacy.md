@@ -45,4 +45,72 @@ An adequate security / privacy approach for any DHIS2 implementation capturing p
 | **Pseudonymization** | Consider using alternative values for recording information about certain procedures or conditions of a patient. Por example you can have a list of medical procedures / personal behavior / actions listed as a color list. This allows to do analytics, without revealing what could be a stigmatized procedure/ action/ behavior in a given territory. |
 | **Traceability** | DHIS 2 provides detailed audit log for each data point. This includes the tracing of data captured via its web tools (from 2.22), as well as imported or via Android (from version 2.27). Currently (2.32) DHIS 2 does not provide a full deletion / anonymization export option, as deletion of a value preserves previous data in the audit log. For this reason, any sharing of exported data to outside parties should include manual removal of sensitive / identifiable data. |
 
-For practical recommendations on configuring DHIS 2 to guarantee data protection and security, please read the [Security and Data Protection considerations](#configuration_security) section.
+## Practical Security Considerations for Android Implementations { #implementation_guide_dhis2_config_sec }
+
+
+### Using DHIS 2 sharing restrictions { #implementation_guide_dhis2_config_sec_sharing }
+
+
+In this section we will share some tips on how to use DHIS 2 sharing and share restrictions to ensure that only the right users have access to records with identifiable information.
+
+Here is a practical example of granular sharing and search restrictions in the context of a Health Care Center for Maternal and Newborn Care:
+
+Midwife User Role:
+
+- Can search across three programs across all org units in the district
+- Can enroll new pregnant women into ANC program
+- Can add/edit events to clinical assessment program stage
+- Can view all ANC data in own org unit
+
+Lab tech User Role
+
+- Can search across one program org units in the district
+- Can add/edit events to lab program stage
+- Cannot view clinical assessment stage
+
+MOH Supervisor User Role
+
+- Can view dashboard only
+
+It is very important to have standard operating procedures (SOPs) as part of your Data Protection Strategy.
+
+A SOP is a set of step-by-step instructions compiled by your organization to help you carry out complex routine operations such as those related to data security.
+
+SOPs helps your organization achieving efficiency, quality and consistency, while complying with Data Protection regulations.
+
+When defining your Data Protection SOPs you should address questions such as:
+
+- What is the relevant existing legislation?
+- Who is the named controller? Processor? Data Protection Officer?
+- Who is tasked with reviewing audit logs?
+- What is your process for removing old users?
+- Bring your own device?
+- Hardware security?
+- Mutual Confidentiality Agreements
+
+We include here some SOP Best Practices taken from the [DHIS 2 Community Health Information System Guidelines](https://s3-eu-west-1.amazonaws.com/content.dhis2.org/Publications/CHIS+Guidelines+En.pdf) document published by the University of Oslo:
+
+1. Harmonize multiple programs into a single data capture protocol.
+2. Develop SOPs for each individual community project especially if multiple data flows exist.
+3. Turn the SOP into illustrated posters and have the facility staff post them on their walls for public viewing.
+4. Print SOPs and make sure all CHWs, facility staff, and district staff have copies
+5. Stakeholders to sign the SOPs at the completion of training.
+6. Stakeholder participation in the creation and approval of SOPs. The SOPs must institutionalize the best practices and workflow of the actors in the CHIS. Include representation from all relevant stakeholders in the process of developing SOPs.
+7. Ensure all data elements and indicators are captured. The CHWs should clearly understand the meaning, and measurement of each data element and indicator to remove ambiguity
+8. Use data capture guidelines at trainings. To build accountability, CHWs and facility staff need to know they are part of a larger system. They need to know how their data is used for planning at higher levels and specific actions at lower levels.
+9. Have the CHWs explain the data capture guidelines. This teach-back method is an effective adult learning practice. By explaining the data capture guidelines, this elevates the CHW’s credibility with the health committee.
+10. Produce, simple-to-use, local language guidelines. CHWs and facility staff need guides and instructions on what to do. Consider making posters or small laminated portable data capture guidelines for CHWs and facilities to put on the wall or carry with them that outline their role and responsibilities based upon the data capture guidelines.
+11. Have CHWs, facility, district staff and national staff sign guidelines. This is a symbolic “commitment” measure. The aim is that they have read it, understand their reporting responsibilities as defined in the data capture guidelines, and will carry out these responsibilities.
+12. Produce simple videos or audio and upload them to phones. Responsibilities and actions for every event are made easier with a simple, local-language videos or audio guides that facility staff and CHWs can refer to.
+
+
+### Practical Data Security Guidelines { #implementation_guide_dhis2_config_sec_practical }
+
+
+Ensuring that the personal data stored on mobile devices is only accessible by the authorized health staff starts by educating users on how to use this data and ensure that it is kept secured at all times. The guidelines below are an extract taken from the PSI’s “Monitoring and Evaluation Standard Operating Procedures for Keeping Client Data Secure & Confidential” manual.
+
+![](resources/images/implementation-guide-image31.png){ .center }
+
+System administrators play an important role when configuring user’s access-level, by ensuring that their data access is appropriate and never unnecessarily excessive. The guidelines below are also part of PSI’s “Keeping Client Data Secure & Confidential Administrators Guide” manual
+
+.![](resources/images/implementation-guide-image13.png){ .center }
