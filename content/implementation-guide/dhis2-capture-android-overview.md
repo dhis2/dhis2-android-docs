@@ -29,7 +29,7 @@ The DHIS2 Android Capture App includes a range of features designed to ensure us
 ![](resources/images/implementation-guide-overview-login2.png){ .center width=25% }
 
 
-### Customizations and Configurable UI{ #implementation_guide_overview_configurable }
+### Customizations and Configurable UI { #implementation_guide_overview_configurable }
 
 * Custom colors an icons: The programs appearance (icon, color) is defined by your server configuration.
 * Visual data entry: Icons and colors can be configured for option sets, making data entry more intuitive, especially in field or low-literacy settings.
