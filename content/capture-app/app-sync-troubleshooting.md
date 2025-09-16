@@ -1,9 +1,9 @@
 # Synchronization Troubleshooting Web App { #capture_app_sync_troubleshooting_webapp }
 ## Overview { #capture_app_sync_troubleshooting_webapp_overview }
 
-This section focuses on the [Synchronization Troubleshooting Web App](https://apps.dhis2.org/app/dff273fc-909e-48af-b151-c4d7e9c8a12c) implementation.
+This section focuses on the [Synchronization Troubleshooting Web App](https://apps.dhis2.org/app/64e70334-be30-4f2e-8883-636beb74ae13) implementation.
 
-The [Synchronization Troubleshooting Web App](https://apps.dhis2.org/app/dff273fc-909e-48af-b151-c4d7e9c8a12c) provides implementation administrators real-time visibility and troubleshooting capabilities for synchronization errors occurring in the last 24 hours.
+The [Synchronization Troubleshooting Web App](https://apps.dhis2.org/app/64e70334-be30-4f2e-8883-636beb74ae13) provides implementation administrators real-time visibility and troubleshooting capabilities for synchronization errors occurring in the last 24 hours.
 
 Please note that in this version of the Web App, only users with "F_JOB_LOG_READ" authority are able to monitor the detailed error information. Other users will not have access to the web app.
 
@@ -15,8 +15,8 @@ A user can easily install the Synchronization Troubleshooting Web App by logging
 - Go to *Synchronization Troubleshooting App*
 - Click on *Install V1.X.X*
 
-![](resources/images/capture-app-apk-distribution-app-hub-install.png)
-![](resources/images/capture-app-apk-distribution-app-hub-install-webapp.png)
+![](resources/images/capture-app-sync-troubleshooting-app-hub-install.png)
+![](resources/images/capture-app-sync-troubleshooting-app-hub-install-webapp.png)
 
 
 ## Synchronization Troubleshooting { #capture_app_sync_troubleshooting_monitoring }
@@ -68,6 +68,4 @@ In case of needing to uninstall the APK Distribution App it is recommended to al
 - Go to *Synchronization Troubleshooting*
 - Click on *Uninstall V1.X.X*
 
-![](resources/images/capture-app-apk-distribution-unistall-custom-app.png)
-
-![](resources/images/capture-app-apk-distribution-unistall-apk.png)
+![](resources/images/capture-app-sync-troubleshooting-unistall-apk.png)
