@@ -3,7 +3,20 @@
 
 This section focuses on the [Synchronization Troubleshooting Web App](https://apps.dhis2.org/app/64e70334-be30-4f2e-8883-636beb74ae13) implementation.
 
-The [Synchronization Troubleshooting Web App](https://apps.dhis2.org/app/64e70334-be30-4f2e-8883-636beb74ae13) provides implementation administrators real-time visibility and troubleshooting capabilities for synchronization errors occurring in the last 24 hours.
+The [Synchronization Troubleshooting Web App](https://apps.dhis2.org/app/64e70334-be30-4f2e-8883-636beb74ae13) provides administrators with real-time visibility into synchronization errors. These error records are automatically removed by the backend after a default period of 24 hours.
+
+This cleanup period is defined in System Settings and applies to all single-run jobs (such as data imports). The value can be changed through the API. Increasing the period will retain errors for longer but also increase database storage.
+
+**To check current cleanup period:**
+
+> 
+> GET /api/systemSettings/jobsCleanupAfterMinutes
+>
+
+**To update cleanup period (value in minutes):**
+>
+> POST /api/systemSettings/jobsCleanupAfterMinutes?value=<value_in_minutes>
+>
 
 Please note that in this version of the Web App, only users with "F_JOB_LOG_READ" authority are able to monitor the detailed error information. Other users will not have access to the web app.
 
