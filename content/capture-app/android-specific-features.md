@@ -389,7 +389,12 @@ The following list contains all possible reasons:
 
 ## Configuration troubleshooting { #capture_app_configuration_troubleshooting }
 
-This feature is for administrators. The Android App incorporates an option in the settings screen for verifying some aspects of the DHIS2 configuration.
+The Configuration Troubleshooting feature is available only in the **DHIS2 Android Training App**. It is not included in the production version of the Capture App.
+
+This tool is intended for administrators and implementers who need to test and troubleshoot program rules or translations during setup or training. It does not require a special user role or authority. 
+
+You can download the latest version of the DHIS2 Android Training App (APK) from the [DHIS2 Training App on GitHub](https://github.com/dhis2/dhis2-android-capture-app/releases)
+ *(look for the APK labeled Training)*.
 
 ![](resources/images/capture-app-image188.png){ width=25%}
 ![](resources/images/capture-app-image195.png){ width=25%}
