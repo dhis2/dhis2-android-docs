@@ -6,7 +6,7 @@ It summarizes how the app has evolved across releases and highlights compatibili
 The information is based on the official release notes and is organized by version comparison (for example, 2.9 vs 3.0, 3.0 vs 3.1, 3.1 vs 3.2).
 New sections will be added as future versions are released.
 
-## How to use this document
+## How to use this guide
 
 Each section compares two consecutive Android app versions and highlights only the features that changed between them.
 For every update, you will find a short description of what was introduced or improved in the newer version, along with links to relevant documentation and screenshots when available.
