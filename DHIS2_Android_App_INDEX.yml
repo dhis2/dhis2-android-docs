@@ -1,6 +1,7 @@
 - About this guide: '@github(dhis2/dhis2-android-docs,content/common/about-this-android-guide.md, main)'
 - Introduction: '@github(dhis2/dhis2-android-docs,content/capture-app/introduction.md, main)'
 - Recommentations for mobile deployment: '@github(dhis2/dhis2-android-docs,content/capture-app/recommendations-for-a-dhis2-mobile-deployment.md, main)'
+- Troubleshooting Guide: '@github(dhis2/dhis2-android-docs,content/capture-app/android-troubleshooting-guide.md, main)'
 - Contribute to the app: '@github(dhis2/dhis2-android-docs,content/capture-app/contribute-to-the-app.md, main)'
 - Visual configurations: '@github(dhis2/dhis2-android-docs,content/capture-app/visual-configurations.md, main)'
 - Settings: '@github(dhis2/dhis2-android-docs,content/capture-app/settings.md, main)'
