@@ -543,7 +543,7 @@ In this case they will be shown in the TEI search list, but will not be accessib
 
 ![](resources/images/capture-app-image86.jpg){ width=25%}
 
-From 3.0, there is a confirmation message to reduce errors when tapping on the dele button.
+From 3.0, there is a confirmation message to reduce errors when tapping on the delete button.
 
 ![](resources/images/capture-app-image269.png){ width=25%}
 
