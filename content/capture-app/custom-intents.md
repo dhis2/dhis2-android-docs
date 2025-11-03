@@ -32,7 +32,7 @@ To add a new Custom Intent:
 3. Click on **Add Custom Intent**
 4. Fill in the configuration parameters as described below
 
-![](resources/images/customintents/custom-intent-main-configuration.png){width=50%}
+![](resources/images/customintents/custom-intent-main-configuration.png)
 
 ### Configuration Parameters { #capture_app_custom_intents_configuration_parameters }
 
@@ -107,7 +107,7 @@ Request Parameters
 | TIMEOUT      | 30000       | Set timeout in milliseconds   |
 | ENABLE_FLASH | true        | Enable camera flash           |
 
-![](resources/images/customintents/dhis2-android-capture-app-custom-intents-request-parameters-configuration.png){width=50%}
+![](resources/images/customintents/dhis2-android-capture-app-custom-intents-request-parameters-configuration.png)
 
 ### Response Configuration { #capture_app_custom_intents_configuration_response }
 
@@ -145,7 +145,7 @@ Property in JSON Object
 >   - For **SEARCH**: The specified property will be extracted from all objects in the list, allowing users to search for tracked entity instances that match any value in the list.
 >   - For **DATA_ENTRY**: The values will be extracted from all objects and concatenated into a single string separated by commas (e.g., `value1,value2,value3`).
 
-![](resources/images/customintents/DHIS2-android-capture-app-custom-intents-response-configuration.png){width=50%}
+![](resources/images/customintents/DHIS2-android-capture-app-custom-intents-response-configuration.png)
 
 ## Use Cases and Examples { #capture_app_custom_intents_examples }
 
@@ -256,7 +256,7 @@ When a custom intent is configured for a tracked entity attribute or data elemen
 6. The configured response value is automatically populated in the field
 7. User can review the value before saving
 
-![](resources/images/customintents/custom-intent-app-data-entry.png){width=25%}
+![](resources/images/customintents/custom-intent-app-data-entry.png)
 
 > **Note**
 >
@@ -272,14 +272,14 @@ When configured for the SEARCH screen:
 4. The returned value is used as a search parameter
 5. Search results are displayed based on the captured value
 
-![](resources/images/customintents/custom-intent-app-search.png){width=25%}
+![](resources/images/customintents/custom-intent-app-search.png)
 
 > **Note**
 >
 > When the Extra Type is **List of JSON Objects**, the search will match tracked entity instances that contain any of the values in the returned list. This allows searching for multiple entities at once.
 
-![](resources/images/customintents/custom-intent-app-search-list-of-values.png){width=25%}
-![](resources/images/customintents/custom-intent-app-search-list-of-values-result-returned.png){width=25%}
+![](resources/images/customintents/custom-intent-app-search-list-of-values.png)
+![](resources/images/customintents/custom-intent-app-search-list-of-values-result-returned.png)
 
 ## Limitations and Considerations { #capture_app_custom_intents_limitations }
 
