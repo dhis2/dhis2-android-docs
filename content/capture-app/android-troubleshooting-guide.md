@@ -4,9 +4,20 @@
 
 This guide follows the journey of a DHIS2 Android user and implementer, from setup to field data collection, synchronization, and ongoing maintenance. Each stage explains how some issues may appear, possible causes to them and the fixes using DHIS2’s Android ecosystem tools.
 
+---
+
 ## Setup and Configuration { #capture_app_troubleshooting_guide_setup }
 
 Before any data is captured, the setup determines how synchronization will be. This phase focuses on installation, configuration, and first sync.
+
+### Important Note on Rooted Devices { #capture_app_troubleshooting_guide_rooted_device }
+>
+>The production version of the DHIS2 Android Capture App cannot run on rooted devices.  
+This is a security measure designed to prevent extraction of sensitive information from the local database.
+>
+> If the user attempts to run the production app on a rooted phone, the device displays a message such as: *“For security reasons, this version of the app is not allowed to be used on rooted devices. Please use the training version.”*
+>
+>The **training version** of the app *can* run on rooted devices and is recommended only for testing, debugging, or training, not for production use.
 
 ### Sync Mechanism { #capture_app_troubleshooting_guide_sync }
 The Android Capture app synchronizes two distinct data streams:
@@ -41,13 +52,13 @@ Reserved values are pre-generated unique identifiers used for tracked entity att
 
 Here’s how the process works:
 
-The server pre-generates a pool of unique IDs for each auto-generated attribute (configurable in ASWA, 500 by default).
+- The server pre-generates a pool of unique IDs for each auto-generated attribute (configurable in ASWA, 500 by default).
 
-During metadata/configuration sync, the device downloads this pool.
+- During metadata/configuration sync, the device downloads this pool.
 
-Each time a new tracked entity is registered, one reserved value is consumed.
+- Each time a new tracked entity is registered, one reserved value is consumed.
 
- When the pool is used to a certain degree, a new batch is requested on the next successful sync. This refill can also be done manually by the user in the app settings menu.
+- When the pool is used to a certain degree, a new batch is requested on the next successful sync. This refill can also be done manually by the user in the app settings menu.
 
 ### Tracker Importer and Exporter – Impact on Synchronization { #capture_app_troubleshooting_guide_tracker_importer }
 
@@ -193,3 +204,51 @@ The Android app maps DHIS2 Tracker Importer  error patterns to readable messages
 | **E9999** | N/A — placeholder. | Undefined import error. | Check logs or DHIS2 API for details. |
 
 
+## Useful External Tools for Troubleshooting and Testing  { #capture_app_troubleshooting_guide_common_external_tools }
+
+This section provides a concise overview of external tools that remain useful for testing, debugging, supporting users, or demonstrating the DHIS2 Android Capture App. 
+
+### Scrcpy
+
+scrcpy is a lightweight, fast tool that allows you to:
+
+- Mirror your Android device screen on your computer  
+- Control the device from your keyboard and mouse  
+- Record the screen (useful for bug reporting)  
+- Install APKs via drag-and-drop  
+- Use both USB and wireless connections  
+
+It works on **Windows, macOS, and Linux**, and does **not** require root.
+
+More info: https://github.com/Genymobile/scrcpy
+
+### Other screen-cloning alternatives
+
+If scrcpy is not available, the following tools are also commonly used:
+
+- **Vysor** – simple interface, Chrome extension available.  
+  https://vysor.io  
+- **AirDroid** – wireless mirroring, can be used without installing anything on the PC.  
+  https://www.airdroid.com  
+
+These tools are useful during remote support, training sessions, or demonstrations.
+
+### Using Android Emulators
+
+Android emulators can replicate a variety of device configurations, allowing implementers to:
+
+- Test different Android OS versions  
+- Simulate phones and tablets  
+- Compare multiple DHIS2 Android App versions  
+- Reproduce configuration issues  
+
+The most common option is the **Android Studio Emulator**:
+
+1. Open Android Studio  
+2. Go to **Tools → Device Manager**  
+3. Download the required Android system images  
+4. Create virtual devices with desired specifications
+
+More info: https://developer.android.com/studio/run/managing-avds
+
+Emulators are excellent for early testing, but physical devices are still recommended for final validation and for reporting bugs.
