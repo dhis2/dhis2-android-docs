@@ -246,6 +246,23 @@ In 2.9, the working lists have been moved from the filters section to the main p
 
 ![](resources/images/capture-app-image251.png){ width=25%}
 
+#### Synchronization based on working lists (New 3.3.0) { #capture_app_programs_common_features_working_lists_sync }
+
+From version 3.3.0, the Android Capture App supports synchronization based on working lists defined in the Capture web app and assigned through the Android Settings Web App (ASWA). Working lists allow administrators to specify exactly which tracked entity instances (TEIs) or events should be downloaded to a device, ensuring focused, context specific data for each group of users.
+
+When working list based sync is enabled for a program:
+
+* If a user has access to only one assigned working list, the Android app will synchronize only the data contained in that list.
+* If a user has access to multiple working lists for the same program, the app will automatically merge all assigned lists into a single dataset during synchronization.
+* If no working list is assigned or shared with the user, standard program-level synchronization rules apply.
+
+This feature helps deployments reduce sync time, limit unnecessary downloads, and ensure that each user receives only the data relevant to their workflows.
+
+> **Configuration note:**
+>
+> Working list assignments and synchronization rules are configured in the Android Settings Web App (ASWA). For instructions on how to assign working lists, manage sharing, and control synchronization behavior, see the [Synchronization settings section](https://docs.dhis2.org/en/use/android-app/android-web-apps/settings-configuration.html#capture_app_android_settings_webapp_synchronization_program_specific) of the ASWA documentation.
+
+
 ### Program Indicators
 
 The analytics tab supports displaying text and key/value pair in feedback or indicator section.
@@ -337,6 +354,67 @@ To prevent accidental deletions and enhance user control, a new confirmation dia
 
 ![](resources/images/capture-app-image307.png){ width=25%}
 ![](resources/images/capture-app-image306.png){ width=25%}
+
+### Custom Intents (New 3.3.0) { #capture_app_programs_common_features_customintents }
+
+> This feature is available from Android Capture App version 3.3.0.
+
+Custom Intents is a powerful feature that allows the DHIS2 Android Capture App to integrate with third-party Android applications. By configuring custom intents, administrators can enable the Android app to launch external applications, send data to them, and receive data back to populate fields automatically.
+
+This feature enables seamless integration with specialized apps such as:
+- Barcode and QR code scanners
+- GPS and mapping applications
+- Biometric identification systems
+- Custom data collection tools
+- Camera applications
+- Medical device applications
+- Any other Android application that supports intent-based communication
+
+Custom Intents are configured using the [Android Settings Web App](https://apps.dhis2.org/app/a1bd6b5b-de8c-4998-8d34-56c18a139683) and can be linked to Tracked Entity Attributes or Data Elements.
+
+> **Note**
+>
+> 1. Custom Intents leverage the Android Intent system, which is a fundamental component of Android's inter-app communication mechanism. Understanding basic Android Intent concepts can be helpful when configuring this feature.
+>
+> 2. When a custom intent is configured for a tracked entity attribute or data element, the field will only accept data from the configured third-party application. Manual data entry will not be available for that field.
+
+
+#### Data Entry Flow { #capture_app_programs_common_features_user_experience_flow }
+
+1. User navigates to the form containing the configured field
+2. User taps the custom intent button/icon next in the field
+3. The third-party application launches with the configured request parameters
+4. User completes the action in the third-party app (e.g., scans a barcode, captures location)
+5. The third-party app returns the result to DHIS2
+6. The configured response value is automatically populated in the field
+7. User can review the value before saving
+
+![](resources/images/capture-app-image350.png)
+
+> **Note**
+>
+> When the Extra Type is **List of JSON Objects**, the returned values will be concatenated into a single string separated by commas (e.g., `120,118,122`). This allows storing multiple values from the list in a single field.
+
+#### Search Flow { #capture_app_programs_common_features_user_experience_search }
+
+When configured for the SEARCH screen:
+
+1. User navigates to the search screen for tracked entities
+2. User taps the custom intent button for the search field
+3. The third-party application launches
+4. The returned value is used as a search parameter
+5. Search results are displayed based on the captured value
+
+![](resources/images/capture-app-image351.png)
+
+> **Note**
+>
+> When the Extra Type is **List of JSON Objects**, the search will match tracked entity instances that contain any of the values in the returned list. This allows searching for multiple entities at once.
+
+![](resources/images/capture-app-image359.png)
+![](resources/images/capture-app-image358.png)
+
+For configuration steps, see the [Custom Intents section](https://docs.dhis2.org/en/use/android-app/android-web-apps/settings-configuration.html#capture_app_android_settings_webapp_custom_intents) of the Android Settings Web App documentation.
 
 
 ## Event Programs specific features { #capture_app_programs_events }
@@ -645,7 +723,7 @@ Once an event has been scheduled, when the user taps on it, the app will display
 ![](resources/images/capture-app-image293.png){ width=25%}
 ![](resources/images/capture-app-image294.png){ width=25%}
 
-### Dashboard quick actions (New 3.2.0)  { #capture_app_quick_actions }
+### Dashboard quick actions { #capture_app_quick_actions }
 
 The Quick Actions bar is a new feature in the DHIS2 Android Capture App that enables users to access frequently used actions directly from the Tracked Entity Instance (TEI) Dashboard. These actions are displayed as customizable chips, streamlining workflows and reducing the number of taps needed to perform routine tasks.
 
