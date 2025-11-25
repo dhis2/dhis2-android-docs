@@ -889,7 +889,29 @@ Request Parameters
     
     - **Key**: The parameter name expected by the third-party application
     - **Value**: The parameter value to send
-    
+
+The "value" parameter is an expression that allows the assignment of dynamic values if needed.
+
+It has support for the d2-functions used in program rules and some suppport for variables. The supported variables are:
+
+| Variable      | Description                                     |
+|---------------|-------------------------------------------------|
+| orgunit_code  | Code of the orgunit of the TE/Event             |
+| orgunit_id    | UID of the orgunit of the TE/Event              |
+| orgunit_path  | Path of the orgunit of the TE/Event             |
+| user_id       | UID of the logged user                          |
+| user_username | Username of the logged user                     |
+
+The identifier for those variables is the prefix `VAR`. For example, you might have a value like:
+
+```
+VAR(orgunit_id)
+```
+or
+```
+d2:condition('OU_', VAR{orgunit_id}) // Resulting in something like 'OU_DiszpKrYNg8'
+```
+   
 > **Note**
 >
 > Request parameters are type-safe. Follow these formatting rules:
@@ -897,6 +919,7 @@ Request Parameters
 > - **Integers**: No quotes needed (e.g., `100`, `640`)
 > - **Floats**: No quotes needed (e.g., `3.14`, `2.5`)
 > - **Booleans**: No quotes needed (e.g., `true`, `false`)
+> - **Expressions**: No quotes needed (e.g., `VAR{orgunit_id}`)
 
 **Example Request Parameters:**
 
