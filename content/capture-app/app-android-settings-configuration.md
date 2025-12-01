@@ -997,7 +997,7 @@ This example shows how to integrate a barcode scanner app to populate a patient 
 
 #### Example 2: GPS Coordinates Integration { #capture_app_android_settings_webapp_custom_intents_examples_gps }
 
-This example demonstrates capturing GPS coordinates from a mapping application that returns JSON data.
+This example demonstrates capturing GPS coordinates accuracy from a mapping application that returns JSON data.
 
 **Configuration:**
 - **Intent Name**: GPS Location Capture
@@ -1016,7 +1016,7 @@ This example demonstrates capturing GPS coordinates from a mapping application t
 **Response:**
 - **Extra Name**: `LOCATION_DATA`
 - **Extra Type**: JSON Object
-- **Property in JSON Object**: `coordinates.latitude`
+- **Property in JSON Object**: `accuracy`
 
 **Example JSON response:**
 ```json
