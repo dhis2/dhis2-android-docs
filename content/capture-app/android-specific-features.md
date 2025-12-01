@@ -1,10 +1,12 @@
 # Generic features { #capture_app_generic }
 
-## Login { #capture_app_generic_login }
+## Login (Improved 3.3.0) { #capture_app_generic_login }
 
-There are two ways to access the application:
+In version 3.3.0 the login screen was redesigned with a modern interface and improved usability in order to support future OAuth-based two-factor authentication (2FA), ensuring the app is ready for upcoming security improvements.
 
-1. Manual: The user must type the corresponding URL of the server to be used and enter the username and password.
+The first step to the login is to enter the server URL. This can be done in two ways:
+
+1. Manual: The user must type the corresponding URL of the server to be used
 
     > **Note**
     >
@@ -12,7 +14,13 @@ There are two ways to access the application:
 
 2. QR: The user can use a QR code instead of typing the URL but username and password must be entered manually.
 
-![](resources/images/capture-app-image63.png){ width=25%}
+![](resources/images/capture-app-image336.png){ width=25%}
+![](resources/images/capture-app-image337.png){ width=25%}
+
+The second step is to add the username and password.
+
+![](resources/images/capture-app-image348.png){ width=25%}
+
 
 > **Note**
 >
@@ -26,23 +34,29 @@ After a succesful login the user should be able to perform an *offline* login on
 > 
 > In DHIS2 versions up to 2.30 if a user attemps an on-line login and their account has been disabled as explained in the [DHIS 2 Manual - Disable User](https://docs.dhis2.org/master/en/user/html/dhis2_user_manual_en_full.html#disable_user) all the data will be wiped from the phone. Make sure that before disabling a user all the data has been synced or that you are using this feature to remotely wipe sensitive data in case of a device getting lost.
 >
-> Due to a change in the login API this feature is not available in 2.31, 2.32, 2.33, 2.34, 2.35 and 2.36.
+> Due to a change in the login API this feature is not available from 2.31.
 
-## Offline Multi-user { #capture_app_generic_multiuser}
+## Offline Multi-user (Improved 3.3.0) { #capture_app_generic_multiuser}
 
-The Android app have removed the limitation on the number of offline accounts that users can create, allowing them to work with as many offline accounts as needed.
+The Manage Accounts screen has been redesigned to align with the updated login experience introduced in version 3.3.0. Saved accounts now appear as clearer, more structured cards that display key information retrieved from each DHIS2 instance. Each card now includes:
+
+* Application title (as configured in System Settings → Appearance)
+* Server URL
+* Username
+* Country flag, when configured in System Settings
+
+This redesign improves readability, makes it easier to distinguish between multiple saved accounts, and ensures visual consistency with the new authentication flow.
 
 The users will need to have access to the internet for the first login of each account and will be able to switch accounts after without requiring access to the Internet.
 
-![](resources/images/capture-app-image185.png){ width=25%}
-![](resources/images/capture-app-image186.png){ width=25%}
+![](resources/images/capture-app-image347.png){ width=25%} 
+![](resources/images/capture-app-image346.png){ width=25%} 
 
 The users will be able to manage the user accounts and delete accounts if needed.
+ 
+![](resources/images/capture-app-image188.png){ width=25%} 
+![](resources/images/capture-app-image189.png){ width=25%} 
 
-![](resources/images/capture-app-image187.png){ width=25%}
-![](resources/images/capture-app-image188.png){ width=25%}
-![](resources/images/capture-app-image189.png){ width=25%}
-![](resources/images/capture-app-image190.png){ width=25%}
 
 ## Account Recovery { #capture_app_generic_recovery }
 
@@ -50,22 +64,32 @@ The users will be able to restore their own password if they have the setting en
 
 ![](resources/images/capture-app-image64.png){ width=25%}
 
-## Blocking session (PIN) { #capture_app_generic_PIN }
+## Blocking session (PIN) (Improved 3.3.0) { #capture_app_generic_PIN }
 
 User is able to lock the session using a 4 digit PIN. This allows to move to other apps in your phone without deleting the local data.
 If the user forgets the PIN number, log in by entering the credentials is also available.
 
-![](resources/images/capture-app-image65.png){width=25%}
+![](resources/images/capture-app-image343.png){width=25%}
+![](resources/images/capture-app-image344.png){width=25%}
 
-## Biometrics login { #capture_app_generic_biometrics_login }
+After 3 invalid attempts, the app will ask the user to login using the password.
+
+![](resources/images/capture-app-image345.png){width=25%}
+
+## Biometrics login (Improved 3.3.0)  { #capture_app_generic_biometrics_login }
 
 User is able to use the fingerprint scanner or face id if the feature is activated in the device. This will only be available if there is only one account (not supported for multple accounts)
 
 * When the fingerprint scanner is enable and not the PIN, every time the app closes, goes to background or the device is blocked, the session will be locked. Once the app is open again, the user needs to tap the fingerprint icon to activate the scanner.
 * If the PIN and the fingerprint are set, when the session is locked and the user open the app again, the PIN will be asked.
 
-![](resources/images/capture-app-image104.jpg){width=25%}
-![](resources/images/capture-app-image105.jpg){width=25%}
+![](resources/images/capture-app-image354.png){width=25%}
+![](resources/images/capture-app-image356.png){width=25%}
+![](resources/images/capture-app-image357.png){width=25%}
+
+If the biomtric authentication fails, the user will be asked to enter password to finish the login process.
+
+![](resources/images/capture-app-image355.png){width=25%}
 
 ## Instructions/information buttons { #capture_app_generic_instructions }
 
@@ -428,3 +452,7 @@ The new module for real stock monitoring use case enables users to manage and mo
 ![](resources/images/capture-app-image221.png){ width=25%}
 ![](resources/images/capture-app-image222.png){ width=25%}
 ![](resources/images/capture-app-image223.png){ width=25%}
+
+### Event upload behavior (Improved in 3.3.0) { #capture_app_lmis_module_sync }
+
+The Android app will upload events with status COMPLETED by default. If the program configuration prevents the event from being completed on the server (for example, due to mandatory data elements or “error on complete” program rules), the app will upload the event with status ACTIVE instead. This prevents failed uploads caused by server side misconfiguration while still ensuring that data is sent.

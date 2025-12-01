@@ -1,6 +1,8 @@
-# Settings { #capture_app_settings }
+# Settings (Improved 3.3.0) { #capture_app_settings }
 
-![Settings window](resources/images/capture-app-image17.png){  width=25%}
+>In version 3.3.0 the settings menu was redesigned to provide a cleaner structure and improved navigation experience. This update aligns the screen with the design changes introduced in previous versions and prepares the menu to host future configuration options, such as 2FA-related settings.
+
+![Settings window](resources/images/capture-app-image340.png){width=25%}
 
 Sync data
 :	User is able to choose from a drop-down list if the data entered in the app is uploaded to the server manually or scheduled every 15 min, 1 hour or 1 Day. By default the app will sync every 24h. This kind of Syncing includes new and updated events and TEI’s.
@@ -26,11 +28,11 @@ Open sync errors log
 Export database
 :   Users are now be able to export the local database and share it with an admin, who will be able to import it for troubleshooting, being able to replicate the exact environment (database, device, configuration). The exported database is encrypted and the administrator will require the user credentials to be able to access the database
 
-![](resources/images/capture-app-image260.png){ width=25%}
+![](resources/images/capture-app-image341.png){ width=25%}
 
 The import button can be found by tapping on the tree dots menu at the login screen.
 
-![](resources/images/capture-app-image261.png){ width=25%}
+![](resources/images/capture-app-image338.png){ width=25%}
 
 Delete local data
 :	This action will delete local data without having to log out.

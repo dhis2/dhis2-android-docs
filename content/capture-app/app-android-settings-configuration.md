@@ -168,64 +168,133 @@ Global settings apply to all programs that an Android user has access to. The se
 
 ![](resources/images/capture-app-program-global-settings.png){width=50%}
 
-TEI to download
-:	Maximum number of TEIs to download from the server.
+* TEI to download:	Maximum number of TEIs to download from the server.
 
-TEI download period
-:	It downloads the TEIs that have been updated within a period. e.g. TEIs that have been updated within last month
+* TEI download period:	It downloads the TEIs that have been updated within a period. e.g. TEIs that have been updated within last month
 
-Event to download
-:	Maximum number of Events to download (from events programs, see note below).
+* Event to download:	Maximum number of Events to download (from events programs, see note below).
 
-Event download period
-:	It downloads Events which event date belongs to a specific period.
+* Event download period:	It downloads Events which event date belongs to a specific period.
 
-> **Note**
->
-> User might find misleading the amount of data downloaded When setting a number of TEIs and a number of Event. The Android App will download the number of TEIs and all their events following the number of TEI set in the field. The Android App will limit the number of Event to download only for the *event programs* (and not *tracker programs*) according to the field. 
->
-> For example, imagine there is *tracker program* in the server with several program stages and each TEI has 5 events (enrollments and program stages). The *TEI to download* value is set to 100. Also, in the server there is an *event program* which contains 1000 events. The *Event to download* value has been set to 200. The Android App will download the following: 100 x 5 events from the tracker program, 200 events from the event program, therefore the Android App will end up downloading 700 events.
->
+---
+**Note**
 
+Administrators may notice that the total number of downloaded events appears higher than expected when configuring limits for both TEIs and Events. This is due to how the Android app applies these limits:
 
-#### Specific settings { #capture_app_android_settings_webapp_synchronization_program_specific }
+* The TEI limit controls how many tracked entities are downloaded, including all their associated events.
+* The Event limit applies only to event programs (programs without registration).
+* It does not restrict events belonging to tracker programs.
 
-This section allows the admin users to specify the behaviour of a particular program/s when syncing the data. The specific configuration overwrites the general settings for the programs listed in this section. To add a setting for a specific program:
- 
-- Click on *Add a Program-specific setting*, a Dialog will appear. 
-- Bellow "Values per Program" title, click and find a list of programs.
-- Clicking on a program will show the different parameters to configure. The number of parameters depends on the program type (with or without registration). 
+*Example:*
 
-**Settings for Program Without Registration**
+A tracker program contains TEIs with an average of 5 events each. If the TEI download limit is set to 100, the app will download those 100 TEIs and all their related events (100 × 5 = 500 events).
+Additionally, an event program contains 1,000 standalone events, and the Event download limit is set to 200.
+In total, the Android app will download:
 
-![](resources/images/capture-app-program-specific-dialog-without_registration.png){width=50%}
+* 500 events from the tracker program (due to 100 TEIs × 5 events each)
+* 200 events from the event program
 
-**Settings for a Program With Registration**
+Resulting in 700 events downloaded overall.
 
-![](resources/images/capture-app-program-specific-dialog-with_registration.png){width=50%}
+---
 
-In the case that any specific settings has been saved, a table will show a summary with the specific configuration per program, and the options to edit or delete these settings.
+#### Specific settings (Improved 3.3.0) { #capture_app_android_settings_webapp_synchronization_program_specific }
+
+Program specific settings allow administrators to override the global synchronization rules for selected programs. This is useful when different programs require different limits or filtering criteria.
+
+To configure program-specific settings:
+
+1. Click Add a Program-specific setting.
+
+2. Select a program under Values per Program.
+
+3. Configure the available parameters (varies depending on program type).
+
+**Available Parameters**
+
+Program specific settings differ depending on whether the program has registration (Tracker) or does not have registration (Event programs). Each setting appears only when applicable.
+
+1. Programs Without Registration (Event programs)
+
+Parameters may include:
+
+* Setting level – Defines whether synchronization applies to all Org Units or specific Org Units.
+* Download events based on predefined list views (NEW in 3.3.0)
+* Maximum event downloads
+* Download events with event date within (configurable time range)
+
+2. Programs With Registration (Tracker programs)
+
+Parameters may include:
+
+* Setting level
+* Maximum TEI downloads per program
+* Download TEIs updated within
+* Download TEIs based on predefined list views (NEW in 3.3.0)
+* Download TEI with status
+* Download TEIs with enrollment date within
+
+**Download based on List views (NEW in 3.3.0)**
+
+When a program is linked to one or more working lists, the corresponding filtering fields will behave as follows:
+
+* The Android app syncs TEIs based on the working list(s) assigned to the user.
+* If a user has access to one working list → that list is used.
+* If the user has access to multiple lists → their content is merged automatically.
+
+![](resources/images/capture-app-image363.png){width=50%}
+![](resources/images/capture-app-image364.png){width=50%}
+
+##### Viewing and managing program-specific settings
+
+When one or more program-specific configurations have been saved, they will appear in a summary table.
+From this table, administrators can:
+
+* View the current configuration per program
+*Edit the values
+* Delete the program-specific settings
 
 ![](resources/images/capture-app-program-specific-table.png){width=50%}
 
+##### Important Considerations
+
 > **Caution**
+Program-specific settings can lead to a larger number of TEIs being downloaded than expected based on the global synchronization limit.
+This happens because the Android client performs synchronization in two steps:
 >
-> Using specific settings per program might have unexpected results in the number of TEIs downloaded and the total amount might exceed the one defined in the Global Settings. This is due to how the application download the TEIs from the server. The Android client will first download a max number of TEIs from the server based on the Organisation Units where the user has access and based on the lastUpdate field. Afterwards it will download a max number of TEIs from the specific programs. Therefore, if the TEIs downloaded from the Global setting (500 in the example above) have been updated more recently than any of the TEIs from a specific program (500 for Malaria case diagnosis, treatment and investigation) the Android client will end up downloading 1000 TEI.
-> 
-> This might look confusing at first, but once understood can be used to ensure a minimum (and maximum) number of TEIs for a specific program will be downloaded which can be very useful in specific implementations.
+>1. Global sync: Downloads up to X TEIs based on the user’s organisation units and the lastUpdated field.
+>2. Program-specific sync:
+Downloads up to Y additional TEIs for each program that has specific settings configured.
 >
-> Imagine an implementation where it must be ensured that the Android user has all the TEIs of a specific program in a server where the same user has access to other Organisation Units where other TEIs might be enrolled in another program. The program is called Community Care, and it has 17 TEIs which have been updated very long time ago. The administrator can ensure that the 17 TEIs will be downloaded by setting anything in Global Settings (if needed to reduce bandwidth a very low value should be set) and an at least 17 for the specific program as show in the image below:
+>If the TEIs included in the global sync were updated more recently than those in a specific program, both sets will be downloaded.
 >
-> ![](resources/images/capture-app-program-specific-example-web.png){width=50%}
 >
-> When the initial synchronization is triggered the Android device will first download the last TEIs updated on the server (which according to our example do not belong to the specific program) and secondly up to 20 TEI from the specific program resulting in the following (notice all the TEIs for the program were downloaded):
+>*For example:*
+>* Global TEI limit = 500
+>* Program-specific TEI limit for Malaria Case Diagnosis = 500
+>* Global set contains more recent TEIs than the program-specific set
 >
-> ![](resources/images/capture-app-program-specific-example-mobile1.png){width=33%}
->
-> And by going to the settings it can be appreciated how the total number of TEIs is the expected 37, 20 from the Global Setting, and 17 from the program specific.
->
-> ![](resources/images/capture-app-program-specific-example-mobile2.png){width=33%}
->
+>The device may download up to 1000 TEIs in total — 500 from the global step and 500 from the program-specific step.
+Although this may seem unexpected at first, it can be used strategically to guarantee minimum TEI numbers for critical programs.
+
+***Example***
+
+Imagine a program called Community Care with 17 TEIs, all updated a long time ago.
+The same user also has access to other organisation units with many recently updated TEIs from other programs.
+
+To ensure that all 17 TEIs from Community Care are always downloaded:
+
+Set a low number (e.g., 20) in Global Settings.
+
+Set 17 as the program-specific limit for Community Care.
+
+Initial sync will download:
+
+20 recently updated TEIs (not from Community Care)
+
+17 TEIs from Community Care
+
+Total downloaded = 37 TEIs
 
 #### Reset all values { #capture_app_android_settings_webapp_synchronization_program_reset_all }
 
@@ -749,6 +818,352 @@ In the same way, Event visualizations are considered valid if:
 > ![](resources/images/capture-app-analytics-visualization-search.png)
 >
 
+## Custom Intents (New 3.3.0) { #capture_app_android_settings_webapp_custom_intents }
+
+By configuring custom intents, administrators can enable the Android app to launch external applications, send data to them, and receive data back to populate fields automatically.
+
+### Adding a Custom Intent { #capture_app_android_settings_webapp_custom_intents_configuration_adding }
+
+To add a new Custom Intent:
+
+1. Open the Android Settings Web App
+2. Navigate to the Custom Intents section
+3. Click on **Add Custom Intent**
+4. Fill in the configuration parameters as described below
+
+![](resources/images/capture-app-image365.png)
+![](resources/images/capture-app-image361.png)
+
+### Configuration Parameters { #capture_app_custom_intents_configuration_parameters }
+
+#### Basic Information { #capture_app_android_settings_webapp_custom_intents_configuration_basic }
+
+Intent Name
+:   A unique, descriptive name for the custom intent. This name helps identify the intent in the configuration interface.
+
+Intent Description
+:   A detailed description of what the custom intent does and which third-party app it integrates with. This helps other administrators understand the purpose of the intent.
+
+#### Element Binding { #capture_app_android_settings_webapp_custom_intents_configuration_binding }
+
+Element Type
+:   Specifies where the custom intent will be attached. Options include:
+    
+    - **Tracked Entity Attribute**: Links the intent to a specific tracked entity attribute
+    - **Data Element**: Links the intent to a specific data element
+
+Attribute/Data Element
+:   Select the specific tracked entity attribute or data element that will trigger the custom intent. When a custom intent is configured for a field, users must use the third-party application to enter or search data for that field. Manual data entry will not be available.
+
+> **Note**
+>
+> Only Data Elements or Tracked Entity Attributes with **TEXT** or **LONG_TEXT** value types are currently supported for custom intents.
+
+Screen/Action
+:   Defines where in the Android app the custom intent will be triggered. Available options:
+    
+    - **SEARCH**: The intent will be available during search operations, allowing users to search for tracked entity instances using data from external apps
+    - **DATA_ENTRY**: The intent will be available during data entry, allowing users to populate fields with data from external apps
+
+#### Third-Party Application { #capture_app_android_settings_webapp_custom_intents_configuration_app }
+
+Package Name
+:   The complete package name and action of the third-party Android application to launch. This should include both the package identifier and the specific action.
+    
+    Format: `com.apppackageName.id.CAPTURE`
+    
+    Example: `com.google.zxing.client.android.SCAN` for a barcode scanner app
+
+> **Important**
+>
+> The third-party application must be installed on the Android device for the custom intent to work. If the app is not installed, users will receive an error message when attempting to trigger the intent.
+
+### Request Configuration { #capture_app_android_settings_webapp_custom_intents_configuration_request }
+
+The Request section defines the parameters that will be sent to the third-party application when the intent is launched. This allows you to customize the behavior of the external app based on your requirements.
+
+#### Request Parameters { #capture_app_android_settings_webapp_custom_intents_configuration_request_params }
+
+Request Parameters
+:   A list of key-value pairs that will be sent as extras to the third-party application's intent. Each parameter consists of:
+    
+    - **Key**: The parameter name expected by the third-party application
+    - **Value**: The parameter value to send
+
+The "value" parameter is an expression that allows the assignment of dynamic values if needed.
+
+It has support for the d2-functions used in program rules and some suppport for variables. The supported variables are:
+
+| Variable      | Description                                     |
+|---------------|-------------------------------------------------|
+| orgunit_code  | Code of the orgunit of the TE/Event             |
+| orgunit_id    | UID of the orgunit of the TE/Event              |
+| orgunit_path  | Path of the orgunit of the TE/Event             |
+| user_id       | UID of the logged user                          |
+| user_username | Username of the logged user                     |
+
+The identifier for those variables is the prefix `VAR`. For example, you might have a value like:
+
+```
+VAR(orgunit_id)
+```
+or
+```
+d2:condition('OU_', VAR{orgunit_id}) // Resulting in something like 'OU_DiszpKrYNg8'
+```
+   
+> **Note**
+>
+> Request parameters are type-safe. Follow these formatting rules:
+> - **Strings**: Must be surrounded by single quotes (e.g., `'QRCODE'`, `'portrait'`)
+> - **Integers**: No quotes needed (e.g., `100`, `640`)
+> - **Floats**: No quotes needed (e.g., `3.14`, `2.5`)
+> - **Booleans**: No quotes needed (e.g., `true`, `false`)
+> - **Expressions**: No quotes needed (e.g., `VAR{orgunit_id}`)
+
+**Example Request Parameters:**
+
+| Key          | Value       | Description                   |
+|--------------|-------------|-------------------------------|
+| PROJECT_ID   | 'sample_id' | Id needed for third party app |
+| ORIENTATION  | 'portrait'  | Set camera orientation        |
+| TIMEOUT      | 30000       | Set timeout in milliseconds   |
+| ENABLE_FLASH | true        | Enable camera flash           |
+
+![](resources/images/capture-app-image360.png)
+
+### Response Configuration { #capture_app_android_settings_webapp_custom_intents_configuration_response }
+
+The Response section defines how to extract and process data returned from the third-party application. This determines which value will be populated in the linked tracked entity attribute or data element.
+
+#### Response Parameters { #capture_app_android_settings_webapp_custom_intents_configuration_response_params }
+
+Extra Name
+:   The exact name of the extra field in the intent returned by the third-party application. This is the key used by the external app to send data back to DHIS2.
+    
+    Example: `SCAN_RESULT`, `LATITUDE`, `BARCODE_VALUE`
+
+Extra Type
+:   The data type of the returned value. Available options:
+    
+    - **String**: Plain text value
+    - **Integer**: Whole number value
+    - **Float**: Decimal number value
+    - **Boolean**: True/false value
+    - **JSON Object**: A single JSON object
+    - **List of JSON Objects**: An array of JSON objects
+
+Property in JSON Object
+:   *Only applicable when Extra Type is "JSON Object" or "List of JSON Objects"*
+    
+    Specifies the property name to extract from the JSON object(s). This should be a direct property of the JSON object.
+    
+    Example: `value`, `latitude`, `name`
+
+> **Note**
+>
+> - Only direct properties are supported. Nested properties (e.g., `location.coordinates.latitude`) are not currently supported.
+> - Array indexing (e.g., `results[0].name`) is not currently supported.
+> - When using **List of JSON Objects** as the Extra Type:
+>   - For **SEARCH**: The specified property will be extracted from all objects in the list, allowing users to search for tracked entity instances that match any value in the list.
+>   - For **DATA_ENTRY**: The values will be extracted from all objects and concatenated into a single string separated by commas (e.g., `value1,value2,value3`).
+
+![](resources/images/capture-app-image362.png)
+
+### Use Cases and Examples { #capture_app_android_settings_webapp_custom_intents_examples }
+
+#### Example 1: Barcode Scanner Integration { #capture_app_android_settings_webapp_custom_intents_examples_barcode }
+
+This example shows how to integrate a barcode scanner app to populate a patient ID field.
+
+**Configuration:**
+- **Intent Name**: Barcode Scanner for Patient ID
+- **Intent Description**: Scans patient ID barcodes using ZXing scanner
+- **Element Type**: Tracked Entity Attribute
+- **Attribute**: Patient ID
+- **Screen/Action**: DATA_ENTRY
+- **Package Name**: `com.google.zxing.client.android.SCAN`
+
+**Request Parameters:**
+| Key | Value |
+|-----|-------|
+| SCAN_MODE | 'QR_CODE_MODE' |
+| PROMPT_MESSAGE | 'Scan patient ID barcode' |
+
+**Response:**
+- **Extra Name**: `SCAN_RESULT`
+- **Extra Type**: String
+- **Property in JSON Object**: *(leave empty for string type)*
+
+#### Example 2: GPS Coordinates Integration { #capture_app_android_settings_webapp_custom_intents_examples_gps }
+
+This example demonstrates capturing GPS coordinates accuracy from a mapping application that returns JSON data.
+
+**Configuration:**
+- **Intent Name**: GPS Location Capture
+- **Intent Description**: Captures GPS coordinates from mapping app
+- **Element Type**: Data Element
+- **Data Element**: Household Location
+- **Screen/Action**: DATA_ENTRY
+- **Package Name**: `com.example.gpsapp.CAPTURE_LOCATION`
+
+**Request Parameters:**
+| Key | Value |
+|-----|-------|
+| ACCURACY | 'HIGH' |
+| TIMEOUT | 60000 |
+
+**Response:**
+- **Extra Name**: `LOCATION_DATA`
+- **Extra Type**: JSON Object
+- **Property in JSON Object**: `accuracy`
+
+**Example JSON response:**
+```json
+{
+  "coordinates": {
+    "latitude": -1.2921,
+    "longitude": 36.8219
+  },
+  "accuracy": 5.0,
+  "timestamp": "2025-11-03T10:30:00Z"
+}
+```
+
+#### Example 3: Custom Data Collection Tool { #capture_app_android_settings_webapp_custom_intents_examples_custom }
+
+This example shows integration with a custom medical device app that returns multiple measurements in a JSON array.
+
+**Configuration:**
+- **Intent Name**: Blood Pressure Monitor
+- **Intent Description**: Captures blood pressure from external monitor device
+- **Element Type**: Data Element
+- **Data Element**: Systolic Pressure
+- **Screen/Action**: DATA_ENTRY
+- **Package Name**: `com.medical.bpmonitor.MEASURE`
+
+**Request Parameters:**
+| Key | Value |
+|-----|-------|
+| MEASUREMENT_TYPE | 'BLOOD_PRESSURE' |
+| UNIT | 'mmHg' |
+
+**Response:**
+- **Extra Name**: `MEASUREMENTS`
+- **Extra Type**: List of JSON Objects
+- **Property in JSON Object**: `systolic`
+
+**Example JSON response:**
+```json
+[
+  {
+    "systolic": 120,
+    "diastolic": 80,
+    "pulse": 72,
+    "timestamp": "2025-11-03T10:30:00Z"
+  }
+]
+```
+### Limitations and Considerations { #capture_app_android_settings_webapp_custom_intents_limitations }
+
+#### Third-Party App Requirements { #capture_app_custom_intents_limitations_app }
+
+- The third-party application must be installed on all Android devices that will use the custom intent
+- The third-party app must support Android Intent-based communication
+- The package name and action must be correctly configured and match the third-party app's implementation
+
+#### Data Type Compatibility { #capture_app_android_settings_webapp_custom_intents_limitations_datatype }
+
+- The Extra Type configured in the response must match the actual data type returned by the third-party application
+- The tracked entity attribute or data element value type should be compatible with the returned data
+- Type mismatches may result in errors or unexpected behavior
+
+#### Device Compatibility { #capture_app_android_settings_webapp_custom_intents_limitations_device }
+
+- Custom Intents rely on Android's Intent system and are only available on Android devices
+- Some third-party apps may have specific Android version requirements
+- Testing should be performed on all target device models
+
+#### Security Considerations { #capture_app_android_settings_webapp_custom_intents_limitations_security }
+
+> **Warning**
+>
+> When configuring custom intents that integrate with third-party applications, consider the following security implications:
+> - Data sent to third-party apps may be stored or transmitted according to the third-party app's privacy policy
+> - Ensure third-party applications are from trusted sources
+> - Review the permissions requested by third-party applications
+> - Sensitive health data should only be shared with certified and compliant applications
+> - Consider implementing Mobile Device Management (MDM) to control which apps can be installed
+
+#### Network and Offline Behavior { #capture_app_android_settings_webapp_custom_intents_limitations_offline }
+
+- Custom intents work in offline mode as long as the third-party app is installed and doesn't require network connectivity
+- Some third-party apps may require internet access to function properly
+- Ensure the solution works in the expected connectivity scenarios for your deployment
+
+### Troubleshooting { #capture_app_android_settings_webapp_custom_intents_troubleshooting }
+
+#### Common Issues { #capture_app_android_settings_webapp_custom_intents_troubleshooting_common }
+
+**Issue: Custom intent button doesn't appear**
+- Verify that the custom intent is correctly configured in the Android Settings Web App
+- Check that the device has synchronized the latest configuration
+- Ensure you're viewing the correct tracked entity attribute or data element
+
+**Issue: "Application not found" error**
+- The third-party application is not installed on the device
+- The package name is incorrectly configured
+- The third-party app doesn't support the specified action
+
+**Issue: No data is returned**
+- Verify the Extra Name matches the key used by the third-party app
+- Check that the Extra Type is correct
+- Review the third-party app's documentation for the expected response format
+
+**Issue: Wrong value is populated**
+- Verify the Property in JSON Object path is correct
+- Check that the JSON structure matches the expected format
+- Ensure the Extra Type matches the actual returned data type
+
+**Issue: App crashes when launching intent**
+- Review the request parameters for syntax errors (e.g., missing quotes for strings)
+- Verify the third-party app supports the configured parameters
+- Check Android logs for detailed error messages
+
+#### Testing Custom Intents { #capture_app_android_settings_webapp_custom_intents_troubleshooting_testing }
+
+Before deploying custom intents to production:
+
+1. Test with a small group of users on various device models
+2. Verify the third-party app is available and properly licensed
+3. Test both online and offline scenarios
+4. Verify data validation rules are applied to returned values
+5. Test error handling when the third-party app is not installed
+6. Document the configuration and user instructions
+
+> **Note**
+>
+> Consider creating a test program or data set specifically for testing custom intent configurations before deploying to production programs.
+
+### Best Practices { #capture_app_custom_intents_best_practices }
+
+1. **Clear Naming**: Use descriptive intent names that clearly indicate the purpose and third-party app being used
+
+2. **Documentation**: Maintain documentation of all configured custom intents, including the required third-party apps and their versions
+
+3. **User Training**: Provide clear instructions to users on how to use custom intents and what to expect. Ensure users understand that manual data entry will not be available for fields with custom intents configured.
+
+4. **App Distribution**: Use Mobile Device Management (MDM) to ensure third-party apps are properly installed and updated on all devices
+
+5. **Testing**: Thoroughly test custom intents in a non-production environment before deployment
+
+6. **Validation**: Implement appropriate validation rules on fields that use custom intents to ensure data quality
+
+7. **Reliability**: Ensure the third-party application is stable and reliable, as it will be the only way to populate the configured field. Have a contingency plan if the third-party app becomes unavailable.
+
+8. **Version Control**: Keep track of third-party app versions and test compatibility when apps are updated
+
+9. **Privacy Compliance**: Ensure custom intent configurations comply with data privacy regulations (GDPR, HIPAA, etc.)
 
 ## Installation { #capture_app_android_settings_webapp_installation }
 

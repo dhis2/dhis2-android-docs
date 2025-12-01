@@ -1,6 +1,6 @@
 # Data sets { #capture_app_datsets }
 
-### Data Entry (Improved 3.2.0) {#capture_app_data_sets_data_entry}
+### Data Entry {#capture_app_data_sets_data_entry}
 
 From 3.2.0, to improve usability and align with user expectations, the DHIS2 Android Capture App has undergone a comprehensive redesign of the data entry table and input dialog for Data Sets.
 
@@ -12,7 +12,7 @@ From 3.2.0, to improve usability and align with user expectations, the DHIS2 And
 ![](resources/images/capture-app-image318.png){ width=25%}
 ![](resources/images/capture-app-image319.png){ width=25%}
 
-#### Capturing Coordinates (New 3.2.0) {#capture_app_data_sets_data_entry_capture_coordinates}
+#### Capturing Coordinates {#capture_app_data_sets_data_entry_capture_coordinates}
 
 To enhance the process of capturing coordinates and align to the behavior in tracker programs, a search bar has been implemented. This feature allows users to input textual information, such as street names or numbers, to facilitate the identification of specific locations.
 
@@ -26,13 +26,13 @@ Use the navigation bar located at the bottom of the data set to switch between t
 
 ![](resources/images/capture-app-image139.png){ width=25%}
 
-### Overview Screen (Removed 3.2.0) { #capture_app_data_sets_overview_screen }
+### Overview Screen { #capture_app_data_sets_overview_screen }
 
 the Overview screen for Data Sets has been removed from the Android Capture App in version 3.2.0. Users are now taken directly to the data entry screen after selecting a Data Set.
 
 All relevant metadata is now either pre-selected or directly accessible within the data entry screen.
 
-### Saving a data set (Improved 3.2.0) { #capture_app_data_sets_saving }
+### Saving a data set { #capture_app_data_sets_saving }
 
 Validation rules and completion of data sets are integrated in the save button actions:
 
@@ -50,7 +50,7 @@ Validation rules and completion of data sets are integrated in the save button a
 
 - If the data set does not have validation rules, the data set will be marked as complete if all mandatory fields have value.
 
-### Increase Row and column Headers (Improved 3.2.0) { #capture_app_data_sets_row }
+### Increase Row and column Headers { #capture_app_data_sets_row }
 
 Users are now allowed to resize the row headers and columns in datasets, making it easier to view and work with larger tables.
 
@@ -70,7 +70,7 @@ The button is contextual and will:
 
 ![](resources/images/capture-app-image335.png){ width=25%}
 
-### Indicators (Improved 3.2.0) { #capture_app_data_sets_indicators }
+### Indicators { #capture_app_data_sets_indicators }
 
 Indicators are now available in default and section forms and are displayed at the bottom of the data entry form.
 
@@ -88,7 +88,7 @@ The new design of cards offers a cleaner and more intuitive layout replacing the
 
 ![](resources/images/capture-app-image237.png){ width=25%}
 
-### Configurable forms/ Pivot options (New 3.2.0) { #capture_app_datsets_pivot_options }
+### Configurable forms/ Pivot options { #capture_app_datsets_pivot_options }
 
 This new feature supports a variety of layout and display configurations, allowing data sets to better reflect national paper tools, simplify workflows, and reduce user errors. It requires a configuration in the maintenance app whithin a DHIS2 Web version: 2.41+.
 
