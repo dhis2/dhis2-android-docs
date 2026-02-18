@@ -697,7 +697,7 @@ The TEI Header is a title that can be added to the TEI cards and dashboards in t
 >
 >  In the Maintenace app, text expressions aren't valid. Even though the error is display in the dialog, save the program indicator and assign it in the Android Settings Web App, the DHIS2 Android capture app will read the expression accordingly.
 
-For more information on how to configure the TEI header, click [here.](https://docs.dhis2.org/en/use/android-app/settings-configuration.html#capture_app_android_settings_webapp_appearance_program)
+For more information on how to configure the TEI header, click [here.](https://docs.dhis2.org/en/use/android-app/android-web-apps/settings-configuration.html#capture_app_android_settings_webapp_appearance_program_specific)
 
 ![](resources/images/capture-app-image249.png){ width=50%}
 ![](resources/images/capture-app-image250.png){ width=50%}
