@@ -531,9 +531,9 @@ The main changes are:
 
 ![](resources/images/capture-app-image247.png){ width=50%}
 
-### Complete/Deactivate Enrollment { #capture_app_programs_complete_deactivate_enrollment }
+### Complete Enrollment / Deactivate TE { #capture_app_programs_complete_deactivate_enrollment }
 
-To complete or deactivate an enrollment, click on three dot menu in the uppper right corner and select "Complete" or "Deactivate".
+To complete an enrollment or deactivate a TE, click on three dot menu in the uppper right corner and select "Complete" or "Deactivate".
 
 ![](resources/images/capture-app-image76.jpg){ width=25%}
 
@@ -787,7 +787,7 @@ In the notes, ‘admin’ refers to someone who develops and configures a DHIS2 
 |Registration form - default|The default data entry form simply lists all attributes defined for the TEI.|![](/en/resources/images/admin/icon-complete.png)|![](/en/resources/images/admin/icon-na.png)||
 |Registration form - custom|This enables an admin to define a custom layout (using HTML) for the registration form.|-|![](/en/resources/images/admin/icon-na.png)|Custom layouts are not supported in the Android App||
 |Program notifications|You can set up automated notifications for when program enrolments or completions occur, or at a set interval before/after incident or enrolment dates. These can be sent as internal DHIS 2 messages, emails or SMSs.|![](/en/resources/images/admin/icon-complete.png)|![](/en/resources/images/admin/icon-complete.png)|This functionality is executed on the server side, once data is received. Will not work when the app is working offline.|
-|Activate/deactivate enrolment|Deactivating a TEI dashboard will cause the TEI to become &ldquo;read-only&rdquo;. This means you cannot enter data, enrol the TEI or edit the TEI profile.|![](/en/resources/images/admin/icon-complete.png)|![](/en/resources/images/admin/icon-na.png)||
+|Activate/deactivate TE|Deactivating a TE dashboard will cause the TE to become &ldquo;read-only&rdquo;. This means you cannot enter data, enrol the TE or edit the TE profile.|![](/en/resources/images/admin/icon-complete.png)|![](/en/resources/images/admin/icon-na.png)||
 |Complete allowed only if validation passes|Select check box to enforce that an event created by this program is only completed when all validation rules have passed.|![](/en/resources/images/admin/icon-incomplete.png)|![](/en/resources/images/admin/icon-incomplete.png)||
 |Org unit opening/closing dates|Enables an admin to set opening and closing dates for an Org Unit, which blocks users from adding or editing events outside of these dates.|![](/en/resources/images/admin/icon-complete.png)|![](/en/resources/images/admin/icon-complete.png)||
 |Data sharing levels/Can capture data|Enables the user to add new event, edit data and delete events in the program.|![](/en/resources/images/admin/icon-complete.png)|![](/en/resources/images/admin/icon-complete.png)||
