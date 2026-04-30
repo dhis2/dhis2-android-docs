@@ -1,6 +1,6 @@
 # Generic features { #capture_app_generic }
 
-## Login (Improved 3.3.0) { #capture_app_generic_login }
+## Login { #capture_app_generic_login }
 
 In version 3.3.0 the login screen was redesigned with a modern interface and improved usability in order to support future OAuth-based two-factor authentication (2FA), ensuring the app is ready for upcoming security improvements.
 
@@ -36,7 +36,7 @@ After a succesful login the user should be able to perform an *offline* login on
 >
 > Due to a change in the login API this feature is not available from 2.31.
 
-## Offline Multi-user (Improved 3.3.0) { #capture_app_generic_multiuser}
+## Offline Multi-user { #capture_app_generic_multiuser}
 
 The Manage Accounts screen has been redesigned to align with the updated login experience introduced in version 3.3.0. Saved accounts now appear as clearer, more structured cards that display key information retrieved from each DHIS2 instance. Each card now includes:
 
@@ -64,19 +64,18 @@ The users will be able to restore their own password if they have the setting en
 
 ![](resources/images/capture-app-image64.png){ width=25%}
 
-## Blocking session (PIN) (Improved 3.3.0) { #capture_app_generic_PIN }
+## Blocking session (PIN) (Improved 3.4.0) { #capture_app_generic_PIN }
 
 User is able to lock the session using a 4 digit PIN. This allows to move to other apps in your phone without deleting the local data.
-If the user forgets the PIN number, log in by entering the credentials is also available.
 
 ![](resources/images/capture-app-image343.png){width=25%}
-![](resources/images/capture-app-image344.png){width=25%}
 
+If the user forgets the PIN number, log in by entering the credentials is also available.
 After 3 invalid attempts, the app will ask the user to login using the password.
 
-![](resources/images/capture-app-image345.png){width=25%}
+![](resources/images/capture-app-image344.png){width=25%}
 
-## Biometrics login (Improved 3.3.0)  { #capture_app_generic_biometrics_login }
+## Biometrics login  { #capture_app_generic_biometrics_login }
 
 User is able to use the fingerprint scanner or face id if the feature is activated in the device. This will only be available if there is only one account (not supported for multple accounts)
 
@@ -453,6 +452,10 @@ The new module for real stock monitoring use case enables users to manage and mo
 ![](resources/images/capture-app-image222.png){ width=25%}
 ![](resources/images/capture-app-image223.png){ width=25%}
 
-### Event upload behavior (Improved in 3.3.0) { #capture_app_lmis_module_sync }
+### Event upload behavior { #capture_app_lmis_module_sync }
 
 The Android app will upload events with status COMPLETED by default. If the program configuration prevents the event from being completed on the server (for example, due to mandatory data elements or “error on complete” program rules), the app will upload the event with status ACTIVE instead. This prevents failed uploads caused by server side misconfiguration while still ensuring that data is sent.
+
+### Event ordering alignment across platforms (Improved in 3.4.0) { #capture_app_lmis_module_event_ordering }
+
+With this update, event ordering has been aligned across Web, Android, and API sources. This ensures that events are processed in the correct sequence during synchronization, improving data consistency and calculation reliability across the system.

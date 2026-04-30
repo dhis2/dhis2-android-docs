@@ -246,7 +246,7 @@ In 2.9, the working lists have been moved from the filters section to the main p
 
 ![](resources/images/capture-app-image251.png){ width=25%}
 
-#### Synchronization based on working lists (New 3.3.0) { #capture_app_programs_common_features_working_lists_sync }
+#### Synchronization based on working lists { #capture_app_programs_common_features_working_lists_sync }
 
 From version 3.3.0, the Android Capture App supports synchronization based on working lists defined in the Capture web app and assigned through the Android Settings Web App (ASWA). Working lists allow administrators to specify exactly which tracked entity instances (TEIs) or events should be downloaded to a device, ensuring focused, context specific data for each group of users.
 
@@ -274,6 +274,67 @@ The analytics tab supports displaying text and key/value pair in feedback or ind
 Legends can be assigned to Data Elements and they will be displayed next to value with the respective color and label.
 
 ![](resources/images/capture-app-image155.png){ width=25%}
+
+### Feedback rendering (New in 3.4) { #capture_app_programs_common_features_feedback_rendering }
+
+Feedback messages generated through Display Text and Display Key Value Pair program rule actions support Markdown formatting. This allows structured and more readable content to be displayed directly in the app, including headings, lists, tables, links, and emphasized text.
+
+In addition, legend-based styling enables feedback values to be visually highlighted using predefined legend sets. When numeric values are present in the content, they are evaluated against the configured legend ranges and rendered with the corresponding color. This allows dynamic color coding of key values, helping users quickly interpret results and identify important conditions.
+
+#### Supported Markdown formatting
+
+The following Markdown elements are supported in feedback content:
+
+- Paragraphs: plain text separated using `\n\n`
+- Headings: `#` to `######`
+- Bold text: `**bold text**`
+- Italic text: `*italic text*`
+- Unordered lists: prefix items with `-`
+- Ordered lists: prefix items with numbers (`1.`, `2.`, etc.)
+- Links: `[text](https://example.com)`
+- Images: `![alt text](https://example.com/image.jpg)` (public URLs only)
+- Tables: defined using pipe (`|`) notation
+
+**Spacing and line breaks**
+
+Spacing within feedback content must be explicitly defined using line break characters.
+
+- Use `\n\n` to create a new paragraph or visual separation between sections.
+- Single line breaks may not be preserved consistently.
+- Proper spacing is required for Markdown elements such as tables and lists to render correctly.
+
+> ***Example***
+
+
+The following example demonstrates how Markdown can be used within program rule actions to render structured feedback content, including formatted text and tables.
+
+```
+Action 1: Display text
+Static text: ## Weight per visit
+Expression:
+d2:concatenate(
+"\n\nFacility: ", V{orgunit_code},
+"\n\nDate of birth: ", V{incident_date}
+)
+```
+```
+Action 2: Display text
+Static text: ## Summary
+Expression:
+d2:concatenate(
+"\n\n|Visit|Weight|\n|---|---|\n|Birth|", #{weightbirth},
+"|\n|Second visit|", #{weight2}, "|"
+)
+```
+![](resources/images/capture-app-image367.png){ width=25%}
+
+>**Notes**
+>
+> - Table columns are rendered with equal width
+> - Tables can be scrolled horizontally if they exceed screen size
+> - All text is left-aligned by default
+> - Markdown support is limited to the elements listed above
+>
 
 ### Data Entry Form { #capture_app_programs_common_features_data_entry_form }
 
@@ -355,7 +416,7 @@ To prevent accidental deletions and enhance user control, a new confirmation dia
 ![](resources/images/capture-app-image307.png){ width=25%}
 ![](resources/images/capture-app-image306.png){ width=25%}
 
-### Custom Intents (New 3.3.0) { #capture_app_programs_common_features_customintents }
+### Custom Intents { #capture_app_programs_common_features_customintents }
 
 > This feature is available from Android Capture App version 3.3.0.
 

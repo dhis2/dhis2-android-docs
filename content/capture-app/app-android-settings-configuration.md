@@ -198,7 +198,7 @@ Resulting in 700 events downloaded overall.
 
 ---
 
-#### Specific settings (Improved 3.3.0) { #capture_app_android_settings_webapp_synchronization_program_specific }
+#### Specific settings { #capture_app_android_settings_webapp_synchronization_program_specific }
 
 Program specific settings allow administrators to override the global synchronization rules for selected programs. This is useful when different programs require different limits or filtering criteria.
 
@@ -219,7 +219,7 @@ Program specific settings differ depending on whether the program has registrati
 Parameters may include:
 
 * Setting level – Defines whether synchronization applies to all Org Units or specific Org Units.
-* Download events based on predefined list views (NEW in 3.3.0)
+* Download events based on predefined list views (available from 3.3.0)
 * Maximum event downloads
 * Download events with event date within (configurable time range)
 
@@ -230,11 +230,11 @@ Parameters may include:
 * Setting level
 * Maximum TEI downloads per program
 * Download TEIs updated within
-* Download TEIs based on predefined list views (NEW in 3.3.0)
+* Download TEIs based on predefined list views (available from 3.3.0)
 * Download TEI with status
 * Download TEIs with enrollment date within
 
-**Download based on List views (NEW in 3.3.0)**
+**Download based on List views**
 
 When a program is linked to one or more working lists, the corresponding filtering fields will behave as follows:
 
@@ -818,7 +818,7 @@ In the same way, Event visualizations are considered valid if:
 > ![](resources/images/capture-app-analytics-visualization-search.png)
 >
 
-## Custom Intents (New 3.3.0) { #capture_app_android_settings_webapp_custom_intents }
+## Custom Intents { #capture_app_android_settings_webapp_custom_intents }
 
 By configuring custom intents, administrators can enable the Android app to launch external applications, send data to them, and receive data back to populate fields automatically.
 
