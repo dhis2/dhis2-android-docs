@@ -118,6 +118,9 @@ Filters will adapt to the different programs and data sets.
 
 It is possible to filter events based on its assignment to the current user. The “Assigned to me” filter has been added to the single event program list, the TEI list and the TEI Dashboard and the map views. It will only be displayed when the active program is configured to assign events to users.
 
+>**Note**
+>The Android app can only filter and display events by their existing assignment. Assigning or reassigning a user to an event must be done from the web Capture app or Tracker Capture app — this is not currently supported within the Android app itself.
+
 ### Event Date/Date/Period { #capture_app_generic_filter_date }
 
 Filter the Events, TEIs(based on their events) and data sets, the following periods of time are availables:
