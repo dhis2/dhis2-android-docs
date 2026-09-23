@@ -289,10 +289,15 @@ Render types are available in event and registration forms
 
 ### QR and Barcodes { #capture_app_visual_render_qr }
 
+Data elements or attributes of value type *Text* can be rendered as QR codes or barcodes. When a data element or attribute is rendered as QR/Barcode, the app opens the device camera to read the code, and the decoded text is stored as the value. When the QR/Barcode is a tracked entity attribute configured as searchable, the user can scan the code to search for and identify the tracked entity. This also works for option sets.
 
-Data elements or attributes type text can be also configured as QR or barcodes. When a Data Element or Attribute is rendered as QR/Barcode, the app will open the device camera to read the code image. When the QR/Barcode is a TEI attribute configured as searchable, the user will be allowed to scan the code in order to search and identify the Tracked Entity Instance. This will also work for option sets.
+Barcodes also allow the user to enter the value manually.
 
-Barcodes also allow the user to manually enter the value.
+> **Important**
+>
+> QR codes and barcodes are not a form of protection: their content is stored as plain text and can be read by anyone with a camera or scanning app. This applies both to codes you print and to codes shared from the app using the Export/Share option.
+>
+> Avoid encoding sensitive or personally identifiable information, such as names, phone numbers, passport or national ID numbers, or health data. Instead, use an identifier that has no meaning outside DHIS2, for example an auto-generated tracked entity attribute. The code then only points to the record, and the data itself stays protected by DHIS2 authentication and sharing settings.
 
 ![](resources/images/capture-app-image118.png){ width=20%}
 ![](resources/images/capture-app-image119.png){ width=20%}
