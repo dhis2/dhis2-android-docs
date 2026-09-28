@@ -295,9 +295,10 @@ Barcodes also allow the user to enter the value manually.
 
 > **Important**
 >
-> QR codes and barcodes are not a form of protection: their content is stored as plain text and can be read by anyone with a camera or scanning app.
->
-> Avoid encoding sensitive or personally identifiable information, such as names, phone numbers, passport or national ID numbers, or health data. Instead, use an identifier that has no meaning outside DHIS2, for example an auto-generated tracked entity attribute. The code then only points to the record, and the data itself stays protected by DHIS2 authentication and sharing settings.
+> Using it to encode sensitive or personally identifiable information, such as names, phone numbers, passport or national ID numbers, or health data can result in data exposure if the QR code is printed and shared outside of the DHIS2 Capture App. We recommend using an identifier that has no meaning outside DHIS2, for example an auto-generated tracked entity attribute. The code then only points to the record, and the data itself stays protected by DHIS2 authentication and sharing settings.
+> 
+
+
 
 ![](resources/images/capture-app-image118.png){ width=20%}
 ![](resources/images/capture-app-image119.png){ width=20%}
