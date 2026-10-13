@@ -4,7 +4,7 @@
 
 In version 3.3.0 the login screen was redesigned with a modern interface and improved usability in order to support future OAuth-based two-factor authentication (2FA), ensuring the app is ready for upcoming security improvements.
 
-OAuth login and two-factor authentication are available from version 3.5. See [Login with OAuth](#capture_app_generic_login_oauth).
+OAuth login and two-factor authentication are available from version 3.5. See [Login with OAuth](https://docs.dhis2.org/en/use/android-app/android-specific-features.html#capture_app_generic_login_oauth).
 
 The first step to the login is to enter the server URL. This can be done in two ways:
 
@@ -25,7 +25,7 @@ The first step to the login is to enter the server URL. This can be done in two 
 
 > **Note**
 >
-> The second step and the offline login that follows are for accounts that log in with a username and password. For accounts that log in with OAuth, see [Login with OAuth](#capture_app_generic_login_oauth).
+> The second step and the offline login that follows are for accounts that log in with a username and password. For accounts that log in with OAuth, see [Login with OAuth](https://docs.dhis2.org/en/use/android-app/android-specific-features.html#capture_app_generic_login_oauth).
 
 The second step is to add the username and password.
 
@@ -467,14 +467,19 @@ Open the TEI profile image by clicking on it.
 
 ### Image quality (New in 3.5) { #capture_app_generic_images_quality }
 
-When you capture or choose a picture for an image field, the app prepares the picture before it sends it to the server. From version 3.5, the admin chooses how the app prepares the picture. Before 3.5, the app reduced pictures that were larger than 512 pixels. The admin sets this in the Android Settings Web App. The choice is for each data element or attribute, in a program or a data set. There are two options:
+When you capture or choose a picture for an image field, the app prepares the picture before it sends it to the server. Before 3.5, the app reduced pictures that were larger than 512 pixels. From version 3.5, the app makes the file smaller only when it is larger than 600 kB. It lowers the resolution before it lowers the quality below a minimum. A picture that is already 600 kB or smaller is not made smaller.
 
-- Default quality: The app makes the file smaller when it is larger than 600 kB. It lowers the resolution before it lowers the quality below a minimum. A picture that is already 600 kB or smaller is not made smaller.
-- Original quality: The app sends the picture as it is. It does not make the file smaller.
+The admin can ask for the original quality for some image fields. In this case, the app sends the picture as it is. It does not make the file smaller and it does not convert it. To do this, in the Android Settings Web App:
 
-If the admin does not choose an option, the app uses the default quality.
+1. Open *Synchronization*, and then *Programs* or *Data sets*.
+2. Add the specific setting of the program or the data set, or open the existing one.
+3. In *Maximum quality images*, click the list and check the data elements or attributes whose pictures the app sends at full quality. The list shows only the items of type image.
+4. Click *Save*.
 
-<!-- VERIFY IN APP: the labels and the place of this setting in the Android Settings Web App, and what happens with picture types that the server does not accept. -->
+The other image fields use the default quality. For more details, see [Maximum quality images](https://docs.dhis2.org/en/use/android-app/android-web-apps/settings-configuration.html#capture_app_android_settings_webapp_synchronization_image_quality).
+
+![](resources/images/capture-app-image381.png){ width=25%}
+
 
 ### Pictures that are not downloaded { #capture_app_generic_images_not_downloaded }
 
@@ -482,10 +487,11 @@ A field can have a value while the app did not download the picture. For example
 
 You can still delete the image and upload a new one. 
 
+![](resources/images/capture-app-image382.png){ width=25%}
+
 ## Display events and TEIs in maps { #capture_app_generic_display_events }
 
 When a program stage or tracked entity type have a feature type (and for programs with registration the option displayFrontPageList is enabled) the listings can be switched to display the information in a map. Make the switch by clicking on the map icon in the navigation panel.
-
 
 ![](resources/images/capture-app-image101.png){ width=25%}
 ![](resources/images/capture-app-image102.png){ width=25%}

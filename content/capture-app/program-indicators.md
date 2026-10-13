@@ -4,7 +4,7 @@ The following is a comprehensive list of all Program indicator variables availa
 
 Any issues around using a particular feature with Android are highlighted with an exclamation mark.
 
-From version 3.5, the app can also show a program indicator broken down by categories. See [Program indicator disaggregation](#capture_app_local_analytics_pi_disaggregation).
+From version 3.5, the app can also show a program indicator broken down by categories. See [Program indicator disaggregation](https://docs.dhis2.org/en/use/android-app/program-indicators-supported.html#capture_app_local_analytics_pi_disaggregation).
 
 |legend|description|
 |:--:|:------|
