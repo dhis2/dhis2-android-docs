@@ -4,6 +4,8 @@
 
 In version 3.3.0 the login screen was redesigned with a modern interface and improved usability in order to support future OAuth-based two-factor authentication (2FA), ensuring the app is ready for upcoming security improvements.
 
+OAuth login and two-factor authentication are available from version 3.5. See [Login with OAuth](#capture_app_generic_login_oauth).
+
 The first step to the login is to enter the server URL. This can be done in two ways:
 
 1. Manual: The user must type the corresponding URL of the server to be used
@@ -12,10 +14,18 @@ The first step to the login is to enter the server URL. This can be done in two 
     >
     > Take note that login is only possible with servers from version 2.29.
 
+    > **Note**
+    >
+    > From version 3.5, you can type the URL without `https://`. The app adds `https://` when the URL has no scheme. If you type `http://`, the app keeps it.
+
 2. QR: The user can use a QR code instead of typing the URL but username and password must be entered manually.
 
 ![](resources/images/capture-app-image336.png){ width=25%}
 ![](resources/images/capture-app-image337.png){ width=25%}
+
+> **Note**
+>
+> The second step and the offline login that follows are for accounts that log in with a username and password. For accounts that log in with OAuth, see [Login with OAuth](#capture_app_generic_login_oauth).
 
 The second step is to add the username and password.
 
@@ -36,7 +46,44 @@ After a succesful login the user should be able to perform an *offline* login on
 >
 > Due to a change in the login API this feature is not available from 2.31.
 
-## Offline Multi-user { #capture_app_generic_multiuser}
+### Login with OAuth (New in 3.5) { #capture_app_generic_login_oauth }
+
+From version 3.5, the app can log in with OAuth. With OAuth, you log in on a page of your server that opens in the browser. You do not type your password in the app. The app checks the server when you enter the server URL. OAuth login is available when both of these are true:
+
+- The server runs DHIS2 43.1 or later (Recommended 43.2).
+- OAuth is enabled on the server.
+
+If OAuth is not available, you log in with your username and password, as before.
+
+To log in with OAuth:
+
+1. Enter the server URL and click *Next*.
+2. In the page that opens in the browser, log in with your username and password.
+3. If your account has two-factor authentication turned on, enter the code from your authenticator app and click *Verify and log in*.
+4. The first time that you log in with an account, the app asks you to create an offline CODE. Enter a 4-digit CODE and click *Create CODE*. You cannot close this step.
+
+![](resources/images/capture-app-image369.png){ width=25%}
+![](resources/images/capture-app-image370.png){ width=25%}
+![](resources/images/capture-app-image371.png){ width=25%}
+
+> **Note**
+>
+> The CODE is not the PIN. The CODE lets you log in to an account when you have no connection. The PIN locks the app session.
+
+#### Offline login with the CODE { #capture_app_generic_login_oauth_code }
+
+When you open the app without a connection, the app asks for your CODE. Enter the CODE and click *Log in*.
+
+After 3 wrong CODEs in a row, the app locks the login for 60 seconds. The screen shows the message *Too many attempts. Try again in N seconds*. N counts down.
+
+![](resources/images/capture-app-image372.png){ width=25%}
+
+If you forget your CODE, click *Forgot your CODE?*. To set a new CODE, you must log in with your username and password. This needs an internet connection. Click *Login online* to continue.
+
+![](resources/images/capture-app-image373.png){ width=25%}
+
+
+## Offline Multi-user (Improved in 3.5) { #capture_app_generic_multiuser}
 
 The Manage Accounts screen has been redesigned to align with the updated login experience introduced in version 3.3.0. Saved accounts now appear as clearer, more structured cards that display key information retrieved from each DHIS2 instance. Each card now includes:
 
@@ -57,6 +104,7 @@ The users will be able to manage the user accounts and delete accounts if needed
 ![](resources/images/capture-app-image188.png){ width=25%} 
 ![](resources/images/capture-app-image189.png){ width=25%} 
 
+From version 3.5, accounts that log in with OAuth also appear on the Manage Accounts screen. The screen does not show the type of an account. Click an account to log in. The app asks for the CODE if the account logs in with OAuth. The app asks for the password if it logs in with a username and password.
 
 ## Account Recovery { #capture_app_generic_recovery }
 
@@ -64,16 +112,22 @@ The users will be able to restore their own password if they have the setting en
 
 ![](resources/images/capture-app-image64.png){ width=25%}
 
-## Blocking session (PIN) (Improved 3.4.0) { #capture_app_generic_PIN }
+From version 3.5, the **Recover account** button also appears for accounts that log in with OAuth, when the server allows account recovery. The button opens the account recovery page of the server.
+
+## Blocking session (PIN) (Improved in 3.5) { #capture_app_generic_PIN }
 
 User is able to lock the session using a 4 digit PIN. This allows to move to other apps in your phone without deleting the local data.
 
+From version 3.4.0, the screen to create the PIN has a full-screen design.
+
 ![](resources/images/capture-app-image343.png){width=25%}
+![](resources/images/capture-app-image344.png){width=25%}
 
 If the user forgets the PIN number, log in by entering the credentials is also available.
 After 3 invalid attempts, the app will ask the user to login using the password.
 
-![](resources/images/capture-app-image344.png){width=25%}
+From version 3.5, if the account logs in with OAuth, the app asks for the CODE and not for the password.
+
 
 ## Biometrics login  { #capture_app_generic_biometrics_login }
 
@@ -89,6 +143,11 @@ User is able to use the fingerprint scanner or face id if the feature is activat
 If the biomtric authentication fails, the user will be asked to enter password to finish the login process.
 
 ![](resources/images/capture-app-image355.png){width=25%}
+
+From version 3.5, biometrics also work with accounts that log in with OAuth. As before, biometrics are available only when the app has a single account. With an OAuth account, you use your fingerprint or face instead of typing the CODE.
+
+If the biometric authentication fails, the app asks for the CODE.
+
 
 ## Instructions/information buttons { #capture_app_generic_instructions }
 
@@ -300,14 +359,43 @@ Users can now retrieve the latest data from the server before entering new data.
 ![](resources/images/capture-app-image192.png){ width=25%}
 ![](resources/images/capture-app-image193.png){ width=25%}
 
-## Org unit { #capture_app_generic_orgunit }
+## Org unit (Improved in 3.5) { #capture_app_generic_orgunit }
 
-![](resources/images/capture-app-image30.png){ width=25%}
+The org unit selector lists the organisation units that you can use. To select a unit, check its box, and then click *Done*. The app shows in bold the name of every unit that you check. How many units you can select depends on where you open the selector:
 
-The whole organisation unit tree is displayed. Organisation units not available for data entry will be colored in grey.
-User must check the box to select the org unit wanted. After an organisation unit is selected, the parents will be marked in bold to show hint of the organisation unit selection when opening the hierarchy.
+- In a filter, you can select several units. The name of each parent of a checked unit is also bold. Next to the name of a parent, the number in brackets shows how many of its units are selected. These marks show you where your selection is.
+- In data entry, you can select only one unit at a time. When you check a unit, the app unchecks the previous one.
+
+The selector does not show organisation units that are not available for data entry. It does not show their parents either.
 
 ![](resources/images/capture-app-image194.png){ width=25%}
+
+### Search for an organisation unit { #capture_app_generic_orgunit_search }
+
+1. In the selector, click the *Search* field.
+2. Type part of the name. The list shows the units that match.
+3. Check the box of the unit that you want.
+4. Click *Done*.
+
+To remove all selected units, click **Clear all**.
+
+### Tell apart units that have the same name (New in 3.5) { #capture_app_generic_orgunit_same_name }
+
+Two organisation units can have the same name. From version 3.5, when the same name appears more than once in the list, the app adds a tag next to the name. The tag shows the name of a higher unit in the hierarchy. Use the tag to see which unit is which.
+
+![](resources/images/capture-app-image368.png){ width=25%}
+
+The app adds the tag only when both of these are true:
+
+- The same name appears more than once in the list.
+- The parent of the unit is not in the list. This is common in search results.
+
+When you browse the full hierarchy, if the parent of each unit is in the list, the app does not add a tag.
+
+When the parents of the units have the same name, the tag shows the name of the first unit, starting from the top of the hierarchy, that is not shared by all the units in the list.
+
+When a name is long, the tag appears below the name. When there is room, the tag appears next to the name. To read a long name, scroll the list sideways.
+
 
 > **Caution**
 >
@@ -377,6 +465,22 @@ Open the TEI profile image by clicking on it.
 
 ![](resources/images/capture-app-image138.png){ width=25%}
 
+### Image quality (New in 3.5) { #capture_app_generic_images_quality }
+
+When you capture or choose a picture for an image field, the app prepares the picture before it sends it to the server. From version 3.5, the admin chooses how the app prepares the picture. Before 3.5, the app reduced pictures that were larger than 512 pixels. The admin sets this in the Android Settings Web App. The choice is for each data element or attribute, in a program or a data set. There are two options:
+
+- Default quality: The app makes the file smaller when it is larger than 600 kB. It lowers the resolution before it lowers the quality below a minimum. A picture that is already 600 kB or smaller is not made smaller.
+- Original quality: The app sends the picture as it is. It does not make the file smaller.
+
+If the admin does not choose an option, the app uses the default quality.
+
+<!-- VERIFY IN APP: the labels and the place of this setting in the Android Settings Web App, and what happens with picture types that the server does not accept. -->
+
+### Pictures that are not downloaded { #capture_app_generic_images_not_downloaded }
+
+A field can have a value while the app did not download the picture. For example, the picture is larger than the file size limit that the admin sets in the Android Settings Web App. From version 3.5, the field then shows that the image was not found. This lets you see that the field is not empty.
+
+You can still delete the image and upload a new one. 
 
 ## Display events and TEIs in maps { #capture_app_generic_display_events }
 
@@ -459,6 +563,6 @@ The new module for real stock monitoring use case enables users to manage and mo
 
 The Android app will upload events with status COMPLETED by default. If the program configuration prevents the event from being completed on the server (for example, due to mandatory data elements or “error on complete” program rules), the app will upload the event with status ACTIVE instead. This prevents failed uploads caused by server side misconfiguration while still ensuring that data is sent.
 
-### Event ordering alignment across platforms (Improved in 3.4.0) { #capture_app_lmis_module_event_ordering }
+### Event ordering alignment across platforms { #capture_app_lmis_module_event_ordering }
 
-With this update, event ordering has been aligned across Web, Android, and API sources. This ensures that events are processed in the correct sequence during synchronization, improving data consistency and calculation reliability across the system.
+From version 3.4.0, event ordering is aligned across Web, Android, and API sources. This ensures that events are processed in the correct sequence during synchronization, improving data consistency and calculation reliability across the system.
