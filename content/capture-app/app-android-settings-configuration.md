@@ -156,6 +156,7 @@ Limit the file size to download (**v2.3**)
 > This provides flexibility for admins to either enforce a file size limit or allow unrestricted downloads depending on their needs.
 >
 
+If a picture is larger than this limit, the Android app does not download it. From Android app version 3.5, the field then shows an image icon with a line across it. See [Pictures that are not downloaded](https://docs.dhis2.org/en/use/android-app/android-specific-features.html#capture_app_generic_images_not_downloaded).
 
 
 ### Program { #capture_app_android_settings_webapp_synchronization_program }
@@ -256,6 +257,25 @@ From this table, administrators can:
 
 ![](resources/images/capture-app-program-specific-table.png){width=50%}
 
+##### Maximum quality images (v2.5.2) { #capture_app_android_settings_webapp_synchronization_image_quality }
+
+By default, when a picture is larger than 600 KiB (614,400 bytes), the Android Capture app makes the picture smaller before it sends it to the server. From Android app version 3.5, the admin can ask for the original picture for some image fields. The app then sends the picture as it is.
+
+In the specific setting of a program, the section **Maximum quality images** lists the items of type image in the program. The list includes the data elements of the program stages, the program attributes, and the attributes of the tracked entity type. The section shows the label **3.5 +**, which means that the setting needs Android app version 3.5 or later. To send the pictures of an item at full quality:
+
+1. Add the specific setting of the program, or open the existing one.
+2. In **Maximum quality images**, click the list. To filter the options, enter part of a name.
+3. Choose the items.
+4. Click **Save**.
+
+Each item that you choose appears in the field. To remove an item, click the **x** next to it. The items that you do not choose use the default quality.
+
+![](resources/images/capture-app-aswa-max-quality-images.png){width=50%}
+
+> **Note**
+>
+> The app sends the picture without any change. A large picture takes longer to send and uses more mobile data.
+
 ##### Important Considerations
 
 > **Caution**
@@ -330,6 +350,7 @@ To add a specific setting:
 
 ![](resources/images/capture-app-dataset-specific-table.png){width=50%}
 
+From version 2.5.2, the specific setting of a data set also has the section **Maximum quality images**. It lists the data elements of type image in the data set, and it works in the same way as for programs. See [Maximum quality images](https://docs.dhis2.org/en/use/android-app/android-web-apps/settings-configuration.html#capture_app_android_settings_webapp_synchronization_image_quality).
 
 ### User Sync Test { #capture_app_android_settings_webapp_synchronization_user_sync_test }
 

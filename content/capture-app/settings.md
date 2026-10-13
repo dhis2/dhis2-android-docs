@@ -8,7 +8,7 @@
 
 Any user is able to choose from a drop-down list if the data entered in the app is uploaded to the server manually or scheduled every 15 min, 1 hour or 1 Day. By default the app will sync every 24h. This kind of Syncing includes new and updated events and TEI’s.
 
-## Sync configuration/metadata (Improved in 3.4) { #capture_app_settings_sync_metadata }
+## Sync configuration/metadata { #capture_app_settings_sync_metadata }
 
 Any User is able to choose from a drop-down list  if the data entered in the app is uploaded to the server manually or scheduled every day or week. By default the app will sync every 24h.  This sync will update changes in programs or configurations in web.
 
@@ -34,9 +34,52 @@ This will specify the number of reserved Id's available in your device and will 
 
 The sync error log gives details about the error and is prepared to be shared with admins.
 
+## Two factor authentication (New in 3.5) { #capture_app_settings_two_factor }
+
+From version 3.5, you can turn on two-factor authentication in the app. Two-factor authentication adds a second step when you log in: a code from an authenticator app on your device.
+
+The **Two factor authentication** item appears in **Settings** only for accounts that log in with OAuth. It does not appear for accounts that log in with a username and password.
+
+The item shows whether two-factor authentication is on or off. To turn it on or off, click the item.
+
+![](resources/images/capture-app-image374.png){ width=25%}
+
+You need an internet connection to turn two-factor authentication on or off. If you have no connection, the screen shows the message **Can't connect to network** and the **Try to reconnect** button.
+
+### Turn on two-factor authentication { #capture_app_settings_two_factor_on }
+
+To turn on two-factor authentication:
+
+1. In **Settings**, click **Two factor authentication**.
+2. If you do not have an authenticator app, install one on your device. The screen recommends Google Authenticator. You can use any app that creates time-based one-time passwords (TOTP).
+3. In your authenticator app, add an account with the configuration key that the screen shows. To copy the key, click the copy icon next to it.
+4. In the **Authentication code** field, enter the code that your authenticator app shows.
+5. Click **Turn on**.
+
+![](resources/images/capture-app-image376.png){ width=25%}
+
+After you turn on two-factor authentication, the login page of your server asks for the code when you log in with OAuth.
+
+![](resources/images/capture-app-image380.png){ width=25%}
+
+### Turn off two-factor authentication { #capture_app_settings_two_factor_off }
+
+To turn off two-factor authentication:
+
+1. In **Settings**, click **Two factor authentication**. The screen shows that two-factor authentication is on.
+2. Open your authenticator app.
+3. In the **Authentication code** field, enter the code that your authenticator app shows.
+4. Click **Turn off**.
+
+![](resources/images/capture-app-image375.png){ width=25%}
+
 ## Export database { #capture_app_settings_export_db }
 
 Users are able to export the local database and share it with an admin, who will be able to import it for troubleshooting, being able to replicate the exact environment (database, device, configuration). The exported database is encrypted and the administrator will require the user credentials to be able to access the database
+
+> **Note**
+>
+> **Export database** is available only for accounts that log in with a username and password. It does not appear in **Settings** for accounts that log in with OAuth.
 
 ![](resources/images/capture-app-image341.png){ width=25%}
 

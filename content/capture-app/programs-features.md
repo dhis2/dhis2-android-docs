@@ -236,11 +236,13 @@ In 3.1 the manual capture can be disabled (Android settings webApp configuration
 
 ![](resources/images/capture-app-image291.png){ width=25%}
 
-### Working Lists { #capture_app_programs_common_features_working_lists }
+### Working lists (Improved in 3.5) { #capture_app_programs_common_features_working_lists }
 
 Working lists are available in Event and Tracker Programs, once a list is selected the filters will be blocked and not allowed to change until the user resets the search.
 
 The Android App supports the new tracker working lists, allowing users to filter by data elements. The working lists need to be configured in web using the web Capture App. The Android app will download the working lists that are configured and saved on the server side.
+
+From version 3.5, a working list can also filter by values that are empty or not empty. For example, a working list can show only the records where a data element has no value. Configure this filter in the web Capture app, in the same way as the other filters.
 
 In 2.9, the working lists have been moved from the filters section to the main program screen. In earlier versions the user had to open the filters to be able to see and select a working list, from this version the working lists are always visible under the search bar facilitating its selection for filtering out Tracked Entity Instances
 
@@ -275,9 +277,9 @@ Legends can be assigned to Data Elements and they will be displayed next to valu
 
 ![](resources/images/capture-app-image155.png){ width=25%}
 
-### Feedback rendering (New in 3.4) { #capture_app_programs_common_features_feedback_rendering }
+### Feedback rendering { #capture_app_programs_common_features_feedback_rendering }
 
-Feedback messages generated through Display Text and Display Key Value Pair program rule actions support Markdown formatting. This allows structured and more readable content to be displayed directly in the app, including headings, lists, tables, links, and emphasized text.
+From version 3.4, feedback messages from the Display Text and Display Key Value Pair program rule actions support Markdown formatting. The app can show structured content that is easier to read, including headings, lists, tables, links, and emphasized text.
 
 In addition, legend-based styling enables feedback values to be visually highlighted using predefined legend sets. When numeric values are present in the content, they are evaluated against the configured legend ranges and rendered with the corresponding color. This allows dynamic color coding of key values, helping users quickly interpret results and identify important conditions.
 
@@ -379,7 +381,7 @@ This feature enables users to take action on phone numbers and email addresses d
 
 ![](resources/images/capture-app-image230.png){ width=25%}
 
-### Customized Tracker Terminology { #capture_app_programs_common_features_customized_terminology }
+### Customized tracker terminology (Improved in 3.5) { #capture_app_programs_common_features_customized_terminology }
 
 In order to facilitate the terminology used in DHIS2, it has been decided to gradually enable the possibility to customize certain terms to each particular use case. In 3.0, the terms "event" (used in a program stage context) and "enrollment" are customizable.
 
@@ -394,6 +396,23 @@ To customize the terms, the admin can go to the Maintenance and when creating or
 ![](resources/images/capture-app-image255.png){ width=25%}
 
 In 3.1, the term "event" (program context) is now customizable.
+
+From version 3.5, the admin can customize more terms, and also their plural forms. If the admin sets a custom label, the app uses it. If not, the app uses the default word. The admin can customize these terms:
+
+- Enrollment, in singular and plural.
+- Event, in singular and plural, at program level and at stage level.
+- Program stage.
+- Follow-up. The app also uses this label in the follow-up messages: the message to mark a record for follow-up and the message that shows that the record is marked.
+- Relationship. The app uses the same label for the singular and the plural.
+- Organisation unit, at program level. The app uses the same label for the singular and the plural.
+- Tracked entity type, in the plural. The singular is the name of the tracked entity type.
+
+To set a custom label, the admin enters the text in the matching **Custom label for** field in the Metadata Management app. The field is in the program, the program stage, or the tracked entity type.
+
+![](resources/images/capture-app-image377.png){ width=25%}
+![](resources/images/capture-app-image378.png){ width=25%}
+
+
 
 ### Relationships { #capture_app_programs_common_features_relationships }
 
