@@ -36,23 +36,25 @@ The sync error log gives details about the error and is prepared to be shared wi
 
 ## Two factor authentication (New in 3.5) { #capture_app_settings_two_factor }
 
-From version 3.5, you can turn on two-factor authentication in the app. Two-factor authentication adds a second step to your login: a code from an authenticator app on your device.
+From version 3.5, you can turn on two-factor authentication in the app. Two-factor authentication adds a second step when you log in: a code from an authenticator app on your device.
 
-The *Two factor authentication* item appears in *Settings* only when you logged in with OAuth. It does not appear for accounts that log in with a username and password.
+The **Two factor authentication** item appears in **Settings** only for accounts that log in with OAuth. It does not appear for accounts that log in with a username and password.
 
-The item shows whether two-factor authentication is enabled or disabled. Click the item to turn it on or off.
+The item shows whether two-factor authentication is on or off. To turn it on or off, click the item.
 
 ![](resources/images/capture-app-image374.png){ width=25%}
 
-You need an internet connection to turn two-factor authentication on or off. Without a connection, the screen shows the message *Can't connect to network* and the button *Try to reconnect*.
+You need an internet connection to turn two-factor authentication on or off. If you have no connection, the screen shows the message **Can't connect to network** and the **Try to reconnect** button.
 
 ### Turn on two-factor authentication { #capture_app_settings_two_factor_on }
 
-1. In the app, open *Settings* and click *Two factor authentication*.
-2. If you do not have an authenticator app, install one on your device. The screen recommends Google Authenticator. You can use any app that creates time-based codes (TOTP).
-3. In your authenticator app, add an account with the configuration key that the screen shows. Use the copy icon next to the key to copy it.
-4. Enter the code that your authenticator app shows in the *Authentication code* field.
-5. Click *Turn on*.
+To turn on two-factor authentication:
+
+1. In **Settings**, click **Two factor authentication**.
+2. If you do not have an authenticator app, install one on your device. The screen recommends Google Authenticator. You can use any app that creates time-based one-time passwords (TOTP).
+3. In your authenticator app, add an account with the configuration key that the screen shows. To copy the key, click the copy icon next to it.
+4. In the **Authentication code** field, enter the code that your authenticator app shows.
+5. Click **Turn on**.
 
 ![](resources/images/capture-app-image376.png){ width=25%}
 
@@ -62,10 +64,12 @@ After you turn on two-factor authentication, the login page of your server asks 
 
 ### Turn off two-factor authentication { #capture_app_settings_two_factor_off }
 
-1. In the app, open *Settings* and click *Two factor authentication*. The screen shows that two-factor authentication is on.
+To turn off two-factor authentication:
+
+1. In **Settings**, click **Two factor authentication**. The screen shows that two-factor authentication is on.
 2. Open your authenticator app.
-3. Enter the code that your authenticator app shows in the *Authentication code* field.
-4. Click *Turn off*.
+3. In the **Authentication code** field, enter the code that your authenticator app shows.
+4. Click **Turn off**.
 
 ![](resources/images/capture-app-image375.png){ width=25%}
 
@@ -75,7 +79,7 @@ Users are able to export the local database and share it with an admin, who will
 
 > **Note**
 >
-> Export database is available only for accounts that log in with a username and password. It **does not appear in Settings for accounts that log in with OAuth**.
+> **Export database** is available only for accounts that log in with a username and password. It does not appear in **Settings** for accounts that log in with OAuth.
 
 ![](resources/images/capture-app-image341.png){ width=25%}
 

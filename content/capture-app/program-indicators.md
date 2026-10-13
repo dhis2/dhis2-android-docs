@@ -4,7 +4,7 @@ The following is a comprehensive list of all Program indicator variables availa
 
 Any issues around using a particular feature with Android are highlighted with an exclamation mark.
 
-From version 3.5, the app can also show a program indicator broken down by categories. See [Program indicator disaggregation](https://docs.dhis2.org/en/use/android-app/program-indicators-supported.html#capture_app_local_analytics_pi_disaggregation).
+From version 3.5, the app can also show a program indicator disaggregated by categories. See [Program indicator disaggregation](https://docs.dhis2.org/en/use/android-app/program-indicators-supported.html#capture_app_local_analytics_pi_disaggregation).
 
 |legend|description|
 |:--:|:------|
@@ -86,14 +86,14 @@ From version 3.5, the app can also show a program indicator broken down by categ
 
 ## Program indicator disaggregation (New in 3.5) { #capture_app_local_analytics_pi_disaggregation }
 
-In DHIS2 2.42 and later, an admin can break a program indicator down by categories, for example by gender or by age group. From version 3.5, the Android app shows these indicators in the same tables as the other analytics. You do not configure anything in the app.
+In DHIS2 2.42 and later, an admin can disaggregate a program indicator by categories, for example by gender or by age group. From version 3.5, the Android app shows these indicators in the same tables as the other analytics. You do not need to configure anything in the app.
 
 For example, a table can show one number for each gender instead of one number for the whole indicator.
 
 ![](resources/images/capture-app-image379.png){ width=25%}
 
-To show a disaggregated indicator in the app, the admin does these steps:
+To show a disaggregated indicator in the app, an admin must do these steps:
 
-1. In the Metadata Management app, set up the disaggregation of the program indicator.
+1. In the Metadata Management app, configure the disaggregation of the program indicator.
 2. In the Data Visualizer app, create the table.
 3. In the Android Settings Web App, add the visualization to the analytics of the Home screen, the program or the data set.

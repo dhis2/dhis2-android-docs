@@ -4,7 +4,7 @@
 
 In version 3.3.0 the login screen was redesigned with a modern interface and improved usability in order to support future OAuth-based two-factor authentication (2FA), ensuring the app is ready for upcoming security improvements.
 
-OAuth login and two-factor authentication are available from version 3.5. See [Login with OAuth](https://docs.dhis2.org/en/use/android-app/android-specific-features.html#capture_app_generic_login_oauth).
+OAuth login and two-factor authentication are available in version 3.5 and later. See [Log in with OAuth](https://docs.dhis2.org/en/use/android-app/android-specific-features.html#capture_app_generic_login_oauth).
 
 The first step to the login is to enter the server URL. This can be done in two ways:
 
@@ -16,7 +16,7 @@ The first step to the login is to enter the server URL. This can be done in two 
 
     > **Note**
     >
-    > From version 3.5, you can type the URL without `https://`. The app adds `https://` when the URL has no scheme. If you type `http://`, the app keeps it.
+    > From version 3.5, you can enter the URL without `https://`. If the URL has no scheme, the app adds `https://`. If you enter `http://`, the app keeps it.
 
 2. QR: The user can use a QR code instead of typing the URL but username and password must be entered manually.
 
@@ -25,7 +25,7 @@ The first step to the login is to enter the server URL. This can be done in two 
 
 > **Note**
 >
-> The second step and the offline login that follows are for accounts that log in with a username and password. For accounts that log in with OAuth, see [Login with OAuth](https://docs.dhis2.org/en/use/android-app/android-specific-features.html#capture_app_generic_login_oauth).
+> The second step and the offline login that follows are for accounts that log in with a username and password. For accounts that log in with OAuth, see [Log in with OAuth](https://docs.dhis2.org/en/use/android-app/android-specific-features.html#capture_app_generic_login_oauth).
 
 The second step is to add the username and password.
 
@@ -46,21 +46,22 @@ After a succesful login the user should be able to perform an *offline* login on
 >
 > Due to a change in the login API this feature is not available from 2.31.
 
-### Login with OAuth (New in 3.5) { #capture_app_generic_login_oauth }
+### Log in with OAuth (New in 3.5) { #capture_app_generic_login_oauth }
 
-From version 3.5, the app can log in with OAuth. With OAuth, you log in on a page of your server that opens in the browser. You do not type your password in the app. The app checks the server when you enter the server URL. OAuth login is available when both of these are true:
+From version 3.5, you can log in with OAuth. With OAuth, you log in on a page of your server that opens in the browser. You do not enter your password in the app. When you enter the server URL, the app checks the server. OAuth login is available when both of these are true:
 
-- The server runs DHIS2 43.1 or later (Recommended 43.2).
+- The server runs DHIS2 43 or later. <!-- VERIFY: the SDK allows OAuth on servers 2.43 and later (ANDROSDK-2374, LoginConfigCall.kt). The earlier text said "43.1 or later" and "43.2 recommended". No source found for either. Test on a 43.0 server. -->
 - OAuth is enabled on the server.
 
 If OAuth is not available, you log in with your username and password, as before.
 
 To log in with OAuth:
 
-1. Enter the server URL and click *Next*.
-2. In the page that opens in the browser, log in with your username and password.
-3. If your account has two-factor authentication turned on, enter the code from your authenticator app and click *Verify and log in*.
-4. The first time that you log in with an account, the app asks you to create an offline CODE. Enter a 4-digit CODE and click *Create CODE*. You cannot close this step.
+1. Enter the server URL.
+2. Click **Next**.
+3. On the page that opens in the browser, log in with your username and password.
+4. If your account has two-factor authentication turned on, enter the code from your authenticator app and click **Verify and log in**.
+5. If this is the first time that you log in with the account, the app asks you to create an offline CODE. Enter a 4-digit CODE, and then click **Create CODE**. You cannot close this step. You must create a CODE before you can use the app.
 
 ![](resources/images/capture-app-image369.png){ width=25%}
 ![](resources/images/capture-app-image370.png){ width=25%}
@@ -68,22 +69,22 @@ To log in with OAuth:
 
 > **Note**
 >
-> The CODE is not the PIN. The CODE lets you log in to an account when you have no connection. The PIN locks the app session.
+> The CODE is not the PIN. The CODE lets you log in to an account when you have no internet connection. The PIN locks the app session.
 
 #### Offline login with the CODE { #capture_app_generic_login_oauth_code }
 
-When you open the app without a connection, the app asks for your CODE. Enter the CODE and click *Log in*.
+When you open the app without an internet connection, the app asks for your CODE. Enter the CODE and click **Log in**.
 
-After 3 wrong CODEs in a row, the app locks the login for 60 seconds. The screen shows the message *Too many attempts. Try again in N seconds*. N counts down.
+After 3 wrong CODEs in a row, the app locks the login for 60 seconds. The screen shows the message **Too many attempts. Try again in N seconds**. N is the number of seconds that are left, and it counts down.
 
 ![](resources/images/capture-app-image372.png){ width=25%}
 
-If you forget your CODE, click *Forgot your CODE?*. To set a new CODE, you must log in with your username and password. This needs an internet connection. Click *Login online* to continue.
+If you forget your CODE, click **Forgot your CODE?** To set a new CODE, you must log in with your username and password. You need an internet connection for this. To continue, click **Login online**.
 
 ![](resources/images/capture-app-image373.png){ width=25%}
 
 
-## Offline Multi-user (Improved in 3.5) { #capture_app_generic_multiuser}
+## Offline multi-user (Improved in 3.5) { #capture_app_generic_multiuser}
 
 The Manage Accounts screen has been redesigned to align with the updated login experience introduced in version 3.3.0. Saved accounts now appear as clearer, more structured cards that display key information retrieved from each DHIS2 instance. Each card now includes:
 
@@ -104,7 +105,7 @@ The users will be able to manage the user accounts and delete accounts if needed
 ![](resources/images/capture-app-image188.png){ width=25%} 
 ![](resources/images/capture-app-image189.png){ width=25%} 
 
-From version 3.5, accounts that log in with OAuth also appear on the Manage Accounts screen. The screen does not show the type of an account. Click an account to log in. The app asks for the CODE if the account logs in with OAuth. The app asks for the password if it logs in with a username and password.
+From version 3.5, accounts that log in with OAuth also appear on the **Manage accounts** screen. The screen does not show the type of an account. To log in, choose an account. If the account logs in with OAuth, the app asks for the CODE. If the account logs in with a username and password, the app asks for the password. <!-- VERIFY: accounts that log in with OpenID Connect also use the CODE (CredentialsEntryMode.EXISTING_OPEN_ID). Decide whether to say so here. -->
 
 ## Account Recovery { #capture_app_generic_recovery }
 
@@ -112,7 +113,7 @@ The users will be able to restore their own password if they have the setting en
 
 ![](resources/images/capture-app-image64.png){ width=25%}
 
-From version 3.5, the **Recover account** button also appears for accounts that log in with OAuth, when the server allows account recovery. The button opens the account recovery page of the server.
+From version 3.5, if the server allows account recovery, the **Recover account** button also appears for accounts that log in with OAuth. <!-- VERIFY: in 3.5.0 the button opens the log in page, not the recovery page, on DHIS2 43 servers (ANDROAPP-7753). The fix is in 3.5.1, planned 2026-11-30. Add the sentence about the recovery page in the 3.5.1 update. The web log in page also needs an email to be configured. -->
 
 ## Blocking session (PIN) (Improved in 3.5) { #capture_app_generic_PIN }
 
@@ -121,12 +122,13 @@ User is able to lock the session using a 4 digit PIN. This allows to move to oth
 From version 3.4.0, the screen to create the PIN has a full-screen design.
 
 ![](resources/images/capture-app-image343.png){width=25%}
-![](resources/images/capture-app-image344.png){width=25%}
 
 If the user forgets the PIN number, log in by entering the credentials is also available.
 After 3 invalid attempts, the app will ask the user to login using the password.
 
-From version 3.5, if the account logs in with OAuth, the app asks for the CODE and not for the password.
+![](resources/images/capture-app-image344.png){width=25%}
+
+From version 3.5, if the account logs in with OAuth, the app asks for the CODE instead of the password.
 
 
 ## Biometrics login  { #capture_app_generic_biometrics_login }
@@ -144,9 +146,9 @@ If the biomtric authentication fails, the user will be asked to enter password t
 
 ![](resources/images/capture-app-image355.png){width=25%}
 
-From version 3.5, biometrics also work with accounts that log in with OAuth. As before, biometrics are available only when the app has a single account. With an OAuth account, you use your fingerprint or face instead of typing the CODE.
+From version 3.5, biometrics also work with accounts that log in with OAuth. As before, biometrics are available only when the app has a single account. With an OAuth account, you can use your fingerprint or face instead of entering the CODE.
 
-If the biometric authentication fails, the app asks for the CODE.
+If the biometric authentication fails for an OAuth account, the app asks for the CODE.
 
 
 ## Instructions/information buttons { #capture_app_generic_instructions }
@@ -361,27 +363,29 @@ Users can now retrieve the latest data from the server before entering new data.
 
 ## Org unit (Improved in 3.5) { #capture_app_generic_orgunit }
 
-The org unit selector lists the organisation units that you can use. To select a unit, check its box, and then click *Done*. The app shows in bold the name of every unit that you check. How many units you can select depends on where you open the selector:
+The organisation unit selector lists the organisation units that you can use. To choose a unit, choose its checkbox, and then click **Done**. The app shows the name of each unit that you choose in bold. The number of units that you can choose depends on where you open the selector:
 
-- In a filter, you can select several units. The name of each parent of a checked unit is also bold. Next to the name of a parent, the number in brackets shows how many of its units are selected. These marks show you where your selection is.
-- In data entry, you can select only one unit at a time. When you check a unit, the app unchecks the previous one.
+- In a filter, you can choose several units. The name of each parent of a chosen unit is also bold. Next to the name of a parent, the number in brackets shows how many of its units are selected. These marks show you where your selection is.
+- In data entry, you can choose only one unit at a time. When you choose a unit, the app clears the checkbox of the previous one.
 
-The selector does not show organisation units that are not available for data entry. It does not show their parents either.
+The selector does not show organisation units that are not available for data entry. It also does not show the parents of these units.
 
 ![](resources/images/capture-app-image194.png){ width=25%}
 
 ### Search for an organisation unit { #capture_app_generic_orgunit_search }
 
-1. In the selector, click the *Search* field.
-2. Type part of the name. The list shows the units that match.
-3. Check the box of the unit that you want.
-4. Click *Done*.
+To search for an organisation unit:
 
-To remove all selected units, click **Clear all**.
+1. In the selector, click the **Search** field.
+2. Enter at least two characters of the name. The list shows the units that match.
+3. Choose the checkbox of the unit that you want.
+4. Click **Done**.
 
-### Tell apart units that have the same name (New in 3.5) { #capture_app_generic_orgunit_same_name }
+To remove all selected units, click **Clear all**. <!-- VERIFY IN APP: Clear all is hidden in the selector for transferring a tracked entity, and disabled when no unit is selected. -->
 
-Two organisation units can have the same name. From version 3.5, when the same name appears more than once in the list, the app adds a tag next to the name. The tag shows the name of a higher unit in the hierarchy. Use the tag to see which unit is which.
+### Identify units that have the same name (New in 3.5) { #capture_app_generic_orgunit_same_name }
+
+Two organisation units can have the same name. From version 3.5, when the same name appears more than once in the list, the app adds a tag next to the name. The tag shows the name of a higher unit in the hierarchy. Use the tag to identify each unit.
 
 ![](resources/images/capture-app-image368.png){ width=25%}
 
@@ -392,9 +396,9 @@ The app adds the tag only when both of these are true:
 
 When you browse the full hierarchy, if the parent of each unit is in the list, the app does not add a tag.
 
-When the parents of the units have the same name, the tag shows the name of the first unit, starting from the top of the hierarchy, that is not shared by all the units in the list.
+If the parents of the units also have the same name, the tag shows the name of the first higher unit that is not the same for all the units in the list. The app starts from the top of the hierarchy.
 
-When a name is long, the tag appears below the name. When there is room, the tag appears next to the name. To read a long name, scroll the list sideways.
+When a name is long, the tag appears below the name. When there is room, the tag appears next to the name. To read a long name, scroll the list horizontally.
 
 
 > **Caution**
@@ -467,14 +471,15 @@ Open the TEI profile image by clicking on it.
 
 ### Image quality (New in 3.5) { #capture_app_generic_images_quality }
 
-When you capture or choose a picture for an image field, the app prepares the picture before it sends it to the server. Before 3.5, the app reduced pictures that were larger than 512 pixels. From version 3.5, the app makes the file smaller only when it is larger than 600 kB. It lowers the resolution before it lowers the quality below a minimum. A picture that is already 600 kB or smaller is not made smaller.
+When you take or choose a picture for an image field, the app prepares the picture before it sends it to the server. Before version 3.5, the app reduced pictures to 512 pixels on the longest side. From version 3.5, the app changes a picture only in these cases: the file is larger than 600 KiB (614,400 bytes), or the server does not accept the format of the picture, such as WebP. The app then saves the picture as a JPEG with quality 85, or as a PNG if the picture has transparency. If the file is still larger than 600 KiB, the app reduces the resolution until the file fits. The app does not reduce the longest side below 256 pixels, so a very large picture can stay above the limit. If the new file is not smaller than the original and the server accepts the original format, the app keeps the original. <!-- VERIFY: read in SDK 1.15.0-rc (FileCompressionHelper.kt). The Capture app 3.5.0-RC depends on a floating 1.15.0-SNAPSHOT. Check again when SDK 1.15.0 is tagged. -->
 
-The admin can ask for the original quality for some image fields. In this case, the app sends the picture as it is. It does not make the file smaller and it does not convert it. To do this, in the Android Settings Web App:
+The admin can ask for the original quality for some image fields. For these fields, the app sends the picture as it is. It does not make the file smaller, and it does not convert it. To ask for the original quality, in the Android Settings Web App:
 
-1. Open *Synchronization*, and then *Programs* or *Data sets*.
+1. Open **Synchronization** > **Programs**, or **Synchronization** > **Data sets**.
 2. Add the specific setting of the program or the data set, or open the existing one.
-3. In *Maximum quality images*, click the list and check the data elements or attributes whose pictures the app sends at full quality. The list shows only the items of type image.
-4. Click *Save*.
+3. In **Maximum quality images**, click the list. The list shows only the items of type image.
+4. Choose each data element or attribute whose pictures the app must send at full quality.
+5. Click **Save**.
 
 The other image fields use the default quality. For more details, see [Maximum quality images](https://docs.dhis2.org/en/use/android-app/android-web-apps/settings-configuration.html#capture_app_android_settings_webapp_synchronization_image_quality).
 
@@ -483,9 +488,9 @@ The other image fields use the default quality. For more details, see [Maximum q
 
 ### Pictures that are not downloaded { #capture_app_generic_images_not_downloaded }
 
-A field can have a value while the app did not download the picture. For example, the picture is larger than the file size limit that the admin sets in the Android Settings Web App. From version 3.5, the field then shows that the image was not found. This lets you see that the field is not empty.
+A field can have a value even when the app did not download the picture. For example, this happens when the picture is larger than the file size limit that the admin sets in the Android Settings Web App. From version 3.5, the field then shows an image icon with a line across it, so you can see that the field is not empty.
 
-You can still delete the image and upload a new one. 
+You can still delete the image and upload a new one.
 
 ![](resources/images/capture-app-image382.png){ width=25%}
 
@@ -571,4 +576,4 @@ The Android app will upload events with status COMPLETED by default. If the prog
 
 ### Event ordering alignment across platforms { #capture_app_lmis_module_event_ordering }
 
-From version 3.4.0, event ordering is aligned across Web, Android, and API sources. This ensures that events are processed in the correct sequence during synchronization, improving data consistency and calculation reliability across the system.
+From version 3.4.0, event ordering is aligned across web, Android, and API sources. As a result, events are processed in the correct sequence during synchronization. This improves data consistency and makes calculations more reliable across the system.
